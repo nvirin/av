@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_kooltreeview" lastupdate="01/01/2009">	
+	<title>KoolTreeView Class [Javascript]</title>
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+		
+	<methods>
+		<method name="unselectAll">
+			<type>void </type>
+			<shortdesc>
+			   <![CDATA[
+		Unselect all selected nodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Unselect all selected nodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        // Unselect the nodes
+        kTree.unselectAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="expandAll">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Expand all the treenodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Expand all the treenodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        // Make tree expand all
+        kTree.expandAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="collapseAll">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Collapse all the treenodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Collapse all the treenodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        // Make tree collapse all
+        kTree.collapseAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="getSelectedIds">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return array of id of selected nodes.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return array of id of selected nodes.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        var list = kTree.getSelectedIds();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="removeNode">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">NodeId</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Remove a node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Remove a node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        // Remove the node1
+        kTree.removeNode("node1");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getNode">
+			<type>TreeNode</type>
+			<parameters>
+			   <param type="string" optional="false"> NodeId</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+Get a node object. 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+Get a node object. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        // Get the software object
+        var treenode = kTree.getNode("software");
+        treenode.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="registerEvent">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Register event for tree.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register event for tree.<br>
+			<b>Allowed eventName:</b>
+			<div style='padding-left:25px;'>
+				<i>
+				"OnBeforeSelect"<br>
+				"OnBeforeUnSelect"<br>
+				"OnBeforeExpand"<br>
+				"OnBeforeCollapse"<br>
+				"OnBeforeStartEdit"<br>
+				"OnBeforeEndEdit"<br>
+				"OnBeforeDrop"<br>
+				"OnBeforeSubTreeLoad"<br>
+				"OnSelect"<br>
+				"OnUnselect"<br>
+				"OnExpand"<br>
+				"OnCollapse"<br>
+				"OnStartEdit"<br>
+				"OnEndEdit"<br>
+				"OnDrag"<br>
+				"OnDrop"<br>
+				"OnSubTreeLoad"<br>
+				</i>
+			</div>
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function nodeSelect_handle(sender,arg)
+    {
+        alert(arg.NodeId);
+    }
+    // Register for OnSelect event
+    kTree.registerEvent("OnSelect",nodeSelect_handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

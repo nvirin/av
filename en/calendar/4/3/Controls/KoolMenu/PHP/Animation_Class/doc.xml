@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_Animation_Class" lastupdate="01/01/2009">	
+	<title>Animation Class [PHP]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="Type">
+			<type>string</type>
+			<defaultvalue>"EaseBoth"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set animation type.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set animation type.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="">"Linear"</value>
+			   <value desc="">"EaseIn"</value>
+			   <value desc="">"EaseOut"</value>
+			   <value desc="">"EaseBoth"</value>
+			   <value desc="">"EaseInStrong"</value>
+			   <value desc="">"EaseOutStrong"</value>
+			   <value desc="">"EaseBothStrong"</value>
+			   <value desc="">"BounceIn"</value>
+			   <value desc="">"BounceOut"</value>
+			   <value desc="">"BounceBoth"</value>
+			   <value desc="">"ElasticIn"</value>
+			   <value desc="">"ElasticOut"</value>
+			   <value desc="">"ElasticBoth"</value>
+			   <value desc="">"BackIn"</value>
+			   <value desc="">"BackOut"</value>
+			   <value desc="">"BackBoth"</value>
+			   <value desc="">"None"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->ExpandAnimation->Type="Linear";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="Duration">
+			<type>int</type>
+			<defaultvalue>200</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the duration of animation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the duration of animation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->ExpandAnimation->Duration=1000; // 1000ms
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolCalendar_ClientEvents" lastupdate="01/01/2009">	
+	<title>KoolCalendar-ClientEvents [Javascript]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="OnInit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when KoolCalendar is first initiated.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when KoolCalendar is first initiated.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnInit"] = "Handle_OnInit";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnInit(sender,args)
+	{
+		alert("KoolCalendar is initiated.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="OnLoad">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when KoolCalendar is loaded.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when KoolCalendar is loaded.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnLoad"] = "Handle_OnInit";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnLoad(sender,args)
+	{
+		alert("KoolCalendar is loaded.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="OnSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when user selects a date.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when user selects a date.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnSelect"] = "Handle_OnSelect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnSelect(sender,args)
+	{
+		alert("Selected date:"+ args["Date"]);
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnDeselect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when user deselects a date.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when user deselects a date.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnDeselect"] = "Handle_OnDeselect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnDeselect(sender,args)
+	{
+		alert("Deselected date:"+ args["Date"]);
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="OnNavigate">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when KoolCalendar is navigated.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when KoolCalendar is navigated.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnNavigate"] = "Handle_OnNavigate";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnNavigate(sender,args)
+	{
+		alert("Nevigated date:"+ args["Date"]);
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="OnCommit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when KoolCalendar is first initiated.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when KoolCalendar is first initiated.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnCommit"] = "Handle_OnCommit";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnCommit(sender,args)
+	{
+		alert("KoolCalendar commited");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="OnDayMouseOut">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is out of a date.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is out of a date.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnDayMouseOut"] = "Handle_OnDayMouseOut";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnDayMouseOut(sender,args)
+	{
+		alert("MouseOut");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>						
+
+
+		<property name="OnDayMouseOver">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is over a date.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is over a date.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnDayMouseOver"] = "Handle_OnDayMouseOver";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnDayMouseOver(sender,args)
+	{
+		alert("MouseOver");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+
+
+		<property name="OnBeforeSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before KoolCalendar date is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before KoolCalendar date is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnBeforeSelect"] = "Handle_OnBeforeSelect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeSelect(sender,args)
+	{
+		alert("Selecting date:" + args["Date"]);
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="OnBeforeDeselect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before KoolCalendar date is deselected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before KoolCalendar date is deselected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnBeforeDeselect"] = "Handle_OnBeforeDeselect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeDeselect(sender,args)
+	{
+		alert("Deselecting date:" + args["Date"]);
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="OnBeforeNavigate">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before KoolCalendar is navigated.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before KoolCalendar is navigated.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnBeforeNavigate"] = "Handle_OnBeforeNavigate";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeNavigate(sender,args)
+	{
+		alert("Navigating date:" + args["Date"]);
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="OnBeforeCommit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before KoolCalendar commits changes to server.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before KoolCalendar commits changes to server.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnBeforeCommit"] = "Handle_OnBeforeCommit";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeCommit(sender,args)
+	{
+		alert("KoolCalendar is about to commit.");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+
+
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

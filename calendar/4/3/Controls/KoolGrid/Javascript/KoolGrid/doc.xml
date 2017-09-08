@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolgrid_class" lastupdate="08/20/2009">	
+	<title>KoolGrid Class [Javascript]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of client-side KoolGrid Class</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get the id of the grid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the id of the grid.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<script type="text/javacript">
+	alert(grid.id);// Should show "grid";
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+	</properties>	
+	
+	<methods>
+		<method name="refresh">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Make grid reload data from database.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Make grid reload data from database.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		grid.refresh();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+		<method name="attachData">
+			<type>void </type>
+			<parameters>
+				<param type="string" optional="false">name</param>
+				<param type="object" optional="false">value</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Attach extra data to grid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Attach extra data to grid. Those data will be posted back when grid does commit changes.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		grid.attachData("customerNumber","123");
+		grid.refresh();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 	
+
+ 
+ 		<method name="commit">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Commit changes, posting all commands to server to process.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Commit changes, posting all commands to server to process.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		grid.refresh();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+ 
+ 		<method name="getMasterTable">
+			<type>&lt;a href='../GridTableView/index.php'>GridTableView&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+				Return the master table object.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return the master table object.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var mastertable = grid.getMasterTable();
+		mastertable.goPage(2);
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+ 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

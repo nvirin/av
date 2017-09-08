@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolMaskedTextBox" lastupdate="01/01/2009">	
+	<title>KoolMaskedTextBox Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolMaskedTextBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolMaskedTextBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	echo $txtPhone->id; // output "txtPhone"
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+		<property name="Value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the value of textbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the value of textbox. This contain pure value that user input to masked textbox. The pure value will not contain any literal characters of the mask.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->Mask = "(###)###-####";
+	$txtPhone->Value = "2705761931";
+	..
+	
+	if($myform_manager->IsPostBack)
+	{
+		echo $txtPhone->Value;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="ValueWithLiterals">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the value of textbox with literal characters from mask.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the value of textbox with liternal characters from mask. For example: (270)576-7931. All the unfilled prompt will be replaced with space " ".
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->Mask = "(###)###-####";
+	if($myform_manager->IsPostBack)
+	{
+		echo $txtPhone->ValueWithLiterals;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="ValueWithPrompt">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the value of textbox. The unfilled characters will be replaced with prompt character.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the value of textbox. The unfilled characters will be replaced with prompt character. For example: 270###79##
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->Mask = "(###)###-####";
+	if($myform_manager->IsPostBack)
+	{
+		//Receive value from postback.
+		echo $txtPhone->ValueWithPrompt;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="ValueWithPromptAndLiterals">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the value of textbox. The value will contain literal characters from mask and the unfilled space will be replaced with prompt character.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the value of textbox. The value will contain literal characters from mask and the unfilled space will be replaced with prompt character. For example: (270)###-79##
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->Mask = "(###)###-####";
+	if($myform_manager->IsPostBack)
+	{
+		//Receive value from postback.
+		echo $txtPhone->ValueWithPromptAndLiterals;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Mask">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the mask for user input.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the mask for user input. Below are some special representing characters:
+		<ul>
+			<li><b>"#"</b>: A number required.</li>
+			<li><b>"a"</b>: Lower-case character (a-z).</li>
+			<li><b>"A"</b>: Upper-case chacter (A-Z)</li>
+			<li><b>"~"</b>: Special characters ( @#$%^ etc.)</li>			
+		</ul>
+		Also, you can define the number range and the option:
+		<ul>
+			<li> <b>&lt;0..255&gt;</b>: Enter number from 0 to 255 </li>
+			<li> <b>&lt;s|d|k&gt;</b>: Only entering the options in the list. In this case are "s","d" or "k"</li>
+		</ul>
+	
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->Mask = "(###)###-####";
+	if($myform_manager->IsPostBack)
+	{
+		//Receive value from postback.
+		echo $txtPhone->ValueWithPromptAndLiterals;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		
+		<property name="PromptChar">
+			<type>string</type>
+			<defaultvalue>"_"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the character that will display for unfilled space.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the character that will display for unfilled space.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->Mask = "(###)###-####";
+	$txtPhone->PromptChar = "?";// It will display: (270)576-????
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the textbox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the textbox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPhone = $myform->AddControl(new KoolMaskedTextBox("txtPhone");
+	$txtPhone->MaxLength = 10;
+	$txtPhone->Mode = "SingleLine";//"MultileLine";
+?>
+
+<div>
+	<?php echo $txtPhone->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

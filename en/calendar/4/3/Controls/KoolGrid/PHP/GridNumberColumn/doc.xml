@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridNumberColumn" lastupdate="08/20/2009">	
+	<title>GridNumberColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridNumberColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ <a href='../GridBoundColumn/index.php'>GridBoundColumn</a>
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ GridNumberColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="DecimalNumber">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the number of decimal points. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the number of decimal points. 
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridNumberColumn();
+	$col->DecimalNumber = 2; // Display 2.53
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="DecimalPoint">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the separator for the decimal point.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the separator for the decimal point.
+				]]>
+			</longdesc>
+			<defaultvalue>"."</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridNumberColumn();
+	$col->DecimalNumber = 2;
+	$col->DecimalPoint = "b"; // Display 2b53 instead of 2.53
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="ThousandSeperate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the thousands separator. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the thousands separator. 
+				]]>
+			</longdesc>
+			<defaultvalue>","</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridNumberColumn();
+	$col->DecimalNumber = 2;
+	$col->ThousandSeperate = "'"; // Display 1'000.53 instead of 1,000.53
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_treenode" lastupdate="01/01/2009">	
+	<title>TreeNode Class [Javascript]</title>
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	<methods>
+		<method name="getText">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get a node text content.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get a node text content.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Get content of "software" node
+        var content = kTree.getNode("software").getText();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="setText">
+			<type>string</type>
+			<parameters>
+			   <param type="string" optional="false">content</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get a node text content.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get a node text content.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Set content to "software" node
+        kTree.getNode("software").setText("My software");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="getImageSrc">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get src of image in a node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get src of image in a node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Get content of "software" node
+        var src = kTree.getNode("software").getImageSrc();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="setImageSrc">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">imageSrc</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set src to the image of a node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set src to the image of a node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Set content to "software" node
+        kTree.getNode("software").setImageSrc("images/folder.gif");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="getData">
+			<type>string</type>
+			<parameters>
+			   <param type="string" optional="false">key</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get node attached data.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get node attached data.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Get data of "software" node
+        var data = kTree.getNode("software").getData("name");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="addData">
+			<type>string</type>
+			<parameters>
+			   <param type="string" optional="false">key</param>
+			   <param type="object" optional="false">value</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add data to a node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add data to the node. Simply providing the key and the value, the data will be saved and retrieve later by getData function.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Get data of "software" node
+        var data = kTree.getNode("software").addData("name","John");
+		alert(kTree.getNode("software").getData("name"));
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		
+		
+		<method name="getTree">
+			<type>KoolTreeView</type>
+			<shortdesc>
+			   <![CDATA[
+		Get tree object of the node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get tree object of the node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Get the tree of the node
+        var tree = node.getTree();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="moveToAbove">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">NodeId</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Move the node to above a node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Move the node to above a node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Move "software" node above "hardware" node.
+        kTree.getNode("software").moveToAbove("hardware");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="moveToBelow">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">NodeId</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Move the node to above a node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Move the node to above a node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Move "software" node bellow "hardware" node.
+        kTree.getNode("software").moveToBelow("hardware");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="isSelected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Check whether the node is selected
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Check whether the node is selected
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        if (kTree.getNode("software").isSelected()==true)
+        {
+            alert("Software node is selected");
+        }
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="isExpanded">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Check whether the node is expanded
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Check whether the node is expanded
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        if (kTree.getNode("software").isExpanded()==true)
+        {
+            alert("Software node is expanded");
+        }
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="startEdit">
+			<type>void</type>
+			<parameters>
+			   <param type="string " optional="false">initContent</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Start editing the node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Start editing the node. If the initContent is specified, the node will be started edit with initContent string.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Make "software" node start editing.
+        kTree.getNode("software").startEdit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="endEdit">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">updated</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		End editing the node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		End editing the node, if the updated is true, content will be updated. If updated is false, update node content will be cancelled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //End editing action and update the node content.
+        kTree.getNode("software").endEdit(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="expand">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Expand a node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Expand a node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        // Expand the "software" node
+        kTree.getNode("software").expand();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="collapse">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Collapse a node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Collapse a node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Collapse the "software" node
+        kTree.getNode("software").collapse();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="select">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Select a node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Select a node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Select the "software" node
+        kTree.getNode("software").select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="unselect">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Unselect a node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Unselect a node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // unselect the "software" node
+        kTree.getNode("software").unselect();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="getParentId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return the parent id of a node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return the parent id of a node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testTreeView()
+    {
+        //Get the id of parent node of the "software" node
+        var parentid = kTree.getNode("software").getParenId();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="getChildIds">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Return array of child ids of a node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return array of child ids of a node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Return all child id under node "node1"
+        var childList = kTree.getNode("software").getChildIds();
+        for(var i=0;i<childList.length;i++)
+        {
+            alert(childList[i]);	
+        }
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="attachTo">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">NodeId</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Attach this node to another node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Attach this node to another node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        kTree.getNode("software").attachTo("computer");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="loadSubTree">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">url</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Load a subtree to node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Load a subtree to node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Dynamic load subtree for "software" node
+        kTree.getNode("software").loadSubTree("subtree.php");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="disableSelect">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">disable</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set whether a node is select-disable. Collapse
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether a node is select-disable. Collapse
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Disable the selection for "software" node
+        kTree.getNode("software").disableSelect(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.4.0 </supportversion>
+		</method> 
+		<method name="disableDrag">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">disable</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set whether a node is select-disable.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether a node is select-disable.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Disable the dragging for "software" node
+        kTree.getNode("software").disableDrag(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.4.0 </supportversion>
+		</method> 
+		<method name="disableDrop">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">disable</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set whether a node is select-disable.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether a node is select-disable.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Disable the dropping for "software" node
+        kTree.getNode("software").disableDrop(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.4.0 </supportversion>
+		</method>
+		<method name="disableEdit">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">disable</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set whether a node is select-disable.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether a node is select-disable.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Disable the editing for "software" node
+        kTree.getNode("software").disableEdit(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.4.0 </supportversion>
+		</method> 		
+		<method name="addChildNode">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">id</param>
+			   <param type="string " optional="false">text</param>
+			   <param type="string" optional="false"> imagesrc</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a new sub node to this node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a new sub node to this node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Add a new subnode "Window Vista" to current  "software" node
+        kTree.getNode("software").addChildNode("win","Window Vista","images/vista.gif");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.4.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

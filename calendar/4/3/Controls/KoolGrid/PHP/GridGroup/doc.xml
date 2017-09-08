@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridGroup" lastupdate="08/20/2009">	
+	<title>GridGroup Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridRow class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="GroupField">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Set the data field that will be grouped by.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the data field that will be grouped by.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$group = new GridGroup();
+	$group->GroupField = "reportsTo";
+	$group->AddInfoField("reportsTo","avg");
+	$group->HeaderText = "Supervisor";
+	$group->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddGroup($group);
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+		<property name="InfoTemplate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Set the information template that will be shown in the header of each group.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the information template that will be shown in the header of each group.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$group = new GridGroup();
+	$group->GroupField = "reportsTo";
+	$group->AddInfoField("reportsTo","avg");
+	$group->HeaderText = "Supervisor";
+	$group->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddGroup($group);
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+		<property name="HeaderText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Set the header text of group that shown in group panel.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the header text of group that shown in group panel.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$group = new GridGroup();
+	$group->GroupField = "reportsTo";
+	$group->AddInfoField("reportsTo","avg");
+	$group->HeaderText = "Supervisor";
+	$group->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddGroup($group);
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+		<property name="Expand">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Set whether the group is expanded initially.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set whether the group is expanded initially.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$group = new GridGroup();
+	$group->Expand = false; //Collapse
+	$group->GroupField = "reportsTo";
+	$group->AddInfoField("reportsTo","avg");
+	$group->HeaderText = "Supervisor";
+
+	$group->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddGroup($group);
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+		<property name="Sort">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Set the sorting direction.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the sorting direction.
+				]]>
+			</longdesc>
+			<defaultvalue>1</defaultvalue>
+			<allowedvalues>
+				<value desc="Sort in accending order">1</value>
+				<value desc="Sort in descending order">-1</value>
+			</allowedvalues>
+			<samplecode>
+<![CDATA[
+<?php				
+	$group = new GridGroup();
+	$group->Sort = -1; //Descending
+	$group->GroupField = "reportsTo";
+	$group->AddInfoField("reportsTo","avg");
+	$group->HeaderText = "Supervisor";
+	$group->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddGroup($group);
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+		
+
+	</properties>
+	<methods>
+		<method name="AddInfoField">
+			<type>array</type>		
+			<parameters>
+				<param type="string" optional="false">$info_field</param>
+				<param type="string" optional="true">$aggregate</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Add the data fields whose values will bed filled in InfoTemplate.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Add the data fields whose values will bed filled in InfoTemplate. The value of <b>$aggregate</b> can be "min"|"max"|"first"|"last"|"sum"|"count"|"avg"
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$group = new GridGroup();
+	$group->GroupField = "reportsTo";
+	$group->AddInfoField("reportsTo","avg");
+	$group->HeaderText = "Supervisor";
+	$group->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddGroup($group);
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

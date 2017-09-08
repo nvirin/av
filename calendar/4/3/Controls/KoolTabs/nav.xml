@@ -1,0 +1,25 @@
+<navigation id="KoolTabs">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="php_kooltabs" 
+					text="KoolTabs"
+					link="PHP/KoolTabs_Class/index.php"/>
+					
+			<link 	id="php_kooltabsitem" 
+					text="KoolTabsItem"
+					link="PHP/KoolTabsItem_Class/index.php"/>
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_kooltabs" 
+					text="KoolTabs"
+					link="Javascript/KoolTabs_Class/index.php"/>
+					
+			<link 	id="javascript_kooltabsitem" 
+					text="KoolTabsItem"
+					link="Javascript/KoolTabsItem_Class/index.php"/>			
+		</category>
+
+	</category>
+</navigation>

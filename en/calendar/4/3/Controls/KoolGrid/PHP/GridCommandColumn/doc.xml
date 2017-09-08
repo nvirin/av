@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridCommandColumn" lastupdate="08/20/2009">	
+	<title>GridCommandColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridCommandColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridCommandColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="CommandText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text on button command.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text on button command.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridCommandColumn();
+	$col->CommandText = "Show";
+	$col->OnClick = "alert('hello world')";
+	$col->CssClass = "button_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		<property name="OnClick">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set javascript that will excute when command button is click.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set javascript that will excute when command button is click.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridCommandColumn();
+	$col->CommandText = "Show";
+	$col->OnClick = "alert('hello world')";
+	$col->CssClass = "button_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+		<property name="CssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the css class name for command button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the css class name for command button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridCommandColumn();
+	$col->CommandText = "Show";
+	$col->OnClick = "alert('hello world')";
+	$col->CssClass = "button_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+
+	</properties>
+	<methods>
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

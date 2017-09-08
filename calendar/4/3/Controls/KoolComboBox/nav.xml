@@ -1,0 +1,26 @@
+<navigation id="KoolComboBox">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="php_koolcombobox_class" 
+					text="KoolCombobox Class"
+					link="PHP/KoolCombobox_Class/index.php"/>
+					
+			<link 	id="php_koolcomboboxitem_class" 
+					text="KoolComboboxItem Class"
+					link="PHP/KoolComboboxItem_Class/index.php"/>
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_koolcombobox_class" 
+					text="KoolCombobox Class"
+					link="Javascript/KoolCombobox_Class/index.php"/>
+					
+			<link 	id="javascript_koolcomboboxitem_class" 
+					text="KoolComboboxItem Class"
+					link="Javascript/KoolComboboxItem_Class/index.php"/>
+			
+		</category>
+
+	</category>
+</navigation>

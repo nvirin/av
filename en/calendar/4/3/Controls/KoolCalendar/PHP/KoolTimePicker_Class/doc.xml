@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolTimePicker_Class" lastupdate="01/01/2009">	
+	<title>KoolTimePicker Class [PHP]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolTimePicker
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolTimePicker. This id will be use as variable name of KoolTimePicker at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$timepicker->id="cal";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolTimePicker
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolTimePicker
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$timepicker->styleFolder="KoolControls/KoolCalendar/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolCalendar script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolCalendar script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$timepicker = new KoolTimePicker("timepicker");
+	$timepicker->scriptFolder = "KoolControls/KoolCalendar";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="Value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the value of KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the value of KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	//Echo the date entered by user.
+	echo($timepicker->Value);
+
+	//Set the date.
+	$timepicker->Value = "15/12/2009 00:00:00";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="TimeFormat">
+			<type>string</type>
+			<defaultvalue>"g:i A"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the time format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the time format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->TimeFormat="g:i A";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="OffsetLeft">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set offset left of panel containing calendar and timeview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set offset left of panel containing calendar and timeview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->OffsetLeft=10;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="OffsetTop">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set offset top of panel containing calendar and timeview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set offset top of panel containing calendar and timeview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->OffsetTop=10;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="CssStyles">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the css styles for input textbox of KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the css styles for input textbox of KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->CssStyles["font-size"]="12px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="TimeViewSettings">
+			<type>&lt;a href='../TimeViewSettings/index.php'>TimeViewSettings&lt;/a></type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the settings of timeview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the settings of timeview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->TimeViewSettings->HeaderText="Time Picker";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		
+		<property name="Width">
+			<type>string</type>
+			<defaultvalue>"160px"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the width of KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the width of KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->Width="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		<property name="ClientEvents">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the client-side event handle.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the client-side event handle.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timepicker->ClientEvents["OnSelect"]="Handle_OnSelect";
+...
+?>
+
+<script type="text/javascript">
+function Handle_OnSelect(sender,arg)
+{
+	alert(datetimepicker.get_value());
+}
+</script>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+		<method name="Init">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Initiate datetime picker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Initiate datetime picker. This function should be called before datetime picker's Render() function.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$timepicker = new KoolTimePicker("cal");
+	...
+	$timepicker->Init();
+	...
+	echo $timepicker->Render(); 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolTimePicker
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolTimePicker
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$timepicker->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $timepicker->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolTimePicker
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolTimePicker
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $timepicker->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderCalendar">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolTimePicker body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolTimePicker body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $timepicker->RenderDateTimePicker();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $timepicker->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

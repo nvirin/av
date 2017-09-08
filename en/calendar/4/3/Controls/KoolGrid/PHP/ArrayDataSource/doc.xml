@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_ArrayDataSource" lastupdate="08/20/2009">	
+	<title>ArrayDataSource Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) ArrayDataSource class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+	<methods>
+		<method name="__construct">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+					Init ArrayDataSource with an associated array.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Init ArrayDataSource with an associated array.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$mydata = array(
+				array("name"=>"John","age"=>54),
+				array("name"=>"Mary","age"=>19),
+				array("name"=>"Micheal","age"=>33)
+			);
+	$array_ds = new ArrayDataSource($mydata);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

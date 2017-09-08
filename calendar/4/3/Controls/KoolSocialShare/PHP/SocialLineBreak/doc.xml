@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_SocialLineBreak" lastupdate="09/16/2009">	
+	<title>SocialLineBreak Class [PHP]</title>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin, share on google++</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[ 
+Add the SocialLineBreak to have the break line in social buttons flow.
+		]]>		
+	</description>
+
+	<properties>
+
+	</properties>
+	
+	<methods>
+		<method name="__construct">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+
+	$socialshare->Add(new SocialButton("Twitter"));
+	$socialshare->Add(new SocialButton("StumbleOn"));
+	
+	$socialshare->Add(new SocialLineBreak());
+	
+	$socialshare->Add(new SocialButton("Facebook"));	
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

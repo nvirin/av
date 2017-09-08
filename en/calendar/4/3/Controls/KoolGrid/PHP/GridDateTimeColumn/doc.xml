@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridDateTimeColumn" lastupdate="08/20/2009">	
+	<title>GridDateTimeColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridDateTimeColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridDateTimeColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="FormatString">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set format string of datetime.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set format string of datetime.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridDateTimeColumn();
+	$col->DataField = "orderDate";
+	$col->FormatString = "M d, Y";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+
+		<property name="Picker">
+			<type>KoolDateTimePicker, KoolDatePicker, KoolTimePicker</type>
+			<shortdesc>
+				<![CDATA[
+					Set the datetime picker for column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the datetime picker for column. When column is in editing mode, the datetime picker will show to facilitate user in picking datetime.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$column->Picker = new KoolDatePicker();
+	$column->Picker->scriptFolder = "KoolControls/KoolCalendar";
+	$column->Picker->styleFolder = "default";	
+	$column->Picker->DateFormat = "M d, Y";
+	$grid->MasterTable->AddColumn($column);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+
+	</properties>
+	<methods>
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

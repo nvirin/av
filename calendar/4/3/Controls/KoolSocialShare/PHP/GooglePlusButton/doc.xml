@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GooglePlusButton" lastupdate="09/16/2009">	
+	<title>GooglePlusButton Class [PHP]</title>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin, share on google++</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+
+
+
+
+
+		<property name="Size">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set size of google+ button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set size of google+ button.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="15px">"small"</value>
+			   <value desc="20px">"medium"</value>
+			   <value desc="24px">"standard"</value>
+			   <value desc="60px">"tall"</value>
+			</allowedvalues>			
+			
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new GooglePlusButton();
+	$button->Size = "medium";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+		<property name="Annotation">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set annotation of google+ button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set annotation of google+ button.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Google+ button with number of people like.">"inline"</value>
+			   <value desc="Compact Google+ button with number of people like">"bubble"</value>
+			   <value desc="Google+ button only">"none"</value>
+			</allowedvalues>			
+			
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new GooglePlusButton();
+	$button->Annotation = "bubble";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the width of google+ button
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the width of google+ button
+			   ]]>
+			</longdesc>
+			
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new GooglePlusButton();
+	$button->WIdth = "120px";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+	</properties>
+	
+	<methods>
+		<method name="__construct">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+	
+	$socialshare->Add(new GooglePlusButton());
+	
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

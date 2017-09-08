@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_ClientSide_Events" lastupdate="08/20/2009">	
+	<title>Client-side Events</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+
+
+		
+		
+		<property name="OnBeforeReorder">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is reodered.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is reodered. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeReorder"] = "Handle_OnBeforeReorder";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeReorder(item,args)
+	{
+		//args["From"]: The position that the item is moved from.
+		//args["To"]: The position that the item is moved to.		
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnReorder">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is reordered.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is reordered.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnReorder"] = "Handle_OnReorder";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnReorder(item,args)
+	{
+	
+		//args["From"]: The position that the item is moved from.
+		//args["To"]: The position that the item is moved to.			
+	
+		alert("Item is reordered.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeTransfer">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is transferred.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is transferred. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeTransfer"] = "Handle_OnBeforeTransfer";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeTransfer(listbox,args)
+	{
+		//args["Destination"]: The destination listbox.
+		//args["Item"]: The item that will be transfered.
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnTransfer">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is transferred.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is transferred.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnTransfer"] = "Handle_OnTransfer";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnTransfer(listbox,args)
+	{
+	
+		//args["Destination"]: The destination listbox.
+		//args["Data"]: The data of item that was transferred.		
+	
+		alert("Item is transferred.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnBeforeDelete">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is deleted. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeDelete"] = "Handle_OnBeforeDelete";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeDelete(item,args)
+	{
+		//args["Data"]: Data of deleted item.	
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnDelete">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is deleted.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnDelete"] = "Handle_OnDelete";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnDelete(item,args)
+	{
+	
+		//args["Data"]: Data of deleted item.	
+	
+		alert("Item is deleted.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnBeforeCheck">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is checked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is checked. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeCheck"] = "Handle_OnBeforeCheck";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeCheck(item,args)
+	{
+		//args["Item"]: The checked item.	
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnCheck">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is checked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is checked.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnCheck"] = "Handle_OnCheck";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnCheck(item,args)
+	{
+	
+		//args["Item"]: The checked item.
+
+		alert("Item is checked.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnBeforeUnCheck">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is un-checked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is un-checked. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeUnCheck"] = "Handle_OnBeforeUnCheck";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeUnCheck(item,args)
+	{
+		//args["Item"]: The un-checked item.	
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnUnCheck">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is un-checked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is un-checked.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnUnCheck"] = "Handle_OnUnCheck";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnUnCheck(item,args)
+	{
+	
+		//args["Item"]: The un-checked item.	
+	
+		alert("Item is un-checked.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnBeforeSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is selected. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeSelect"] = "Handle_OnBeforeSelect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeSelect(item,args)
+	{
+		//args["Item"]: The selected item.
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnSelect"] = "Handle_OnSelect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnSelect(item,args)
+	{
+	
+		//args["Item"]: The selected item.
+		alert("Item is selected.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnBeforeUnSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before item is un-selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before item is un-selected. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnBeforeUnSelect"] = "Handle_OnBeforeUnSelect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeReorder(item,args)
+	{
+		//args["Item"]: The un-selected item.	
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnUnSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur after an item is un-selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur after an item is un-selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnUnSelect"] = "Handle_OnUnSelect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnUnSelect(item,args)
+	{
+	
+		//args["Item"]: The un-selected item.		
+	
+		alert("Item is un-selected .");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+	</properties>	
+
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

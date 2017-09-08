@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolContextMenu_Class" lastupdate="01/01/2009">	
+	<title>KoolContextMenu Class [Javascript]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../PHP_KoolMenu_Class/index.php'>KoolMenu</a>
+<br />
+&nbsp;|__ KoolContextMenu
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="targetId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the latest id of object that contenxtmenu attached with.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the latest id of object that contenxtmenu attached with. Note: It may return null to indicate that contextmenu has not been opened from any targeted objects.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        alert(kcm.targetId);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

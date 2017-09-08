@@ -1,0 +1,194 @@
+<navigation id="KoolGrid">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="PHP_KoolGrid" 
+					text="KoolGrid"
+					link="PHP/KoolGrid/index.php"/>
+			<link 	id="PHP_GridTableView" 
+					text="GridTableView"
+					link="PHP/GridTableView/index.php"/>
+			<link 	id="PHP_GridRow" 
+					text="GridRow"
+					link="PHP/GridRow/index.php"/>
+
+			<link 	id="PHP_StatusBar" 
+					text="StatusBar"
+					link="PHP/StatusBar/index.php"/>
+			<link 	id="PHP_FunctionPanel" 
+					text="FunctionPanel"
+					link="PHP/FunctionPanel/index.php"/>
+
+			<link 	id="PHP_Localization" 
+					text="Localization"
+					link="PHP/Localization/index.php"/>
+
+			<link 	id="PHP_ClientSettings" 
+					text="ClientSettings"
+					link="PHP/ClientSettings/index.php"/>
+
+			<link 	id="PHP_EditSettings" 
+					text="EditSettings"
+					link="PHP/EditSettings/index.php"/>
+			<link 	id="PHP_InsertSettings" 
+					text="InsertSettings"
+					link="PHP/InsertSettings/index.php"/>
+
+			<link 	id="PHP_ExportSettings" 
+					text="ExportSettings"
+					link="PHP/ExportSettings/index.php"/>
+
+
+			<link 	id="PHP_GridTemplate" 
+					text="GridTemplate"
+					link="PHP/GridTemplate/index.php"/>
+
+			<link 	id="PHP_GridEventHandler" 
+					text="GridEventHandler"
+					link="PHP/GridEventHandler/index.php"/>
+
+			<link 	id="PHP_GroupPanel" 
+					text="GroupPanel"
+					link="PHP/GroupPanel/index.php"/>
+
+			<link 	id="PHP_GridGroup" 
+					text="GridGroup"
+					link="PHP/GridGroup/index.php"/>
+
+
+			<link 	id="PHP_Style" 
+					text="Style"
+					link="PHP/Style/index.php"/>
+
+
+			<category id="PHP_Columns" text="Columns">
+				<link 	id="PHP_GridColumn" 
+						text="GridColumn"
+						link="PHP/GridColumn/index.php"/>
+				<link 	id="PHP_GridBoundColumn" 
+						text="GridBoundColumn"
+						link="PHP/GridBoundColumn/index.php"/>
+				<link 	id="PHP_GridNumberColumn" 
+						text="GridNumberColumn"
+						link="PHP/GridNumberColumn/index.php"/>
+				<link 	id="PHP_GridCurrencyColumn" 
+						text="GridCurrencyColumn"
+						link="PHP/GridCurrencyColumn/index.php"/>
+				<link 	id="PHP_GridCalculatedColumn" 
+						text="GridCalculatedColumn"
+						link="PHP/GridCalculatedColumn/index.php"/>
+
+				<link 	id="PHP_GridTextAreaColumn" 
+						text="GridTextAreaColumn"
+						link="PHP/GridTextAreaColumn/index.php"/>
+				<link 	id="PHP_GridDropDownColumn" 
+						text="GridDropDownColumn"
+						link="PHP/GridDropDownColumn/index.php"/>
+				<link 	id="PHP_GridRowSelectColumn" 
+						text="GridRowSelectColumn"
+						link="PHP/GridRowSelectColumn/index.php"/>
+				<link 	id="PHP_GridBooleanColumn" 
+						text="GridBooleanColumn"
+						link="PHP/GridBooleanColumn/index.php"/>
+				<link 	id="PHP_GridImageColumn" 
+						text="GridImageColumn"
+						link="PHP/GridImageColumn/index.php"/>
+				<link 	id="PHP_GridCustomColumn" 
+						text="GridCustomColumn"
+						link="PHP/GridCustomColumn/index.php"/>
+				<link 	id="PHP_GridCommandColumn" 
+						text="GridCommandColumn"
+						link="PHP/GridCommandColumn/index.php"/>
+				<link 	id="PHP_GridEditDeleteColumn" 
+						text="GridEditDeleteColumn"
+						link="PHP/GridEditDeleteColumn/index.php"/>
+				<link 	id="PHP_GridExpandDetailColumn" 
+						text="GridExpandDetailColumn"
+						link="PHP/GridExpandDetailColumn/index.php"/>
+				<link 	id="PHP_GridDateTimeColumn" 
+						text="GridDateTimeColumn"
+						link="PHP/GridDateTimeColumn/index.php"/>				
+			</category>
+					
+			<category id="PHP_Validators" text="Validators">
+				<link 	id="PHP_GridValidator" 
+						text="GridValidator"
+						link="PHP/GridValidator/index.php"/>
+				<link 	id="PHP_RequiredFieldValidator" 
+						text="RequiredFieldValidator"
+						link="PHP/RequiredFieldValidator/index.php"/>
+				<link 	id="PHP_RangeValidator" 
+						text="RangeValidator"
+						link="PHP/RangeValidator/index.php"/>
+				<link 	id="PHP_RegularExpressionValidator" 
+						text="RegularExpressionValidator"
+						link="PHP/RegularExpressionValidator/index.php"/>
+				<link 	id="PHP_CustomValidator" 
+						text="CustomValidator"
+						link="PHP/CustomValidator/index.php"/>
+			</category>	
+			
+			<category id="PHP_Pagers" text="Pagers">
+				<link 	id="PHP_GridPager" 
+						text="GridPager"
+						link="PHP/GridPager/index.php"/>
+				<link 	id="PHP_GridPrevNextPager" 
+						text="GridPrevNextPager"
+						link="PHP/GridPrevNextPager/index.php"/>
+				<link 	id="PHP_GridNumericPager" 
+						text="GridNumericPager"
+						link="PHP/GridNumericPager/index.php"/>
+				<link 	id="PHP_GridPrevNextAndNumericPager" 
+						text="GridPrevNextAndNumericPager"
+						link="PHP/GridPrevNextAndNumericPager/index.php"/>
+				<link 	id="PHP_GridManualPager" 
+						text="GridManualPager"
+						link="PHP/GridManualPager/index.php"/>
+				<link 	id="PHP_GridCustomPager" 
+						text="GridCustomPager"
+						link="PHP/GridCustomPager/index.php"/>
+			</category>
+			
+			<category id="PHP_DataSources" text="DataSources">
+				<link 	id="PHP_MySQLDataSource" 
+						text="MySQLDataSource"
+						link="PHP/MySQLDataSource/index.php"/>
+				<link 	id="PHP_ArrayDataSource" 
+						text="ArrayDataSource"
+						link="PHP/ArrayDataSource/index.php"/>
+			</category>	
+
+					
+		</category>
+		
+		
+		
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_koolgrid_class" 
+					text="KoolGrid"
+					link="Javascript/KoolGrid/index.php"/>
+			<link 	id="javascript_gridtableview_class" 
+					text="GridTableView"
+					link="Javascript/GridTableView/index.php"/>
+			<link 	id="javascript_gridcolumn_class" 
+					text="GridColumn"
+					link="Javascript/GridColumn/index.php"/>
+			<link 	id="javascript_gridrow_class" 
+					text="GridRow"
+					link="Javascript/GridRow/index.php"/>
+
+			<link 	id="javascript_gridcell_class" 
+					text="GridCell"
+					link="Javascript/GridCell/index.php"/>
+
+			<link 	id="javascript_builtin_functions" 
+					text="Built-in Functions"
+					link="Javascript/Builtin_Functions/index.php"/>
+			<link 	id="javascript_clientside_events" 
+					text="Client-side Events"
+					link="Javascript/ClientSide_Events/index.php"/>
+		</category>
+
+	</category>
+</navigation>

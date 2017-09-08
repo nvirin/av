@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolRadioButton" lastupdate="01/01/2009">	
+	<title>KoolRadioButton Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of radio button object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of radio button object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$radioYes = $myform_mananger->AddControl(new KoolRadioButton("radioYes"));
+	echo $radioYes->id;// The output is "radioYes".
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the text that goes with radio button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the text that goes with radio button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$radioYes = $myform_mananger->AddControl(new KoolRadioButton("radioYes"));
+	$radioYes->Text = "Yes";
+	$radioYes->Name = "agree_to_term";
+	
+	$radioNo = $myform_mananger->AddControl(new KoolRadioButton("radioNo"));
+	$radioYes->Text = "No";
+	$radioYes->Name = "agree_to_term";
+
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Name">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set name for group of radio buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set name for group of radio buttons.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$radioYes = $myform_mananger->AddControl(new KoolRadioButton("radioYes"));
+	$radioYes->Text = "Yes";
+	$radioYes->Name = "agree_to_term";
+	
+	$radioNo = $myform_mananger->AddControl(new KoolRadioButton("radioNo"));
+	$radioYes->Text = "No";
+	$radioYes->Name = "agree_to_term";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		
+		<property name="Selected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the value of radio button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the value of radio button. This variable will reflect the selection of radio button.
+			   ]]>
+			</longdesc>
+			<defaultvalue>false</defaultvalue>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$radioYes = $myform_mananger->AddControl(new KoolRadioButton("radioYes"));
+	$radioYes->Text = "Yes";
+	$radioYes->Selected = false;
+	
+	
+	
+	$myform_manager->Init();	
+	if($myform_manager->IsPostBack)
+	{
+		if($radioYes->Selected) echo "You selected Yes";
+	}
+	
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		 
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the radio button
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the radio button
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$radioYes = $myform_mananger->AddControl(new KoolRadioButton("radioYes"));
+	$radioYes->Text = "I agree with the term and condition.";
+	$radioYes->Selected = false;
+?>
+...
+<div>
+	<?php echo 	$radioYes->Render(); ?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

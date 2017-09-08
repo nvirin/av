@@ -1,0 +1,225 @@
+<?php xml version="1.0" encoding="utf-8"?>
+<documentation id="php_treenode" lastupdate="01/01/2009">	
+	<title>TreeNode Class [PHP]</title>
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of the node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set id of the node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$node = $kTree->Add("root","software","My software");
+	echo $node->id;//Write out the node id: "software" 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set content of node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set content of node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$node = $kTree->Add("root","software","My software");
+	echo $node->text;//Print out "My software"
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="image">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set image src of node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set image src of node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$node = $kTree->Add("root","software","My software"); 
+	$node->image="folder.gif";//Set image src for $node 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="expand">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether node is expanded or collapsed
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether node is expanded or collapsed
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$node = $kTree->Add("root","software","My software");
+	$node->expand=true;//Make the node open. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="subTreeUrl">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the url for loading subtree.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the url for loading subtree.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$software = $ktree->Add("category","software","Software"); 
+	$software->subTreeUrl = "software_subtree.php"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="visible">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether node is visible (Note: For root node only)
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether node is visible (Note: For root node only)
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$root = $kTree->getRootNode(); 
+	//Not show the root node. 
+	$root->visible = false; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="showPlusMinus">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether node show plusminus button (Note: For root node only)
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether node show plusminus button (Note: For root node only)
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 	
+	$root = $kTree->getRootNode(); //Not show the plus/minus button in root node.
+	$root->showPlusMinus = false; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		
+	</properties>
+	
+	<methods>
+		<method name="addChild">
+			<type>void</type>
+			<parameters>
+			   <param type="TreeNode " optional="false">$node</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a new childnode to the node.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a new childnode to the node.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	//Add a new childnode with i="newnode" and text="New Node" to $node/
+	$node->addChild(new TreeNode("newnode","New Node")); 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+		<method name="addData">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">$key</param>
+			   <param type="string " optional="false">$value</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add hidden data to the node which can be retrived at client-side.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add hidden data to the node which can be retrived at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	//Add hidden description data to node 
+	$node->addData("description","This is new node");
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

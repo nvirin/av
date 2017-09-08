@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_ListBoxEventHandler" lastupdate="08/20/2009">	
+	<title>ListBoxEventHandle Class [PHP]</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+	<properties>
+	</properties>
+	<methods>
+
+		 <method name="OnBeforeReorder">
+			<type>bool</type>
+			<parameters>
+				<param type="ListBox" optional="false">$listbox</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before an item is reordered.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Occurring before an item is reordered.
+ 				You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	
+	class MyListBoxEventHandler extends ListBoxEventHandler
+	{
+		function OnBeforeReorder($listbox,$args)
+		{
+			//$listbox: The listbox object
+			//$args["From"]: The position that item is from.
+			//$args["To"]: The position that item is moved to.
+			
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnReorder">
+			<type>bool</type>
+			<parameters>
+				<param type="ListBox" optional="false">$listbox</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after an item is reordered.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Occurring after an item is reordered.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	
+	class MyListBoxEventHandler extends ListBoxEventHandler
+	{
+		function OnReorder($listbox,$args)
+		{
+			//$listbox: The listbox object
+			//$args["From"]: The position that item is from.
+			//$args["To"]: The position that item is moved to.
+			
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+		 <method name="OnBeforeTransferIn">
+			<type>bool</type>
+			<parameters>
+				<param type="ListBox" optional="false">$listbox</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before an item is transferred in.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Occurring before an item is transferred in.
+ 				You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	
+	class MyListBoxEventHandler extends ListBoxEventHandler
+	{
+		function OnBeforeTransferIn($listbox,$args)
+		{
+			//$listbox: The listbox object
+			//$args["ItemData"]: Contain the data of item.
+			
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnTransferIn">
+			<type>bool</type>
+			<parameters>
+				<param type="ListBox" optional="false">$listbox</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after an item is transferred in.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Occurring after an item is transferred in.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	
+	class MyListBoxEventHandler extends ListBoxEventHandler
+	{
+		function OnTransferIn($listbox,$args)
+		{
+			//$listbox: The listbox object
+			//$args["ItemData"]: The position that item is from.
+			
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		 <method name="OnBeforeDelete">
+			<type>bool</type>
+			<parameters>
+				<param type="ListBox" optional="false">$listbox</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before an item is deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Occurring before an item is deleted.
+ 				You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	
+	class MyListBoxEventHandler extends ListBoxEventHandler
+	{
+		function OnBeforeDelete($listbox,$args)
+		{
+			//$listbox: The listbox object
+			//$args["Position"]: The position of deleted item.
+			
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnDelete">
+			<type>bool</type>
+			<parameters>
+				<param type="ListBox" optional="false">$listbox</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after an item is deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Occurring after an item is deleted.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	
+	class MyListBoxEventHandler extends ListBoxEventHandler
+	{
+		function OnDelete($listbox,$args)
+		{
+			//$listbox: The listbox object
+			//$args["Position"]: The position of deleted item.
+			
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+
+		
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

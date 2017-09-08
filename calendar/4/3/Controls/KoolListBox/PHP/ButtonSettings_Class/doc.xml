@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_ButtonSettings_Class" lastupdate="01/01/2009">	
+	<title>ButtonSettings Class [PHP]</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ShowDelete">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether delete button is shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether delete button is shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->ShowDelete = true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ShowReorder">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether move up and move down buttons are shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether move up and move down buttons are shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->ShowReorder = true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowTransfer">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether transfer in and transfer out button are shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether transfer in and transfer out button are shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->ShowDelete = true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowTransferAll">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether tranfer all buttons are shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether tranfer all buttons are shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->ShowTransferAll = true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+
+		<property name="Position">
+			<type>string</type>
+			<defaultvalue>Right</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Set the position of function buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Set the position of function buttons. There are four positions to set: top,right,left,bottom.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Buttons are shown on top.">"Top"</value>
+			   <value desc="Buttons are shown on right.">"Right"</value>
+			   <value desc="Buttons are shown at bottom.">"Bottom"</value>
+			   <value desc="Buttons are shown on left.">"Left"</value>
+			</allowedvalues>			
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->Position = "Left";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="HorizontalAlign">
+			<type>string</type>
+			<defaultvalue>"Left"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Set the horizontal align.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Set the horizontal align. This alignment will take effect when button is on top and bottom position.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Buttons are shown on top.">"Left"</value>
+			   <value desc="Buttons are shown on right.">"Right"</value>
+			   <value desc="Buttons are shown at bottom.">"Center"</value>
+			</allowedvalues>			
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->Position = "Top";
+	$listbox->ButtonSettings->HorizontalAlign = "Center";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="VerticalAlign">
+			<type>string</type>
+			<defaultvalue>Top</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Set the vertical align.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Set the vertical align. This alignment will take effect when button is on left and right position.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Buttons are shown on top.">"Top"</value>
+			   <value desc="Buttons are shown on right.">"Bottom"</value>
+			   <value desc="Buttons are shown at bottom.">"Middle"</value>
+			</allowedvalues>			
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ButtonSettings->Position = "Left";
+	$listbox->ButtonSettings->HorizontalAlign = "Middle";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

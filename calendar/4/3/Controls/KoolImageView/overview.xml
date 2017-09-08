@@ -1,0 +1,51 @@
+<control>
+	<name>KoolImageView - PHP Image View</name>
+	<metakeywords>php image view, php image zoom, zoom image script</metakeywords>	 
+	<metadescription>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</metadescription>
+	<description>
+		<![CDATA[
+	KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE! 
+	<br/>
+	<b>Key features:</b>
+	<div style='padding-left:25px;'>
+	  <li>Semantic design with minimal html generation</li>
+	  <li>Many templates to choose, all can be customized</li>
+	  <li>Equipped with two effects: Zooming and Fading</li>
+	  <li>Have Dimmed Background option</li>
+
+	  <li>The most simple and easy-to-use control</li>
+	</div>
+
+	]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolImageView component to your page
+    require "koolimageview/koolimageview.php";
+
+    //Step 2: Create imageview object.
+    $kiv = new KoolImageView("kiv");
+
+    //Step 3: Set small image url and big image url for ImageView.
+    $kiv->imageUrl = "images/small_image.jpg";
+    $kiv->bigImageUrl = "images/big_image.jpg";
+
+    //Step 4: Set properties for imageview
+    $kiv->styleFolder = "koolimageview/styles/simple";
+    $kiv->effect = "zooming";
+    $kiv->backgroundOpacity = 40;
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render koolimageview -->
+        <?php echo $kiv->Render();?>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

@@ -1,0 +1,7 @@
+<navigation id="KoolChart">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<link id="codegenerator" text="Code Generator" link="http://codegen.koolphp.net/chart/" />		
+	</category>
+</navigation>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GroupSettings_Class" lastupdate="01/01/2009">	
+	<title>GroupSettings Class [PHP]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="OffsetX">
+			<type>int</type>
+			<defaultvalue>0</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the offset left of child menu's panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the offset left of child menu's panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$_item_open = $km->GetItem("open");
+	$_item_open->GroupSettings->OffsetX = 20;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="OffsetY">
+			<type>int</type>
+			<defaultvalue>0</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the offset top of child menu's panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the offset top of child menu's panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$_item_open = $km->GetItem("open");
+	$_item_open->GroupSettings->OffsetY=20; // 20px
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="Flow">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the flow direction of menu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the flow direction of menu.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Flow horizontally.">"Horizontal"</value>
+			   <value desc="Flow vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$_item_open = $km->GetItem("open");
+	$_item_open->GroupSettings->Flow="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ExpandDirection">
+			<type>string</type>
+			<defaultvalue>"Auto"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set expand direction of menu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set expand direction of menu.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Auto expansion.">"Auto"</value>
+			   <value desc="Left expansion.">"Left"</value>
+			   <value desc="Right expansion.">"Right"</value>
+			   <value desc="Up expansion.">"Up"</value>
+			   <value desc="Down expansion.">"Down"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$_item_open = $km->GetItem("open");
+	$_item_open->GroupSettings->ExpandDirection="Up";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set width for child menu panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set width for child menu panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$_item_open = $km->GetItem("open");
+	$_item_open->GroupSettings->Width="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set height for child menu panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set height for child menu panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$_item_open = $km->GetItem("open");
+	$_item_open->GroupSettings->Height="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

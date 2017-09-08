@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolCustomValidator" lastupdate="01/01/2009">	
+	<title>KoolCustomValidator Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolCustomValidator.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolCustomValidator.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var validator = myform_manager.get_control("_custom_validator_id");
+		alert(validator.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="show_message">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_show</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Show or hide the validation message.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Show or hide the validation message.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var validator = myform_manager.get_control("_custom_validator_id");
+		validator.show_message(true);//Show the message.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+		<method name="validate">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the targeted input is valid.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the targeted input is valid.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var validator = myform_manager.get_control("_custom_validator_id");
+		var is_valid = validator.validate();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method>
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

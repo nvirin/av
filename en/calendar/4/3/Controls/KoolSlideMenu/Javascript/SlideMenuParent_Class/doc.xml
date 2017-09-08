@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_slidemenuparent" lastupdate="01/01/2009">	
+	<title>SlideMenuParent Class [Javascript]</title>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<methods>
+		<method name="expand">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Expand the parent
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Expand the parent
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Expand the parent with id="parent"
+        ksm.getItem("parent").expand();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="collapse">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Collapse the parent
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Collapse the parent
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Collapse the parent with id="parent"
+        ksm.getItem("parent").collapse();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="isExpanded">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the parent is expanded
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the parent is expanded
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        //Collapse the parent if it is expanded
+		if (ksm.getItem("parent").isExpanded())
+        {
+            ksm.getItem("parent").collapse();
+        }
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getSlideMenu">
+			<type>KoolSlideMenu</type>
+			<shortdesc>
+			   <![CDATA[
+		Get object of slidemenu which the parent belongs to Show example
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get object of slidemenu which the parent belongs to Show example
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Get slidemenu object of a parent with id="parent", then collapse all the slidemenu
+        var _parent = new SlideMenuParent("parent");
+        _parent.getSlideMenu().collapseAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

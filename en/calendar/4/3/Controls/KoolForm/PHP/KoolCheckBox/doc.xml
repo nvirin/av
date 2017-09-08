@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolCheckBox" lastupdate="01/01/2009">	
+	<title>KoolCheckBox Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of checkbox object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of checkbox object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$chkAgree = $myform_mananger->AddControl(new KoolCheckBox("chkAgree"));
+	echo $chkAgree->id;// The output is "chkAgree".
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the text that goes with checkbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the text that goes with checkbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$chkAgree = $myform_mananger->AddControl(new KoolCheckBox("chkAgree"));
+	$chkAgree->Text = "I agree with the term and condition.";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Selected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the value of checkbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the value of checkbox. This variable will reflect the selection of checkbox.
+			   ]]>
+			</longdesc>
+			<defaultvalue>false</defaultvalue>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$chkAgree = $myform_mananger->AddControl(new KoolCheckBox("chkAgree"));
+	$chkAgree->Text = "I agree with the term and condition.";
+	$chkAgree->Selected = false;
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		 
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the checkbox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the checkbox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$chkAgree = $myform_mananger->AddControl(new KoolCheckBox("chkAgree"));
+	$chkAgree->Text = "I agree with the term and condition.";
+	$chkAgree->Selected = false;
+?>
+...
+<div>
+	<?php echo 	$chkAgree->Render(); ?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

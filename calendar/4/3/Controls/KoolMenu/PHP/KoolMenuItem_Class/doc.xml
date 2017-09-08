@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolMenuItem_Class" lastupdate="01/01/2009">	
+	<title>KoolMenuItem Class [PHP]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get id of KoolMenuItem.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get id of KoolMenuItem.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	//Not available
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Target">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the target of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the target of the item. The target would be "_blank" or any frame's name.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->Target="_blank"; // Open new window when click.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		<property name="GroupSettings">
+			<type>&lt;a href='../GroupSettings/index.php'>GroupSettings&lt;/a></type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set properties of menu item's group settings.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set properties of menu item's group settings.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->GroupSettings->ExpandDirection = "Left";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="Text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the text of item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the text of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->Text="Open";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="Link">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the text of item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the text of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->Link="http://www.example.com?page=open";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ImageUrl">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the image url of item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the image url of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->ImageUrl="../Images/open.gif";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ToolTip">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the tooltip of item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the tooltip of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->ToolTip="Click here to open.";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="Enabled">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether the item is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether the item is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->Enabled=false;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the width of item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the width of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("open");
+	$item_open->Width="50px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+
+	</properties>
+	
+	<methods>
+		<method name="AddChild">
+			<type>KoolMenuItem</type>
+			<parameters>
+			   <param type="KoolMenuItem" optional="false">$menu_item</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add sub menuitem.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add sub menuitem.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("item_open");
+	$item_sub_open = new KoolMenuItem("item_sub_open");
+	$item_open->AddChild($item_sub_open);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+		<method name="AddSeparator">
+			<type>KoolMenuItem</type>
+			<shortdesc>
+			   <![CDATA[
+		Add a separator.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a separator.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item_open = $km->GetItem("item_open");
+	$item_open->AddSeparator();
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

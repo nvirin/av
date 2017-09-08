@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridEventHandler" lastupdate="08/20/2009">	
+	<title>GridEventHandler Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridEventHandler class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+	<properties>
+	</properties>
+	<methods>
+
+		 <method name="OnBeforeDetailTablesExpand">
+			<type>bool</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid row expands its detail tables.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid row expands its detail tables. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeDetailTablesExpand($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnDetailTablesExpand">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid row expands its detail tables.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid row expands its detail tables.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnDetailTablesExpand($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+
+
+		 <method name="OnBeforeDetailTablesCollapse">
+			<type>bool</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid row collapses its detail tables.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid row collapses its detail tables. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeDetailTablesCollapse($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnDetailTablesCollapse">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid row collapses its detail tables.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid row collapses its detail tables.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnDetailTablesCollapse($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforeRowStartEdit">
+			<type>bool</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid row is in edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid row is in edit mode. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeRowStartEdit($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnRowStartEdit">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid row is in edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid row is in edit mode.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnRowStartEdit($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforeRowCancelEdit">
+			<type>bool</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid row cancels editing.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid row cancels editing. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeRowCancelEdit($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnRowCancelEdit">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid row cancels editing.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid row cancels editing.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnRowCancelEdit($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforeRowDelete">
+			<type>bool</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid row is deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid row is deleted. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeRowDelete($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnRowDelete">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid row is deleted. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid row is deleted. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnRowDelete($row,$args)
+		{
+			//$row: The grid row object.
+			//$args["Successful"]: bool value indicating whether row is deleted sucessfully.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforeColumnSort">
+			<type>bool</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid column is sorted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid column is sorted. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeColumnSort($column,$args)
+		{
+			//$column: The grid column object.
+			//$args["NewSort"]: The value of sort is going to be apply.
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnColumnSort">
+			<type>void</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid column is sorted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid column is sorted.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnColumnSort($column,$args)
+		{
+			//$column: The grid column object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+
+		 <method name="OnBeforeColumnGroup">
+			<type>bool</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid column is grouped.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid column is grouped. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeColumnGroup($column,$args)
+		{
+			//$column: The grid column object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnColumnGroup">
+			<type>void</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid column is grouped.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid column is grouped.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnColumnGroup($column,$args)
+		{
+			//$column: The grid column object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+
+
+		 <method name="OnBeforeColumnFilter">
+			<type>bool</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid column is filtered.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid column is filtered. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeColumnFilter($column,$args)
+		{
+			//$column: The grid column object.
+			//$args["FilterExp"]: The filter expression is going to apply. 
+			//$args["FilterValue"]: The filter value is going to apply.
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnColumnFilter">
+			<type>void</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid column is filtered.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid column is filtered.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnColumnFilter($column,$args)
+		{
+			//$column: The grid column object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+
+
+
+
+
+		
+		
+		 <method name="OnBeforePageIndexChange">
+			<type>bool</type>
+			<parameters>
+				<param type="GridPager" optional="false">$pager</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid pager changes its page index.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid pager changes its page index. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforePageIndexChange($pager,$args)
+		{
+			//$pager: The grid pager object.
+			//$args["NewPageIndex"]: The new pager index.
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnPageIndexChange">
+			<type>void</type>
+			<parameters>
+				<param type="GridPager" optional="false">$pager</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid pager changes its page index.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid pager changes its page index.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnPageIndexChange($pager,$args)
+		{
+			//$pager: The grid pager object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforePageSizeChange">
+			<type>bool</type>
+			<parameters>
+				<param type="GridPager" optional="false">$pager</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid pager changes its page size.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid pager changes its page size. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforePageSizeChange($pager,$args)
+		{
+			//$pager: The grid pager object.
+			//$args["NewPageSize"]: The new pager size.
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnPageSizeChange">
+			<type>void</type>
+			<parameters>
+				<param type="GridPager" optional="false">$pager</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid pager changes its page size.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid pager changes its page size.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnPageSizeChange($pager,$args)
+		{
+			//$pager: The grid pager object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		
+		 <method name="OnBeforeRowConfirmEdit">
+			<type>bool</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a grid row confirms edit.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a grid row confirms edit. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeRowConfirmEdit($row,$args)
+		{
+			//$row: The grid row object.
+			//$args["NewDataItem"]: New dataitem.
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnRowConfirmEdit">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after a grid row confirms edit.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after a grid row confirms edit.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnRowConfirmEdit($row,$args)
+		{
+			//$row: The grid row object.
+			//$args["NewDataItem"]: New dataitem
+			//$args["Successful"]: Bool value which indicates whether the edit is successful.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforeConfirmInsert">
+			<type>bool</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before tableview adds a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before tableview adds a new row. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeConfirmInsert($tableview,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args["NewDataItem"]: New dataitem
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnConfirmInsert">
+			<type>void</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after tableview adds a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after tableview adds a new row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnConfirmInsert($tableview,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args["NewDataItem"]: New dataitem
+			//$args["Successful"]: Bool value which indicates whether the insert is successful.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		
+		 <method name="OnBeforeStartInsert">
+			<type>bool</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before tableview starts inserting a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before tableview starts inserting a new row. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeStartInsert($row,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnStartInsert">
+			<type>void</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after tableview starts inserting a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after tableview starts inserting a new row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnStartInsert($tableview,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+		 <method name="OnBeforeCancelInsert">
+			<type>bool</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before tableview cancels inserting.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before tableview cancels inserting. You return <code>true</code> in handle function to approve the action, return <code>true</code> to cancel the action. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeCancelInsert($row,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args: No data
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+		
+		 <method name="OnCancelInsert">
+			<type>void</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring after tableview cancels inserting.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring after tableview cancels inserting.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnCancelInsert($tableview,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args: No data.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+		 <method name="OnTableViewPreRender">
+			<type>void</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$tableview</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before the tableview render.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before the tableview render. You can make any neccessary changes here before table is in rendering process.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnTableViewPreRender($tableview,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args: No data.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+		 <method name="OnRowPreRender">
+			<type>void</type>
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before a row renders.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before a row renders. You can make any neccessary changes here before the row is in rendering process.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnRowPreRender($row,$args)
+		{
+			//$row: The grid row object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+		 <method name="OnGridPreRender">
+			<type>void</type>
+			<parameters>
+				<param type="KoolGrid" optional="false">$grid</param>
+				<param type="array" optional="false">$args</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Occurring before the grid renders.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occurring before the grid renders. You can make any neccessary changes here before the grid is in rendering process.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnGridPreRender($grid,$args)
+		{
+			//$grid: The grid object.
+			//$args: No data
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+
+		
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

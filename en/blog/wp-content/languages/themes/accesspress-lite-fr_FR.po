@@ -1,0 +1,1409 @@
+# Translation of AccessPress Lite in French (France)
+# This file is distributed under the same license as the AccessPress Lite package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-04-19 09:03:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
+"Project-Id-Version: AccessPress Lite\n"
+
+#. Theme Name of the plugin/theme
+msgid "AccessPress Lite"
+msgstr "AccessPress Lite"
+
+#: index-two.php:88
+msgid "Features Posts"
+msgstr "Articles mis en avant"
+
+#: index-two.php:442
+msgid ""
+"labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco labolabore et dolore magna aliqua. <br />\n"
+"                Ut enim ad minim veniam, quis nostrud exercitation ullamco labolabore et dolore magna aliqua. Ulabore et dolore magna aliqua."
+msgstr ""
+"labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco labolabore et dolore magna aliqua. <br />\n"
+"                Ut enim ad minim veniam, quis nostrud exercitation ullamco labolabore et dolore magna aliqua. Ulabore et dolore magna aliqua."
+
+#: index-two.php:79
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: inc/admin-panel/theme-options.php:293
+msgid "Home Page Template"
+msgstr "Modèle de page d'accueil"
+
+#: inc/admin-panel/theme-options.php:295
+msgid "Template One"
+msgstr "Modèle 1"
+
+#: inc/admin-panel/theme-options.php:295
+msgid "Template Two"
+msgstr "Modèle 2"
+
+#: inc/admin-panel/theme-options.php:435
+msgid "Footer Title"
+msgstr "Titre du pied"
+
+#: inc/admin-panel/theme-options.php:438
+msgid "Only For Home Template Two"
+msgstr "Pour le modèle 2 seulement"
+
+#: inc/more-themes.php:108
+msgid "Install Now"
+msgstr "Installer"
+
+#: inc/more-themes.php:111
+msgid "Live Preview"
+msgstr "Prévisualisation en ligne"
+
+#: inc/more-themes.php:96
+msgid "Already installed"
+msgstr "Déjà installé"
+
+#: inc/more-themes.php:14 inc/more-themes.php:15
+msgid "More Themes"
+msgstr "Plus de thèmes"
+
+#: inc/more-themes.php:61
+msgid "Customize"
+msgstr "Personnaliser"
+
+#: inc/more-themes.php:31
+msgid "More Themes from <a href=\"%s\" target=\"_blank\">AccessPress Themes</a>"
+msgstr "Plus de thèmes chez <a href=\"%s\" target=\"_blank\">AccessPress Themes</a>"
+
+#: footer.php:64
+msgid "Copyright"
+msgstr "Copyright"
+
+#: inc/admin-panel/theme-options.php:1073
+msgid "For Online Chat Support"
+msgstr "Pour du support par tchat"
+
+#: inc/admin-panel/theme-options.php:1056
+msgid "Check Demo Here - "
+msgstr "Découvrez la démo ici -"
+
+#: inc/admin-panel/theme-options.php:1057
+msgid "Download Here - "
+msgstr "Téléchargement ici -"
+
+#: inc/admin-panel/theme-options.php:1055
+msgid "New Child Theme of AccessPress Lite"
+msgstr "Nouveau thème enfant pour AccessPress Lite"
+
+#: inc/class-tgm-plugin-activation.php:3382
+msgid "All installations have been completed."
+msgstr "Toutes les installations sont terminées."
+
+#: inc/class-tgm-plugin-activation.php:3383
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation de l'extension %1$s (%2$d/%3$d)"
+
+#: inc/extras.php:617
+msgid "Go to <a href=\"%s\">Theme Options Panel</a> to set up the website."
+msgstr "Allez dans <a href=\"%s\">Options du thème</a> pour configurer le site."
+
+#: inc/class-tgm-plugin-activation.php:3377
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation et activation de l'extension %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3380
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Démarrage de l'installation. Cela, selon l'hôte, peut prendre un certain temps. Patienter...."
+
+#: inc/class-tgm-plugin-activation.php:3381
+msgid "%1$s installed successfully."
+msgstr "%1$s a bien été installé."
+
+#: inc/class-tgm-plugin-activation.php:3376
+msgid "All installations and activations have been completed."
+msgstr "Toutes les instalations et activations ont été effectuées."
+
+#: inc/class-tgm-plugin-activation.php:3375
+#: inc/class-tgm-plugin-activation.php:3381
+msgid "Hide Details"
+msgstr "Cacher les détails"
+
+#: inc/class-tgm-plugin-activation.php:3375
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s a bien été installé et activé."
+
+#: inc/class-tgm-plugin-activation.php:3375
+#: inc/class-tgm-plugin-activation.php:3381
+msgid "Show Details"
+msgstr "Afficher les détails"
+
+#: inc/class-tgm-plugin-activation.php:3369
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Une erreur est apparue lors de l'installation de: %1$s: <strong>%2$s</strong>."
+
+#: inc/class-tgm-plugin-activation.php:3370
+msgid "The installation of %1$s failed."
+msgstr "L'installation de %1$s a échoué."
+
+#: inc/class-tgm-plugin-activation.php:3374
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Démarrage de l'installation et de l'activation de l'extension. Son déroulement, selon l'hôte, peut prendre un certain temps. Patienter..."
+
+#: inc/class-tgm-plugin-activation.php:3367
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Mise à jour de l&rsquo;extension %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3033
+msgid "Plugin activation failed."
+msgstr "L'activation de l'extension a échoué."
+
+#: inc/class-tgm-plugin-activation.php:2793
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Aucune extension n'a été sélectionnée pour activation. Aucune action ne sera effectuée."
+
+#: inc/class-tgm-plugin-activation.php:2650
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Aucune extension n'a été sélectionnée pour être mise à jour. Aucune action ne sera effectuée. "
+
+#: inc/class-tgm-plugin-activation.php:2688
+msgid "No plugins are available to be updated at this time."
+msgstr "Aucune mise à jour n'est disponible pour les extensions pour le moment."
+
+#: inc/class-tgm-plugin-activation.php:2648
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Aucune extension n'a été sélectionnée pour être installée. Aucune action ne sera effectuée."
+
+#: inc/class-tgm-plugin-activation.php:2686
+msgid "No plugins are available to be installed at this time."
+msgstr "Pas d'extensions disponibles pour être installées en ce moment."
+
+#: inc/class-tgm-plugin-activation.php:2819
+msgid "No plugins are available to be activated at this time."
+msgstr "Pas d'extensions disponibles pour être activées en ce moment."
+
+#: inc/class-tgm-plugin-activation.php:2617 inc/more-themes.php:99
+msgid "Activate"
+msgstr "Activer"
+
+#: inc/class-tgm-plugin-activation.php:2614
+msgid "Update"
+msgstr "Mise à jour"
+
+#: inc/class-tgm-plugin-activation.php:2608
+msgid "Install"
+msgstr "Installer"
+
+#: inc/class-tgm-plugin-activation.php:2500
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr "Mettre à jour %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2505
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr "Activer %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2496
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr "Installer %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2575
+msgid "Upgrade message from the plugin author:"
+msgstr "Message de mise à niveau de l&rsquo;auteur de l'extension&nbsp;:"
+
+#: inc/class-tgm-plugin-activation.php:2448
+msgid "Status"
+msgstr "Humeur du moment"
+
+#: inc/class-tgm-plugin-activation.php:2447
+msgid "Version"
+msgstr "Version"
+
+#: inc/class-tgm-plugin-activation.php:2443
+msgid "Type"
+msgstr "Type"
+
+#: inc/class-tgm-plugin-activation.php:2442
+msgid "Source"
+msgstr "Adresse web source"
+
+#: inc/class-tgm-plugin-activation.php:2441
+msgid "Plugin"
+msgstr "Extension"
+
+#: inc/class-tgm-plugin-activation.php:2404
+msgid "Available version:"
+msgstr "Version disponible :"
+
+#: inc/class-tgm-plugin-activation.php:2376
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "inconnue"
+
+#: inc/class-tgm-plugin-activation.php:2384
+msgid "Installed version:"
+msgstr "Version installée :"
+
+#: inc/class-tgm-plugin-activation.php:2392
+msgid "Minimum required version:"
+msgstr "Version minimale requise :"
+
+#: inc/class-tgm-plugin-activation.php:2427
+msgid "No plugins to install, update or activate. <a href=\"%1$s\">Return to the Dashboard</a>"
+msgstr "Aucune extension à installer, mettre à jour ou à activer. <a href=\"%1$s\">Retour au Tableau de bord</a> "
+
+#: inc/class-tgm-plugin-activation.php:2294
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "A activer <span class=\"count\">(%s)</span>"
+msgstr[1] "A activer <span class=\"count\">(%s)</span>"
+
+#: inc/class-tgm-plugin-activation.php:2291
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Prête à mettre à jour <span class=\"count\">(%s)</span>"
+msgstr[1] "Prêtes à mettre à jour <span class=\"count\">(%s)</span>"
+
+#: inc/class-tgm-plugin-activation.php:2288
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "A Installer <span class=\"count\">(%s)</span>"
+msgstr[1] "A Installer <span class=\"count\">(%s)</span>"
+
+#: inc/class-tgm-plugin-activation.php:2285
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Tous <span class=\"count\">%s</span>"
+msgstr[1] "Tous <span class=\"count\">%s</span>"
+
+#: inc/class-tgm-plugin-activation.php:2240
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2232
+msgid "Update recommended"
+msgstr "Mise à jour recommandée"
+
+#: inc/class-tgm-plugin-activation.php:2229
+msgid "Requires Update"
+msgstr "Mise à jour nécessaires"
+
+#: inc/class-tgm-plugin-activation.php:2218
+msgid "Installed But Not Activated"
+msgstr "Installé(e) mais non activé(e)"
+
+#: inc/class-tgm-plugin-activation.php:2220 inc/more-themes.php:59
+msgid "Active"
+msgstr "Actif"
+
+#: inc/class-tgm-plugin-activation.php:2226
+msgid "Required Update not Available"
+msgstr "Mise à jour requise non disponible"
+
+#: inc/class-tgm-plugin-activation.php:2191
+msgid "WordPress Repository"
+msgstr "Référentiel WordPresss"
+
+#: inc/class-tgm-plugin-activation.php:2197
+msgid "Pre-Packaged"
+msgstr "Pré-packagé"
+
+#: inc/class-tgm-plugin-activation.php:2214
+msgid "Not Installed"
+msgstr "Non installé(e)"
+
+#: inc/class-tgm-plugin-activation.php:2194
+msgid "External Source"
+msgstr "Source externe"
+
+#: inc/class-tgm-plugin-activation.php:2175
+msgid "Recommended"
+msgstr "Recommandé(e)"
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr "Omettre ce conseil."
+
+#: inc/class-tgm-plugin-activation.php:833
+#: inc/class-tgm-plugin-activation.php:3443
+msgid "Return to the Dashboard"
+msgstr "Retour au tableau de bord"
+
+#: inc/class-tgm-plugin-activation.php:2172
+msgid "Required"
+msgstr "Obligatoire"
+
+#: inc/class-tgm-plugin-activation.php:405 inc/extras.php:757
+msgid "Please contact the administrator of this site for help."
+msgstr "Veuillez contacter l'administrateur du site pour le support."
+
+#: inc/class-tgm-plugin-activation.php:524
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Cette extension doit être mise à jour pour être compatible avec votre thème."
+
+#: inc/class-tgm-plugin-activation.php:525
+msgid "Update Required"
+msgstr "Mise à jour requise"
+
+#: inc/class-tgm-plugin-activation.php:1121
+#: inc/class-tgm-plugin-activation.php:2833
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "et"
+
+#: inc/class-tgm-plugin-activation.php:639
+msgid "Set the parent_slug config variable instead."
+msgstr "Réglez plutôt la variable de configuration parent_slug"
+
+#: inc/class-tgm-plugin-activation.php:940
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "Le paquet distant de l'extension ne contient pas de dossier avec l&rsquo;identifiant désiré et le renommage n'a pas fonctionné."
+
+#: inc/class-tgm-plugin-activation.php:940
+#: inc/class-tgm-plugin-activation.php:943
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Veuillez contacter le fournisseur de l'extension et demandez-lui d'empaqueter son extension en respectant les instructions de WordPress."
+
+#: inc/class-tgm-plugin-activation.php:943
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "Le paquet distant de l'extension contient plus d'un fichier, mais les fichiers ne sont pas empaquetés dans un dossier."
+
+#: inc/class-tgm-plugin-activation.php:1886
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: inc/class-tgm-plugin-activation.php:400
+#: inc/class-tgm-plugin-activation.php:2837 inc/extras.php:753
+msgid "The following plugin was activated successfully:"
+msgstr "L'extension suivante a bien été activée:"
+
+#: inc/class-tgm-plugin-activation.php:403 inc/extras.php:756
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Toutes les extensions ont été installées et activées. %1$s"
+
+#: inc/class-tgm-plugin-activation.php:401 inc/extras.php:754
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Aucune action effectuée. L'extension %1$s était déjà activée."
+
+#: inc/class-tgm-plugin-activation.php:402 inc/extras.php:755
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Extension non activée. Une version plus récente de %s est requise pour ce thème. Merci de mettre à jour l&rsquo;extension."
+
+#: inc/class-tgm-plugin-activation.php:387 inc/extras.php:741
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Démarrer la mise à jour de l'extension"
+msgstr[1] "Démarrer la mise à jour des extensions"
+
+#: inc/class-tgm-plugin-activation.php:392 inc/extras.php:746
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Commencer à activer le plugin"
+msgstr[1] "Commencer l'activation des plugins"
+
+#: inc/class-tgm-plugin-activation.php:397 inc/extras.php:751
+msgid "Return to Required Plugins Installer"
+msgstr "Retour à l'installation des extensions requises."
+
+#: inc/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr "Retour au tableau de bord"
+
+#: inc/class-tgm-plugin-activation.php:399
+#: inc/class-tgm-plugin-activation.php:3034 inc/extras.php:752
+msgid "Plugin activated successfully."
+msgstr "L'extension a bien été activée."
+
+#: inc/class-tgm-plugin-activation.php:367 inc/extras.php:721
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Les attributs requis plugin est actuellement inactive : %1$s."
+msgstr[1] "Les attributs requis plugins sont actuellement inactifs : %1$s."
+
+#: inc/class-tgm-plugin-activation.php:372 inc/extras.php:726
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Plugin est actuellement inactive a recommandé ce qui suit : %1$s."
+msgstr[1] "Plugins sont actuellement inactifs a recommandé ce qui suit : %1$s."
+
+#: inc/class-tgm-plugin-activation.php:382 inc/extras.php:736
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Commencer l'installation du plugin"
+msgstr[1] "Commencer l'installation de plugins"
+
+#: inc/class-tgm-plugin-activation.php:377 inc/extras.php:731
+msgid "Sorry, but you do not have the correct permissions to activate the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %1$s plugins."
+msgstr[0] "Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer l&rsquo;extension %1$s."
+msgstr[1] "Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer les extensions %1$s."
+
+#: inc/class-tgm-plugin-activation.php:357 inc/extras.php:711
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Une mise à jour est disponible pour&nbsp;: %1$s."
+msgstr[1] "Des mises à jour sont disponibles pour les extensions suivantes&nbsp;: %1$s."
+
+#: inc/class-tgm-plugin-activation.php:362 inc/extras.php:716
+msgid "Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %1$s plugins."
+msgstr[0] "Désolé, mais vous n'avez pas les droits nécessaires de mettre à jour l&rsquo;extension %1$s."
+msgstr[1] "Désolé, mais vous n'avez pas les droits necessaires de mettre à jour les extensions %1$s."
+
+#: inc/class-tgm-plugin-activation.php:337 inc/extras.php:691
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Ce thème nécessite le plugin suivant : %1$s."
+msgstr[1] "Ce thème nécessite les plugins suivants : %1$s."
+
+#: inc/class-tgm-plugin-activation.php:342 inc/extras.php:696
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Ce thème recommande l'extension suivante : %1$s."
+msgstr[1] "Ce thème recommande les extensions suivantes : %1$s."
+
+#: inc/class-tgm-plugin-activation.php:352 inc/extras.php:706
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "Le plugin suivant doit être mis à jour pour sa version la plus récente pour assurer une compatibilité maximale avec ce thème : %1$s."
+msgstr[1] "Les plugins suivants doivent être mis à jour vers leur dernière version afin d'assurer une compatibilité maximale avec ce thème : %1$s."
+
+#: inc/class-tgm-plugin-activation.php:347 inc/extras.php:701
+msgid "Sorry, but you do not have the correct permissions to install the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %1$s plugins."
+msgstr[0] "Désolé, mais vous n'avez pas les permissions correctes pour installer l'extension %1$s."
+msgstr[1] "Désolé, mais vous n'avez pas les permissions correctes pour installer les extensions %1$s."
+
+#: inc/class-tgm-plugin-activation.php:336 inc/extras.php:690
+msgid "Something went wrong with the plugin API."
+msgstr "Une erreur est apparue avec l'API de l'extension."
+
+#: inc/class-tgm-plugin-activation.php:335 inc/extras.php:689
+msgid "Installing Plugin: %s"
+msgstr "Extension en cours d&rsquo;installation&nbsp;: %s"
+
+#: inc/class-tgm-plugin-activation.php:333 inc/extras.php:687
+msgid "Install Required Plugins"
+msgstr "Installer les extensions requises"
+
+#: inc/class-tgm-plugin-activation.php:334 inc/extras.php:688
+msgid "Install Plugins"
+msgstr "Installer des extensions"
+
+#: searchform.php:9
+msgid "Search..."
+msgstr "Recherche ..."
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour %s"
+
+#: index-one.php:520
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: index-one.php:531
+msgid "Yanetxys Torreblanca"
+msgstr "Yanetxys Torreblanca"
+
+#: index-one.php:542
+msgid "David Soriano"
+msgstr "David Soriano"
+
+#: index-one.php:553
+msgid "Jotta Lima"
+msgstr "Jotta Lima"
+
+#: index-one.php:557
+msgid "View All Testimonials"
+msgstr "Voir tous les témoignages"
+
+#: index-one.php:431
+msgid "Featured Slider"
+msgstr "Featured Slider"
+
+#: index-one.php:449 index-two.php:456
+msgid "Gallery"
+msgstr "Galerie"
+
+#: index-one.php:433
+msgid "Multiple Homepage Layouts"
+msgstr "Multiples styles de page d'accueil"
+
+#: index-one.php:434
+msgid "Portfolio, Event/News Layout"
+msgstr "Style de portfolio, événements / nouveautés "
+
+#: index-one.php:435
+msgid "CSS3 Animations"
+msgstr "Animations CSS3"
+
+#: index-one.php:430
+msgid "Responsive Design"
+msgstr "Design réactif"
+
+#: index-one.php:367 index-two.php:293
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate..."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate..."
+
+#: index-one.php:426 index-two.php:440
+msgid "Why AccessPress?"
+msgstr "Pourquoi AccesPress&nbsp;?"
+
+#: index-one.php:429
+msgid "Theme Options Panel"
+msgstr "Tableau d'options du thème"
+
+#: inc/template-tags.php:85
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+
+#: index-one.php:364 index-two.php:290
+msgid "Featured Post"
+msgstr "Article mis en avant"
+
+#: index-one.php:152
+msgid "Mar"
+msgstr "Mar"
+
+#: index-one.php:71
+msgid "Free WordPress theme - ACCESSPRESS LITE"
+msgstr "Thème WordPress gratuit - ACCESSPRESS LITE"
+
+#: index-one.php:159
+msgid "Title of the event-"
+msgstr "Titre de l’événement - "
+
+#: index-one.php:163
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor..."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor..."
+
+#: inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navigation des articles"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articles plus récents <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articles plus anciens"
+
+#: inc/extras.php:178
+msgid "Display items in the Right just above the footer and replaces Testimonials"
+msgstr "Afficher les éléments de la droite, juste au-dessus du pied de page et remplace Témoignages"
+
+#: inc/extras.php:176
+msgid "Right Block above footer"
+msgstr "Bloc droite, au-dessus du pied de page"
+
+#: inc/extras.php:168
+msgid "Display items in the middle just above the footer and replaces defaul gallery"
+msgstr "Afficher les éléments au milieu juste au-dessus du pied de page et remplace la galerie par défaut"
+
+#: inc/extras.php:166
+msgid "Middle Block above footer"
+msgstr "Bloc central, au-dessus du pied de page"
+
+#: inc/extras.php:158
+msgid "Display items in the left just above the footer"
+msgstr "Afficher les éléments à gauche, juste au-dessus du pied de page"
+
+#: inc/extras.php:156
+msgid "Left Block above footer"
+msgstr "Bloc de gauche au-dessus de pied de page"
+
+#: inc/extras.php:148
+msgid "Display items in Fourth Footer Area"
+msgstr "Afficher les éléments dans quatrième zone Pied de page"
+
+#: inc/extras.php:146
+msgid "Footer Area Four"
+msgstr "Pied de page \\\"Zone quatre\\\""
+
+#: inc/extras.php:138
+msgid "Display items in Third Footer Area"
+msgstr "Afficher les éléments dans troisième zone de Pied de page"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigation des articles"
+
+#: inc/extras.php:128
+msgid "Display items in Second Footer Area"
+msgstr "Afficher les éléments dans deuxième zone Pied de page"
+
+#: inc/extras.php:136
+msgid "Footer Area Three"
+msgstr "Zone 3 du pied de page"
+
+#: inc/extras.php:118
+msgid "Display items in First Footer Area"
+msgstr "Afficher les éléments dans le premier espace pied de page"
+
+#: inc/extras.php:126
+msgid "Footer Area Two"
+msgstr "Zone 2 du pied de page"
+
+#: inc/extras.php:108
+msgid "Display items for the blog category in the Right Sidebar of the inner pages"
+msgstr "Afficher les articles de la catégorie de blog dans la barre de droite des pages intérieures"
+
+#: inc/extras.php:106
+msgid "Blog Right Sidebar"
+msgstr "Barre latérale de droite pour Blog"
+
+#: inc/extras.php:96
+msgid "Event Sidebar"
+msgstr "Barre latérale événement"
+
+#: inc/extras.php:88
+msgid "Display items in the Right Sidebar of the inner pages"
+msgstr "Afficher des éléments dans la barre de droite des pages intérieures"
+
+#: inc/extras.php:116
+msgid "Footer Area One"
+msgstr "Zone 1 du pied de page"
+
+#: inc/extras.php:78 inc/extras.php:98
+msgid "Display items in the Left Sidebar of the inner pages"
+msgstr "Afficher des éléments dans la barre latérale gauche des pages intérieures"
+
+#: inc/extras.php:86
+msgid "Right Sidebar"
+msgstr "Colonne latérale droite"
+
+#: inc/extras.php:76
+msgid "Left Sidebar"
+msgstr "Colonne latérale gauche"
+
+#: inc/custom-metabox.php:53
+msgid "No sidebar"
+msgstr "Pas de barre latérale"
+
+#: inc/custom-metabox.php:47
+msgid "Both Sidebar"
+msgstr "Les deux Barre latérale"
+
+#: inc/custom-metabox.php:42
+msgid "Right sidebar<br/>(default)"
+msgstr "barre latérale droite <br/>(default)"
+
+#: inc/custom-metabox.php:67
+msgid "Choose Sidebar Template"
+msgstr "Choix de modèle de barre"
+
+#: inc/custom-metabox.php:88
+msgid "You can set up the sidebar content <a href=\"%s\" target=\"_blank\">here</a> in Sidebar tab"
+msgstr "Vous pouvez définir le contenu de la barre <a href=\"%s\" target=\"_blank\">ici</a> dans l'onglet Barre"
+
+#: inc/custom-metabox.php:37
+msgid "Left sidebar"
+msgstr "Colonne latérale gauche"
+
+#: inc/admin-panel/theme-options.php:1088
+msgid "Save Options"
+msgstr "Sauvegarder les options"
+
+#: inc/admin-panel/theme-options.php:1106
+msgid "Any question!! Click <a href=\"%s\" target=\"_blank\">here</a> for Live Chat."
+msgstr "Pour toute question cliquez <a href=\"%s\" target=\"_blank\">ici</a> pour une discussion en direct."
+
+#: inc/admin-panel/theme-options.php:1065
+msgid "Get in touch"
+msgstr "rester en contact"
+
+#: inc/admin-panel/theme-options.php:1051
+msgid "For Video tutorials, click"
+msgstr "pour voir des tutoriels, cliquez sur"
+
+#: inc/admin-panel/theme-options.php:1045
+msgid " Access Keys - has developed more than 350 WordPress websites for its clients."
+msgstr " Access Keys - a développé plus de 350 sites WordPress pour ses clients."
+
+#: inc/admin-panel/theme-options.php:1044
+msgid "- A WordPress Division of Access Keys."
+msgstr "- Une division WordPress de Access Keys."
+
+#: inc/admin-panel/theme-options.php:1044
+msgid "AccessPress Lite - is a FREE WordPress theme by"
+msgstr "AccessPress Lite - est un thème gratuit WordPress par"
+
+#: inc/admin-panel/theme-options.php:1040
+msgid "Know more about AccessPress Themes"
+msgstr "En savoir plus sur Thèmes AccessPress"
+
+#: inc/admin-panel/theme-options.php:1029
+msgid "Custom CSS"
+msgstr "CSS personnalisé"
+
+#: inc/admin-panel/theme-options.php:1027
+msgid "Footer Contact"
+msgstr "\\\"Contactez\\\" en pied de page"
+
+#: inc/admin-panel/theme-options.php:926
+msgid "Disable Social icons in header?"
+msgstr "Désactiver icônes sociales en tête?"
+
+#: inc/admin-panel/theme-options.php:922
+msgid "Put your social url below.. Leave blank if you don't want to show it."
+msgstr "ci-dessous mettre votre url sociale .. Laissez ce champ vide si vous ne voulez pas montrer."
+
+#: inc/admin-panel/theme-options.php:919
+msgid "Social links - Put your social url"
+msgstr "Liens sociaux - Mettez votre lien social"
+
+#: inc/admin-panel/theme-options.php:911
+msgid "Leave blank if you don't want to show View All Text"
+msgstr "Laissez ce champ vide si vous ne souhaitez pas afficher \\\"Afficher tout le texte\\\""
+
+#: inc/admin-panel/theme-options.php:910
+msgid "View All Text"
+msgstr "Afficher tout le texte"
+
+#: inc/admin-panel/theme-options.php:876
+msgid "To add Custom widget in Left Sidebar, Click"
+msgstr "Pour ajouter un widget personnalisé dans barre latérale de gauche, Cliquez"
+
+#: inc/admin-panel/theme-options.php:883
+msgid "Right Sidebar Options"
+msgstr "Options du menu de droite"
+
+#: inc/admin-panel/theme-options.php:901
+msgid "To add Custom widget in Right Sidebar, Click"
+msgstr "Pour ajouter un widget personnalisé dans la barre latérale droite, Cliquez"
+
+#: inc/admin-panel/theme-options.php:852
+msgid "Sidebar Settings"
+msgstr "Paramètres de la barre latérale"
+
+#: inc/admin-panel/theme-options.php:858
+msgid "Left Sidebar Options"
+msgstr "Options du menu de gauche"
+
+#: inc/admin-panel/theme-options.php:860 inc/admin-panel/theme-options.php:885
+msgid "Show Latest Events?"
+msgstr "Afficher les derniers événements?"
+
+#: inc/admin-panel/theme-options.php:868 inc/admin-panel/theme-options.php:893
+msgid "Show Testimonials?"
+msgstr "Afficher Témoignages?"
+
+#: inc/admin-panel/theme-options.php:838
+msgid "Show Slider Captions"
+msgstr "Afficher curseur légendes"
+
+#: inc/admin-panel/theme-options.php:832
+msgid "Slider Pause"
+msgstr "curseur Pause"
+
+#: inc/admin-panel/theme-options.php:826
+msgid "Slider Speed"
+msgstr "Vitesse de curseur"
+
+#: inc/admin-panel/theme-options.php:817
+msgid "Slider auto Transition"
+msgstr "Transition automatique de curseur"
+
+#: inc/admin-panel/theme-options.php:808
+msgid "Slider Transition - fade/slide"
+msgstr "Curseur de transition - effet de fondu / diaporama"
+
+#: inc/admin-panel/theme-options.php:799
+msgid "Show Slider Controls (Arrows)"
+msgstr "Afficher les contrôles de curseur (flèches)"
+
+#: inc/admin-panel/theme-options.php:790
+msgid "Show Slider Pager (Navigation dots)"
+msgstr "Afficher curseur Pager (points de navigation)"
+
+#: inc/admin-panel/theme-options.php:781
+msgid "Show Slider"
+msgstr "Afficher curseur"
+
+#: inc/admin-panel/theme-options.php:754
+msgid "Select the Category"
+msgstr "Select the Category"
+
+#: inc/admin-panel/theme-options.php:778
+msgid "Adjust the slider as per your need."
+msgstr "Ajustez le curseur selon vos besoins."
+
+#: inc/admin-panel/theme-options.php:737
+msgid "Silder 4"
+msgstr "curseur 4"
+
+#: inc/admin-panel/theme-options.php:722
+msgid "Silder 3"
+msgstr "curseur 3"
+
+#: inc/admin-panel/theme-options.php:675
+msgid "Single Posts as a Slider"
+msgstr "Single Posts comme un curseur"
+
+#: inc/admin-panel/theme-options.php:679
+msgid "Category Posts as a Slider"
+msgstr "Category Posts comme un curseur"
+
+#: inc/admin-panel/theme-options.php:689
+msgid "Select the post that you want to display as a Slider"
+msgstr "Sélectionnez le message que vous souhaitez afficher comme un curseur"
+
+#: inc/admin-panel/theme-options.php:694
+msgid "Silder 1"
+msgstr "curseur 1"
+
+#: inc/admin-panel/theme-options.php:708
+msgid "Silder 2"
+msgstr "curseur 2"
+
+#: inc/admin-panel/theme-options.php:1069
+msgid "Forum:"
+msgstr "Forum:"
+
+#: inc/admin-panel/theme-options.php:1032
+msgid "Put your custom CSS"
+msgstr "Déposez votre CSS personnalisé"
+
+#: inc/admin-panel/theme-options.php:1050
+msgid "For Documentation, click"
+msgstr "Pour la documentation cliquez"
+
+#: inc/admin-panel/theme-options.php:1052
+msgid "Live Preview, click"
+msgstr "Aperçu en live, cliquez"
+
+#: inc/admin-panel/theme-options.php:1061
+msgid "Our other Products"
+msgstr "Nos autres produits"
+
+#: inc/admin-panel/theme-options.php:1063
+msgid "Plugins - "
+msgstr "Extensions -"
+
+#: inc/admin-panel/theme-options.php:1062
+msgid "Themes - "
+msgstr "Thèmes -"
+
+#: inc/admin-panel/theme-options.php:643
+msgid "Read More Button Text"
+msgstr "En savoir plus Bouton texte"
+
+#: inc/admin-panel/theme-options.php:650
+msgid "Read More Button link"
+msgstr "Lire la suite link Button"
+
+#: inc/admin-panel/theme-options.php:661
+msgid "Home Page Slider Settings"
+msgstr "Paramètres de curseur Page d'accueil"
+
+#: inc/admin-panel/theme-options.php:666
+msgid "Show"
+msgstr "Afficher"
+
+#: inc/admin-panel/theme-options.php:620
+msgid "Disable Featured Bar (above footer)"
+msgstr "Désactiver Bar vedette (ci-dessus le pied de page)"
+
+#: inc/admin-panel/theme-options.php:630
+msgid "Call To action"
+msgstr "Appel à l'action"
+
+#: inc/admin-panel/theme-options.php:582
+msgid "Featured Post 3"
+msgstr "Article en vedette numéro 3"
+
+#: inc/admin-panel/theme-options.php:605
+msgid "Gallery Short Code"
+msgstr "Galerie Short Code"
+
+#: inc/admin-panel/theme-options.php:613
+msgid "You can replace the gallery and testimonial section of the home page with custom widget"
+msgstr "Vous pouvez remplacer la galerie et la section témoignage de la page d'accueil avec le widget personnalisé"
+
+#: inc/admin-panel/theme-options.php:540 inc/admin-panel/theme-options.php:613
+#: inc/admin-panel/theme-options.php:876 inc/admin-panel/theme-options.php:901
+#: inc/admin-panel/theme-options.php:1050
+#: inc/admin-panel/theme-options.php:1051
+#: inc/admin-panel/theme-options.php:1052
+msgid "here"
+msgstr "ici"
+
+#: inc/admin-panel/theme-options.php:545
+msgid "Show Big Font Awesome icon with center aligned"
+msgstr "Afficher Big Font Awesome icône avec le centre alignés"
+
+#: inc/admin-panel/theme-options.php:552
+msgid "Featured Post 1"
+msgstr "Article en vedette numéro 1"
+
+#: inc/admin-panel/theme-options.php:567
+msgid "Featured Post 2"
+msgstr "Article en vedette numéro 2"
+
+#: inc/admin-panel/theme-options.php:530
+msgid "and drag widget item into the Event Sidebar Widget area."
+msgstr "et faites glisser article widget dans la zone Event Sidebar Widget ."
+
+#: inc/admin-panel/theme-options.php:536
+msgid "Show Font Awesome icon for Featured Post?"
+msgstr "Afficher l'icône Font Awesome pour poste promu ?"
+
+#: inc/admin-panel/theme-options.php:540
+msgid "(If enabled the featured image will be replaced by Font Awesome Icon. For lists of icons click"
+msgstr "(Si activé l'image sélectionnée sera remplacée par la  Font Awesome Icon. Pour les listes d'icônes cliquez sur"
+
+#: inc/admin-panel/theme-options.php:522
+msgid "Show Event Date?"
+msgstr "Afficher la date de l'événement ?"
+
+#: inc/admin-panel/theme-options.php:530
+msgid "To replace the Event section in homepage, Go to"
+msgstr "Pour remplacer la section de l'événement dans la page d'accueil , allez à"
+
+#: inc/admin-panel/theme-options.php:530
+msgid "widget"
+msgstr "le widget"
+
+#: inc/admin-panel/theme-options.php:517
+msgid "No of Items to display in Event/News Category beside Welcome Post"
+msgstr "Pas d'éléments à afficher dans la catégorie de l'événement / Nouvelles à côté de Bienvenue post"
+
+#: inc/admin-panel/theme-options.php:502 inc/admin-panel/theme-options.php:599
+msgid "Leave blank if you don't want to show read more"
+msgstr "Laissez ce champ vide si vous ne voulez pas montrer lire la suite"
+
+#: inc/admin-panel/theme-options.php:501 inc/admin-panel/theme-options.php:598
+msgid "Read More Text"
+msgstr "lire le reste du texte"
+
+#: inc/admin-panel/theme-options.php:497
+msgid "Characters"
+msgstr "caractères "
+
+#: inc/admin-panel/theme-options.php:488
+msgid "Show Full Content?"
+msgstr "Voir le contenu complet ?"
+
+#: inc/admin-panel/theme-options.php:496
+msgid "Welcome Post Excerpt Character"
+msgstr "Message de bienvenue  Excerpt Character"
+
+#: inc/admin-panel/theme-options.php:474
+msgid "Welcome Post"
+msgstr "message de bienvenue"
+
+#: inc/admin-panel/theme-options.php:636
+msgid "Text"
+msgstr "Texte"
+
+#: inc/admin-panel/theme-options.php:563 inc/admin-panel/theme-options.php:578
+#: inc/admin-panel/theme-options.php:593
+msgid "Example:"
+msgstr "exemple&nbsp;:"
+
+#: inc/admin-panel/theme-options.php:456
+msgid "Layout1"
+msgstr "Style 1"
+
+#: inc/admin-panel/theme-options.php:456
+msgid "Layout2"
+msgstr "Style 2"
+
+#: inc/admin-panel/theme-options.php:508
+msgid "Disable Event Section?"
+msgstr "Désactiver la section des événements&nbsp;?"
+
+#: inc/admin-panel/theme-options.php:511
+msgid "Check to Disable"
+msgstr "Cochez pour désactiver"
+
+#: inc/admin-panel/theme-options.php:563 inc/admin-panel/theme-options.php:578
+#: inc/admin-panel/theme-options.php:593
+msgid "Font Awesome icon name"
+msgstr "Nom de l'icône Font Awesome"
+
+#: inc/admin-panel/theme-options.php:454
+msgid "Home Page Layout"
+msgstr "Mise en page de la page d'accueil"
+
+#: inc/admin-panel/theme-options.php:452
+msgid "Home Page Settings"
+msgstr "Paramètres de la page d'accueil"
+
+#: inc/admin-panel/theme-options.php:428
+msgid "Page."
+msgstr "Page"
+
+#: inc/admin-panel/theme-options.php:442
+msgid "Footer Copyright Text"
+msgstr "texte du droit d'auteur dans le pied de page"
+
+#: inc/admin-panel/theme-options.php:428
+msgid "You can show these categories in the menu by configuring"
+msgstr "Vous pouvez afficher ces catégories dans le menu de configuration"
+
+#: inc/admin-panel/theme-options.php:412
+msgid "Select the category to display as Portfolio/Products"
+msgstr "Sélectionnez la catégorie à afficher comme portefeuille / Produits"
+
+#: inc/admin-panel/theme-options.php:398
+msgid "Select the category to display as Testimonials"
+msgstr "Sélectionnez la catégorie à afficher comme Témoignages"
+
+#: inc/admin-panel/theme-options.php:384
+msgid "Select the category to display as Events"
+msgstr "Sélectionnez la catégorie à afficher comme des événements"
+
+#: inc/admin-panel/theme-options.php:456
+msgid "Default"
+msgstr "Valeur par défaut"
+
+#: inc/admin-panel/theme-options.php:371
+msgid "Center"
+msgstr "Centre"
+
+#: inc/admin-panel/theme-options.php:371
+msgid "Right"
+msgstr "Droite"
+
+#: inc/admin-panel/theme-options.php:369
+msgid "Menu Alignment"
+msgstr "Menu de l'alignement"
+
+#: inc/admin-panel/theme-options.php:366
+msgid "Html content allowed"
+msgstr "Contenu HTML autorisée"
+
+#: inc/admin-panel/theme-options.php:365
+msgid "Example.. Call Us : 985XXX9856XX"
+msgstr "Exemple .. Contactez-nous : 985XXX9856XX"
+
+#: inc/admin-panel/theme-options.php:371
+msgid "Left"
+msgstr "Gauche"
+
+#: inc/admin-panel/theme-options.php:356
+msgid "Upload Logo"
+msgstr "Télécharger Logo"
+
+#: inc/admin-panel/theme-options.php:363
+msgid "Header Text"
+msgstr "Texte de l&rsquo;en-tête"
+
+#: inc/admin-panel/theme-options.php:338
+msgid "Upload favicon(.png) with size of 16px X 16px"
+msgstr "Ajouter favicon ( .png ) avec la taille de 16px X 16px"
+
+#: inc/admin-panel/theme-options.php:343 inc/admin-panel/theme-options.php:348
+msgid "Remove"
+msgstr "Retirer"
+
+#: inc/admin-panel/theme-options.php:333
+msgid "Upload Favicon"
+msgstr "télécharger Favicon"
+
+#: inc/admin-panel/theme-options.php:328 inc/admin-panel/theme-options.php:491
+#: inc/admin-panel/theme-options.php:525 inc/admin-panel/theme-options.php:539
+#: inc/admin-panel/theme-options.php:548 inc/admin-panel/theme-options.php:863
+#: inc/admin-panel/theme-options.php:871 inc/admin-panel/theme-options.php:888
+#: inc/admin-panel/theme-options.php:896
+msgid "Check to enable"
+msgstr "cliquez pour activer"
+
+#: inc/admin-panel/theme-options.php:312
+msgid "Web Page Layout"
+msgstr "Mise en page web"
+
+#: inc/admin-panel/theme-options.php:325
+msgid "Show Search in Header?"
+msgstr "Voir Recherche dans tête de la page ?"
+
+#: inc/admin-panel/theme-options.php:308 inc/admin-panel/theme-options.php:623
+#: inc/admin-panel/theme-options.php:929
+msgid "Check to disable"
+msgstr "cliquez pour désactiver"
+
+#: inc/admin-panel/theme-options.php:305
+msgid "Disable Responsive Design?"
+msgstr "Désactiver Responsive Design ?"
+
+#: inc/admin-panel/theme-options.php:275 index-two.php:74
+msgid "About AccessPress Lite"
+msgstr "À propos de AccessPress Lite"
+
+#: inc/admin-panel/theme-options.php:337 inc/admin-panel/theme-options.php:358
+msgid "Upload"
+msgstr "Envoyer"
+
+#: inc/admin-panel/theme-options.php:314
+msgid "Boxed"
+msgstr "Largeur fixe"
+
+#: inc/admin-panel/theme-options.php:314
+msgid "Fullwidth"
+msgstr "Pleine largeur"
+
+#: inc/admin-panel/theme-options.php:273
+msgid "Social Links"
+msgstr "Liens sociaux"
+
+#: inc/admin-panel/theme-options.php:274
+msgid "Tools"
+msgstr "Outils"
+
+#: inc/admin-panel/theme-options.php:271
+msgid "Slider Settings"
+msgstr "Paramètres Slider"
+
+#: inc/admin-panel/theme-options.php:270
+msgid "Home Page"
+msgstr "page d'accueil"
+
+#: inc/admin-panel/theme-options.php:272
+msgid "Sidebar"
+msgstr "Colonne latérale"
+
+#: inc/admin-panel/theme-options.php:224
+msgid "fade"
+msgstr "Fondu"
+
+#: inc/admin-panel/theme-options.php:258
+msgid " Theme Options"
+msgstr "Options du thème"
+
+#: inc/admin-panel/theme-options.php:269 inc/admin-panel/theme-options.php:291
+msgid "Basic Settings"
+msgstr "Réglages de base"
+
+#: inc/admin-panel/theme-options.php:264
+msgid "Options saved"
+msgstr "Réglages sauvegardés"
+
+#: inc/admin-panel/theme-options.php:228
+msgid "slide"
+msgstr "Slide"
+
+#: inc/admin-panel/theme-options.php:195 inc/admin-panel/theme-options.php:206
+#: inc/admin-panel/theme-options.php:217
+msgid "no"
+msgstr "Non"
+
+#: inc/admin-panel/theme-options.php:191 inc/admin-panel/theme-options.php:202
+#: inc/admin-panel/theme-options.php:213
+msgid "yes"
+msgstr "Oui"
+
+#: inc/admin-panel/theme-options.php:184 inc/admin-panel/theme-options.php:239
+msgid "hide"
+msgstr "Cacher"
+
+#: inc/admin-panel/theme-options.php:180 inc/admin-panel/theme-options.php:235
+msgid "show"
+msgstr "Afficher"
+
+#: inc/admin-panel/theme-options.php:120 inc/admin-panel/theme-options.php:134
+#: inc/admin-panel/theme-options.php:159
+msgid "--choose--"
+msgstr "--choisissez--"
+
+#: inc/admin-panel/theme-options.php:113
+msgid "Theme Options"
+msgstr "Options du thème"
+
+#: inc/admin-panel/theme-options.php:88
+msgid "View All"
+msgstr "Afficher tout"
+
+#: inc/admin-panel/theme-options.php:29 inc/admin-panel/theme-options.php:36
+#: index-one.php:82 index-one.php:368
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: inc/admin-panel/theme-options.php:25
+msgid "Call us : 984187523XX"
+msgstr "Appelez nous : 984187523XX"
+
+#: header/header-one.php:44 header/header-two.php:65
+msgid "Menu"
+msgstr "Menu"
+
+#: footer.php:58
+msgid "Free WordPress Theme"
+msgstr "Thème Gratuit propose par WordPress"
+
+#: content.php:142
+msgid "Tagged %1$s"
+msgstr "Identifié %1$s"
+
+#: content.php:132
+msgid "Posted in %1$s"
+msgstr "Publié dans  %1$s"
+
+#: functions.php:67
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#. translators: used between list items, there is a space after the comma
+#: content.php:128 content.php:138
+msgid ", "
+msgstr ", "
+
+#: content.php:38 content.php:114
+msgid "More"
+msgstr "Plus"
+
+#: content-page.php:23 content-single.php:32
+msgid "Edit"
+msgstr "Modifier"
+
+#: content-page.php:18 content-single.php:25 content.php:117
+msgid "Pages:"
+msgstr "Pages&nbsp;:"
+
+#: content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. Essayez en lançant une recherche."
+
+#: content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Désolé, mais rien ne correspond à votre recherche. Veuillez réessayer avec des mots différents."
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Prêt à publier votre premier article&nbsp;? <a href=\"%1$s\">Lancez-vous</a>&nbsp;!"
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: comments.php:37 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus récents &rarr;"
+
+#: comments.php:36 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; Commentaire plus ancien"
+
+#: comments.php:35 comments.php:52
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+
+#: archive.php:67
+msgid "Chats"
+msgstr "Chat"
+
+#: archive.php:70
+msgid "Archives"
+msgstr "Archives"
+
+#: archive.php:64
+msgid "Audios"
+msgstr "Audio"
+
+#: archive.php:61
+msgid "Statuses"
+msgstr "Statuts"
+
+#: archive.php:58
+msgid "Links"
+msgstr "Liens"
+
+#: archive.php:55
+msgid "Quotes"
+msgstr "Citations"
+
+#: archive.php:52
+msgid "Videos"
+msgstr "Vidéos"
+
+#: archive.php:49
+msgid "Images"
+msgstr "Images"
+
+#: archive.php:46
+msgid "Galleries"
+msgstr "Galeries"
+
+#: archive.php:43
+msgid "Asides"
+msgstr "En passant"
+
+#: archive.php:40
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:40
+msgid "Year: %s"
+msgstr "Année : %s"
+
+#: archive.php:37
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:37
+msgid "Month: %s"
+msgstr "Mois : %s"
+
+#: archive.php:34
+msgid "Day: %s"
+msgstr "Jour : %s"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Auteur : %s"
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location."
+msgstr "On dirait que rien n'a été trouvé à cet endroit. "
+
+#: 404.php:23
+msgid "error"
+msgstr "Erreur "
+
+#: 404.php:22
+msgid "404"
+msgstr "404"
+
+#: 404.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups&nbsp;! Cette page est introuvable."
+
+#. Theme URI of the plugin/theme
+msgid "https://accesspressthemes.com/wordpress-themes/accesspress-lite/"
+msgstr "https://accesspressthemes.com/wordpress-themes/accesspress-lite/"
+
+#. Author of the plugin/theme
+msgid "AccessPress Themes"
+msgstr "AccessPress Themes"
+
+#. Author URI of the plugin/theme
+msgid "https://accesspressthemes.com"
+msgstr "https://accesspressthemes.com"

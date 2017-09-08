@@ -1,0 +1,57 @@
+<control>
+	<name>KoolListBox - Advanced PHP ListBox</name>
+	<metadescription>KoolListBox is advanced control that extends the standard html listbox to the max. It supports order item, transfer item to another listbox, drag-and-drop and many more..</metadescription>
+	<metakeywords>listbox, php listbox, ajax listbox, web20 listbox, multi select listbox</metakeywords>	 
+	<description>
+		<![CDATA[
+		KoolListBox is advanced control that extends the standard html listbox to the max. 
+		It supports order item, transfer item to another listbox, drag-and-drop and many more.
+		<br><b>Key Features:</b>
+		<div style='padding-left:25px;'>
+		   <li>Semantic Rendering for Minimal HTML</li>
+		   <li>Simple PHP interface</li>
+		   <li>Rich Client-side API</li>
+		   <li>Highly customizable CSS styles and template</li>
+		   <li>Drag and drop supported</li>
+		   <li>Item re-order</li>
+		   <li>Item transfering</li>
+		   <li>Support checkbox</li>
+		   <li>Support template</li>
+		</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolMenu component to your page
+    require "KoolControls/KoolListBox/koollistbox.php";
+
+    //Step 2: Create menu object.
+    $listbox = new KoolListBox("listbox");
+
+    //Step 3: Set properties for menu
+    $km->styleFolder = "KoolControls/KoolListBox/styles/default";
+
+    //Step 4: Building menu
+	$listbox->AddItem(new ListBoxItem("Australia"));
+	$listbox->AddItem(new ListBoxItem("Brazil"));
+	$listbox->AddItem(new ListBoxItem("Canada"));
+	$listbox->AddItem(new ListBoxItem("Chile"));
+	$listbox->AddItem(new ListBoxItem("China"));
+	$listbox->AddItem(new ListBoxItem("Egypt"));
+    ...
+    //Step 5: Init
+	$listbox->Init();
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render listbox -->
+        <?php echo $listbox->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

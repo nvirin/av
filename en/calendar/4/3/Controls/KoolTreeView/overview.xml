@@ -1,0 +1,52 @@
+<control>
+	<name>KoolTreeView - Great PHP Tree View Control</name>
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview</metakeywords>	 
+	<description>
+		<![CDATA[
+	KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.	<br/>
+	<b>Key features:</b>
+	<div style='padding-left:25px;'>
+		<li>Render Thousand nodes in a second</li>
+		<li>Very simple PHP interface</li>
+		<li>Rich Client-side API</li>
+		<li>Search-Engine Friendly</li>
+		<li>Drag and Drop behavior</li>
+		<li>Edit Node behavior</li>
+		<li>Multiple-nodes Selection feature</li>
+		<li>AJAX-based Loading on Demand</li>
+		<li>State-persistent capability</li>
+		<li>Style can be all customized</li>
+	</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolTreeView component to your page
+    require "kooltreeview/kooltreeview.php";
+
+    //Step 2: Create treeview object.
+    $kTree = new KoolTreeView("kTree");
+
+    //Step 3: Set properties for tree
+    $kTree->styleFolder = "kooltreeview/styles/default";
+    $kTree->imageFolder = "kooltreeview/icons";
+    $kTree->selectEnable = true;
+
+    //Step 4: Building tree
+    $kTree->getRootNode()->text = "I am root node";
+    $kTree->Add("root","node1","First node");
+    $kTree->Add("root","node2","Second node");
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render tree -->
+        <?php echo $kTree->Render();?>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

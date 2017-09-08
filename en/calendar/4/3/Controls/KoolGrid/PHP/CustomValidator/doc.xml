@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_CustomValidator" lastupdate="08/20/2009">	
+	<title>CustomValidator Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) CustomValidator class.</metadescription>
+	<description>
+		<![CDATA[
+<b style='color:red'>This class is obsolete.</b><br/>
+Instead of using this class, you should write a custom class derived from <a href='../GridValidator/index.php'>GridValidator</a>.
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ValidateFunction">
+			<type>function</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set function that will handle validation task.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set function that will handle validation task. Your custom validation function will get a value as parameter. The function will validate the value and return error message if value is not valid. The function returns <code>null</code> if the value is valid. 
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	function my_validate_function($value)
+	{
+		if ($value>20)
+		{
+			return "Value should not be greater than 20!";
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	$col = new GridBoundColumn();
+	$validator = new CustomValidator();
+	$validator->ValidateFunction = my_validate_function;
+	$col->AddValidator($validator);
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.3.0.0</supportversion>
+		</property>					
+	</properties>
+	<methods>	
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

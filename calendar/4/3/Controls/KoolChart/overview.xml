@@ -1,0 +1,54 @@
+<control>
+	<name>KoolChart - Excellent PHP Chart</name>
+	<metadescription></metadescription>
+	<metakeywords>php chart,php charting, pie chart, column chart, bar chart, scatter chart, line chart, area chart, scatter line chart</metakeywords>	 
+	<description>
+		<![CDATA[
+		KoolChart is a powerful PHP charting and graphing control which allows you to visualize your financial, scientific, engineering, 
+		business or any kind of relevant data in a stunning data-driven graph. Equipped with very strong client-side rendering
+		engine, KoolChart shows a remarkable performance and quality images across browsers. 
+		<br><b>Key Features:</b>
+		<div style='padding-left:25px;'>
+		   <li>Using SVG standard for high quality vector image.</li>
+		   <li>Support old browsers with limited capability.</li>
+		   <li>High interface-customizability.</li>
+		   <li>Smooth animated transitions</li>
+		   <li>Support user-interactivity </li>
+		   <li>Support all major charting: Line, Bar,Column, Pie and many more..</li>
+		   <li>Continously developed and supported.</li>
+		   <li>Easy-to use, with support of <a target="_blank" href="http://codegen.koolphp.net/chart/">Code Generator</a></li>
+		</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolChart component to your page
+    require "KoolControls/KoolChart/koolchart.php";
+
+    //Step 2: Create chart object.
+    $chart = new KoolChart("chart");
+    
+    //Step 3: Set properties for chart: title, legend, axis
+    $chart->Title->Text = "Sale report for 2012";
+    $chart->PlotArea->XAxis->Title = "Quarter";
+    $chart->PlotArea->XAxis->Set(array("Q1","Q2","Q3","Q4","Q5"));
+    $chart->PlotArea->YAxis->Title = "Sales";
+    $chart->PlotArea->YAxis->LabelsAppearance->DataFormatString = "$ {0}";
+    
+    //Step 4: Adding series
+    $chart->PlotArea->AddSeries(new ColumnSeries("Computer",array(20,30,40,70,50)));
+    $chart->PlotArea->AddSeries(new ColumnSeries("Laptop",array(40,50,10,30,60)));
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render koolchart -->
+        <?php echo $chart->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

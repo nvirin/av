@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_koolcombobox_class" lastupdate="01/01/2009">	
+	<title>KoolCombobox Class [PHP]</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolCombobox. This id will be use as variable name of KoolCombobox at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$kcb->id="kac";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width for combobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width for combobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->width="100px";
+	//Specify width by pixels 
+	$kcb->width="100%";
+	//Specify width by percent 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kcb->styleFolder="KoolCombobox/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="openDirection">
+			<type>string</type>
+			<defaultvalue>down</defaultvalue>
+			<allowedvalues>
+			   <value desc="ComboBox open option panel at bottom.">down</value>
+			   <value desc="ComboBox open option panel at top.">up</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set open direction of combobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set open direction of combobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->openDirection="up";//Set "up" as direction to open option panel 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="superAbove">
+			<type>bool</type>
+			<defaultvalue>"true"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether whether "shim" technique is used.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether whether "shim" technique is used. This is very useful if your application running in IE6 because it helps option panel to open above all other elements.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->superAbove=false;//Do not use "shim" technique 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="effect">
+			<type>string</type>
+			<allowedvalues>
+				<value desc="Combobox open option panel at bottom.">"none"</value>
+				
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the open effect of KoolCombobox's option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the open effect of KoolCombobox's option panel. Note: More effects will be added in the future.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->effect="none";//No effect 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion> 1.0.0.0</supportversion>
+		</property> 
+		 <property name="boxWidth">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width of option panel in KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width of option panel in KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->boxWidth="200px";
+	//Set the fixed width for option panel 
+	$kcb->boxWidth="auto";
+	//Width of option panel will be equal to width of KoolCombobox 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="boxHeight">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the height of option panel in KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the height of option panel in KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->boxHeight="200px";
+	//Set the fixed height for option panel 
+	$kcb->boxHeight="auto";
+	//The height of option panel will be auto between minBoxHeight and maxBoxHeight 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="minBoxHeight">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the min height of option panel in KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the min height of option panel in KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->minBoxHeight="50px";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="maxBoxHeight">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the max height of option panel in KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the max height of option panel in KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->maxBoxHeight="50px";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="align">
+			<type>string</type>
+			<defaultvalue>"right"</defaultvalue>
+			<allowedvalues>
+				<value desc="Align option panel to the left.">"left"</value>
+				<value desc="Align option panel to the right.">"right"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the alignment of option panel in KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the alignment of option panel in KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->align="left";
+	//Align option panel to the left 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="headerTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the header template of option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the header template of option panel
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->headerTemplate="This is the header"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="itemTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the item template of option panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the item template of option panel. The template contains marking to be replaced item's data. For example, {text} will be replaced by the text of each items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kcb->itemTemplate="<img src='{image}'/>{text}";
+	//Make item appears with an image and text 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="footerTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the footer template of option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the footer template of option panel
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->footerTemplate="This is the footer"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="inputValidate">
+			<type>string</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether input inserted to combobox will be validated.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether input inserted to combobox will be validated. If true the selected option must be one of items in option panel. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->inputValidate=true;//Keep only one node expand 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		 <property name="serviceFunction">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the name of koolajax-enabled function that will be used to update item list from server
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the name of koolajax-enabled function that will be used to update item list from server The service function will will take a text agurment ( this is the text that user keys in at client-side and sent to server-side) and return an array contain item data.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	function getdata($text)
+	{
+		$data = array(); 
+		array_push($data,array("text"=>"Software","value"=>"software","image"=>"software.gif"));
+		array_push($data,array("text"=>"Hardware","value"=>"hardware","image"=>"hardware.gif"));
+		return $data; 
+	} 
+	$koolajax->enableFunction("getdata"); 
+	$kcb->serviceFunction="getdata";
+	//Set reference to service-function 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		</properties>
+	
+	<methods>
+		<method name="addItem">
+			<type>KoolComboboxItem</type>
+			<parameters>
+			   <param type="string " optional="false">$text</param>
+			   <param type="string " optional="false">$value</param>
+			   <param type="array " optional="true">$data</param>
+			   <param type="bool " optional="true">$select</param>
+			   <param type="bool " optional="true">$enabled</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add item to option list of KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add item to option list of KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->addItem("Software","software",array("image"=>"software.gif"),true,true);
+    //The array contain custom data depended on the definition from user
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="LoadXML">
+			<type>function </type>
+			<parameters>
+			   <param type="string" optional="false">xml</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create KoolCombobox from XML.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create KoolCombobox with XML content. The input value may be string or XmlDocument.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$thePanel->LoadXML("<koolcombobox id='thePanel'><items><item text='Software' value='soft'/></items></koolcombobox>");
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.0 </supportversion>
+		</method> 
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo $kcb->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolCombobox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolCombobox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kcb->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kcb->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderCombobox">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolCombobox body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolCombobox body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $kcb->RenderCombobox();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolCombobox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolCombobox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $kcb->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

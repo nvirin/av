@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_kooltabs" lastupdate="01/01/2009">	
+	<title>KoolTabs Class [Javascript]</title>
+	<metadescription>KoolTabs - Powerful PHP Tab Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id for KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id for KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of kooltabs.
+        alert(kts.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</property> 
+	</properties>
+	<methods>
+		<method name="getTab">
+			<type>KoolTabsItem</type>
+			<parameters>
+			   <param type="string" optional="false">tabid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get a tab object with id
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get a tab object with id
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kts.getTab("hometabid").select();//Select the home tab
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.4 </supportversion>
+		</method> 
+		<method name="addTab">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">parentid</param>
+			   <param type="string " optional="false">id</param>
+			   <param type="string" optional="false">text</param>
+			   <param type="string" optional="true">link</param>
+			   <param type="bool " optional="true">selected</param>
+			   <param type="bool " optional="true">selected</param>
+			   <param type="int" optional="true">width</param>
+			   <param type="int" optional="true">height</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a new tab
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a new tab
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kts.addTab("root","newtab","New Tab");//Add a new tab to root
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+		<method name="removeTab">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Remove a tab
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Remove a tab
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kts.removeTab("hometabid");//Remove the home tab
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+		<method name="getSelectedChain">
+			<type>string</type>
+			<parameters>
+			   <param type="string" optional="false">tabid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Return chain of selected tabs
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return chain of selected tabs
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    alert(kts.getSelectedChain());//Alert the current selected chain
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+		 <method name="registerEvent">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.<br> <b>Allowed eventName:</b><br>
+		<div style='padding-left:25px;'>
+				"OnBeforeSelect"<br>
+				"OnBeforeUnselect"<br>
+				"OnBeforeClick"<br>
+				"OnSelect"<br>
+				"OnUnselect"<br>
+				"OnClick"<br>
+				"OnMouseOver"<br>
+				"OnMouseOut"<br>
+		</div>
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function tabSelect_handle(sender,arg)
+    {
+        alert(arg.TabId);
+    }
+    // Register for OnSelect event
+    kts.registerEvent("OnSelect",tabSelect_handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

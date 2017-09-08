@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolSocialShare" lastupdate="09/16/2009">	
+	<title>KoolSocialShare Class [PHP]</title>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin, share on google++</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width of KoolSocialShare.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width of KoolSocialShare.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->Width = "300px";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		
+		<property name="UrlToShare">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the page url that you want to share.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the page url that you want to share.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->UrlToShare = "http://www.koolphp.net";
+	$socialshare->TitleToShare = "KoolPHP - Spend less, code few, deliver HUGE";	
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+		<property name="TitleToShare">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the title that you want to share.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the title that you want to share.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->UrlToShare = "http://www.koolphp.net";
+	$socialshare->TitleToShare = "KoolPHP - Spend less, code few, deliver HUGE";	
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		
+		
+		<property name="Align">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the alignment of share buttons, whether "left" or "right"; the defaut value is "left"
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the alignment of share buttons, whether "left" or "right"; the defaut value is "left"
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Buttons align in left side">"left"</value>
+			   <value desc="Buttons align in right side">"right"</value>
+			</allowedvalues>			
+
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->Algin = "right";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 		
+		
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolSocialShare.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolSocialShare.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	echo $socialshare->id; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the folder which KoolSocialShare will load css to render.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the folder which KoolSocialShare will load css to render.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolSocialShare script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolSocialShare script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="ShowAllShareButtons">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Automatically add and show all available sharing buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Automatically add and show all available sharing buttons.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+	
+	$socialshare->ShowAllShareButtons();
+	
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+
+		<method name="Add">
+			<type>SocialButton</type>			
+			<parameters>
+				<param type="SocialButton" optional="false">$social_button</param>
+			</parameters>						
+			<shortdesc>
+			   <![CDATA[
+		Add a social button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a social button. The returned value is the added social button object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+	
+	$share->Add(new FacebookLikeWithCount());
+	$share->Add(new GooglePlusWithCount());
+	$share->Add(new TwitterWithCount());
+	$share->Add(new LinkedInWithCount());
+	$share->Add(new SocialButton("Blogger"));
+	$share->Add(new SocialButton("Delicious"));
+	$share->Add(new SocialButton("MySpace"));
+	$share->Add(new SocialButton("Reddit"));
+	$share->Add(new SocialButton("StumbleUpon"));
+	$share->Add(new SocialButton("Tumblr"));
+	$share->Add(new SocialButton("MailTo"));
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolSocialShare
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolSocialShare
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo $socialshare->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolSocialShare.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolSocialShare.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $socialshare->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolSocialShare
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolSocialShare
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $socialshare->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderGrid">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolSocialShare body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolSocialShare body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $socialshare->KoolGrid();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$script</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Regiser script to be at client from sever-side.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Regiser script to be at client from sever-side.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javascript">
+    <?php echo $socialshare->StartupScript();?>
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>			
+		</method>
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

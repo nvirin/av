@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_kooltreeview" lastupdate="01/01/2009">	
+	<title>KoolTreeView Class [PHP]</title>
+	<metadescription>KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance.</metadescription>
+	<metakeywords>php treeview, php tree view, php tree, ajax treeview, php ajax treeview</metakeywords>	 
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width for treeview
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width for treeview
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->width="100px";//Specify width by pixels 
+	$myTree->width="100%";//Specify width by percent 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the height for treeview
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the height for treeview
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->height="100px";//Specify height by pixels 
+	$myTree->height="100%";//Specify height by percent 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="imageFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folders which contain image resource for treeview
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folders which contain image resource for treeview
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->imageFolder="kooltreeview/icons"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="isSubTree">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set to true if current tree is under subtree request.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set to true if current tree is under subtree request.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="multipleSelectEnable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether treeview allows multiple nodes selection.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether treeview allows multiple nodes selection. User use Ctrl + leftmouse in order to select multinodes.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->multipleSelectEnable=true; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="overflow">
+			<type>string</type>			
+			<allowedvalues>
+			   <value desc="Auto adding scroll when tree is longer or bigger than width and height. ">"auto"</value>
+			   <value desc="Add scroll ">"scroll"</value>
+			   <value desc="Treeview will not display the scroll, overflow tree is hidden. ">"hidden"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set behavior when overflow happens.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set behavior when overflow happens.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->overflow="auto";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for treeview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for treeview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->styleFolder="kooltreeview/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="selectedIds">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set set of selected tree nodes.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set set of selected tree nodes.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->selectedIds="node1,node2";//List of selected node id
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="selectEnable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether tree allow selection
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether tree allow selection
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->selectEnable=false;//Disable select node feature 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="DragAndDropEnable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether tree allow drag and drop.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether tree allow drag and drop.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->DragAndDropEnable=true;//Enable drag and drop node feature 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		<property name="EditNodeEnable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether tree allow drag and drop.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether tree allow drag and drop.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->EditNodeEnable=true;//Enable edit node feature 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property> 
+		 <property name="selectDisableIds">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set list of select-disable tree nodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set list of select-disable tree nodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->selectDisableIds="node1,node2";//List of disable selection node
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="dragDisableIds">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set list of drag-disable tree nodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set list of drag-disable tree nodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->dragDisableIds="software,hardware";//List of drag-disable nodes 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="dropDisableIds">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set list of drop-disable tree nodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set list of drop-disable tree nodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->dropDisableIds="software,hardware";//List of drop-disable nodes
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="editDisableIds">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set list of edit-disable tree nodes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set list of edit-disable tree nodes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->editDisableIds="software,hardware";//List of edit-disable nodes 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</property>
+		 <property name="singleExpand">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether treeview keeps single node expand
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether treeview keeps single node expand
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->singleExpand=true;//Keep only one node expand 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="showLines">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether treeview show lines connection between nodes.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether treeview show lines connection between nodes.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->showLines=true;//Show lines connection
+?>
+			   ]]>
+			</samplecode>
+			<supportversion> 2.0.1.0 </supportversion>
+		</property>
+		 <property name="keepState">
+			<type>string</type>
+			<defaultvalue>"none"</defaultvalue>
+			<allowedvalues>
+			   <value desc="TreeView will not keep its state persisted.">"none"</value>
+			   <value desc="TreeView will keep its state persisted only on the current page.">"onpage"</value>
+			   <value desc="TreeView will keep its state persisted cross multiple pages.">"crosspage"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set how treeview will keep its state in cookie.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set how treeview will keep its state in cookie.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php	
+	$myTree->keepState="onpage";//Keep state of the tree on the page.
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.3.1 </supportversion>
+		</property>
+		 <property name="keepStateHours">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the number of hours that treeview state will be kept in cookie.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the number of hours that treeview state will be kept in cookie.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myTree->keepStateHours = 24;//Keep state persisted in 24 hours. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.3.1 </supportversion>
+		</property>
+	</properties>
+	
+	<methods>
+		<method name="Add">
+			<type>TreeNode</type>
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			   <param type="string " optional="false">$id</param>
+			   <param type="string" optional="false">$html</param>
+			   <param type="bool" optional="true">$expand</param>
+			   <param type="string" optional="true">$imageSrc</param>
+			   <param type="string" optional="true">$subTreeUrl</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a node to tree
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a node to tree
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kTree->Add("root","subnode","Sub Node",true,"Page.gif","theSubtree.php"); 
+	//Add the child with text="Sub Node" and id="subnode" to the root node
+	//The nodes expands at his initial state 
+	//The node has page.gif in front of text 
+	//When the node is open, the "theSubTree.php" will be loaded and put under "subnode" node 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		<method name="getRootNode">
+			<type>TreeNode</type>
+			<shortdesc>
+			   <![CDATA[
+		Return the root node object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return the root node object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+$root = $treeview->getRootNode();
+$root->showPlusMinus = true;
+...	
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+
+		<method name="getNode">
+			<type>TreeNode</type>
+			<parameters>
+			   <param type="string" optional="false">$nodeid</param>
+			</parameters>
+			
+			<shortdesc>
+			   <![CDATA[
+		Return tree node object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return tree node object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+$treeview->Add("root","intro","Introduction");
+...
+$intro_node = $treeview->getNode("intro"); //Get intro node object.
+$intro_node->expand = true; 
+...	
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 		
+
+		 
+		 
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the treeview
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the treeview
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo $myTree->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for treeview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for treeview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $myTree->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for treeview
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for treeview
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $myTree->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderTree">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of treeview body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of treeview body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $myTree->RenderTree();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate treeview
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate treeview
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $myTree->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_kooltabsitem" lastupdate="01/01/2009">	
+	<title>KoolTabsItem Class [PHP]</title>
+	<metadescription>KoolTabs - Powerful PHP Tab Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the id for KoolTabsItem 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolTabsItem 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+    $home_tab = $kts->addTab("root","home","Home");
+    echo $home_tab->id;//Write out "home" value.
+?>	
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the text for KoolTabsItem
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the text for KoolTabsItem
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$home_tab = $kts->addTab("root","home","Home"); 
+	$home_tab->text = "My Home";//Change text from "Home" to "My Home". 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="link">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the link for KoolTabsItem
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the link for KoolTabsItem
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$home_tab = $kts->addTab("root","home","Home"); 
+	$home_tab->link = "http://mydomain.com/home.php";//Set url link for tab.
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="enabled">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether the tab is enabled/disabled
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether the tab is enabled/disabled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$home_tab = $kts->addTab("root","home","Home");
+	$home_tab->enabled = false;//Disable the tab. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="selected">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether the tab is selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether the tab is selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$home_tab = $kts->addTab("root","home","Home");
+	$home_tab->selected = true;//Make the tab selected.
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width for KoolTabsItem
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width for KoolTabsItem
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$home_tab = $kts->addTab("root","home","Home"); 
+	$home_tab->width = "100px";//Set width for tab. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the height for KoolTabsItem
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the height for KoolTabsItem
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$home_tab = $kts->addTab("root","home","Home"); 
+	$home_tab->height = "20px";//Set height for tab. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="children">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the sub children for a KoolTabsItem.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the sub children for a KoolTabsItem.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php //Example is comming. ?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

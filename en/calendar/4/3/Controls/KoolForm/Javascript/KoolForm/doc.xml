@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolForm" lastupdate="01/01/2009">	
+	<title>KoolForm Class [Javascript]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolForm.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolForm. Normally the id of KoolForm will be the id of the real form concatenated with "_manager".
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="refresh">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make the form refresh.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make the form refresh.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		myform_manager.refresh();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="validate">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Triger form validation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Sometime you will need to validate the form not just at submission time but others, you just need to call this validate() function, the form input will be validated immediately.
+		Returned value is whether the whole form is valid.	   
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var isvalid =  myform_manager.validate();		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="get_control">
+			<type>object</type>
+			<parameters>
+			   <param type="string" optional="false">control_id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get control object with id.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get control object with id.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtName = myform_manager.get_control("txtName");
+		alert(txtName.get_value());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>
+		
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

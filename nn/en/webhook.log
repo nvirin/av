@@ -1,0 +1,18 @@
+2016-01-09 12:48:40 | ==================[ Incoming Request ]==================
+2016-01-09 12:48:41 | Full _REQUEST dump:
+Array
+(
+)
+
+2016-01-09 12:48:41 | No security key specified, ignoring request
+2016-01-09 12:48:41 | Finished processing request.
+2016-01-09 12:49:49 | ==================[ Incoming Request ]==================
+2016-01-09 12:49:49 | Full _REQUEST dump:
+Array
+(
+    [key] => addafbaplm
+)
+
+2016-01-09 12:49:49 | Security key specified, but not correct:
+2016-01-09 12:49:49 | 	Wanted: "EnterAKey!", but received "addafbaplm"
+2016-01-09 12:49:49 | Finished processing request.

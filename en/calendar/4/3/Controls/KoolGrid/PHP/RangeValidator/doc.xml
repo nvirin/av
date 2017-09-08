@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_RangeValidator" lastupdate="08/20/2009">	
+	<title>RangeValidator Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) RangeValidator class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridValidator/index.php'>GridValidator</a>
+<br />
+&nbsp;|__ RangeValidator
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ErrorMessage">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the message shown when user input is not valid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the message shown when user input is not valid.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridBoundColumn();
+	$validator = new RangeValidator();
+	$validator->MinValue = 10;
+	$validator->MaxValue = 100;
+	$validator->ErrorMessage = "Not in range!";
+	$col->AddValidator($validator);
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.3.0.0</supportversion>
+		</property>					
+
+		<property name="MinValue">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the minimum value.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the minimum value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridBoundColumn();
+	$validator = new RangeValidator();
+	$validator->MinValue = 10;
+	$validator->MaxValue = 100;
+	$validator->ErrorMessage = "Not in range!";
+	$col->AddValidator($validator);
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.3.0.0</supportversion>
+		</property>					
+
+		<property name="MaxValue">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the maximum value.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the maximum value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridBoundColumn();
+	$validator = new RangeValidator();
+	$validator->MinValue = 10;
+	$validator->MaxValue = 100;
+	$validator->ErrorMessage = "Not in range!";
+	$col->AddValidator($validator);
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.3.0.0</supportversion>
+		</property>					
+
+	</properties>
+	<methods>		
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

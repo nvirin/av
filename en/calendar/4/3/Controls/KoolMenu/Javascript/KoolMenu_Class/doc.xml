@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolMenu_Class" lastupdate="01/01/2009">	
+	<title>KoolMenu Class [Javascript]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolMenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolMenu.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of KoolMenu.
+        alert(km.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="collapse">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make all opening menuitems collapse.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make all opening menuitems collapse.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		km.collapse();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="getItem">
+			<type>KoolMenuItem</type>
+			<parameters>
+			   <param type="Date" optional="false">date</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get the menu item object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the menu item object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _open_item = km.getItem("open");
+		_open_item.expand();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="getRootItems">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Return the list of most top menu items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return the list of most top menu items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _items_under_root = km.getRootItems();
+		_items_under_root[0].expand(); // Expand the first menu item.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>
+		 
+		 <method name="registerEvent">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<allowedvalues>
+				<value desc="">"OnBeforeItemSelect"</value>
+				<value desc="">"OnItemSelect"</value>
+				<value desc="">"OnBeforeItemMouseOver"</value>
+				<value desc="">"OnItemMouseOver"</value>
+				<value desc="">"OnBeforeItemMouseOut"</value>
+				<value desc="">"OnItemMouseOut"</value>
+				<value desc="">"OnBeforeItemExpand"</value>
+				<value desc="">"OnItemExpand"</value>
+				<value desc="">"OnBeforeItemCollapse"</value>
+				<value desc="">"OnItemCollapse"</value>
+				<value desc="">"OnBeforeItemClick"</value>
+				<value desc="">"OnItemClick"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function OnItemSelect_Handle(sender,arg)
+    {
+        alert(arg["ItemId"]);
+    }
+    // Register for OnItemSelect event
+    km.registerEvent("OnItemSelect",OnItemSelect_Handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

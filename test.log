@@ -1,0 +1,331 @@
+array (
+)2016-01-09 15:25:17 | array (
+)
+2016-01-09 15:25:33 | array (
+)
+2016-01-09 15:26:55 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-09 15:26:55',
+  'data' => 
+  array (
+    'id' => 'c5cb19f3a6',
+    'email' => 'virin.nicolas@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.161.117.43',
+    'ip_signup' => '93.5.67.102',
+    'web_id' => '64946181',
+    'merges' => 
+    array (
+      'FNAME' => 'nicolas',
+      'LNAME' => 'nicolas',
+      'EMAIL' => 'virin.nicolas@gmail.com',
+      'MMERGE4' => 'coucou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-09 15:54:32 | array (
+)
+2016-01-09 15:57:01 | array (
+)
+2016-01-09 15:58:35 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-09 15:58:35',
+  'data' => 
+  array (
+    'id' => '86a9485a1d',
+    'email' => 'vnicolas054@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.161.117.43',
+    'ip_signup' => '80.14.189.169',
+    'web_id' => '64946837',
+    'merges' => 
+    array (
+      'FNAME' => 'nicolas',
+      'LNAME' => 'nicolas',
+      'EMAIL' => 'vnicolas054@gmail.com',
+      'MMERGE4' => 'coucou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-09 16:00:33 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-09 16:00:33',
+  'data' => 
+  array (
+    'id' => '86a9485a1d',
+    'email' => 'vnicolas054@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.161.117.43',
+    'ip_signup' => '93.5.67.102',
+    'web_id' => '64946633',
+    'merges' => 
+    array (
+      'FNAME' => 'nicolas',
+      'LNAME' => 'nicolas',
+      'EMAIL' => 'vnicolas054@gmail.com',
+      'MMERGE4' => 'coucou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-09 16:01:16 | array (
+)
+2016-01-09 16:02:21 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-09 16:02:20',
+  'data' => 
+  array (
+    'id' => '86a9485a1d',
+    'email' => 'vnicolas054@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.161.117.43',
+    'ip_signup' => '80.14.189.169',
+    'web_id' => '64946837',
+    'merges' => 
+    array (
+      'FNAME' => 'nicolas',
+      'LNAME' => 'nicolas',
+      'EMAIL' => 'vnicolas054@gmail.com',
+      'MMERGE4' => 'coucou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-09 16:04:01 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-09 16:04:01',
+  'data' => 
+  array (
+    'id' => 'c5cb19f3a6',
+    'email' => 'virin.nicolas@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.161.117.43',
+    'ip_signup' => '93.5.67.102',
+    'web_id' => '64946953',
+    'merges' => 
+    array (
+      'FNAME' => 'nicolas',
+      'LNAME' => 'nicolas',
+      'EMAIL' => 'virin.nicolas@gmail.com',
+      'MMERGE4' => 'coucou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-09 16:07:42 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-09 16:07:41',
+  'data' => 
+  array (
+    'id' => '86a9485a1d',
+    'email' => 'vnicolas054@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.161.117.43',
+    'ip_signup' => '80.14.189.169',
+    'web_id' => '64946777',
+    'merges' => 
+    array (
+      'FNAME' => 'nicolas',
+      'LNAME' => 'nicolas',
+      'EMAIL' => 'vnicolas054@gmail.com',
+      'MMERGE4' => 'coucou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:10:47 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:10:47',
+  'data' => 
+  array (
+    'id' => '9783b2365f',
+    'email' => 'moi@moi.fr',
+    'email_type' => 'html',
+    'ip_opt' => '84.98.98.120',
+    'web_id' => '75938601',
+    'merges' => 
+    array (
+      'FNAME' => 'moi',
+      'LNAME' => 'moi',
+      'EMAIL' => 'moi@moi.fr',
+      'MMERGE4' => 'moi',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:11:09 | array (
+)
+2016-01-22 11:14:26 | array (
+)
+2016-01-22 11:14:51 | array (
+)
+2016-01-22 11:15:58 | array (
+)
+2016-01-22 11:20:27 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:20:27',
+  'data' => 
+  array (
+    'id' => 'c5cb19f3a6',
+    'email' => 'virin.nicolas@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '84.99.78.142',
+    'ip_signup' => '82.127.215.77',
+    'web_id' => '75947717',
+    'merges' => 
+    array (
+      'FNAME' => 'moi',
+      'LNAME' => 'moi',
+      'EMAIL' => 'virin.nicolas@gmail.com',
+      'MMERGE4' => 'moi',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:28:07 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:28:06',
+  'data' => 
+  array (
+    'id' => 'c5cb19f3a6',
+    'email' => 'virin.nicolas@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '93.5.67.102',
+    'ip_signup' => '93.5.67.102',
+    'web_id' => '75948137',
+    'merges' => 
+    array (
+      'FNAME' => 'moi',
+      'LNAME' => 'moi',
+      'EMAIL' => 'virin.nicolas@gmail.com',
+      'MMERGE4' => 'moi',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:37:12 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:37:12',
+  'data' => 
+  array (
+    'id' => 'c5cb19f3a6',
+    'email' => 'virin.nicolas@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '80.14.189.169',
+    'ip_signup' => '80.14.189.169',
+    'web_id' => '75939321',
+    'merges' => 
+    array (
+      'FNAME' => 'moi',
+      'LNAME' => 'moi',
+      'EMAIL' => 'virin.nicolas@gmail.com',
+      'MMERGE4' => 'moi',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:48:29 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:48:29',
+  'data' => 
+  array (
+    'id' => '86a9485a1d',
+    'email' => 'vnicolas054@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '37.162.37.48',
+    'ip_signup' => '93.5.67.102',
+    'web_id' => '75961897',
+    'merges' => 
+    array (
+      'FNAME' => 'moi',
+      'LNAME' => 'moi',
+      'EMAIL' => 'vnicolas054@gmail.com',
+      'MMERGE4' => 'moi',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:54:44 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:54:44',
+  'data' => 
+  array (
+    'id' => '32a77053b7',
+    'email' => 'aaa@a.a',
+    'email_type' => 'html',
+    'ip_opt' => '80.14.189.169',
+    'web_id' => '75966917',
+    'merges' => 
+    array (
+      'FNAME' => 'a',
+      'LNAME' => 'a',
+      'EMAIL' => 'aaa@a.a',
+      'MMERGE4' => 'a',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 11:57:12 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 11:57:12',
+  'data' => 
+  array (
+    'id' => 'c5cb19f3a6',
+    'email' => 'virin.nicolas@gmail.com',
+    'email_type' => 'html',
+    'ip_opt' => '82.127.215.77',
+    'ip_signup' => '82.127.215.77',
+    'web_id' => '75937853',
+    'merges' => 
+    array (
+      'FNAME' => 'nico',
+      'LNAME' => 'vi',
+      'EMAIL' => 'virin.nicolas@gmail.com',
+      'MMERGE4' => 'couvou',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-22 12:11:03 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-22 12:11:02',
+  'data' => 
+  array (
+    'id' => '0d13eef9d1',
+    'email' => 'ac@ac.a',
+    'email_type' => 'html',
+    'ip_opt' => '82.127.215.77',
+    'web_id' => '75974505',
+    'merges' => 
+    array (
+      'FNAME' => 'aaa',
+      'LNAME' => 'aaaa',
+      'EMAIL' => 'ac@ac.a',
+      'MMERGE4' => 'a',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)
+2016-01-23 20:36:26 | array (
+  'type' => 'subscribe',
+  'fired_at' => '2016-01-23 20:36:25',
+  'data' => 
+  array (
+    'id' => '5e5d6c083e',
+    'email' => 'tilic@live.fr',
+    'email_type' => 'html',
+    'ip_opt' => '82.228.221.128',
+    'ip_signup' => '82.228.221.128',
+    'web_id' => '76405505',
+    'merges' => 
+    array (
+      'FNAME' => 'loic',
+      'LNAME' => 'loic',
+      'EMAIL' => 'tilic@live.fr',
+      'MMERGE4' => 'lol',
+    ),
+    'list_id' => '0b086adfa5',
+  ),
+)

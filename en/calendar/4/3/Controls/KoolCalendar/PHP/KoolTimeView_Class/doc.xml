@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolTimeView_Class" lastupdate="01/01/2009">	
+	<title>KoolTimeView Class [PHP]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolTimeView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolTimeView. This id will be use as variable name of KoolTimeView at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$timeview->id="cal";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolTimeView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolTimeView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$timeview->styleFolder="KoolControls/KoolCalendar/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolCalendar script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolCalendar script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$timeview = new KoolTimeView("timepicker");
+	$timeview->scriptFolder = "KoolControls/KoolCalendar";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="Orientation">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Render month days horizontally.">"Horizontal"</value>
+			   <value desc="Render month days vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->Orientation="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="HeaderText">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the header text of TimeView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the header text of TimeView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->HeaderText = "Time View";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="TimeFormat">
+			<type>string</type>
+			<defaultvalue>"g:i A"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the time format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the time format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->TimeFormat="g:i A";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="NumberOfColumns">
+			<type>int</type>
+			<defaultvalue>4</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set number of columns for TimeView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set number of columns for TimeView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->NumberOfColumns=5;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="StartTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the start time.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the start time.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->StartTime=mktime(1,0,0); // Start at 00:00
+	$timeview->EndTime=mktime(10,0,0); // End at 10:00
+	$timeview->Interval=mktime(2,0,0); // Every 2 hours.		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="EndTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the end time.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the end time.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->StartTime=mktime(1,0,0); // Start at 00:00
+	$timeview->EndTime=mktime(10,0,0); // End at 10:00
+	$timeview->Interval=mktime(2,0,0); // Every 2 hours.		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Interval">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the time interval.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the time interval.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->StartTime=mktime(1,0,0); // Start at 00:00
+	$timeview->StartTime=mktime(10,0,0); // Start at 10:00
+	$timeview->Interval=mktime(2,0,0); // Every 2 hours.		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		
+		<property name="ClientEvents">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the client-side event handle.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the client-side event handle.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$timeview->ClientEvents["OnSelect"]="Handle_OnSelect";
+...
+?>
+
+<script type="text/javascript">
+function Handle_OnSelect(sender,arg)
+{
+	alert(arg["Time"]);
+}
+</script>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+		<method name="Init">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Initiate datetime picker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Initiate datetime picker. This function should be called before datetime picker's Render() function.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$timeview = new KoolTimeView("cal");
+	...
+	$timeview->Init();
+	...
+	echo $timeview->Render(); 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolTimeView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolTimeView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$timeview->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolTimeView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolTimeView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $timeview->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolTimeView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolTimeView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $timeview->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderCalendar">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolTimeView body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolTimeView body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $timeview->RenderDateTimePicker();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolTimeView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolTimeView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $timeview->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_kooltabs" lastupdate="01/01/2009">	
+	<title>KoolTabs Class [PHP]</title>
+	<metadescription>KoolTabs - Powerful PHP Tab Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the id for KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolTabs. This id will be use as variable name of KoolTabs at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->id="kts";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="styleFolder">
+			<type></type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->styleFolder="kooltabs/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain core file "kooltabs.php".
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain core file "kooltabs.php". Normally the path to script folder is automatically added, however in some cases you may need to set it manually.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->scriptFolder="lib/kooltabs";//Set path to "kooltabs" folder
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="width">
+			<type>string</type>
+			<defaultvalue>auto</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width of KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width of KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kts->width="500px";//Set width of KoolTabs 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="height">
+			<type>string</type>
+			<defaultvalue>auto</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the height of KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the height of KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kts->height="200px";//Set height of KoolTabs 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="position">
+			<type>string</type>
+			<defaultvalue>"top"</defaultvalue>
+			<allowedvalues>
+			   <value desc="KoolTabs show top style tabs.">"top"</value>
+			   <value desc="KoolTabs show left tabs style.">"left"</value>
+			   <value desc="KoolTabs show bottom tabs style.">"bottom"</value>
+			   <value desc="KoolTabs show right tabs style.">"right"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the position of KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the position of KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->position="top";//Set KoolTabs position styles 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="align">
+			<type></type>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="KoolTabs align tab from the left.">"left"</value>
+			   <value desc="KoolTabs align tabs from the right.">"right"</value>
+			   <value desc="KoolTabs align tabs in the center.">"center"</value>
+			   <value desc="KoolTabs fills tabs in all available space.">"justify"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the alignment of tabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the alignment of tabs. This alignment is only effective with "top" and "bottom" position style of KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->align="left";//Render tabs from left-hand side 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="scroll">
+			<type>string</type>
+			<defaultvalue>"hidden"</defaultvalue>
+			<allowedvalues>
+			   <value desc="No scrolling will be shown.">"hidden"</value>
+			   <value desc="Both scrolling arrows align to left.">"left" </value>
+			   <value desc="Both scrolling arrows align to right.">"right" </value>
+			    <value desc="Left-scrolling arrow align to left-hand side and right-scrolling arrow aligns to the right-hand side.">"middle" </value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the scrollment of tabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the scrollment of tabs. This scrollment is only effective with "top" and "bottom" position style of KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->scroll="left";//Align both scrolling arrows to left.
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.4 </supportversion>
+		</property> 
+
+	</properties>
+	
+	<methods>
+		<method name="addTab">
+			<type>KoolTabsItem</type>
+			<parameters>
+			   <param type="string " optional="false">$parentid</param>
+			   <param type="string " optional="false">$id</param>
+			   <param type="string" optional="false">$text</param>
+			   <param type="string " optional="true">$link</param>
+			   <param type="string " optional="true">$selected</param>
+			   <param type="string" optional="true">$enabled</param>
+			   <param type="string " optional="true">$width</param>
+			   <param type="string" optional="true">$height</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add new tab to KoolTabs list
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add new tab to KoolTabs list
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	//Add the home tab to root 
+	$kts->addTab("root","home","Home");
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="addBreak">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add break between tabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add break between tabs. The next tab will show in the new line.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kts->addTab("root","home","Home");
+	$kts->addBreak("root");	//Add break
+	$kts->addTab("root","products","Products");
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="LoadXML">
+			<type>function </type>
+			<parameters>
+			   <param type="string" optional="false">xml</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create KoolTabs from XML.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create KoolTabs with XML content. The input value may be string or XmlDocument.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$thePanel->LoadXML("<kooltabs id='kts'><tab id="home" text="Home" link="home.html" /></kooltabs>");
+
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.0 </supportversion>
+		</method> 
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolTabs
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolTabs
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo $kts->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kts->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolTabs
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolTabs
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kts->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderTabs">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolTabs body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolTabs body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $kts->RenderTabs();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolTabs
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolTabs
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $kts->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

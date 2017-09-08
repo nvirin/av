@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_MySQLDataSource" lastupdate="08/20/2009">	
+	<title>MySQLDataSource Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) MySQLDataSource class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="SelectCommand">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the select command for datasource. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the select command for datasource. MySQLDataSource will use this command to select data from database.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$ds = new MySQLDataSource();
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+	$ds->UpdateCommand = "update customers set customerName='@customerName' where customerNumber=@customerNumber";
+	$ds->DeleteCommand = "delete from customers where customerNumber=@customerNumber";
+	$ds->InsertCommand = "insert into customers (customerNumber,customerName) values (@customerNumber,'@customerName');";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="UpdateCommand">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the update command for datasource. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the update command for datasource. MySQLDataSource will use this command to update data. Those field name which is preceded by "@" will be relaced with value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$ds = new MySQLDataSource();
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+	$ds->UpdateCommand = "update customers set customerName='@customerName' where customerNumber=@customerNumber";
+	$ds->DeleteCommand = "delete from customers where customerNumber=@customerNumber";
+	$ds->InsertCommand = "insert into customers (customerNumber,customerName) values (@customerNumber,'@customerName');";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="InsertCommand">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the insert command for datasource. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the insert command for datasource. MySQLDataSource will use this command to insert new data to database. Those field name which is preceded by "@" will be relaced with value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$ds = new MySQLDataSource();
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+	$ds->UpdateCommand = "update customers set customerName='@customerName' where customerNumber=@customerNumber";
+	$ds->DeleteCommand = "delete from customers where customerNumber=@customerNumber";
+	$ds->InsertCommand = "insert into customers (customerNumber,customerName) values (@customerNumber,'@customerName');";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="DeleteCommand">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the delete command for datasource. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the delete command for datasource. MySQLDataSource will use this command to delete data from database. Those field name which is preceded by "@" will be relaced with value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$ds = new MySQLDataSource();
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+	$ds->UpdateCommand = "update customers set customerName='@customerName' where customerNumber=@customerNumber";
+	$ds->DeleteCommand = "delete from customers where customerNumber=@customerNumber";
+	$ds->InsertCommand = "insert into customers (customerNumber,customerName) values (@customerNumber,'@customerName');";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+
+
+	</properties>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

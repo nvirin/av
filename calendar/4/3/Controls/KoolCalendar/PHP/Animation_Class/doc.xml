@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_Animation_Class" lastupdate="01/01/2009">	
+	<title>Animation Class [PHP]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="Type">
+			<type>string</type>
+			<defaultvalue>"EaseBoth"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set animation type.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set animation type.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="">"Linear"</value>
+			   <value desc="">"EaseIn"</value>
+			   <value desc="">"EaseOut"</value>
+			   <value desc="">"EaseBoth"</value>
+			   <value desc="">"EaseInStrong"</value>
+			   <value desc="">"EaseOutStrong"</value>
+			   <value desc="">"EaseBothStrong"</value>
+			   <value desc="">"BounceIn"</value>
+			   <value desc="">"BounceOut"</value>
+			   <value desc="">"BounceBoth"</value>
+			   <value desc="">"ElasticIn"</value>
+			   <value desc="">"ElasticOut"</value>
+			   <value desc="">"ElasticBoth"</value>
+			   <value desc="">"BackIn"</value>
+			   <value desc="">"BackOut"</value>
+			   <value desc="">"BackBoth"</value>
+			   <value desc="">"None"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->NavigateAnimation->Type="Linear";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="Duration">
+			<type>int</type>
+			<defaultvalue>200</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the duration of animation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the duration of animation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->NavigateAnimation->Duration=1000; // 1000ms
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

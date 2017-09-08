@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation" metakeywords = "php menu, php slidemenu, ajax menu, php ajax menu,sliding menu, vertical menu ">	
+
+	<log date="Apr 16, 2012" version="1.6.0.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+
+	<log date="December 04, 2011" version="1.5.0.3">
+		<![CDATA[ 
+		- Enhance loading xml.
+		]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="1.4.0.2">
+		<![CDATA[ 
+		- Small enhancement related to css style.
+		]]>		
+	</log>
+
+
+	<log date="July 09, 2009" version="1.4.0.0">
+		<![CDATA[ 
+		- Adding target property to SlideMenuParent and SlideMenuChild.
+		]]>		
+	</log>
+	<log date="March 08, 2009" version="1.3.0.8">
+		<![CDATA[ 
+		- Registering CSS is improved.
+		]]>		
+	</log>
+	<log date="February 09, 2009" version="1.3.0.6">
+		<![CDATA[ 
+		- Enhance styleFolder property.
+		]]>		
+	</log>
+	<log date="January 25, 2009" version="1.3.0.4">
+		<![CDATA[ 
+		- New client-side function: getParentId() has been added to SlideMenuParent, SlideMenuChild, SlideMenuPanel classes.
+		]]>		
+	</log>
+	<log date="January 04, 2009" version="1.3.0.0">
+		<![CDATA[ 
+		- Many enhancements of current feature.
+		]]>		
+	</log>
+	<log date="December 15, 2008" version="1.0.1.2">
+		<![CDATA[ 
+		- Enhance styles and render to make KoolSlideMenu comply to XHTML1.0 strict.
+		- Improve the rendering speed of KoolSlideMenu
+		]]>		
+	</log>
+	<log date="December 10, 2008" version="1.0.1.1">
+		<![CDATA[ 
+		- Enhance the panel of KoolSlideMenu.
+		]]>		
+	</log>
+	<log date="November 17, 2008" version="1.0.1.0">
+		<![CDATA[ 
+		- New property added: scriptFolder for manually setting the path to script folder.
+		]]>		
+	</log>
+	<log date="October 15, 2008" version="1.0.0.6">
+		<![CDATA[ 
+		- Make KoolSlideMenu work inside UpdatePanel.
+		- Solve the style issues in Chrome.
+		]]>		
+	</log>
+	<log date="October 01, 2008" version="1.0.0.4">
+		<![CDATA[ 
+		- Enhance the render of JS library's absolute path.
+		]]>		
+	</log>
+	<log date="September 23, 2008" version="1.0.0.3">
+		<![CDATA[ 
+		- Make KoolSlideMenu work better with WAMP Server
+		]]>		
+	</log>
+	<log date="September 21, 2008" version="1.0.0.1">
+		<![CDATA[ 
+		- Enhance KoolSlideMenu to work when short_open_tags settings of PHP is disabled.
+		]]>		
+	</log>
+	<log date="September 03, 2008" version="1.0.0.0">
+		<![CDATA[ 		
+		- Build slide menu from XML.
+		- Sliding effect is provided.
+		- Event handles are fully equiped.
+		- SlideMenu is able to do single expand.
+		]]>		
+	</log>
+</changelog>

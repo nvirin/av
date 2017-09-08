@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_TwitterButton" lastupdate="09/16/2009">	
+	<title>TwitterButton Class [PHP]</title>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin, share on google++</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+
+
+
+
+
+		<property name="ShowCount">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set whether the number of people who like the page will be shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether the number of people who like the page will be shown.
+			   ]]>
+			</longdesc>
+	
+			
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new TwitterButton();
+	$button->ShowCount = true;
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+
+	</properties>
+	
+	<methods>
+		<method name="__construct">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+	
+	$socialshare->Add(new TwitterButton());
+	
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

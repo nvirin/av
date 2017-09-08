@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolautocomplete_class" lastupdate="01/01/2009">	
+	<title>KoolAutoComplete Class [Javascript]</title>
+	<metakeywords>php ajax autocomplete, php autocomplete, php ajax autosuggest, php autosuggest</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of autocomplete.
+        alert(kac.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="attachTo">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false"> textboxid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Attach this autocomplete to a textbox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Attach this autocomplete to a textbox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Attach autocomplete to textbox with id="newTextBoxId"
+        kac.attachTo("newTextBoxId");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getItemIds">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get all ids of items in autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get all ids of items in autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Get all items' id.
+        var itemIdList = kac.getItemIds();
+        var oItem = kac.getItem(itemIdList[0]);        
+        oItem.select();		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="getItem">
+			<type>KoolAutoCompleteItem</type>
+			<parameters>
+			   <param type="string" optional="false">itemid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get item object
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get item object
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Select the first item of autocomplete
+        var oItem = kac.getItem(kac.getItemIds()[0]);        
+        oItem.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="addItem">
+			<type>KoolAutoCompleteItem</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			   <param type="object " optional="true">data</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a new item to item list of autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a new item to item list of autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Add new item.
+        kac.addItem("I am new",{"image":"new.gif"});
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="removeItem">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">itemid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+				Remove item from item list of autocomplete 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Remove item from item list of autocomplete 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Remove the first item of the item
+        var itemIdList = kac.getItemIds();
+        kac.removeItem(itemIdList[0]);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="open">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+Open autocomplete option panel 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+Open autocomplete option panel 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Open the option panel.
+        kac.open();
+    }
+</script>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="isOpening">
+			<type>bool</type>
+			<parameters>
+			   <param type="string" optional="false">id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Return true if autocomplete option panel is opening
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return true if autocomplete option panel is opening
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Alert whether option panel is opened.
+        alert(kac.isOpening()?"Open":"Close");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="close">
+			<type>string</type>
+			<parameters>
+			   <param type="string" optional="false">id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Close autocomplete option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Close autocomplete option panel
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        // Close the option panel.
+        kac.close();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="registerEvent">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<allowedvalues>
+				<value desc="">"OnBeforeSelect"</value>
+				<value desc="">"OnBeforeOpen"</value>
+				<value desc="">"OnBeforeClose"</value>
+				<value desc="">"OnBeforeSendUpdateRequest"</value>
+				<value desc="">"OnBeforeUpdateItemList"</value>
+				<value desc="">"OnBeforeKeyPress"</value>
+				<value desc="">"OnSelect"</value>
+				<value desc="">"OnOpen"</value>
+				<value desc="">"OnClose"</value>
+				<value desc="">"OnSendUpdateRequest"</value>
+				<value desc="">"OnUpdateItemList"</value>
+				<value desc="">"OnKeyPress"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.<br><b>Allowed eventName:</b>
+				<ul><i>
+				"OnBeforeSelect"<br>
+				"OnBeforeOpen"<br>
+				"OnBeforeClose"<br>
+				"OnBeforeSendUpdateRequest"<br>
+				"OnBeforeUpdateItemList"<br>
+				"OnBeforeKeyPress"<br>
+				"OnSelect"<br>
+				"OnOpen"<br>
+				"OnClose"<br>
+				"OnSendUpdateRequest"<br>
+				"OnUpdateItemList"<br>	
+				"OnKeyPress"<br>	
+							
+				</i></ul>
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function itemSelect_handle(sender,arg)
+    {
+        alert(arg.ItemId);
+    }
+    // Register for OnSelect event
+    ksm.registerEvent("OnSelect",itemSelect_handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

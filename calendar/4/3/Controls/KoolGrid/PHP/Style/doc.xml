@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_Style" lastupdate="08/20/2009">	
+	<title>Style Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) Style class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+	<properties>
+		<property name="Wrap">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether text is wrapped.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether text is wrapped.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col->HeaderStyle->Wrap = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+	
+	
+		
+		<property name="Align">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set horizontal alignment.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set horizontal alignment.
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Text aligns in left side">"left"</value>
+			   <value desc="Text aligns in center">"center"</value>
+			   <value desc="Text aligns in right side">"right"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$col->HeaderStyle->Align = "center";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+		<property name="Valign">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set vertical alignment.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set vertical alignment.
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Top alignment">"top"</value>
+			   <value desc="Middle alignment">"middle"</value>
+			   <value desc="Bottom alignment">"left"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$col->HeaderStyle->Valign = "bottom";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

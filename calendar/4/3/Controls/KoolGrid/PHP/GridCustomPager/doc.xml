@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridCustomPager" lastupdate="08/20/2009">	
+	<title>GridCustomPager Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridCustomPager class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridPager/index.php'>GridPager</a>
+<br />
+&nbsp;|__ GridCustomPager
+		]]>		
+	</description>
+
+	<methods>
+		<method name="Render">
+			<type>function</type>
+			<shortdesc>
+				<![CDATA[
+					Set the function that will render content of custom pager.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the function that will render content of custom pager.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	
+	class MyUniquePager extends GridCustomPager
+	{
+		function Render($info)
+		{
+			$html = "My custom pager, select to change page: ";
+			$html.="<select style='width:40px;' onchange='handle_pagechange(this)'>";
+			for($i=0;$i<$info["TotalPages"];$i++)
+			{
+				$html.="<option value='".($i+1)."' ".(($i==$info["PageIndex"])?"selected":"").">".($i+1)."</option>";
+			}
+			$html.="</select>";
+			return $html;
+		}
+	}	
+	$grid->MasterTable->Pager = new MyUniquePager();
+?>
+...
+	<script type="text/javascript">
+		function handle_pagechange(_obj_select)
+		{
+			var page_index = _obj_select.options[_obj_select.selectedIndex].value;
+			grid_gopage(_obj_select,page_index-1);
+		}
+	</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method>
+		
+	</methods>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

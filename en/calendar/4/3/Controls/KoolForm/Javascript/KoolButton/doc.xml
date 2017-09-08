@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolButton" lastupdate="01/01/2009">	
+	<title>KoolButton Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolButton.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolButton.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var button = myform_manager.get_control("btnSubmit");
+		alert(button.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="enable">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">enabled</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Enable or disable the control.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Enable or disable the control.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var button = myform_manager.get_control("btnSubmit");
+		button.enable(false);//Disable the button.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+		<method name="set_text">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set the text for button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the text for button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var button = myform_manager.get_control("btnSubmit");
+		button.set_text("Done");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method>
+
+		<method name="get_text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		The the text of button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		The the text of button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var button = myform_manager.get_control("btnSubmit");
+		alert(button.get_text());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

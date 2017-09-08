@@ -1,0 +1,60 @@
+<div class="form-row">
+    <div class="plan-select">
+        <div class="form-row">
+            <div class="label-container">
+                <label for=""></label>
+            </div>
+            <div class="input-container">
+                <input type="radio" id="planchoose" name="planchoose" value="0.00" checked /> Plan 1
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="label-container">
+                <label for="Bin1_Count">Bin 1</label>
+            </div>
+            <div class="input-container">
+                <select id="Bin1_Count" name="Bin1_Count">
+                    <option value="0"> - select - </option>
+                    <option value="10.00">1 - 10.00</option>
+                    <option value="15.00">3 - 15.00</option>
+                    <option value="52.00">13 - 52.00</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">            
+            <div class="label-container">
+                <label for="Bin2_Count">Bin 2</label>
+            </div>
+            <div class="input-container">
+                <select id="Bin2_Count" name="Bin2_Count">
+                    <option value="0"> - select - </option>
+                    <option value="10.00">1 clean - 10.00</option>
+                    <option value="15.00">3 cleans - 15.00</option>
+                    <option value="52.00">13 cleans - 52.00</option>
+                </select>
+            </div>
+        </div>        
+
+    </div>
+
+    <div class="plan-select-split">OR</div>
+
+    <div class="plan-select">
+        <div class="form-row">
+            <div class="label-container">
+            </div>
+            <div class="input-container">
+                <input type="radio" id="planchoose" name="planchoose" value="120" /> Plan 2
+                <p>Set price<br /></p>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="form-row">
+    <div class="label-container">
+        <label for="Payment">Total</label>
+    </div>
+    <div class="input-container">
+        <input type="text" id="Payment" name="Payment" value="0.00" readonly />
+    </div>
+</div>

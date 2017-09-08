@@ -1,0 +1,48 @@
+<control>
+	<name>KoolComboBox - Advanced PHP Combo Box</name>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<description>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</description>
+	<description>
+		<![CDATA[
+	KoolComboBox as an advanced solution to replace old and limited default &lt;select> tag. KoolComboBox extends the capability of combo box to the max. 
+	Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.<br/>
+	<b>Key Features :</b>
+	<div style='padding-left:25px;'>
+	  <li>Semantic HTML design</li>
+	  <li>Simple PHP control interface</li>
+	  <li>Featured-rich client-side control</li>
+	  <li>Highly cusomized interface with template</li>
+	  <li>Many advanced behaviors</li>
+	  <li>CSS styles can be fully customized</li>
+	</div>
+	]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolComboBox component to your page
+    require "koolcombobox/koolcombobox.php";
+
+    //Step 2: Create koolcombobox object.
+    $kcb = new KoolCombobox("kcb");
+
+    //Step 3: Set properties for koolcombobox
+    $kcb->styleFolder = "koolcombobox/styles/default";
+    $kcb->itemTemplate = "<img src='{image}'/>{text}";
+
+    //Step 4: Add items for combo box: addItem($text,$value[,$data])
+    $kcb->addItem("Canada","Canada",array("image"=>"flag_canada.png"));
+    $kcb->addItem("Finland","Finland",array("image"=>"flag_finland.png"));
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render koolcombobox -->
+        <?php echo $kcb->Render();?>
+    </body>
+</html>
+		]]>
+	</samplecode>			
+</control>

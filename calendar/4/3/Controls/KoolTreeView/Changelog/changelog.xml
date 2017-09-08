@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolTreeView is the excellent treeview control for PHP, combining highly-efficient rendering and AJAX Load on Demand support for superior performance." metakeywords = "php treeview, php tree view, php tree, ajax treeview, php ajax treeview">	
+
+	<log date="Apr 16, 2012" version="2.0.8.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+
+	<log date="March 15, 2012" version="2.0.7.5">
+		<![CDATA[ 
+		- Add new client-side function addData()
+		]]>		
+	</log>
+
+
+	<log date="December 04, 2011" version="2.0.7.3">
+		<![CDATA[ 
+		- Fix rendering issue in IE.
+		]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="2.0.7.2">
+		<![CDATA[ 
+		- Enhance css style.
+		]]>		
+	</log>
+
+	<log date="September 24, 2009" version="2.0.6.0">
+		<![CDATA[ 
+		- Enhance adding data function.
+		]]>		
+	</log>
+
+
+	<log date="March 08, 2009" version="2.0.5.7">
+		<![CDATA[ 
+		- Registering CSS is improved.
+		- Improve the edit input: Enter key will not cause postback
+		]]>		
+	</log>
+	<log date="February 09, 2009" version="2.0.5.4">
+		<![CDATA[ 
+		- Enhance styleFolder property.
+		]]>		
+	</log>
+	<log date="December 15, 2008" version="2.0.4.9">
+		<![CDATA[ 
+		- Enhance styles and render to make KoolTreeView comply to XHTML1.0 strict.
+		- Modify the javascript rendering to improve rendering speed of KoolTreeView
+		]]>		
+	</log>
+	<log date="December 10, 2008" version="2.0.4.8">
+		<![CDATA[ 
+		- Enhance the RenderTree() function.
+		]]>		
+	</log>
+	<log date="November 17, 2008" version="2.0.4.6">
+		<![CDATA[ 
+		- New property added: scriptFolder for manually setting the path to script folder.
+		]]>		
+	</log>
+	<log date="November 11, 2008" version="2.0.4.5">
+		<![CDATA[ 
+		- Improve the loading image in IE when doctype is used.
+		- Enhance TreeNode::loadSubNode() function
+		]]>		
+	</log>
+	<log date="October 26, 2008" version="2.0.4.3">
+		<![CDATA[ 
+		- Enhance KoolTreeView working with KoolScripting.
+		- Enhance working of moveToBelow() function in IE
+		]]>		
+	</log>
+	<log date="October 25, 2008" version="2.0.4.1">
+		<![CDATA[ 
+		- Enhance drag and drop action.
+		- Modify the wrong function name moveToBellow() to the correct one moveToBelow()
+		]]>		
+	</log>
+	<log date="October 20, 2008" version="2.0.4.0">
+		<![CDATA[ 
+		- New TreeNode::addChildNode(): This will extend capability of creating node at client-side.
+		- New set of method for TreeNode to control select,drag,drop and edit options:
+			  o TreeNode::disableSelect()
+			  o TreeNode::disableDrag()
+			  o TreeNode::disableDrop()
+			  o TreeNode::disableEdits()
+		- Enhance the working of TreeNode::addData() function.
+		]]>		
+	</log>
+	<log date="October 15, 2008" version="2.0.3.2">
+		<![CDATA[ 
+		- Make KoolTreeView work better inside UpdatePanel.
+		- Some minor improvement related to treeview rendering.
+		]]>		
+	</log>
+	<log date="October 06, 2008" version="2.0.3.1">
+		<![CDATA[ 
+		- New feature: KoolTreeView now is able to keep its state persisted. View demo
+		- Some enhancements related to TreeView style.
+		]]>		
+	</log>
+	<log date="October 01, 2008" version="2.0.2.1">
+		<![CDATA[ 
+	    - Enhance the render of JS library's absolute path.
+		]]>		
+	</log>
+	<log date="September 25, 2008" version="2.0.1.9">
+		<![CDATA[ 
+		- Enhance styles of KoolTreeView when working with IE Transitional Doctype.
+		- Make dynamic loading work better.
+		]]>		
+	</log>
+	<log date="September 23, 2008" version="2.0.1.7">
+		<![CDATA[ 
+		- Make KoolTreeView work better with WAMP Server
+		]]>		
+	</log>
+	<log date="September 21, 2008" version="2.0.1.5">
+		<![CDATA[ 
+		- Enhance KoolTreeView to work when short_open_tags settings of PHP is disabled.
+		]]>		
+	</log>
+	<log date="September 08, 2008" version="2.0.1.4">
+		<![CDATA[ 
+		- Solve the issue of setting height and overflow properties.
+		- Enhance behavior of edit node.
+		]]>		
+	</log>
+		<log date="August 15, 2008" version="2.0.1.0">
+		<![CDATA[ 
+		- TreeView style has been improved very much.
+		- New property showLines: TreeView is able to on/off showing lines connection between nodes.
+		- Enhanced the Drag and Drop behavior
+		]]>		
+	</log>
+	<log date="August 10, 2008" version="2.0.0.0">
+		<![CDATA[ 
+		- Total new structure in rendering the tree which is smaller in size, faster in loading, more compatible with latest browser.
+		- Drag and Drop feature is available.
+		- Edit Node feature now is available.
+		- Enhance the sub tree loading.
+		]]>		
+	</log>
+	<log date="June 19, 2008" version="1.0.0.2">
+		<![CDATA[ 
+		- Enhance KoolTreeView to work better in Linux environment.
+		]]>		
+	</log>
+	<log date="June 10, 2008" version="1.0.0.0">
+		<![CDATA[ 
+		- KoolTreeView is first released.
+		]]>		
+	</log>
+</changelog>

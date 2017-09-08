@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolajax_class" lastupdate="01/01/2009">	
+	<title>KoolAjax Class [Javascript]</title>
+	<metakeywords>php ajax,php ajax framework,php callback, ajax for php</metakeywords>	 
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	<methods>
+		<method name="loadCss">
+			<type>void </type>
+			<parameters>
+				<param type="string" optional="false">cssUrl</param>
+				<param type="function" optional="false">ondone</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[
+				Register a css file to page.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Register a css file to page.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+function onCssLoad(_sender,_arg) 
+{ 
+	alert("main.css has been loaded"); 
+} 
+koolajax.loadCss("styles/main.css",onCssLoad);
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		<method name="loadScript">
+			<type>void </type>
+			<parameters>
+				<param type="string" optional="false">jsUrl</param>
+				<param type="function" optional="false">ondone</param>
+			</parameters> <shortdesc>
+				<![CDATA[
+				Load a .js file to page.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Load a .js file to page.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+function onScriptLoad(_sender,_arg) 
+{
+	alert("action.js has been loaded"); 
+}
+koolajax.loadScript("scripts/action.js",onScriptLoad);
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		<method name="callback">
+			<type>void</type>
+			<parameters>
+			   <param type="object" optional="false"> functionRequest</param>
+			   <param type="function" optional="true"> onDone</param>
+			</parameters>   
+			<shortdesc>
+			   <![CDATA[
+		Send request to call a server function.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make a callback to a server koolajax-enabled function. Return value can be retrieved from onDone function (asynchronous mode) or directly from callback function (synchonous mode). If onDone function is specified, asynchronous callback will be made. If onDone is not specified or set to null, synchonous callback will be made.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+function synchronousCallback()
+{ 
+	//Synchronous call: Browser will be freezed and wait for result sent from server 
+	var z = koolajax.callback(multiply(3,4)); 
+	alert(z); 
+} 
+function onDone(res)
+{
+	alert(res); 
+} 
+function asynchronousCallback() 
+{ 
+	//Asynchronous call: After server responses, the onDone will be called with available result. 
+	koolajax.callback(multiply(3,4),onDone); 
+}
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="load">
+			<type>void</type>
+			<parameters>
+			   <param type="string " optional="false">url</param>
+			   <param type="function" optional="true"> onDone</param>
+			</parameters> 
+			<shortdesc>
+			   <![CDATA[
+		Load any resource file.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Load any content from url. Returned content can be retrieved from onDone function (asynchronous mode) or directly from callback function (synchonous mode). If onDone function is specified, asynchronous callback will be made. If onDone is not specified or set to null, synchonous callback will be made.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+function synchronousLoad() 
+{
+	//Synchronous load: Browser will for result sent from server and continue with processing 
+	var z = koolajax.load("myData.txt"); alert(z); 
+}
+function onDone(res) 
+{ 
+	alert(res); 
+} 
+function asynchronousLoad() 
+{ 
+	//Asynchronous load: After server responses, the onDone will be called with available result.	
+	koolajax.load("myData.txt",onDone); 
+}
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="parseXml">
+			<type>XmlDocument</type>
+			<parameters>
+			   <param type="string" optional="false"> xmlString</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Parse a xml string to xml object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Parse a xml string to xml object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+function example()
+{
+	var xmlDoc = koolajax.parseXml("Ned Thompson"); 
+}
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="sendRequest">
+			<type>void</type>
+			<parameters>
+			   <param type="object " optional="false">request</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Parse a xml string to xml object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Parse a xml string to xml object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+function onDone(content,error,request)
+{ 
+	if (content!=null) 
+	{
+		//Get content 
+		alert(content); 
+	}
+	else if(error!=null) 
+	{
+		//Error 
+		alert(error); 
+	} 
+} 
+function sendCustomRequest() 
+{ 
+	var oReq = new Request("get",onDone,"myPage.php"); 
+	koolajax.sendRequest(oReq); 
+}
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

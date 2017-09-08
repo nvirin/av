@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_gridcolumn_class" lastupdate="08/20/2009">	
+	<title>GridColumn Class [Javascript]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of client-side GridColumn Class</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get the id of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the id of the column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<script type="text/javacript">
+	alert(grid.id);// Should show "grid";
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+	</properties>	
+	
+ 		<method name="getElement">
+			<type>[object]</type>
+			<shortdesc>
+				<![CDATA[
+				Get the html object of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the html object of the column.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _cols = _mastertable.getColumns();
+		var _first_col = _cols[0];
+		_first_col.getElement().style.background = "yellow";
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+	
+	
+	<methods>
+		<method name="getFooterText">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Get the footer text of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the footer text of the column.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		alert(_first_column.getFooterText());
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		
+		
+		<method name="setFooterText">
+			<type>void </type>
+			<parameters>
+				<param type="string" optional="false">text</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Set the footer text of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Set the footer text of the column.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.setFooterText("Footer");
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+		<method name="put_to_group">
+			<type>void</type>
+			<parameters>
+				<param type="int" optional="true">position</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Put the column to group.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Put the column to group. You can specify the position to insert the group.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.put_to_group(1); // Put the column group to position 1 in group list.
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+
+ 
+		<method name="change_group_order">
+			<type>void</type>
+			<parameters>
+				<param type="int" optional="true">position</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Change column grouping position.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Change column grouping position.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.change_group_order(3); // Change the column grouping position to 3.
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+
+
+		<method name="remove_group">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Remove the column from grouping list.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Remove the column from grouping list.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.remove_group(); // Remove the first column from grouping
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+
+		
+		
+		<method name="setVisible">
+			<type>void </type>
+			<parameters>
+				<param type="bool" optional="false">visible</param>
+			</parameters>						
+			<shortdesc>
+				<![CDATA[
+				Set the visibility of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Set the visibility of the column.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.setVisible(false); // Hide the first column.
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		
+		
+		<method name="isVisible">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Get whether the column is visible.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get whether the column is visible.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		alert(_first_column.isVisible());
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		
+		
+		<method name="setWidth">
+			<type>void </type>
+			<parameters>
+				<param type="string" optional="false">width</param>
+			</parameters>						
+			<shortdesc>
+				<![CDATA[
+				Set width of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Set width of the column. The width parameter accepts both px value and % value.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.getWidth("100px");// You also can set _first_column.getWidth("30%");
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		
+		
+		<method name="sort">
+			<type>void </type>
+			<parameters>
+				<param type="int" optional="false">direction</param>
+			</parameters>									
+			<shortdesc>
+				<![CDATA[
+				Request server to sort this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Set the footer text of the column. The direction allows value 0, -1 and 1 standing for "no sort", "sort desc" and "sort asc" respectively.
+				]]>
+			</longdesc>
+			
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.sort(1);// Sort Asc
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+				
+		
+		<method name="filter">
+			<type>void </type>
+			<parameters>
+				<param type="string" optional="false">expression</param>
+				<param type="string" optional="false">value</param>
+			</parameters>									
+			<shortdesc>
+				<![CDATA[
+				Request server to filter records with this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Request server to filter records with this column.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+		var _first_column = _columns[0];
+		_first_column.filter("Greater_Than","200");
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		
+		
+		
+  
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

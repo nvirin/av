@@ -1,0 +1,38 @@
+<navigation id="KoolListBox">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="PHP_KoolListBox_Class" 
+					text="KoolListBox"
+					link="PHP/KoolListBox_Class/index.php"/>
+
+			<link 	id="PHP_ListBoxItem_Class" 
+					text="ListBoxItem"
+					link="PHP/ListBoxItem_Class/index.php"/>
+
+			<link 	id="PHP_ButtonSettings_Class" 
+					text="ButtonSettings"
+					link="PHP/ButtonSettings_Class/index.php"/>
+			<link 	id="PHP_ListBoxEventHandler" 
+					text="ListBoxEventHandler"
+					link="PHP/ListBoxEventHandler/index.php"/>
+
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="Javascript_KoolListBox_Class" 
+					text="KoolListBox"
+					link="Javascript/KoolListBox_Class/index.php"/>
+
+			<link 	id="Javascript_ListBoxItem_Class" 
+					text="ListBoxItem"
+					link="Javascript/ListBoxItem_Class/index.php"/>
+
+			<link 	id="Javascript_ClientSide_Events" 
+					text="Client-Side Events"
+					link="Javascript/ClientSide_Events/index.php"/>
+
+		</category>
+
+	</category>
+</navigation>

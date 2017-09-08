@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_ListBoxItem_Class" lastupdate="01/01/2009">	
+	<title>ListBoxItem Class [Javascript]</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolMenuItem.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolMenuItem.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var _item_open = km.getItem("open");
+        alert(_item_open.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+
+		
+		<method name="get_text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get text of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get text of the item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_text());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="get_value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get value of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get value of the item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_value());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="get_index">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get index/position of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get index/position of the item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_index());//Return 3
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="get_data">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get data of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get data of the item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		var item_data = item.get_data();
+		alert(item_data["mydata"]);//Suppose you added a datum called mydata into item at server-side.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="enable">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Enable an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Enable an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.enable();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="disable">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Disable an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Disable an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.disable();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+			
+		<method name="select">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make item selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make item selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="unselect">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		If item is selected, then the function will unselect this item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		If item is selected, then the function will unselect this item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.unselect();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+
+		<method name="check">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make item checked.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make item checked.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.check();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="uncheck">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make item unchecked.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make item unchecked.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.uncheck();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		
+		<method name="set_active">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_bool</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set whether item is active.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether item is active.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_active(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+				
+		
+		<method name="set_selected">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_bool</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set whether item is selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether item is selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_selected(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+				
+		<method name="set_enabled">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_bool</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set whether item is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether item is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_enabled(false);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		
+		<method name="set_checked">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_bool</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set whether item is checked.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether item is checked.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_checked(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+				
+		
+		<method name="set_checkable">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_bool</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set whether item is checkable.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether item is checkable.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_checkable(true);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+				
+		<method name="set_imageurl">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">image_url</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set image url for item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set image url for item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_imageurl("image/canada.jpg");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="set_tooltip">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set tooltip for item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set tooltip for item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_tooltip("Choose canada.");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+	
+		<method name="set_text">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set text for item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set text for item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_text("Brazil");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+	
+	
+		<method name="set_value">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set value for item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set value for item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		item.set_value("brazil");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+	
+		<method name="set_data">
+			<type>void</type>
+			<parameters>
+			   <param type="array" optional="false">data</param>
+			</parameters>			
+			<shortdesc>
+			   <![CDATA[
+		Set data for item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set data for item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		var data = item.get_data();
+		data["MyData"] = "My value";
+		item.set_data(data);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 			
+		
+		
+		
+		<method name="get_selected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the item is selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the item is selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_selected());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="get_checked">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the item is checked.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the item is checked.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_selected());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="get_imageurl">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get image url of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get image url of the item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_imageurl());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="get_tooltip">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get tooltip of the item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get tooltip of the item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_tooltip());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="get_element">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the html element of item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the html element of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		var _item_li_html = item.get_element();
+		_item_li_html.style.fontSize = "13px";
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+			
+		
+		
+		<method name="get_enabled">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the item is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the item is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var item = listbox.get_item(3);
+		alert(item.get_enabled());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 			
+		
+		
+		 	
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

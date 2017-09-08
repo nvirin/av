@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolCalendar_Class" lastupdate="01/01/2009">	
+	<title>KoolCalendar Class [PHP]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolCalendar
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolCalendar. This id will be use as variable name of KoolCalendar at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$cal->id="cal";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolCalendar
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolCalendar
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$cal->styleFolder="KoolControls/KoolCalendar/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolCalendar script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolCalendar script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$cal = new KoolCalendar("cal");
+	$cal->scriptFolder = "KoolControls/KoolCalendar";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		 		
+		<property name="ClientMode">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use client mode.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use client mode. In client mode, the date selection and month navigation are performed at client.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ClientMode=true;//Use client mode 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		<property name="AjaxEnabled">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use ajax feature.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use ajax feature. The ajax feature require KoolAjax to be registered. In ajax mode, date selection and month navigation will be done at server-side with the help of KoolAjax.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->AjaxEnabled=true;//Use ajax
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+
+
+
+
+		
+		<property name="AjaxLoadingImage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the loading image src.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the loading image src. This image will be shown when calendar do callback.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->AjaxEnabled=true;
+	$cal->AjaxLoadingImage="KoolControls/KoolAjax/loading/1/gif"; // Set loading image.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="AjaxHandlePage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the ajax handle page.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the ajax handle page. Sometime, it is more convenient if calendar ajax-handle is seperated from your main page. By setting this property, KoolCalendar will do callback to the ajax handle page that you specified. In the ajax handle page, you setup, init and render KoolCalendar in the same way as you do with the calendar in your main page.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->AjaxEnabled=true;
+	$cal->AjaxHandlePage="calendar_handle.php";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="Orientation">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Render month days horizontally.">"Horizontal"</value>
+			   <value desc="Render month days vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->Orientation="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MonthLayout">
+			<type>string</type>
+			<defaultvalue>"7x6"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the layout of month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the layout of month.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Display in 7x6 table">"7x6"</value>
+			   <value desc="Display in 14x3 table">"14x3"</value>
+			   <value desc="Display in 21x2 table">"21x2"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->MonthLayout="14x3";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ShowOtherMonthsDays">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show other month days in month table.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show other month days in month table.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowOtherMonthsDays=false;//Not show other month days. 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ShowDayCellToolTips">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show tooltip when mouse hovers the day.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show tooltip when mouse hovers the day.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowDayCellToolTips=false;//Not show tooltip.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowToday">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar highlight today date.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar highlight today date.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowToday=false;//Not show today
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowRowHeader">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show row header.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show row header.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowRowHeader=false;//Not show row header.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="UseRowHeadersAsSelectors">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use row header as date selector.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use row header as date selector.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->UseRowHeadersAsSelectors=false;//Not use header as date selector.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowColumnHeader">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show column header.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show column header.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowColumnHeader=false;//Not show column header.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="UseColumnHeadersAsSelectors">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use column header as date selector.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar use column header as date selector.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->UseColumnHeadersAsSelectors=false;//Not column header as selector.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="DayNameFormat">
+			<type>string</type>
+			<defaultvalue>"Shortest"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the day name format in header of KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the day name format in header of KoolCalendar.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="">"Shortest"</value>
+			   <value desc="">"Short"</value>
+			   <value desc="">"FirstLetter"</value>
+			   <value desc="">"FirstTwoLetters"</value>
+			   <value desc="">"Full"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowOtherMonthsDays=false;//Not show other month days. 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowViewSelector">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show the view selector.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show the view selector.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowViewSelector=false;//Not show other month days. 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ViewSelectorText">
+			<type>string</type>
+			<defaultvalue>"x"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the text of view selector.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the text of view selector.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ViewSelectorText="s";// change "x" selector to "s" 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="EnableSelect">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar allow user to select date.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar allow user to select date.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->EnableSelect=false;//Not allow to select.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="EnableMultiSelect">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar allow user to do multi-selection.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar allow user to do multi-selection.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->EnableMultiSelect=true;//Enable multi selection.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="SelectedDates">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the selected dates in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the selected dates in KoolCalendar. The information of selected dates will be accessed or set after calendar is initiated.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->Init();
+	...
+	//Get the selected dates.
+	for($i=0;$i<count($cal->SelectedDates);$i++)
+	{
+		echo $cal->SelectedDates[$i];
+	}
+	
+	...
+	//To set the selected dates, you can do as follow:
+	$cal->SelectedDates = array(mktime(0,0,0,12,15,2009),mktime(0,0,0,11,7,2009));	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="MultiViewColumns">
+			<type>int</type>
+			<defaultvalue>1</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the number of columns of KoolCalendar in multiview mode.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the number of columns of KoolCalendar in multiview mode.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->MultiViewColumns=2; // KoolCalendar shows 2 columns.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="MultiViewRows">
+			<type>int</type>
+			<defaultvalue>1</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the number of rows of KoolCalendar in multiview mode.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the number of rows of KoolCalendar in multiview mode.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->MultiViewRows=2;//KoolCalendar shows 2 rows.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="NavigateAnimation">
+			<type>&lt;a href='../Animation/index.php'>Animation&lt;/a></type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the settings of navigation animation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the settings of navigation animation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->NavigateAnimation->Type="Linear";// Linear animation.
+	$cal->NavigateAnimation->Duration=200;// 200ms
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="FirstDayOfWeek">
+			<type>int</type>
+			<defaultvalue>0</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the first day of week.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the first day of week.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Sunday">0</value>
+			   <value desc="Monday">1</value>
+			   <value desc="Tuesday">2</value>
+			   <value desc="Wednesday">3</value>
+			   <value desc="Thursday">4</value>
+			   <value desc="Friday">5</value>
+			   <value desc="Saturday">6</value>
+			</allowedvalues>
+			
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->FirstDayOfWeek=1;//Monday is first day of week.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="FocusedDate">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set focused date in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set focused date in KoolCalendar. By setting this date, we will let KoolCalendar know the month to be shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->FocusedDate=mktime(0,0,0,12,15,2009);// Set focused date in 12/15/2009
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="RangeMinDate">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set min date in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set min date in KoolCalendar. User may not able to select the date prior to RangeMinDate.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	//Set the date range from 12/15/2009 to 6/15/2010
+	$cal->RangeMinDate=mktime(0,0,0,12,15,2009);
+	$cal->RangeMaxDate=mktime(0,0,0,6,15,2010);	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="RangeMaxDate">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set max date in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set max date in KoolCalendar. User may not able to select the date after the RangeMaxDate.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	//Set the date range from 12/15/2009 to 6/15/2010
+	$cal->RangeMinDate=mktime(0,0,0,12,15,2009);
+	$cal->RangeMaxDate=mktime(0,0,0,6,15,2010);	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		
+		<property name="ShowNavigation">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show navigation buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show navigation buttons.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowNavigation=false;// Not showing the navigation buttons.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="ShowFastNavigation">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show fast navigation buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show fast navigation buttons.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ShowFastNavigation=false;// Not showing the fast navigation buttons.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		
+		<property name="FastNavigationStep">
+			<type>int</type>
+			<defaultvalue>3</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the step numbers of fast navigation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the step numbers of fast navigation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->FastNavigationStep=4;// Not showing the fast navigation buttons.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>	
+				
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the width of KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the width of KoolCalendar.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->Width="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the height of KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the height of KoolCalendar.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->Height="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="EnableQuickMonthSelect">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether the quick month selection is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether the quick month selection is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->EnableQuickMonthSelect=false;//Disable the quick month selection.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		
+		<property name="Localization">
+			<type>Localization</type>
+			<shortdesc>
+			   <![CDATA[
+					Set the localization of KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Set the localization of KoolCalendar.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->Localization->Load("KoolControls/KoolCalendar/localization/en.xml");
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		
+		<property name="ClientEvents">
+			<type>array</type>
+			<defaultvalue>1</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the client-side event handle.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the client-side event handle.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->ClientEvents["OnSelect"]="Handle_OnSelect";
+...
+?>
+
+<script type="text/javascript">
+function Handle_OnSelect(sender,arg)
+{
+	var _selected_date = arg["Date"];
+	alert(_selected_date);
+}
+</script>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+		<method name="Init">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Initiate calendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Initiate calendar. This function should be called before calendar Render() function.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$cal = new KoolCalendar("cal");
+	...
+	$cal->Init();
+	...
+	echo $cal->Render(); 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="AddSpecialDate">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">$date</param>
+			   <param type="bool" optional="true">$disable</param>
+			   <param type="string" optional="true">$css_class</param>
+			   <param type="string" optional="true">$tooltip</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add special dates to calendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add special dates to calendar.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	...
+	$cal->AddSpecialDate(mktime(0,0,0,11,5,2010),false,"cssRed","This is my birthday!");
+	// Make the date May 11th, 2010:
+	//	- Selectable, not disabled.
+	//	- The cssRed class is applied. The cssRed class may contain css rules to make the date distinguished.
+	//	- The date will have tooltip "This is my birthday!" when user hover the date.
+	...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.1.0.0 </supportversion>
+		</method> 
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolCalendar
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolCalendar
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$cal->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolCalendar.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $cal->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolCalendar
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolCalendar
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $cal->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderCalendar">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolCalendar body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolCalendar body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $cal->RenderCalendar();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolCalendar
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolCalendar
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $cal->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

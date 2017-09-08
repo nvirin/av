@@ -1,0 +1,49 @@
+<control>
+	<name>KoolUploader - PHP Ajax File Upload</name>
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<description>
+		<![CDATA[
+	KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity. KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. 	<br/>
+	<b>Key features:</b>
+	<div style='padding-left:25px;'>
+	<li>Files are uploaded without refreshing page.</li>
+	<li>Real-time Ajax uploading progress tracking.</li>
+	<li>Support simultaneous file uploading.</li>
+	<li>No limitation in total files size uploaded.</li>
+	<li>Very easy to use, simple PHP code.</li>
+	<li>Powerful client-side API.</li>
+	<li>Icons of common file extensions are provided.</li>
+	<li>Many skins are available to choose.</li>
+	<li>Skin can be all customized as wished.</li>
+	</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolUploader component to your page
+    require "kooluploader/kooluploader.php";
+
+    //Step 2: Create kooluploader object.
+    $kul = new KoolUploader("kul");
+
+    //Step 3: Set properties for kooluploader
+    $kul->styleFolder = "kooluploader/styles/default";
+    $kul->handlePage = "handleupload.php";
+    $kul->progressTracking = true;
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 4: Render kooluploader -->
+        <?php echo $kul->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

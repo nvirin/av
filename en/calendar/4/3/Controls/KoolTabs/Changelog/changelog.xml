@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolTabs - Powerful PHP Tab Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system." metakeywords = "php tab, php tab menu, php tabstrip, ajax tab menu">	
+
+	<log date="Apr 16, 2012" version="1.8.0.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+
+	<log date="December 04, 2011" version="1.7.0.4">
+		<![CDATA[ 
+		- Fix issue working with IE.
+		]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="1.7.0.2">
+		<![CDATA[ 
+		- Enhance css style.
+		]]>		
+	</log>
+
+	<log date="March 08, 2009" version="1.5.0.9">
+		<![CDATA[ 
+	    - Registering CSS is improved.
+		]]>		
+	</log>
+	<log date="February 09, 2009" version="1.5.0.4">
+		<![CDATA[ 
+	    - Enhance styleFolder property.
+		]]>		
+	</log>
+	<log date="January 25, 2008" version="1.5.0.2">
+		<![CDATA[ 
+	    - Added new server-side function: getTab()
+		]]>		
+	</log>
+	<log date="January 19, 2009" version="1.5.0.0">
+		<![CDATA[   
+		- New client-side function: addTab()
+		- New client-side function: removeTab()
+		- New client-side function: getSelectedChain()
+		- New client-side function: getParentId()
+		- New client-side function: getChildIds()
+		- New client-side function: moveToFront()
+		- New client-side function: moveToBehind()
+		- New style added: Silver
+		- Enhancement: Select tab when KoolTabs is in bottom position
+		]]>		
+	</log>
+	<log date="November 29, 2008" version="1.0.0.2">
+		<![CDATA[ 
+	    - Adding template for style of KoolTabs' item. This will make KoolTabs more flexible in changing appearance.
+		]]>		
+	</log>
+	<log date="November 19, 2008" version="1.0.0.0">
+		<![CDATA[ 
+		- First version of KoolTabs has been released
+		- Multi-level tabs capability is included
+		- Scrolling capaibity is included
+		- Tab alignment capability is included
+		]]>		
+	</log>
+</changelog>

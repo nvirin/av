@@ -1,0 +1,57 @@
+<control>
+	<name>KoolAjax - Great PHP Ajax Framework</name>
+	<metakeywords>php ajax,php ajax framework,php callback, ajax for php</metakeywords>	 
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</metadescription>
+	<description>
+		<![CDATA[
+	KoolAjax facilitates data exchange between server-side and client-side. Beside KoolAjax also provides number of client-side utility functions to help processing xml, loading resource, adding Javascript and CSS.
+When koolajax.php is included, the object $koolajax will be created automatically at server-side. At client-side, a javascript object koolajax is also created to faciliate the commnication. 
+	<br/>
+	<b>Key features:</b>
+	<div style='padding-left:25px;'>
+	<li>Cross-browsers compatible</li>
+	<li>Comply to XHTML standard</li>
+	<li>Feature-rich and easy to use controls</li>
+	<li>Abundant ready-to-use examples</li>
+	<li>Working with Zend, CakePHP, Joomla, Smarty.</li>
+	<li>Compatible with Prototype,jQuery, Mootools, Extjs</li>
+	</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register koolajax component to your page
+    require "koolajax/koolajax.php";
+
+    //Let say you have a function named multiply that you would like to call from client
+    function multiply($x,$y)
+    {
+        return $x*$y;
+    }
+    //Step 2: Enable the multiply function for ajax call.
+    //For security reason, you need to specify which functions can be called.
+    $koolajax->enableFunction("multiply");	
+?>
+
+<html>
+    <head>
+        <title></title>
+        <!-- Step 3: Get koolajax render, prefer in head section of page -->
+        <?php echo $koolajax->Render();?>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function testMultiply()
+            {
+                //Step 4: User callback function to call server-side php function
+                var res = koolajax.callback(multiply(3,4));
+                //res = 12
+            }	
+        </script>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

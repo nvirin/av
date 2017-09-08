@@ -1,0 +1,52 @@
+<control>
+	<name>KoolMenu - Excellent PHP Menu Control</name>
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<metakeywords>php menu,php drop down menu, ajax menu,php hierarchical menu,	php horizontal menu, php vertical menu,php menu system, php dynamic menu</metakeywords>	 
+	<description>
+		<![CDATA[
+		KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.
+		<br><b>Key Features:</b>
+		<div style='padding-left:25px;'>
+		   <li>Semantic Rendering for Minimal HTML</li>
+		   <li>Search-Engine Friendly</li>
+		   <li>Simple PHP interface</li>
+		   <li>Rich Client-side API</li>
+		   <li>Menu Structure </li>
+		   <li>Context Menu</li>
+		   <li>Open and Close Animations</li>
+		   <li>Highly customizable CSS styles and template</li>
+		</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolMenu component to your page
+    require "KoolControls/KoolMenu/koolmenu.php";
+
+    //Step 2: Create menu object.
+    $km = new KoolMenu("km");
+
+    //Step 3: Set properties for menu
+    $km->styleFolder = "KoolControls/KoolMenu/styles/default";
+
+    //Step 4: Building menu
+    $km->Add("root","file","File");
+    $km->Add("file","new","New...");
+    $km->Add("new","newfile","File");
+    $km->Add("new","newfolder","Folder");
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render menu -->
+        <?php echo $km->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

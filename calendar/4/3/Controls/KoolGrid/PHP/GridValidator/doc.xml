@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridValidator" lastupdate="08/20/2009">	
+	<title>GridValidator Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridValidator class.</metadescription>
+	<description>
+		<![CDATA[ 
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ErrorMessage">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Set the error message when validation is false.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the error message when validation is false.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	class MyValidator extends GridValidator
+	{
+		function Validate($value,$dataItems)
+		{
+			if ($dataItems["startTime"]>$dataItems["endTime"])
+			{
+				//Wrong
+				$this->ErrorMessage = "Start Time must smaller than End Time";
+				return false;
+			}
+			return true;//Correct
+		}
+	}
+
+	$col = new GridBoundColumn();
+	$validator = new MyValidator();
+	$col->AddValidator($validator);
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.0.0.0</supportversion>
+		</property>				
+	</properties>
+	<methods>	
+		<method name="Validate">
+			<type>function</type>
+			<parameters>
+				<param type="object" optional="false">$value</param>
+				<param type="array" optional="true">$dataitems</param>
+				<param type="GridRow" optional="true">$row</param>
+				<param type="GridColumn" optional="true">$column</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[
+					Perform data validation.					
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Override this function to provide custom validation. Return true if data is validated.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+	class MyValidator extends GridValidator
+	{
+		function Validate($value,$dataItems)
+		{
+			if ($dataItems["startTime"]>$dataItems["endTime"])
+			{
+				//Wrong
+				$this->ErrorMessage = "Start Time must smaller than End Time";
+				return false; 
+			}
+			return true;//Correct
+		}
+	}
+
+	$col = new GridBoundColumn();
+	$validator = new MyValidator();
+	$col->AddValidator($validator);
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.0.0.0</supportversion>
+		</method>	
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

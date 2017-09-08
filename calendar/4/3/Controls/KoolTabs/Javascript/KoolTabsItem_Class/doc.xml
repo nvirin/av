@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_kooltabsitem" lastupdate="01/01/2009">	
+	<title>KoolTabsItem Class [Javascript]</title>
+	<metadescription>KoolTabs - Powerful PHP Tab Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id for KoolTabs.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id for KoolTabs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Example comes later.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+	</properties>
+	<methods>
+		 <method name="isEnabled">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Return true if the tab is enabled
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return true if the tab is enabled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        //Check if the tab is disabled
+        if(!home_tab.isEnabled())
+        {
+            alert("Home tab is disabled");
+        }		
+		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="enable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set whether the tab is enabled
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether the tab is enabled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        //Disable the tab
+        home_tab.enable(false);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="isSelected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Return true if the tab is selected
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return true if the tab is selected
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        //Check if the tab is selected
+        if(!home_tab.isSelected())
+        {
+            alert("This tab is not selected");
+        }				
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="select">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make the tab selected
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make the tab selected
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Make home tab selected
+        var home_tab = kts.getTab("home");        
+        home_tab.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="unselect">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make the tab unselected
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make the tab unselected
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Make home tab unselected
+        var home_tab = kts.getTab("home");        
+        home_tab.unselect();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getParentId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of parent tab
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of parent tab
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        alert(home_tab.getParentId());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+		<method name="moveToFront">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Move a tab to in front of another same level tab
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Move a tab to in front of another same level tab
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        home_tab.moveToFont("service");//Move the home tab to in front of service tab
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+		<method name="moveToBehind">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Move a tab to behind of another same level tab
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Move a tab to behind of another same level tab
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        home_tab.moveToBehind("service");//Move the home tab to behind of service tab
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+		<method name="getChildIds">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of parent tab
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of parent tab
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var home_tab = kts.getTab("home");        
+        var _childids = home_tab.getChildIds();
+        for(var i in _childids)
+        {
+            alert(_childids[i]);
+        }
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.5.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

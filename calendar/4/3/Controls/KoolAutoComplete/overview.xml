@@ -1,0 +1,50 @@
+<control>
+	<name>KoolAutoComplete - Great PHP Ajax AutoComplete</name>
+	<metakeywords>php ajax autocomplete, php autocomplete, php ajax autosuggest, php autosuggest</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[
+	KoolAutoComplete is excellent Ajax Auto Complete for PHP.
+	Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.<br/>	
+	<b>Key Features :</b>
+	<div style='padding-left:25px;'>
+	  <li>Semantic design with minimal HTML rendering</li>
+	  <li>Ajax Load On-Demand</li>
+	  <li>Support both JSON and XML data type</li>
+
+	  <li>Customize item element with powerful templates</li>
+	  <li>CSS styles can be fully customized</li>
+	</div>
+	]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolAutoComplete component to your page
+    require "koolautocomplete/koolautocomplete.php";
+
+    //Step 2: Create koolautocomplete object.
+    $kac = new KoolAutoComplete("kac");
+
+    //Step 3: Set properties for koolautocomplete
+    $kac->styleFolder = "koolautocomplete/styles/default";
+    $kac->itemTemplate = "<img src='{image}'/>{text}";
+
+    //Step 4: Add items for autocomplete: addItem($text,[$data])
+    $kac->addItem("Canada","Canada",array("image"=>"flag_canada.png"));
+    $kac->addItem("Finland","Finland",array("image"=>"flag_finland.png"));
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render koolautocomplete -->
+        <?php echo $kac->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

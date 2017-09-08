@@ -1,0 +1,18 @@
+<navigation id="KoolImageView">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="php_KoolImageView_class" 
+					text="KoolImageView Class"
+					link="PHP/KoolImageView_Class/index.php"/>				
+			
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_KoolImageView_class" 
+					text="KoolImageView Class"
+					link="Javascript/KoolImageView_Class/index.php"/>
+		
+		</category>
+	</category>
+</navigation>

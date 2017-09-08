@@ -1,0 +1,44 @@
+<navigation id="KoolSlideMenu">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="php_koolslidemenu" 
+					text="KoolSlideMenu"
+					link="PHP/KoolSlideMenu_Class/index.php"/>
+
+			<link 	id="php_slidemenuparent" 
+					text="SlideMenuParent"
+					link="PHP/SlideMenuParent_Class/index.php"/>
+					
+			<link 	id="php_slidemenuchild" 
+					text="SlideMenuChild"
+					link="PHP/SlideMenuChild_Class/index.php"/>
+					
+					
+			<link 	id="php_slidemenupanel" 
+					text="SlideMenuPanel"
+					link="PHP/SlideMenuPanel_Class/index.php"/>
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_koolslidemenu" 
+					text="KoolSlideMenu"
+					link="Javascript/KoolSlideMenu_Class/index.php"/>
+
+			<link 	id="javascript_slidemenuparent" 
+					text="SlideMenuParent"
+					link="Javascript/SlideMenuParent_Class/index.php"/>
+					
+			<link 	id="javascript_slidemenuchild" 
+					text="SlideMenuChild"
+					link="Javascript/SlideMenuChild_Class/index.php"/>
+					
+					
+			<link 	id="javascript_slidemenupanel" 
+					text="SlideMenuPanel"
+					link="Javascript/SlideMenuPanel_Class/index.php"/>
+			
+		</category>
+
+	</category>
+</navigation>

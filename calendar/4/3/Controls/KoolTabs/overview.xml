@@ -1,0 +1,49 @@
+<control>
+	<name>KoolTabs - Powerful PHP Tab Menu</name>
+	<metadescription>KoolTabs - Powerful PHP Tab Menu - Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great PHP Tab Menu solution for your website navigation system.</metadescription>
+	<metakeywords>php tab, php tab menu, php tabstrip, ajax tab menu</metakeywords>	 
+	<description>
+		<![CDATA[
+	Fast rendering, Flexible CSS Style and Search Engine Friendly make KoolTabs the great Tabstrip solution for your website navigation system.	<br/>
+	<b>Key features:</b>
+	<div style='padding-left:25px;'>
+	<li>Rendering with minimal XHTML</li>
+	  <li>Search Engine Friendly</li>
+	  <li>Support multiple levels of tabstrip</li>
+	  <li>Powerful server-side interface</li>
+	  <li>Object creatable with XML</li>
+	  <li>Excellent event-handle at client-side</li>
+	  <li>Design is changeable with template technique</li>
+	  <li>CSS style is easy to customize</li>
+	</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolTabs component to your page
+    require "kooltabs/kooltabs.php";
+
+    //Step 2: Create kooltabs object.
+    $kts = new KoolTabs("kts");
+
+    //Step 3: Set properties for kooltabs
+    $kts->styleFolder = "kooltabs/styles/default";
+
+    //Step 4: Add tabs for KoolTabs: addTab($parentid,$id,$text,$link)
+    $kts->addTab("root","home","Home","http://www.domain.com/home.php");
+    $kts->addTab("root","products","Products","http://www.domain.com/products.php");
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render kooltabs -->
+        <?php echo $kts->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

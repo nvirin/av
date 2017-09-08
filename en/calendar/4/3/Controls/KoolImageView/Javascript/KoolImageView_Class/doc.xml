@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolimageview_class" lastupdate="01/01/2009">	
+	<title>KoolImageView Class [Javascript]</title>
+	<metakeywords>php image view, php image zoom, zoom image script</metakeywords>	 
+	<metadescription>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id for KoolImageView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id for KoolImageView. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of koolimageview.
+        alert(kiv.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>
+	<methods>
+		 <method name="open">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Open the the big view of image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Open the the big view of image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kiv.open();
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="close">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Close big view of image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Close big view of image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kiv.close();
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getStatus">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get status of ImageView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get status of ImageView. The return values are "loading"|"opening"|"opened"|"closing"|"closed"
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    alert(kiv.getStatus());
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="registerEvent">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.<br/>
+		<b>Allowed eventName:</b>
+		<ul><i>
+				"OnBeforeOpen"<br>	
+				"OnBeforeClose"<br>
+				"OnBeforeImageClick"<br>
+				"OnBeforeBigImageClick"<br>
+				"OnBeforeBackgroundClick"<br>
+				"OnBeforeCloseButtonClick"<br>
+				"OnOpen"<br>
+				"OnClose"<br>
+				"OnImageClick"<br>
+				"OnImageMouseOver"<br>
+				"OnImageMouseOut"<br>
+				"OnBigImageClick"<br>
+				"OnBackgroundClick"<br>
+				"OnZoomPanelMouseOver"<br>
+				"OnZoomPanelMouseOut"<br>	
+		</i></ul>
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function OnUploadDone_handle(sender,arg)
+    {
+        alert(arg.ItemId);
+    }	
+    // Register for OnUploadDone event
+    kiv.registerEvent("OnUploadDone",OnUploadDone_handle);
+	
+    // Register for OnError event
+    kiv.registerEvent( "OnError" , function(sender,arg){ alert(arg.Error); }  );
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

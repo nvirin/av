@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolcomboboxitem_class" lastupdate="01/01/2009">	
+	<title>KoolComboboxItem Class [Javascript]</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		perties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of item 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of item 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of new added item.
+        var oItem = kac.addItem("I am new item","new item");
+        alert(oItem.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</property>
+	</properties>
+	
+	<methods>
+		<method name="getData">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get data of the item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get data of the item
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Get the text data of first item in combobox
+        var oItem = kac.getItem(kac.getItemIds()[0]);        
+        alert(oItem.getData()["text"]);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="enable">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Set whether the item is enabled
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether the item is enabled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var oItem = kac.getItem(kac.getItemIds()[0]);        
+        //Disable the item
+        oItem.enable(false);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="isEnabled">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Return true if the item is enabled
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return true if the item is enabled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var oItem = kac.getItem(kac.getItemIds()[0]);        
+        //Check if the item is disabled
+        if(!oItem.isEnabled())
+        {
+            alert("This item is disabled");
+        }		
+		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="isSelected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Return true if the item is selected
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return true if the item is selected
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var oItem = kcb.getItem(kcb.getItemIds()[0]);        
+        //Check if the item is selected
+        if(oItem.isSelected())
+        {
+            alert("This item is selected");
+        }		
+		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="setVisible">
+			<type>void </type>
+			<shortdesc>
+			   <![CDATA[
+		Set the visibility of an item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the visibility of an item
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Get the text data of first item in combobox
+        //Make the item invisible
+        oItem.setVisible(false);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="select">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make the item selected
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make the item selected
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Select the first item of combobox
+        var oItem = kac.getItem(kac.getItemIds()[0]);        
+        oItem.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="unselect">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Unselect the node
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Unselect the node
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //UnSelect the first item of combobox if it is selected.
+        var oItem = kcb.getItem(kcb.getItemIds()[0]);        
+        if(oItem.isSelected())
+        {
+            oItem.unselect();
+        }
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

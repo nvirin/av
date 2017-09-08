@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolajaxrequest_class" lastupdate="01/01/2009">	
+	<title>KoolAjaxRequest Class [Javascript]</title>
+	<metakeywords>php ajax,php ajax framework,php callback, ajax for php</metakeywords>	 
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	<methods>
+		<method name="KoolAjaxRequest">
+			<type>function </type>
+			<parameters>
+			   <param type="object" optional="false">settings</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Constructor of Request class.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Define a request. The settings object is written in JSON. View <a href='../KoolAjaxRequest_Settings/index.php'>KoolAjaxRequest Settings</a> for more details.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+function onDone(content,error,request) 
+{
+	if (content!=null) 
+	{ 
+		//Get content 
+		alert(content); 
+	}
+	else if(error!=null) 
+	{
+		//Error 
+		alert(error);
+	}
+}
+function sendCustomRequest() 
+{ 
+	var request = new KoolAjaxRequest({
+	method:"post",
+	onDone:function(ct)
+	{ 
+		alert(ct); 
+	} 
+	}); 
+	koolajax.sendRequest(request); 
+}
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.3.0.0 </supportversion>
+		</method> 
+		<method name="addArg">
+			<type>function</type>
+			<parameters>
+			   <param type="string" optional="false">sName</param>
+			   <param type="object" optional="false">vValue</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a argument to the request.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a argument to the request.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+
+function sendCustomRequest()
+{ 
+	var request = new KoolAjaxRequest({ method:"post", onDone:function(ct){ alert(ct); } });
+	request.addArg("myNumber",10); 
+	koolajax.sendRequest(request); 
+}
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

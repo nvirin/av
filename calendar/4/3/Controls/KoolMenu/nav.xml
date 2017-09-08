@@ -1,0 +1,43 @@
+<navigation id="KoolMenu">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="PHP_KoolMenu_Class" 
+					text="KoolMenu"
+					link="PHP/KoolMenu_Class/index.php"/>
+
+			<link 	id="PHP_KoolContextMenu_Class" 
+					text="KoolContextMenu"
+					link="PHP/KoolContextMenu_Class/index.php"/>
+
+			<link 	id="PHP_GroupSettings_Class" 
+					text="GroupSettings"
+					link="PHP/GroupSettings_Class/index.php"/>
+
+			<link 	id="PHP_KoolMenuItem_Class" 
+					text="KoolMenuItem"
+					link="PHP/KoolMenuItem_Class/index.php"/>
+
+			<link 	id="PHP_Animation_Class" 
+					text="Animation"
+					link="PHP/Animation_Class/index.php"/>
+
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="Javascript_KoolMenu_Class" 
+					text="KoolMenu"
+					link="Javascript/KoolMenu_Class/index.php"/>
+
+			<link 	id="Javascript_KoolMenuItem_Class" 
+					text="KoolMenuItem"
+					link="Javascript/KoolMenuItem_Class/index.php"/>
+
+			<link 	id="Javascript_KoolContextMenu_Class" 
+					text="KoolContextMenu"
+					link="Javascript/KoolContextMenu_Class/index.php"/>
+
+		</category>
+
+	</category>
+</navigation>

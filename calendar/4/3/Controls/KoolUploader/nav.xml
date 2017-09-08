@@ -1,0 +1,33 @@
+<navigation id="KoolUploader">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />
+		<category id="Install" text="Install">
+			<link 	id="PECL_UploadProgress" 
+					text="PECL UploadProgress "
+					link="Install/PECL_UploadProgress/index.php"/>			
+		</category>
+			
+		<category id="PHP" text="PHP">
+			<link 	id="php_kooluploader" 
+					text="KoolUploader"
+					link="PHP/KoolUploader_Class/index.php"/>
+					
+			<link 	id="php_kooluploadhandler" 
+					text="KoolUploadHandler"
+					link="PHP/KoolUploadHandler_Class/index.php"/>					
+					
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_kooluploader" 
+					text="KoolUploader"
+					link="Javascript/KoolUploader_Class/index.php"/>
+					
+			<link 	id="javascript_kooluploaderitem" 
+					text="KoolUploaderItem"
+					link="Javascript/KoolUploaderItem_Class/index.php"/>
+						
+		</category>
+
+	</category>
+</navigation>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolListBox_Class" lastupdate="01/01/2009">	
+	<title>KoolListBox Class [Javascript]</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolListBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolListBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of KoolListBox.
+        alert(listbox.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+
+		
+		<method name="get_item">
+			<type>ListBoxItem</type>
+			<parameters>
+			   <param type="int" optional="false">position</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get listbox item at an position.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get listbox item at an position.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item = listbox.get_item(3);
+		_item.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="get_items">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get list of all items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get list of all items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _items = listbox.get_items();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="get_selected_items">
+			<type>array</type>
+
+			<shortdesc>
+			   <![CDATA[
+		Get list of selected items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get list of selected items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _selected_items = listbox.get_selected_items();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="delete_item">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">position</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Delete an item at a position.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Delete an item at a position.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.delete_item(3);//Delete item at position 3.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="select_item">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">position</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Select an item at a position.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Select an item at a position.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.select_item(3);//Select item at position 3.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		<method name="unselect_item">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">position</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Unselect an item at a position.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Unselect an item at a position.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.unselect_item(3);//Unselect item at position 3.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 		
+		
+		
+		<method name="move_item">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">from</param>
+			   <param type="int" optional="false">to</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Move an item from a position to another.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Move an item from a position to another.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.mov_item(3,5);Move item at position 3 to position 5.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="transfer_to_destination">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">position</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Transfer item at a position to destination listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Transfer item at a position to destination listbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.transfer_to_destination(3);//Transfer item at position 3 to destination.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		<method name="transfer_to_destination">
+			<type>void</type>
+			<parameters>
+			   <param type="ListBoxItem" optional="false">item</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Transfer an item to destination listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Transfer an item to destination listbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item = listbox.get_item(3);
+		listbox.transfer_to_destination(_item);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="transfer_all_to_destination">
+			<type>void</type>
+
+			<shortdesc>
+			   <![CDATA[
+		Transfer all items to destination listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Transfer all items to destination listbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.transfer_all_to_destination();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="transfer_all_from_destination">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Transfer all items from destination to this listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Transfer all items from destination to this listbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.transfer_all_from_destination();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+		
+		<method name="transfer_from_destination">
+			<type>void</type>
+			<parameters>
+			   <param type="int" optional="false">position</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Transfer an item at a position from destination.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Transfer an item at a position from destination.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		listbox.transfer_from_destination(3);// Transfer item at position 3 in destination listbox.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+
+		<method name="transfer_from_destination">
+			<type>void</type>
+			<parameters>
+			   <param type="ListBoxItem" optional="false">item</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Transfer an item  from destination.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Transfer an item from destination.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item = destination_listbox.get_item(3);
+		listbox.transfer_from_destination(_item);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method> 
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

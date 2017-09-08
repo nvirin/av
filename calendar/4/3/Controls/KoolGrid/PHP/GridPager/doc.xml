@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridPager" lastupdate="08/20/2009">	
+	<title>GridPager Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridPager class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="PageIndex">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the page index.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the page index.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->PageIndex = 3;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="PageSize">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the page size.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the page size.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->PageSize = 20;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="ShowPageInfo">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether page information is shown.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether page information is shown.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->ShowPageInfo = false;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="PageInfoTemplate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the folder which images is stored.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the folder which images is stored.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->PageInfoTemplate = "Displaying page {PageIndex}";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+
+
+		<property name="Position">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the position of pager.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the position of pager.					
+				]]>
+			</longdesc>
+			<defaultvalue>"bottom"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Grid show pager at top">"top"</value>
+			   <value desc="Grid show pager at bottom">"bottom"</value>
+			   <value desc="Grid show pager at both top and bottom position">"topbottom"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager->Position = "topbottom";//Show both pager
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.5.0.0</supportversion>
+		</property>
+		
+		
+		
+		
+		<property name="ShowPageSize">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether pagesize selection box is shown.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether pagesize selection box is shown and allow user to change the page size.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->ShowPageSize = false;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="PageSizeText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text in front of pagesize select box.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text in front of pagesize select box.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->PageSizeText = "Change Page Size:";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="PageSizeOptions">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the pagesize options.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the pagesize options. The options separate from each other by commas.
+				]]>
+			</longdesc>
+			<defaultvalue>"5,10,20,40"</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextPager();// GridPrevNextPager is inherited from GridPager.
+	$grid->MasterTable->Pager->PageSizeOptions = "1,5,7,15,30";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

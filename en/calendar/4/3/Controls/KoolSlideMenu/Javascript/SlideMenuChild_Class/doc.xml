@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_slidemenuchild" lastupdate="01/01/2009">	
+	<title>SlideMenuChild Class [Javascript]</title>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<methods>
+		<method name="select">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Select the child
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Select the child
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Select the child with id="child"
+        ksm.getItem("child").select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="unselect">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Unselect the child
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		unselect the child
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Unselect the child with id="child"
+        ksm.getItem("child").unselect();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getSlideMenu">
+			<type>KoolSlideMenu</type>
+			<shortdesc>
+			   <![CDATA[
+		Get object of slidemenu which the child belongs to
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get object of slidemenu which the child belongs to
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Get slidemenu object of a child with id="child", then collapse all the slidemenu
+        var _child = new SlideMenuChild("child");
+        _child.getSlideMenu().collapseAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

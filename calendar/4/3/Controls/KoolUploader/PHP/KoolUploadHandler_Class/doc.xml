@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_kooluploadhandler" lastupdate="01/01/2009">	
+	<title>KoolUploadHandler Class [PHP]</title>
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		<property name="targetFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the folder to which you would like to save the file
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the folder to which you would like to save the file
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kulhandle = new KoolUploadHandler(); 
+	$kulhandle->targetFolder = "upload/savefolder";
+	//Set place where file will be saved 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="allowedExtension">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set list of allowed file extensions
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set list of allowed file extensions
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kulhandle = new KoolUploadHandler(); 
+	$kulhandle->allowedExtension = "jpg,gif,png";//Allow only *.jpg,*.gif,*.png to be uploaded 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="funcFileHandle">
+			<type>function</type>
+			<shortdesc>
+			   <![CDATA[
+		Set your custom function to process the uploaded file.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set your custom function to process the uploaded file. Your customed function will recieve parameter about file information. Your customed function should return boolean value to indicate whether file hsa been uploaded successful.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kulhandle = new KoolUploadHandler();
+	function myCustomeFileHandle(&$file) 
+	{ 
+		//Process saving file with $file information 
+		//$file["name"] : Name of file 
+		//$file["tmp_name"] : Temporary name(path) 
+		//$file["size"] : Size of file 
+		//$file["type"] : Type of file 
+		//$file["error"] : Error if any ... 
+		//If you change the name of file when saved, please assign new name to $file["name"]
+		$file["name"] = "newname.doc"; 
+		//Return true if file is saved successfully return true; 
+	} 
+	$kulhandle->funcFileHandle = myCustomeFileHandle; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion> 1.2.0.1 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="handleUpload">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Handle upload and progress tracking function
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Handle upload and progress tracking function
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kulhandle = new KoolUploadHandler(); 
+	...
+	$kulhandle->handleUpload(); 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

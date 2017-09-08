@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_clientside_events" lastupdate="08/20/2009">	
+	<title>Client-side Events</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of KoolGrid Client-side Events</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name="OnInit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when KoolGrid is first initiated.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when KoolGrid is first initiated.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnInit"] = "Handle_OnInit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnInit(sender,args)
+	{
+		alert("KoolGrid is initiated.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="OnLoad">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when grid is loaded.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when grid is loaded.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnLoad"] = "Handle_OnLoad";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnLoad(sender,args)
+	{
+		alert("KoolGrid is loaded.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		
+		<property name="OnBeforeGridCommit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before grid commit changes to server.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before grid commit changes to server. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeGridCommit"] = "Handle_OnBeforeGridCommit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeGridCommit(sender,args)
+	{
+		alert("Grid is about to commit");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnGridCommit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when grid commited changes to server.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when grid commited changes to server.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnGridCommit"] = "Handle_OnGridCommit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnGridCommit(sender,args)
+	{
+		alert("Grid was commited");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnRowMouseOver">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is over a row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is over a row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowMouseOver"] = "Handle_OnRowMouseOver";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowMouseOver(sender,args)
+	{
+		var _row = args["Row"];
+		var _event = args["Event"];
+		alert("Mouseover");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnRowMouseOut">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is out of a row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is out of a row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowMouseOut"] = "Handle_OnRowMouseOut";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowMouseOut(sender,args)
+	{
+		var _row = args["Row"];
+		var _event = args["Event"];
+		alert("Mouseout");
+		
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeRowSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before a row is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before a row is selected. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeRowSelect"] = "Handle_OnBeforeRowSelect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeRowSelect(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row is about to be selected ");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnRowSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowSelect"] = "Handle_OnRowSelect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowSelect(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Row is selected");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeRowDeselect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before a row is deselected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before a row is deselected. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeRowDeselect"] = "Handle_OnBeforeRowDeselect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeRowDeselect(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Row is about to be deselected.");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnRowDeselect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was deselected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was deselected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowDeselect"] = "Handle_OnRowDeselect";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowDeselect(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Row was deselected");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnRowClick">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was clicked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was clicked.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowClick"] = "Handle_OnRowClick";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowClick(sender,args)
+	{
+		var _row = args["Row"];
+		var _event = args["Event"];
+		alert("Row was clicked");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnRowDoubleClick">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was double-clicked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was double-clicked.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowDoubleClick"] = "Handle_OnRowDoubleClick";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowDoubleClick(sender,args)
+	{
+		var _row = args["Row"];
+		var _event = args["Event"];
+		alert("Row was double-clicked");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnMouseOver">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is over a column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is over a column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnMouseOver"] = "Handle_OnColumnMouseOver";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnMouseOver(sender,args)
+	{
+		var _column = args["Column"];
+		var _event = args["Event"];
+		alert("Mouse was over column");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnMouseOut">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is out of a column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is out of a column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnMouseOut"] = "Handle_OnColumnMouseOut";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnMouseOut(sender,args)
+	{
+		var _column = args["Column"];
+		var _event = args["Event"];
+		alert("Mouse was out of column");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnClick">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a column was clicked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a column was clicked.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnClick"] = "Handle_OnColumnClick";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnClick(sender,args)
+	{
+		var _column = args["Column"];
+		var _event = args["Event"];
+		alert("Column was clicked");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnDoubleClick">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a column was double-clicked.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a column was double-clicked.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnDoubleClick"] = "Handle_OnColumnDoubleClick";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnDoubleClick(sender,args)
+	{
+		var _column = args["Column"];
+		var _event = args["Event"];
+		alert("Column was double-clicked");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeColumnResize">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before column is resized.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before column is resized. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeColumnResize"] = "Handle_OnBeforeColumnResize";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeColumnResize(sender,args)
+	{
+		var _column = args["Column"];
+		alert("Column is about to resize");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnResize">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a column was resized.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a column was resized.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnResize"] = "Handle_OnColumnResize";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnResize(sender,args)
+	{
+		var _column = args["Column"];
+		alert("Column was resized");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeDetailTablesExpand">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before detail tables of a row are expanded.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before detail tables of a row are expanded. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeDetailTablesExpand"] = "Handle_OnBeforeDetailTablesExpand";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeDetailTablesExpand(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Detail tables of a row are about to be expanded");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnDetailTablesExpand">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when detail tables of a row were expanded.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when detail tables of a row were expanded.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnDetailTablesExpand"] = "Handle_OnDetailTablesExpand";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnDetailTablesExpand(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Detail tables were expanded");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeDetailTableCollapse">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before detail tables of a row are collapsed.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before detail tables of a row are collapsed. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeDetailTableCollapse"] = "Handle_OnBeforeDetailTableCollapse";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeDetailTableCollapse(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Detail tables are about to be collapsed");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnDetailTableCollapse">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when detail tables of a row were collapsed.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when detail tables of a row were collapsed.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnDetailTableCollapse"] = "Handle_OnDetailTableCollapse";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnDetailTableCollapse(sender,args)
+	{
+		var _row = args["Row"];
+		alert("Detail tables were collapsed");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeColumnSort">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before a column is sorted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before a column is sorted. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeColumnSort"] = "Handle_OnBeforeColumnSort";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeColumnSort(sender,args)
+	{
+		var _column = args["Column"];
+		var _order = args["Order"];
+		alert("Column is about to be sorted");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnSort">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a column was sorted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a column was sorted.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnSort"] = "Handle_OnColumnSort";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnSort(sender,args)
+	{
+		var _column = args["Column"];
+		var _order = args["Order"];
+		alert("Column was sorted");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeColumnGroup">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before a column is grouped.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before a column is grouped. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeColumnGroup"] = "Handle_OnBeforeColumnGroup";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeColumnGroup(sender,args)
+	{
+		var _column = args["Column"];
+		alert("Column is about to be grouped.");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnGroup">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a column was grouped.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a column was grouped.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnGroup"] = "Handle_OnColumnGroup";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnGroup(sender,args)
+	{
+		var _column = args["Column"];
+		alert("Column was grouped.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeColumnFilter">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before grid filters records with this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before grid filters records with this column. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeColumnFilter"] = "Handle_OnBeforeColumnFilter";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeColumnFilter(sender,args)
+	{
+		var _column = args["Column"];
+		var _expression = args["Exp"];
+		var _value= args["Value"];
+		alert("Column is about to be filtered.");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnColumnFilter">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when grid filtered records with this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when grid filtered records with this column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnColumnFilter"] = "Handle_OnColumnFilter";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnColumnFilter(sender,args)
+	{
+		var _column = args["Column"];
+		var _expression = args["Exp"];
+		var _value= args["Value"];
+		alert("Column was filtered.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforePageChange">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before a tableview changes page index.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before a tableview changes page index. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforePageChange"] = "Handle_OnBeforePageChange";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforePageChange(sender,args)
+	{
+		var _tableview = args["TableView"];
+		var _pageindex = args["PageIndex"];		
+		alert("Tableview is about to change page.");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnPageChange">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur whena tableview changed page index.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur whena tableview changed page index.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnPageChange"] = "Handle_OnPageChange";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnPageChange(sender,args)
+	{
+		var _tableview = args["TableView"];
+		var _pageindex = args["PageIndex"];		
+		alert("Tableview changed page.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnBeforeRowStartEdit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was changed to edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was changed to edit mode. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeRowStartEdit"] = "Handle_OnBeforeRowStartEdit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeRowStartEdit(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row is is about to be edited.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="OnRowStartEdit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was changed to edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was changed to edit mode.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowStartEdit"] = "Handle_OnRowStartEdit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowStartEdit(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row was in edit mode.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+				
+		
+		<property name="OnBeforeRowConfirmEdit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row is about to be confirmed changes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row is about to be confirmed changes.You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeRowConfirmEdit"] = "Handle_OnBeforeRowConfirmEdit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeRowConfirmEdit(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row is is about to be confirmed changes.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="OnRowConfirmEdit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was confirmed changes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was confirmed changes.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowConfirmEdit"] = "Handle_OnRowConfirmEdit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowConfirmEdit(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row was confirmed changes");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		
+		
+		<property name="OnBeforeRowCancelEdit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row is about to be cancelled changes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row is about to be cancelled changes.You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeRowCancelEdit"] = "Handle_OnBeforeRowCancelEdit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeRowCancelEdit(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row is is about to be cancelled changes.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="OnRowCancelEdit">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was cancelled the changes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was cancelled the changes.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowCancelEdit"] = "Handle_OnRowCancelEdit";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowCancelEdit(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row was cancel the changes.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+
+		<property name="OnBeforeStartInsert">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a tableview is about to start inserting a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a tableview is about to start inserting a new row.You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeStartInsert"] = "Handle_OnBeforeStartInsert";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeStartInsert(sender,args)
+	{
+		var _tableview = args["TableView"];
+		alert("A tableview is about to start inserting a new row.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>		
+		
+		<property name="OnStartInsert">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a tableview starts inserting a row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a tableview starts inserting a row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnStartInsert"] = "Handle_OnStartInsert";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnStartInsert(sender,args)
+	{
+		var _row = args["TableView"];
+		alert("A tableview starts inserting a row.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>
+
+
+
+
+
+
+		<property name="OnBeforeConfirmInsert">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a tableview is about to confirm inserting a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a tableview is about to confirm inserting a new row.You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeConfirmInsert"] = "Handle_OnBeforeConfirmInsert";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeConfirmInsert(sender,args)
+	{
+		var _tableview = args["TableView"];
+		alert("A tableview is about to confirm inserting a new row.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>		
+		
+		<property name="OnConfirmInsert">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a tableview confirms inserting a row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a tableview confirms inserting a row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnConfirmInsert"] = "Handle_OnConfirmInsert";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnConfirmInsert(sender,args)
+	{
+		var _row = args["TableView"];
+		alert("A tableview confirms inserting a row.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>
+
+
+
+
+		<property name="OnBeforeCancelInsert">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a tableview is about to cancel inserting a new row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a tableview is about to cancel inserting a new row. You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeCancelInsert"] = "Handle_OnBeforeCancelInsert";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeCancelInsert(sender,args)
+	{
+		var _tableview = args["TableView"];
+		alert("A tableview is about to cancel inserting a new row.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>		
+		
+		<property name="OnCancelInsert">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a tableview cancels inserting a row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a tableview cancels inserting a row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnCancelInsert"] = "Handle_OnCancelInsert";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnCancelInsert(sender,args)
+	{
+		var _row = args["TableView"];
+		alert("A tableview cancels inserting a row.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>
+
+
+
+
+		<property name="OnBeforeRowDelete">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row is about to be deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row is about to be deleted.You return <code>true</code> on handle function to approve action, return <code>false</code> to cancel action.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnBeforeRowDelete"] = "Handle_OnBeforeRowDelete";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnBeforeRowDelete(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row is is about to be deleted.");
+		return true; // Approve action
+	}
+</script>
+
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="OnRowDelete">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a row was deleted.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a row was deleted.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnRowDelete"] = "Handle_OnRowDelete";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnRowDelete(sender,args)
+	{
+		var _row = args["Row"];
+		alert("A row was deleted.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="OnCellMouseOver">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is over a cell.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is over a row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnCellMouseOver"] = "Handle_OnCellMouseOver";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnCellMouseOver(sender,args)
+	{
+		var _cell = args["Cel"];
+		var _event = args["Event"];
+		alert("MouseOver");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="OnCellMouseOut">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when mouse is out of a cell.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when mouse is out of a cell.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnCellMouseOut"] = "Handle_OnCellMouseOut";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnCellMouseOut(sender,args)
+	{
+		var _cell = args["Cell"];
+		var _event = args["Event"];
+		alert("Mouseout");
+		
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+		<property name="OnCellClick">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when a cell is click.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when a cell is click.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->ClientSettings->ClientEvents["OnCellClick"] = "Handle_OnCellClick";
+...
+?>
+...
+<script type="text/javascript">
+	function Handle_OnCellClick(sender,args)
+	{
+		var _cell = args["Cell"];
+		var _event = args["Event"];
+		alert("click");
+		
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+
+		
+	</properties>	
+
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

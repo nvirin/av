@@ -1,0 +1,55 @@
+<!-- <form method="POST" action="upload.php" enctype="multipart/form-data">
+ 
+     <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+     Fichier : <input type="file" name="avatar">
+     <script type="text/javascript" src="dist/js/formfieldlimiter.js"></script>
+
+
+
+
+
+
+     <input type="submit" name="envoyer" value="Envoyer le fichier">
+</form>  -->
+
+<script type="text/javascript" src="dist/js/formfieldlimiter.js"></script>
+
+<form name="sampleform">
+
+<input type="text" name="george" style="width:250px" />
+<div id="george-status"></div>
+
+<p>
+<textarea name="johndoe" id="johndoe" cols="30" rows="5" style="width:250px"></textarea>
+<div id="john-status"></div>
+
+</form>
+
+<script type="text/javascript">
+
+//Example 1:
+
+fieldlimiter.setup({
+	thefield: document.sampleform.george, //reference to form field
+	maxlength: 10,
+	statusids: ["george-status"], //id(s) of divs to output characters limit in the form [id1, id2, etc]. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		if (curlength<maxlength) //if limit hasn't been reached
+			this.style.border="2px solid gray" //"this" keyword returns form field
+		else
+			this.style.border="2px solid red"
+	}
+})
+
+//Example 2:
+
+fieldlimiter.setup({
+	thefield: document.getElementById("johndoe"), //reference to form field
+	maxlength: 30,
+	statusids: ["john-status"], //id(s) of divs to output characters limit. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		//define custom event actions here if desired
+	}
+})
+
+</script>

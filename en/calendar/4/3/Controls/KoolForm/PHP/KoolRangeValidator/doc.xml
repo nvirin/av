@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolRangeValidator" lastupdate="01/01/2009">	
+	<title>KoolRangeValidator Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of validator.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of validator.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$validator = $myform_manager->AddControl(new KoolRangeValidator("valiadtor")); 
+	echo $validator->id;
+
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="MinValue">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the minimum value.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the minimum value.
+		 		]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$validator = $myform_manager->AddControl(new KoolRangeValidator("valiadtor"));
+	$validator->TargetId = "txtAge";//Validate the Age text box
+	$validator->ErrorMessage = "Please enter number between 18 and 30";
+	$validator->MinValue = 18;
+	$validator->MaxValue = 30;
+?>
+
+<div>
+	<input id="txtAge" name="txtAge" /> <?php echo $validator->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="MaxValue">
+			<type>[float][date]</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the maximum value.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the maximum value.
+		 		]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$validator = $myform_manager->AddControl(new KoolRangeValidator("valiadtor"));
+	$validator->TargetId = "txtAge";//Validate the Age text box
+	$validator->ErrorMessage = "Please enter number between 18 and 30";
+	$validator->MinValue = 18;
+	$validator->MaxValue = 30;
+?>
+
+<div>
+	<input id="txtAge" name="txtAge" /> <?php echo $validator->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		
+		<property name="ErrorMessage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the message that will display when validation is failed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the message that will display when validation is failed.
+		 		]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$validator = $myform_manager->AddControl(new KoolRangeValidator("valiadtor"));
+	$validator->TargetId = "txtAge";//Validate the Age text box
+	$validator->ErrorMessage = "Please enter number between 18 and 30";
+	$validator->MinValue = 18;
+	$validator->MaxValue = 30;
+?>
+
+<div>
+	<input id="txtAge" name="txtAge" /> <?php echo $validator->Render();?>
+</div>
+
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 		
+
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the validator
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the validator
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$validator = $myform_manager->AddControl(new KoolRangeValidator("valiadtor"));
+	$validator->TargetId = "txtAge";//Validate the Age text box
+	$validator->ErrorMessage = "Please enter number between 18 and 30";
+	$validator->MinValue = 18;
+	$validator->MaxValue = 30;
+?>
+
+<div>
+	<input id="txtAge" name="txtAge" /> <?php echo $validator->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

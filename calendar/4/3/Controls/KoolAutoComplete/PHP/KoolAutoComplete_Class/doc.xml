@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_koolautocomplete_class" lastupdate="01/01/2009">	
+	<title>KoolAutoComplete Class [PHP]</title>
+	<metakeywords>php ajax autocomplete, php autocomplete, php ajax autosuggest, php autosuggest</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolAutoComplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for autocomplete. This id will be use as variable name of autocomplete at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$kac->id="kac";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kac->styleFolder="koolautocomplete/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 		
+		<property name="attachTo">
+			<type>string</type>
+			<defaultvalue>"down"</defaultvalue>
+			<allowedvalues>
+				<value desc="Combobox open option panel at bottom.">"down"</value>
+				<value desc="Combobox open option panel at top.">"up"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the id of textbox that KoolAutoComplete attaches to
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id of textbox that KoolAutoComplete attaches to
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->attachTo="txtTextbox";//Attach autocomplete to "txtTextbox" 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="openDirection">
+			<type>string</type>
+			<defaultvalue>down</defaultvalue>
+			<allowedvalues>
+			   <value desc="AutoComplete open option panel at bottom.">down</value>
+			   <value desc="AutoComplete open option panel at top.">up</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set open direction of autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set open direction of autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kcb->openDirection="up";//Set "up" as direction to open option panel 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="superAbove">
+			<type>bool</type>
+			<defaultvalue>"true"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether whether "shim" technique is used.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether whether "shim" technique is used. This is very useful if your application running in IE6 because it helps option panel to open above all other elements.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->superAbove=false;//Do not use "shim" technique 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="effect">
+			<type>string</type>
+			<allowedvalues>
+				<value desc="Combobox open option panel at bottom.">"none"</value>
+				
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the open effect of autocomplete's option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the open effect of autocomplete's option panel. Note: More effects will be added in the future.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->effect="none";//No effect 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion> 1.0.0.0</supportversion>
+		</property> 
+		 <property name="boxWidth">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width of option panel in autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width of option panel in autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->boxWidth="200px";
+	//Set the fixed width for option panel 
+	$kac->boxWidth="auto";
+	//Width of option panel will be equal to width of autocomplete 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		<property name="boxHeight">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the height of option panel in autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the height of option panel in autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->boxHeight="200px";
+	//Set the fixed height for option panel 
+	$kac->boxHeight="auto";
+	//The height of option panel will be auto between minBoxHeight and maxBoxHeight 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="minBoxHeight">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the min height of option panel in autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the min height of option panel in autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->minBoxHeight="50px";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="maxBoxHeight">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the max height of option panel in autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the max height of option panel in autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->maxBoxHeight="50px";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="align">
+			<type>string</type>
+			<defaultvalue>"right"</defaultvalue>
+			<allowedvalues>
+				<value desc="Align option panel to the left.">"left"</value>
+				<value desc="Align option panel to the right.">"right"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the alignment of option panel in autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the alignment of option panel in autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->align="left";
+	//Align option panel to the left 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="headerTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the header template of option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the header template of option panel
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->headerTemplate="This is the header"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="itemTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the item template of option panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the item template of option panel. The template contains marking to be replaced item's data. For example, {text} will be replaced by the text of each items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kac->itemTemplate="<img src='{image}'/>{text}";
+	//Make item appears with an image and text 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="footerTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the footer template of option panel
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the footer template of option panel
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->footerTemplate="This is the footer"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="serviceFunction">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the name of koolajax-enabled function that will be used to update item list from server
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the name of koolajax-enabled function that will be used to update item list from server The service function will will take a text agurment ( this is the text that user keys in at client-side and sent to server-side) and return an array contain item data.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	function getdata($text)
+	{
+		$data = array(); 
+		array_push($data,array("text"=>"Software","value"=>"software","image"=>"software.gif"));
+		array_push($data,array("text"=>"Hardware","value"=>"hardware","image"=>"hardware.gif"));
+		return $data; 
+	} 
+	$koolajax->enableFunction("getdata"); 
+	$kac->serviceFunction="getdata";
+	//Set reference to service-function 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="delayTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the number of millisecond autocomplete will wait before bringing out suggestion
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the number of millisecond autocomplete will wait before bringing out suggestion
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->delayTime = 1000;
+	//Set delay to 1 second 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="searchFilter">
+			<type>string</type>
+			<defaultvalue>"startwith"</defaultvalue>
+			<allowedvalues>
+				<value desc="The autocomplete will look for option text that starts same characters with typed text.">"startwith"</value>
+				<value desc=" The autocomplete will look for option text that contains the typed text.">"contain"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the searching method of autocomplete.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the searching method of autocomplete.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->searchFilter="contain";//Use the contain filter 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="servicePage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the url that autocomplete will post the typed text to get appropriate item list
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the url that autocomplete will post the typed text to get appropriate item list
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->servicePage="myservicepage.php"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="addItem">
+			<type>KoolAutoCompleteItem</type>
+			<parameters>
+			   <param type="string " optional="false">$text</param>
+			   <param type="array " optional="true">$data</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add item to option list of autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add item to option list of autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kac->addItem("Software",array("image"=>"software.gif")); 
+	//The array contain custom data depended on the definition from user
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="LoadXML">
+			<type>function </type>
+			<parameters>
+			   <param type="string" optional="false">xml</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create KoolAutoComplete from XML.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create KoolAutoComplete with XML content. The input value may be string or XmlDocument.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$thePanel->LoadXML("<koolautocomplete id='thePanel'><items><item text='Software' value='soft'/></items></koolautocomplete>");
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.0 </supportversion>
+		</method> 
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolAutoComplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolAutoComplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$kac->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for autocomplete.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for autocomplete.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kac->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $kac->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderAutoComplete">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolAutoComplete body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolAutoComplete body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $kac->RenderAutoComplete();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $kac->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

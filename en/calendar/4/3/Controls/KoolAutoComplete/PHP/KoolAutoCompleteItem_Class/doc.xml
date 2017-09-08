@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_koolautocompleteitem_class" lastupdate="01/01/2009">	
+	<title>KoolAutoCompleteItem Class [PHP]</title>
+	<metakeywords>php ajax autocomplete, php autocomplete, php ajax autosuggest, php autosuggest</metakeywords>	 
+	<metadescription>KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="data">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set data of item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set data of item. The values from this data array will be used to render item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$item = $kac->addItem("Software","soft");
+	$item->data["image"] = "resources/software.gif";
+	//Add image to data array of item 
+	$item->data["anykey"] = "Any value"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+	</properties>	
+	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

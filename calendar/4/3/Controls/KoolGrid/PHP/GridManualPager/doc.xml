@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridManualPager" lastupdate="08/20/2009">	
+	<title>GridManualPager Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridManualPager class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridPager/index.php'>GridPager</a>
+<br />
+&nbsp;|__ GridManualPager
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ManualPagerTemplate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the template of manual pager.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the template of manual pager.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridManualPager();
+	$grid->MasterTable->Pager->ManualPagerTemplate = "Change page: {TextBox} (of {TotalPage} pages) {GoPageButton}";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="ButtonType">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set type of button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set type of button.
+				]]>
+			</longdesc>
+			<defaultvalue>"Button"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Show edit delete command in button">"Button"</value>
+			   <value desc="Show edit delete command in link">"Link"</value>
+			   <value desc="Show edit delete command in image">"Image"</value>
+			</allowedvalues>
+
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridManualPager();
+	$grid->MasterTable->Pager->ButtonType = "Link";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="GoPageButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text of go-page button
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text of go-page button
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridManualPager();
+	$grid->MasterTable->Pager->GoPageButtonText = "Go";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		<property name="TextBoxWidth">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set width of page input textbox.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set width of page input textbox.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridManualPager();
+	$grid->MasterTable->Pager->TextBoxWidth = "40px";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		
+		
+		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

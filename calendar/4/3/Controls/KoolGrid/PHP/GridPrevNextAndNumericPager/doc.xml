@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridPrevNextAndNumericPager" lastupdate="08/20/2009">	
+	<title>GridPrevNextAndNumericPager Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridPrevNextAndNumericPager class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridPager/index.php'>GridPager</a>
+<br />
+&nbsp;|__ GridPrevNextAndNumericPager
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="Range">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the number of page selection showing at a time.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the number of page selection showing at a time.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->MasterTable->Pager->Range = 5;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		<property name="PrevPageText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text of previous page button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text of previous page button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->MasterTable->Pager->PrevPageText = "Next";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="PrevPageToolTip">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the tooltip of previous page button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the tooltip of previous page button. The tooltip will show when mouse is over the button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->MasterTable->Pager->PrevPageToolTip = "Next";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="NextPageText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text of next page button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text of next page button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->MasterTable->Pager->NextPageText = "Next";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="NextPageToolTip">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the tooltip of next page button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the tooltip of next page button. The tooltip will show when mouse is over the button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	$grid->MasterTable->Pager->NextPageToolTip = "Next";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

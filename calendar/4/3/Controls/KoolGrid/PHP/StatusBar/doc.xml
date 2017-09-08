@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_StatusBar" lastupdate="08/20/2009">	
+	<title>StatusBar Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) StatusBar class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="LoadingText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set loading text.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set loading text.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->Status->LoadingText = "Grid is loading data ...";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="DoneText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set done text.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set done text. This text will be shown when grid is done with loading data.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->Status->DoneText = "Finish";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

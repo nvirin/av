@@ -1,0 +1,56 @@
+<control>
+	<name>KoolForm - PHP Form decoration and validation</name>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[
+	KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.<br/>	
+	<b>Key Features :</b>
+	<div style='padding-left:25px;'>
+	  <li>Beatiful skin</li>
+	  <li>Same appearance in all browser</li>
+	  <li>Contain form validator</li>
+	  <li>Contain special input boxes</li>
+	  <li>Contain styling button</li>	  	
+	  <li>Semantic Rendering for Minimal HTML </li>
+	  <li>Rich Client-side API </li>
+	  <li>Easily customized appearance</li>
+	</div>
+	]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+	//Step 1: Register KoolForm component to your page
+	require "KoolControls/KoolForm/koolform.php";
+	
+	//Step 2: Create KoolForm object.
+	$myform_manager = new KoolForm("myform");
+	$myform_manager->scriptFolder = "KoolControls/KoolForm";//Set scriptFolder
+
+	//Step 3: Set properties for KoolForm
+	$myform_manager->styleFolder="default";
+
+	//Step 4: Init kooform before render
+	$myform_manager->Init();	
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <form id="myform" method="post">
+            <!-- The area that is marked with "decoration" will be decorated-->	
+            <div class="decoration">
+                <input id="txtName" name="txtName" />
+				<input type="checkbox" name="checkReceived" />
+            </div>		
+
+            <!-- Step 5: Render KoolForm -->		
+            <?php echo $myform_manager->Render();?>
+        </form>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

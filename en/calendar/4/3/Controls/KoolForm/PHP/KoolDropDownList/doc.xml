@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolDropDownList" lastupdate="01/01/2009">	
+	<title>KoolDropDownList Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolDropDownList.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolDropDownList.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$ddlSex = $myform_manager->AddControl(new KoolDropDownList("ddlSex"));
+	echo $ddlSex->id; //output "ddlSex"
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="SelectedText">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the selected text.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the selected text.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$ddlSex = $myform_manager->AddControl(new KoolDropDownList("ddlSex"));
+	$ddlSex->AddItem("Male");
+	$ddlSex->AddItem("Female");
+
+
+	$myform_manager->Init();
+	
+	if($myform_manager->IsPostBack)
+	{
+		echo $dllSex->SelectedText;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="SelectedValue">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the selected value.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the selected value.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$ddlSex = $myform_manager->AddControl(new KoolDropDownList("ddlSex"));
+	$ddlSex->AddItem("Male",1);
+	$ddlSex->AddItem("Female",0);
+
+
+	$myform_manager->Init();
+	
+	if($myform_manager->IsPostBack)
+	{
+		echo $dllSex->SelectedValue; // output 1 if male is selected and 0 if female is selected.
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+		<property name="SelectedIndex">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the selected index.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the selected index.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$ddlSex = $myform_manager->AddControl(new KoolDropDownList("ddlSex"));
+	$ddlSex->AddItem("Male","1");
+	$ddlSex->AddItem("Female","0");
+
+	$ddlSex->SelectedIndex = 1; // Female is selected.
+
+	$myform_manager->Init();
+	
+	if($myform_manager->IsPostBack)
+	{
+		echo $dllSex->SelectedIndex; // output 0 if male is selected and 1 if female is selected.
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the drop down list
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the drop down list
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$ddlSex = $myform_manager->AddControl(new KoolDropDownList("ddlSex"));
+	$ddlSex->AddItem("Male");
+	$ddlSex->AddItem("Female");
+?>
+
+<div>
+	<?php echo 	$ddlSex->Render(); ?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="AddItem">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$text</param>
+				<param type="string" optional="true">$value</param>
+			</parameters>
+			
+			<shortdesc>
+			   <![CDATA[
+		Add item to dropdown list.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add item to dropdown list.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$ddlSex = $myform_manager->AddControl(new KoolDropDownList("ddlSex"));
+	$ddlSex->AddItem("Male","1");
+	$ddlSex->AddItem("Female","0");
+?>
+
+<div>
+	<?php echo 	$ddlSex->Render(); ?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

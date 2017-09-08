@@ -1,0 +1,69 @@
+<navigation id="KoolAutoComplete">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="PHP_KoolCalendar_Class" 
+					text="KoolCalendar Class"
+					link="PHP/KoolCalendar_Class/index.php"/>
+
+			<link 	id="PHP_KoolTimeView_Class" 
+					text="KoolTimeView Class"
+					link="PHP/KoolTimeView_Class/index.php"/>
+					
+			<link 	id="PHP_KoolDateTimePicker_Class" 
+					text="KoolDateTimePicker Class"
+					link="PHP/KoolDateTimePicker_Class/index.php"/>
+
+			<link 	id="PHP_KoolDatePicker_Class" 
+					text="KoolDatePicker Class"
+					link="PHP/KoolDatePicker_Class/index.php"/>
+
+			<link 	id="PHP_KoolTimePicker_Class" 
+					text="KoolTimePicker Class"
+					link="PHP/KoolTimePicker_Class/index.php"/>
+
+			<link 	id="PHP_CalendarSettings_Class" 
+					text="CalendarSettings Class"
+					link="PHP/CalendarSettings_Class/index.php"/>
+
+			<link 	id="PHP_TimeViewSettings_Class" 
+					text="TimeViewSettings Class"
+					link="PHP/TimeViewSettings_Class/index.php"/>
+
+			<link 	id="PHP_Animation_Class" 
+					text="Animation Class"
+					link="PHP/Animation_Class/index.php"/>
+
+
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="Javascript_KoolCalendar_Class" 
+					text="KoolCalendar Class"
+					link="Javascript/KoolCalendar_Class/index.php"/>
+
+			<link 	id="Javascript_KoolCalendar_ClientEvents" 
+					text="KoolCalendar-ClientEvents"
+					link="Javascript/KoolCalendar_ClientEvents/index.php"/>			
+					
+			<link 	id="Javascript_KoolDateTimePicker_Class" 
+					text="KoolDateTimePicker Class"
+					link="Javascript/KoolDateTimePicker_Class/index.php"/>
+
+			<link 	id="Javascript_KoolDateTimePicker_ClientEvents" 
+					text="KoolDateTimePicker-ClientEvents"
+					link="Javascript/KoolDateTimePicker_ClientEvents/index.php"/>			
+
+
+			<link 	id="Javascript_KoolDatePicker_Class" 
+					text="KoolDatePicker Class"
+					link="Javascript/KoolDatePicker_Class/index.php"/>
+
+			<link 	id="Javascript_KoolTimePicker_Class" 
+					text="KoolTimePicker Class"
+					link="Javascript/KoolTimePicker_Class/index.php"/>			
+
+		</category>
+
+	</category>
+</navigation>

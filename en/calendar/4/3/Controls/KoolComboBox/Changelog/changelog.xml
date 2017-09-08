@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls." metakeywords = "php combobox,php ajax combobox, php combo box,php dropdown list">	
+
+	<log date="Apr 16, 2012" version="1.8.0.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+	<log date="Mar 15, 2012" version="1.7.0.4">
+		<![CDATA[ 
+		- Make KoolComboBox compatible with KoolForm.
+	    ]]>		
+	</log>
+
+
+	<log date="Dec 04, 2011" version="1.7.0.4">
+		<![CDATA[ 
+		- Enhance option list management at client-side
+	    ]]>		
+	</log>
+
+
+	<log date="May 15, 2010" version="1.7.0.0">
+		<![CDATA[ 
+		- Enhance the ajax and character compatibility.
+	    ]]>		
+	</log>
+
+
+	<log date="January 15, 2010" version="1.5.0.3">
+		<![CDATA[ 
+		- Enhance the panel position in special case.
+	    ]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="1.5.0.0">
+		<![CDATA[ 
+		- Enhance the panel position in special case.
+	    ]]>		
+	</log>
+
+
+	<log date="November 15, 2009" version="1.4.0.0">
+		<![CDATA[ 
+		- Fix the position issue.
+	    ]]>		
+	</log>
+
+
+	<log date="September 24, 2009" version="1.3.0.0">
+		<![CDATA[ 
+		- Make KoolComboBox work better with other language.
+	    ]]>		
+	</log>
+
+	<log date="March 08, 2009" version="1.0.1.2">
+		<![CDATA[ 
+	    - Registering CSS is improved.
+		]]>		
+	</log>
+	<log date="February 09, 2009" version="1.0.0.8">
+		<![CDATA[ 
+	    - Enhance styleFolder property.
+		]]>		
+	</log>
+	<log date="December 10, 2008" version="1.0.0.5">
+		<![CDATA[ 
+	    - Enhance the header and footer template.
+		]]>		
+	</log>
+	<log date="November 17, 2008" version="1.0.0.4">
+		<![CDATA[ 
+	    - New property added: scriptFolder for manually setting the path to script folder.
+		]]>		
+	</log>
+	<log date="November 11, 2008" version="1.0.0.3">
+		<![CDATA[ 
+	    - Add item common template to ease skin development
+		]]>		
+	</log>
+	<log date="October 25, 2008" version="1.0.0.1">
+		<![CDATA[ 
+		- Enhance client-side behaviors for Combobox
+		- Add new client-side functions
+		<div style='padding-left:25px;'>
+			  o addItem()
+			  o removeItem()
+			  o getItem()
+			  o getItemIds()
+		</div>
+		]]>		
+	</log>
+	<log date="October 20, 2008" version="1.0.0.0">
+		<![CDATA[ 
+	    - First version of KoolComboBox has been released
+		]]>		
+	</log>
+</changelog>

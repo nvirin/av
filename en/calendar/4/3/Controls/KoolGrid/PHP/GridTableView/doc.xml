@@ -1,0 +1,1518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridTableView" lastupdate="08/20/2009">	
+	<title>GridTableView Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridTableView class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+
+
+		<property name="KeepRowStateOnRefresh">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Keep row state on refresh.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Keep states of row on refresh such as: selected, sub-tables and so on.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->KeepRowStateOnRefresh = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowHovering">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow row highlighted when mouse is over.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow row highlighted when mouse is over.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowHovering = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="AllowSelecting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow row selected
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow row selected
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowSelecting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowMultiSelecting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow selecting more than one row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow selecting more than one row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowMultiSelecting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowEditing">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow tableview edit and update data to datasource.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow tableview edit and update data to datasource.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowEditing = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowDeleting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow tableview delete data.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow tableview delete data.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowDeleting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowScrolling">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow tableview scrollable.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow tableview scrollable.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowScrolling = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowSorting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all sortable columns in tableview will enable sorting feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all sortable columns in tableview will enable sorting feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowSorting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowResizing">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all resizable columns in tableview will enable resizing feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all resizable columns in tableview will enable resizing feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowResizing = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowFiltering">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all columns in tableview will enable filtering feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all columns in tableview will enable filtering feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowFiltering = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="AllowGrouping">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all columns in tableview will enable grouping feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all columns in tableview will enable grouping feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AllowGrouping = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="ShowHeader">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, it make header of tableview visible.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, it make header of tableview visible.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ShowHeader = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="SingleColumnSorting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, only one column is allowed sorting at a time.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, only one column is allowed sorting at a time.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->SingleColumnSorting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="VirtualScrolling">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, the grid will perform virtual scrolling.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, the grid will perform virtual scrolling. This should be used with <b>AllowScrolling</b> set to <b>true</b>.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->AllowScrolling = true;
+	$grid->MasterTable->Height = "300px";	
+	$grid->MasterTable->VirtualScrolling = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>4.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="FrozenColumnsCount">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Specify number of columns in table that will stay still regardless of scrolling action.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Specify number of columns in table that will stay still regardless of scrolling action. This should be used with <b>AllowScrolling</b> set to <b>true</b>.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->AllowScrolling = true;
+	$grid->MasterTable->Height = "300px";	
+	$grid->MasterTable->FrozenColumnsCount = 2;
+	
+?> 
+]]>
+			</samplecode>
+			<supportversion>4.0.0.0</supportversion>
+		</property>		
+
+
+
+		<property name="ShowFooter">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, it make footer of tableview visible.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, it make footer of tableview visible.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ShowFooter = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="RowAlternative">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, it make tableview show alternative color for each row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, it make tableview show alternative color for each row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->RowAlternative = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ShowFunctionPanel">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, tableview will show function panel.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, tableview will show function panel.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ShowFunctionPanel = true;
+	$tableview->FunctionPanel->RefreshButtonText = "Reload";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="FunctionPanel">
+			<type>&lt;a href='../FunctionPanel/index.php'>FunctionPanel&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					TableView's function panel settings.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					TableView's function panel settings.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ShowFunctionPanel = true;
+	$tableview->FunctionPanel->RefreshButtonText = "Reload";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="ShowGroupPanel">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, tableview will show group panel.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, tableview will show group panel.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ShowGroupPanel = true;
+	$tableview->GroupPanel->ItemConnector = ">";
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+
+		<property name="GroupPanel">
+			<type>&lt;a href='../GroupPanel/index.php'>GroupPanel&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					TableView's group panel settings.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					TableView's group panel settings.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ShowGroupPanel = true;
+	$tableview->GroupPanel->ItemConnector = ">";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+
+		<property name="EditSettings">
+			<type>&lt;a href='../EditSettings/index.php'>EditSettings&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Contain settings for tableview editing data function. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Contain settings for tableview editing data function. More detail of settings you may have a look at <a href='../EditSettings/index.php'>EditSettings</a> class.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->EditSettings->Mode = "Form";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="InsertSettings">
+			<type>&lt;a href='../InsertSettings/index.php'>InsertSettings&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Contain settings for tableview inserting data function. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Contain settings for tableview inserting data function. More detail of settings you may have a look at <a href='../InsertSettings/index.php'>InsertSettings</a> class 
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->InsertSettings->Mode = "Form";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+
+
+		<property name="AutoGenerateRowSelectColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add GridRowSelectColumn to tableview automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add GridRowSelectColumn to tableview automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AutoGenerateRowSelectColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateExpandColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add GridExpandDetailColumn to the tableview automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add GridExpandDetailColumn to the tableview automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AutoGenerateExpandColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateColumns">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will generate and add data-driven columns to tableview automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will generate and add data-driven columns to tableview automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AutoGenerateColumns = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateEditColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add edit command column to tableview automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add edit command column to tableview automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AutoGenerateEditColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateDeleteColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add delete command column to tableview automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add delete command column to tableview automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->AutoGenerateDeleteColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="DisableAutoGenerateDataFields">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the list of field names that will not be generated column by KoolGrid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the list of field names that will not be generated column by KoolGrid. When you set <code>AutoGenerateColumns</code> to <code>true</code>, by default, KooLGrid will build columns for all available fieldnames. With this <code>DisableAutoGenerateDataFields</code>, you can choose the datafields that you do not want to build columns.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->MasterTable->AutoGenerateColumns  = true;
+	$grid->MasterTable->DisableAutoGenerateDataFields  = "ID,customerNumber"; //Do not create columns for ID and customerNumber field.
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+		<property name="KeepSelectedRecords">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, tableview will keep selected records persistent againts postback or callback.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, tableview will keep selected records persistent againts postback or callback.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->KeepSelectedRecords = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		
+		<property name="ColumnWrap">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all columns in tableview will be in wrap mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all columns in tableview will be in wrap mode. The long text will be broken in more than one line.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ColumnWrap = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+	
+	
+		
+		<property name="ColumnAlign">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set alignment of column's text
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set alignment of column's text
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Text in column aligns in left side">"left"</value>
+			   <value desc="Text in column aligns in center">"center"</value>
+			   <value desc="Text in column aligns in right side">"right"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ColumnAlign  = "left";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		<property name="ColumnValign">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set vertical alignment of column's text
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set vertical alignment of column's text
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Top alignment">"top"</value>
+			   <value desc="Middle alignment">"middle"</value>
+			   <value desc="Bottom alignment">"left"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->ColumnValign  = "top";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+				
+		
+		
+		<property name="TableLayout">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set layout of the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set layout of the tableview.
+				]]>
+			</longdesc>
+			<defaultvalue>"auto"</defaultvalue>
+			<allowedvalues>
+			   <value desc="The width of table will be set automatically.">"auto"</value>
+			   <value desc="Use the fixed width for tableview.">"fixed"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->TableLayout  = "fixed";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		
+		<property name="SelectedKeys">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get the keys of selected rows.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the keys of selected rows. This list will be available after the grid processing. Note: This SelectedKeys requires DataKeyNames to be set.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$grid->MasterTable->DataKeyNames = "customerNumber";
+...
+	$grid->Process();				
+	$selectedKeys = $grid->GetInstanceMasterTable()->SelectKeys;
+	for(var $i=0;$i<sizeof($selectedKeys);$i++)
+	{
+		echo selectedKeys[$i]["customerName"];
+	}
+	
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+		
+		
+		
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set detfault width of the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set detfault width of the tableview. The width can be set with px value of % value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->Width  = "900px";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="Name">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the name of table.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the name of table. This name can be used to differentiate tables in client-side or server-side event handling.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->Name  = "order_table";
+	
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnBeforeConfirmInsert($tableview,$args)
+		{
+
+			if($tableview->Name=="order_table")
+			{
+				//Do something.
+			}
+			
+			return true;//Approve the action.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();	
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+		
+		<property name="Height">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set height of tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set height of tableview. The height can only be set with px value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->Height  = "300px";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+		
+		
+		<property name="DataKeyNames">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set list of primary keys of the data set.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set list of primary keys of the data set. You can input multiple primary key name with comma seperator.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->DataKeyNames  = "customerNumber";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+		
+		
+		<property name="Pager">
+			<type>GridPager</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set pager object for tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set pager object for tableview.
+				]]>
+			</longdesc>
+			<defaultvalue>null</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->Pager  = new GridPrevNextColumn();
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+		
+		
+		<property name="FilterOptions">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set default filter options for all columns in tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set default filter options for all columns in tableview.
+				]]>
+			</longdesc>
+			<defaultvalue>array("No_Filter","Equal","Not_Equal","Greater_Than","Less_Than","Greater_Than_Or_Equal","Less_Than_Or_Equal","Contain","Not_Contain","Start_With","End_With");</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->FilterOptions  = array("No_Filter","Greater_Than","Less_Than");//Only show 3 chosen options.
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		<property name="PageSize">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the page size for tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the page size for tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$tableview = new GridTableView();
+	$tableview->PageSize  = 20;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		
+		
+		
+		
+		<property name="DataSource">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the datasource for tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the datasource for tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$ds = new MySQLDataSource();
+	$ds->SelectCommand = "select customerNumber,customerName from customers";
+	$tableview = new GridTableView();
+	$tableview->DataSource  = $ds;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		
+		<property name="Grid">
+			<type>&lt;a href='../KoolGrid/index.php'>KoolGrid&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get the grid object that contain this tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the grid object that contain this tableview. Note: This property is only available after grid has been processed.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>
+		</property>	
+		<property name="ParentRow">
+			<type>&lt;a href='../GridRow/index.php'>GridRow&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get the parent row instance which contains this detail tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the parent row instance which contains this detail tableview. Note: This property is only available after grid has been processed.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>
+		</property>					
+		
+	</properties>
+	
+	<methods>
+
+		 <method name="Refresh">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[ 
+					Force the tableview to refresh.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Force the tableview to refresh. The data will be rebound.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnTableViewPreRender($tableview,$args)
+		{
+			//$tableview: The grid tableview object.
+			//$args: No data.
+			
+			$tableview->Refresh();
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+		<method name="GetInstanceRows">
+			<type>array</type>			
+			<shortdesc>
+			   <![CDATA[
+				Get all instance rows of tableview after processing.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Get all instance rows of tableview after processing.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+...
+	$grid->Process();
+	$mastertable = $grid->GetInstanceMasterTable();
+	$rows = $mastertable->GetInstanceRows();
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+
+		<method name="GetInstanceColumns">
+			<type>array</type>			
+			<shortdesc>
+			   <![CDATA[
+				Get all instance columns of tableview after processing.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Get all instance columns of tableview after processing.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+...
+	$grid->Process();
+	$mastertable = $grid->GetInstanceMasterTable();
+	$columns = $mastertable->GetInstanceColumns();
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+
+
+
+		<method name="AddColumn">
+			<type>void</type>
+			<parameters>
+				<param type="GridColumn" optional="false">$column</param>
+			</parameters>						
+			<shortdesc>
+			   <![CDATA[
+				Add a column to tableview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Add a column to tableview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$col = new GridBoundColumn();
+	$col->DataField = "customerNumber";
+	$grid->MasterTable->AddColumn($col);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="AddGroup">
+			<type>void</type>
+			<parameters>
+				<param type="GridGroup" optional="false">$group</param>
+			</parameters>						
+			<shortdesc>
+			   <![CDATA[
+				Add a group to tableview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Add a group to tableview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$group = new GridGroup();
+	$group->GroupField = "supervisor_name";
+	$group->AddInfoField("reportsTo");
+	$group->HeaderText = "Supervisor";
+	$group->InfoTemplate = "Report To: {supervisor_name}";
+	$grid->MasterTable->AddGroup($group);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+
+
+
+		<method name="AddDetailTable">
+			<type>void</type>
+			<parameters>
+				<param type="GridTableView" optional="false">$detail_table</param>
+				<param type="string" optional="true">$description_template</param>
+			</parameters>						
+			<shortdesc>
+			   <![CDATA[
+				Add a detail table to tableview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Add a detail table to tableview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$table = new GridTableView();
+	$table->DataSource = $detail_ds;
+	$table->AddRelationField("customerNumber","customerNumber");
+	$grid->MasterTable->AddDetailTable($table,"Detail orders of <b>{customerName}</b>");
+	//Note: "customerName" should be a field in parent table ( MasterTable in this case )
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+
+		<method name="AddRelationField">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$field_of_this_detail_table</param>
+				<param type="string" optional="false">$field_of_master_table</param>
+			</parameters>						
+			<shortdesc>
+			   <![CDATA[
+				Add relation field between detail table and master table.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Add relation field between detail table and master table.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$table = new GridTableView();
+	$table->DataSource = $detail_ds;
+	$table->AddRelationField("customerNumber","customerNumber");
+	$grid->MasterTable->AddDetailTable($table);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="ExportToCSV">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Export the tableview to CSV format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Export the tableview to CSV format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	...
+	$grid->Process();
+	//Asuume that an ExportToCSV input button is clicked.
+	if(isset($_POST["ExportToCSV"]))
+	{
+		$grid->GetInstanceMasterTable()->ExportToCSV();
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+		<method name="ExportToPDF">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Export the tableview to PDF format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Export the tableview to PDF format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	...
+	$grid->Process();
+	//Asuume that an ExportToPDF input button is clicked.
+	if(isset($_POST["ExportToPDF"]))
+	{
+		$grid->GetInstanceMasterTable()->ExportToPDF();
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+
+		<method name="ExportToExcel">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Export the tableview to Microsoft Excel format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Export the tableview to Microsoft Excel format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	...
+	$grid->Process();
+	//Asuume that an ExportToExcel input button is clicked.
+	if(isset($_POST["ExportToExcel"]))
+	{
+		$grid->GetInstanceMasterTable()->ExportToExcel();
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+
+		<method name="ExportToWord">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Export the tableview to Microsoft Word format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Export the tableview to Microsoft Word format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	...
+	$grid->Process();
+	//Asuume that an ExportToWord input button is clicked.
+	if(isset($_POST["ExportToWord"]))
+	{
+		$grid->GetInstanceMasterTable()->ExportToWord();
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+
+		<method name="GetParentRow">
+			<type>GridRow</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the parent row that contains this tableview.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the parent row that contains this tableview.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.1.0.0 </supportversion>
+		</method> 
+		<method name="GetUniqueID">
+			<type>string</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the tableview's unique ID which is assigned by KoolGrid.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the tableview's unique ID which is assigned by KoolGrid.
+			   ]]>
+			</longdesc>
+			<supportversion>2.3.0.0 </supportversion>
+		</method>		 
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

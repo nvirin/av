@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridTextAreaColumn" lastupdate="08/20/2009">	
+	<title>GridTextAreaColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridTextAreaColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridTextAreaColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="BoxHeight">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set height of textarea in edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set height of textarea in edit mode.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridTextAreaColumn();
+	$col->BoxHeight = "100px";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.2.0.0</supportversion>
+		</property>
+		<property name="AllowHtmlRender">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether column will render content as html or as text.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether column will render content as html or as text.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridTextAreaColumn();
+	$col->AllowHtmlRender = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.1.0.0</supportversion>
+		</property>
+
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

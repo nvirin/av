@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_KoolImageView_class" lastupdate="01/01/2009">	
+	<title>KoolImageView Class [PHP]</title>
+	<metakeywords>php image view, php image zoom, zoom image script</metakeywords>	 
+	<metadescription>KoolImageView provides perfect solution for image detail view in your online store or images collection. KoolImageView is equipped with many nice templates and effects. And it is Totally FREE!</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the id for KoolImageView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolImageView. This id will be use as variable name of KoolImageView at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->id="kiv";
+	//We usually use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolImageView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolImageView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->styleFolder="KoolImageView/styles/default";
+	//Use the "default" style
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain core file "koolimageview.php"
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain core file "koolimageview.php". Normally the path to script folder is automatically added, however in some cases you may need to set it manually.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->scriptFolder="lib/koolimageview";
+	//Set path to "koolimageview" folder 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="imageUrl">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set url of small image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set url of small image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->imageUrl="images/small_image.jpg";
+	//Set imageUrl to small image url 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="cssClass">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the css class for small image.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the css class for small image.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->cssClass="borderCss";
+	//Set cssClass for small image
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="bigImageUrl">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set url of big image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set url of big image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->bigImageUrl="images/big_image.jpg";
+	//Set url for big image 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="effect">
+			<type>string</type>
+			<allowedvalues>
+			   <value desc="Zooming effect">"zooming"</value>
+			   <value desc="Fading effect">"fading" </value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the tranformed effect of ImageView. 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the tranformed effect of ImageView. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->effect="zooming";
+	//Make KoolImageView perform zomming effect
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="backgroundOpacity">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set background transparent level.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set background transparent level. The background will be disabled if you set backgroundOpacity to 0.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->backgroundOpacity=50;
+	//Set background tranparency 50% 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="openTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set time duration to open ImageView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set time duration to open ImageView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->openTime=200;
+	//Set openTime to 200 miliseconds 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="frameNumber">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set number of frames rendering when imageview opens or closes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set number of frames rendering when imageview opens or closes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->frameNumber=15;
+	//Set frameNumber of KoolImageView
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="showLoading">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether loading text/image will be shown when big image is loaded. By default showLoading has true value.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether loading text/image will be shown when big image is loaded. By default showLoading has true value.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->showLoading=false;//Off showing loading
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="description">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set text description for big image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set text description for big image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->description="This is the big image!";//Set description for big image 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="zIndex">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set zIndex layer for ImageView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set zIndex layer for ImageView. This property is helpful when you want to set ImageZoom above all of your elements in your page.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->zIndex=2000;//Set zIndex to 2000 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="position">
+			<type>string</type>
+			<allowedvalues>
+			   <value desc="Open big image in the center of screen">"SCREEN_CENTER"</value>
+			   <value desc="Expand big image equally in all direction from small image">"IMAGE_CENTER"</value>
+			   <value desc="">"RELATIVE"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set position type for imagezoom
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set position type for imagezoom
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->position="RELATIVE";//Use relative postion 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="relativeLeft">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set left postion of zoompanel relative to small image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set left postion of zoompanel relative to small image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->relativeLeft=50;//Set relativeLeft to 50px 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="relativeTop">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set top postion of zoompanel relative to small image
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set top postion of zoompanel relative to small image
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$kiv->relativeTop=50;//Set relativeTop to 50px
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="LoadXML">
+			<type>function</type>
+			<parameters>
+			   <param type="string" optional="false">xml</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create KoolImageView with XML content.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create KoolImageView with XML content. The input value may be string or XmlDocument.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php //This feature is temporarily off ?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.0 </supportversion>
+		</method> 		
+		<method name="Render">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolImageView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolImageView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $kiv->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolImageView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolImageView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kiv->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolImageView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolImageView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $kiv->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderUploader">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolImageView body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolImageView body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $kiv->RenderUploader();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolImageView
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolImageView
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $kiv->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

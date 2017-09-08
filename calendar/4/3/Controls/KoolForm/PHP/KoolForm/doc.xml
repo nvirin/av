@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolForm" lastupdate="01/01/2009">	
+	<title>KoolForm Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolForm.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolForm. As the rule, the id of KoolForm will be the id of the form added with "_manager".
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	echo $myform_manager->id; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolForm
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolForm
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$myform_manager->styleFolder="default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolForm script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolForm script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$myform_manager = new KoolForm("myform");
+	$myform_manager->scriptFolder = "KoolControls/KoolForm";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		 		
+		<property name="Controls">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+					This is an associate array containing all controls that has been added to form.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					This is an associate array containing all controls that has been added to form. You can access to particular controls through its id.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$myform_manager->AddControl(new KoolTextBox("txtName"));
+...
+	$myform_manager->Controls["txtName"]->MaxLength = 10;
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		<property name="Validate">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether the form will be validated before submitted.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether the form will be validated before submitted.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$cal->Validate=false;//No form validation.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+
+
+
+
+		
+		<property name="IsPostBack">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the form has just been posted back.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the form has just been posted back.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	if($myform_manager->IsPostBack)
+	{
+		// Retrieve post data from user.
+	}
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="StatePersistent">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether the view state of each controls and the form will be persistent.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether the view state of each controls and the form will be maintained. If the StatePersistent is set to false, the values of all controls will be reset after postback.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$myform_manager->StatePersistent=false;//Turn off the view state persistent feature.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="DecorationEnabled">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether the form will be decorated.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether the form will be decorated.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$myform_manager->DecorationEnabled=false;//No decoration.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="Decoration">
+			<type>object</type>
+			<shortdesc>
+			   <![CDATA[
+				Turn on/off the decoration for particular form elements.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Turn on/off the decoration for particular form elements. Please have a look at below example code.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	//You can turn om/off decoration for particular below elements.
+	$myform_manager->Decoration->Button = true;
+	$myform_manager->Decoration->TextBox = true;
+	$myform_manager->Decoration->RadioButton = true;
+	$myform_manager->Decoration->CheckBox = true;
+	$myform_manager->Decoration->TextArea = true;
+	$myform_manager->Decoration->FieldSet = true;
+	$myform_manager->Decoration->DropDownList = true;
+	$myform_manager->Decoration->ListBox = true;
+	$myform_manager->Decoration->Headings = true;
+	$myform_manager->Decoration->Label = true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="RenderWithExistingMarkup">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Set whether koolform will be used to enhance existing html mark-up.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					When this is set to true, you do not need to use Render() function to render content for each controls. Instead, KoolForm will based on existing html mark-ups to initiate.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$myform_manager->RenderWithExistingMarkup=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="Init">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Initiate koolform.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Initiate koolform. This function should be called before koolform Render() function.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$myform_manager = new KoolForm("myform");
+	...
+	$myform_manager->Init();
+	...
+	echo $myform_manager->Render(); 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="AddControl">
+			<type>object</type>
+			<parameters>
+			   <param type="object" optional="false">$control</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+			Add a control to form.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+			Add a control to form. The return of function is the created control.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	...
+		$txtName = $myform_manager->AddControl(new KoolTextBox("txtName"));
+		$txtName->MaxLength = 20;
+
+	...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+
+
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolForm
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolForm
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$myform_manager->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolForm.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolForm.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $myform_manager->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolForm
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolForm
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $myform_manager->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderForm">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolForm body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolForm body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $myform_manager->RenderForm();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolForm
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolForm
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $myform_manager->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

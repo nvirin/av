@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_InsertSettings" lastupdate="08/20/2009">	
+	<title>InsertSettings Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) InsertSettings class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="Mode">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set which mode of insert form to render.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set which mode of insert form to render. The mode is whether default "Form" or custom "Template"
+					
+				]]>
+			</longdesc>
+			<defaultvalue>"Form"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Use built-in form">"Form"</value>
+			   <value desc="Use custom form template">"Template"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->Mode = "Form";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="InputFocus">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the behavior of grid when it is inside inserting mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the behavior of grid when it is inside inserting mode.
+					
+				]]>
+			</longdesc>
+			<defaultvalue>"None"</defaultvalue>
+			<allowedvalues>
+			   <value desc="The grid is hidden when user perform inserting">"HideGrid"</value>
+			   <value desc="The grid is blurred when user perform inserting">"BlurGrid"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->Mode = "Form";
+	$grid->MasterTable->InsertSettings->InputFocus = "HideGrid";
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.5.0.0</supportversion>
+		</property>
+
+
+
+
+		<property name="HeaderCaption">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set header of insert form.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+v				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->HeaderCaption = "Insert New Row";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ColumnNumber">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the column number in insert form.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the column number in insert form.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->ColumnNumber = 3;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="CancelButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text of cancel button
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text of cancel button
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->CancelButtonText = "Cancel Insert";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ConfirmButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text of confirm button
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text of confirm button
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->ConfirmButtonText = "Update";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="CancelButtonToolTip">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the tooltip of cancel button
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the tooltip of cancel button
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->CancelButtonToolTip = "Cancel Insert";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ConfirmButtonToolTip">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the tooltip of confirm button
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the tooltip of confirm button
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->InsertSettings->ConfirmButtonToolTip = "Confirm Insert";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Template">
+			<type>&lt;a href='../GridTemplate/index.php'>GridTemplate&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Set the object of GridTemplate's implementation class.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the object of GridTemplate's implementation class.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	//Create inserting template.
+	...
+	class MyInsertTemplate implements GridTemplate
+	{
+		function Render($_row)
+		{
+			$html  = "<input id='city_input'  name='city_input' type='text' />"; User input
+			$html .= "<input type='button' value='Confirm' onclick='grid_confirm_insert(this)'/>"; //Render confirm button.
+			$html .= "<input type='button' value='Cancel' onclick='grid_cancel_insert(this)'/>"; //Render cancel button.
+			return $html;
+		}
+		function GetData($_row)
+		{
+			return array("city"=>$_POST["city_input"]);
+		}		
+	}
+	...
+	$grid->MasterTable->InsertSettings->Mode = "Template";
+	$grid->MasterTable->InsertSettings->Template = new MyInsertTemplate();
+	...
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

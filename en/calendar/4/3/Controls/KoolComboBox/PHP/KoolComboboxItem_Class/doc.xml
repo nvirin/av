@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_koolcomboboxitem_class" lastupdate="01/01/2009">	
+	<title>KoolComboboxItem Class [PHP]</title>
+	<metakeywords>php combobox,php ajax combobox, php combo box,php dropdown list</metakeywords>	 
+	<metadescription>KoolComboBox extends the capability of combobox to the max.Easy-to-use, highly customized interface, advanced behavior options are the strongest points that make KoolComboBox better than any other industrial similar controls.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="enabled">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether a item is enabled 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether a item is enabled 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$item = $kcb->Add("Software","soft");
+	$item->enabled = false;//Disable item
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		 <property name="selected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether a item is selected 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether a item is selected 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$item = $kcb->Add("Software","soft");
+	$item->selected = true;//Make this item selected
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		<property name="data">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set data of item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set data of item. The values from this data array will be used to render item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$item = $Koo->addItem("Software","soft");
+	$item->data["image"] = "resources/software.gif";
+	//Add image to data array of item 
+	$item->data["anykey"] = "Any value"; 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+	</properties>	
+	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

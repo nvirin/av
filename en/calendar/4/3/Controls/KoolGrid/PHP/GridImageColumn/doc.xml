@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridImageColumn" lastupdate="08/20/2009">	
+	<title>GridImageColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridImageColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridImageColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ImageFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the folder which images is stored.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the folder which images is stored.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridImageColumn();
+	$col->ImageFolder = "images";
+	$col->CssClass = "my_image_css";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="CssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set css class that applies to images in the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set css class that applies to images in the column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridImageColumn();
+	$col->ImageFolder = "images";
+	$col->CssClass = "my_image_css";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

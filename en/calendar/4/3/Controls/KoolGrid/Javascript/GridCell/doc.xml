@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_gridcell_class" lastupdate="08/20/2009">	
+	<title>GridCell Class [Javascript]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of client-side GridCell Class</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get the id of the cell.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the id of the cell.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<script type="text/javacript">
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+	</properties>	
+	
+	<methods>
+		<method name="getElement">
+			<type>[object]</type>
+			<shortdesc>
+				<![CDATA[
+				Get the html object of the cell.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the html object of the cell.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		var _cells = _first_row.getCells();
+		_cells[0].getElement().style.backgroundColor="red"; // Mark the first cell of the first row red.
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+		<method name="getData">
+			<type>[object]</type>
+			<shortdesc>
+				<![CDATA[
+				Get the cell's data.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the cell's data.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		var _cells = _first_row.getCells();
+		alert(_cells[0].getData()); // Alert the data of first cell.
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+ 
+		<method name="getInputElement">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Get the element object of the cell's input when the row is in editing mode.	
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the element object of the cell's input when the row is in editing mode.	
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		var _cells = _first_row.getCells();
+		if (_first_row.isEditing())
+		{
+			var _input = _cells[0].getInputElement();
+			alert(_input.value); // Get the input from user in the first cell of the first row.
+		}
+		
+	}
+
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

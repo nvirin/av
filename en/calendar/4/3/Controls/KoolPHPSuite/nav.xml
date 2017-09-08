@@ -1,0 +1,15 @@
+<navigation id="KoolPHPSuite">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<category id="License" text="Licensing">
+			<link 	id="Which_License" 
+					text="Which license should I purchase?"
+					link="Licensing/Which_License/index.php"/>
+		</category>		
+		<category id="install" text="Installation">
+			<link 	id="Install_Instruction" 
+					text="Install Instruction"
+					link="Installation/Install_Instruction/index.php"/>
+		</category>	
+	</category>
+</navigation>

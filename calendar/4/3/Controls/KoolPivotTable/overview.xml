@@ -1,0 +1,69 @@
+<control>
+	<name>KoolPivotTable - Powerful PHP Pivot Table</name>
+	<metadescription></metadescription>
+	<metakeywords>php pivot table, php pivot grid, pivot table, pivot grid, php data analysis, business intelligent tool, excel-like data summarization</metakeywords>	 
+	<description>
+		<![CDATA[
+		KoolPivotTable is the excel-like pivot table made for PHP. It comes with great features such as data filtering, data view alternating, data sorting along with other features such as caching, localization. KoolPivotTable allows users to drag and drop fields to view data in different angles. It is an excellent business data analysis tool to power your data process and visualization.
+		<br><b>Key Features:</b>
+		<div style='padding-left:25px;'>
+		   <li>Allow user to alternate data view by drag and drop fields.</li>
+		   <li>Allow data selection and filtering.</li>
+		   <li>Support Data sorting.</li>
+		   <li>Use data caching to speed up. </li>
+		   <li>Support style customizability. </li>
+		   <li>Support localization. </li>
+		   <li>Easy-to use, with support of <a target="_blank" href="http://codegen.koolphp.net/pivot_table/">Code Generator</a></li>		   
+		</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php 
+
+    //Step 1: Register control	 
+    require "KoolControls/KoolPivotTable/koolpivottable.php";
+    //Step 2: Create database connection
+    $dbcon = mysql_connect("localhost","username","password");
+    mysql_select_db("database_name",$dbcon);
+ 
+    //Step 3: Create datasource
+    $ds = new MySQLPivotDataSource($dbcon);
+    $ds->SelectCommand = "select customer,product,order from tblSales";
+ 
+    //Step 4: Assing property to pivot table object
+    $pivot = new KoolPivotTable("pivot");
+    $pivot->scriptFolder = "KoolControls/KoolPivotTable";
+    $pivot->DataSource = $ds;
+ 
+    $pivot->Pager = PivotPrevNextAndNumericPager();
+    $pivot->AllowCaching = true;
+ 
+    $field = new PivotSumField("order");
+    $pivot->AddDataField($field);
+ 
+    $field = new PivotField("product");
+    $pivot->AddRowField($field);
+ 
+    $field = new PivotField("customer");
+    $pivot->AddColumnField($field);
+ 
+
+    $pivot->Process();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>KoolPivotTable</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    </head>
+    <body>
+        <!-- Step 5: Render -->
+        <?php echo $pivot->Render(); ?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

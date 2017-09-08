@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity." metakeywords = "php ajax,php ajax framework,php callback, ajax for php">	
+
+
+	<log date="Apr 16, 2012" version="2.8.0.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+
+	<log date="Dec 04, 2011" version="2.7.0.1">
+		<![CDATA[ 
+		- Correct the position of UpdatePanel in IE8
+		]]>		
+	</log>
+
+
+	<log date="May 15, 2010" version="2.7.0.0">
+		<![CDATA[ 
+		- Enhance the loading process of UpdatePanel.
+		]]>		
+	</log>
+
+
+	<log date="February 28, 2010" version="2.6.0.0">
+		<![CDATA[ 
+		- Change Request class to KoolAjaxRequest
+		- New property: KoolAjax::CharSet
+		]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="2.5.0.2">
+		<![CDATA[ 
+		- Solve issue of KoolAjax working with AutoComplete.
+		]]>		
+	</log>
+
+
+	<log date="September 24, 2009" version="2.1.0.0">
+		<![CDATA[ 
+	    - Make KoolAjax work better with different languages.
+		]]>		
+	</log>
+
+
+	<log date="September 05, 2009" version="2.0.0.0">
+		<![CDATA[ 
+	    - Enhance position of UpdatePanel's loading image.
+		]]>		
+	</log>
+
+
+	<log date="August 20, 2009" version="1.9.0.0">
+		<![CDATA[ 
+	    - Fix KoolAjax's issue of parameter transporting.
+		]]>		
+	</log>
+
+	<log date="July 09, 2009" version="1.8.0.2">
+		<![CDATA[ 
+	    - UpdatePanel now recognizes submit button as triggers.
+	    - Solve error "this._getCurrentBrowsers() is null" in FF3
+		]]>		
+	</log>
+	<log date="March 08, 2009" version="1.7.0.0">
+		<![CDATA[ 
+	    - Enhance response of UpdatePanel and KoolAjax's callback
+    	- KoolAjax now can be registered in any place of your page, not just only at top of your page.
+		]]>		
+	</log>
+	<log date="February 09, 2009" version="1.6.0.5">
+		<![CDATA[ 
+		- Update ActiveX Object list for IE Ajax
+		- Improve the debug mode.
+		]]>		
+	</log>
+	<log date="December 10, 2008" version="1.6.0.2">
+		<![CDATA[ 
+		- Enhance OnError event handle of UpdatePanel
+		- Improve the return of callback() function.
+		]]>		
+	</log>
+	<log date="November 17, 2008" version="1.6.0.1">
+		<![CDATA[ 
+		- New property added: scriptFolder for manually setting the path to script folder.
+		]]>		
+	</log>
+	<log date="November 11, 2008 " version="1.6.0.0 ">
+		<![CDATA[ 
+		- Big enhancement in handling ajax request.
+		- Solved the issue of "not well-formed" warning.
+		- Improved the return data type when page does the callback.
+		]]>		
+	</log>
+	<log date="October 15, 2008 " version="1.5.0.7 ">
+		<![CDATA[ 
+		- Make KoolAjax work better with other kool controls.
+		]]>		
+	</log>
+	<log date="October 03, 2008 " version="1.5.0.6 ">
+		<![CDATA[ 
+		- Enahnce setLoading function of UpdatePanel
+		]]>		
+	</log>
+	<log date="October 01, 2008 " version="1.5.0.5 ">
+		<![CDATA[ 
+		- Enhance the render of JS library's absolute path.
+		]]>		
+	</log>
+	<log date="September 25, 2008 " version="1.5.0.4 ">
+		<![CDATA[ 
+		- Enhance the loading panel of UpdatePanel.
+		- UpdatePanel now can be nested.
+		]]>		
+	</log>
+	<log date="September 23, 2008 " version="1.5.0.3 ">
+		<![CDATA[ 
+		- Make KoolAjax work better with WAMP Server
+		]]>		
+	</log>
+	<log date="September 21, 2008 " version="1.5.0.1 ">
+		<![CDATA[ 
+		- Enhance KoolAjax to make it work when short_open_tag settings of PHP is disable.
+		- Improve the loading panel, the loading image now is preloaded.
+		]]>		
+	</log>
+	<log date="September 08, 2008 " version="1.5.0.0 ">
+		<![CDATA[ 
+		- New function: registerClientScript() enable us to set any client command to run from server-side.
+		- New function: loadScript() which help to load any js library silently to page.
+		- New function: loadCss() which help to load a CSS file silently to page.
+		- UpdatePanel has been improved alot, the loading panel option has been added.
+		- Bundle of loading image are provided.
+		]]>		
+	</log>
+	<log date="August 03, 2008 " version="1.3.0.2 ">
+		<![CDATA[ 
+		- Enhance synchronous callback function.
+		- Improve the Request class.
+		]]>		
+	</log>
+	<log date="July 04, 2008 " version="1.3.0.0 ">
+		<![CDATA[ 
+		- Added attachData() function to UpdatePanel
+		- Enhanced Request class
+		- Added abort function to Request, helping to abort a request in neccesary cases.
+		- Added timeout capability to KoolAjax.
+		- Many new event handles has been added to Request class : onOpen, onSent, onRecieve, onDone, onError, onAbort.
+		]]>		
+	</log>
+	<log date="June 25, 2008 " version=" 1.2.0.1">
+		<![CDATA[ 
+		- Enhanced UpdatePanel in handling callbacked data.
+		]]>		
+	</log>
+	<log date="June 19, 2008 " version="1.2.0.0 ">
+		<![CDATA[ 		
+		- UpdatePanel class has been added.
+		- KoolScripting has been enabled in this version. With this feature,we can create UpdatePanel by adding XML directly on the page.
+		- Enhanced KoolAjax in working with Linux.
+		- Improve function callback feature with JSON.
+		]]>		
+	</log>
+	<log date="June 10, 2008 " version="1.0.0.0 ">
+		<![CDATA[ 
+		- KoolAjax is first released.
+		]]>		
+	</log>
+</changelog>

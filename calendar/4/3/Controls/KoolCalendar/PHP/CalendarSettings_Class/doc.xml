@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_CalendarSettings_Class" lastupdate="01/01/2009">	
+	<title>CalendarSettings Class [PHP]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+	
+
+		<property name="Orientation">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Render month days horizontally.">"Horizontal"</value>
+			   <value desc="Render month days vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->Orientation="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MonthLayout">
+			<type>string</type>
+			<defaultvalue>"7x6"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the layout of month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the layout of month.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Display in 7x6 table">"7x6"</value>
+			   <value desc="Display in 14x3 table">"14x3"</value>
+			   <value desc="Display in 21x2 table">"21x2"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->MonthLayout="14x3";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ShowOtherMonthsDays">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show other month days in month table.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show other month days in month table.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowOtherMonthsDays=false;//Not show other month days. 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ShowDayCellToolTips">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show tooltip when mouse hovers the day.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show tooltip when mouse hovers the day.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowDayCellToolTips=false;//Not show tooltip.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowToday">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar highlight today date.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar highlight today date.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowToday=false;//Not show today
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ShowRowHeader">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show row header.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show row header.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowRowHeader=false;//Not show row header.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="ShowColumnHeader">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show column header.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolCalendar show column header.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowColumnHeader=false;//Not show column header.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="NavigateAnimation">
+			<type>&lt;a href='../Animation/index.php'>Animation&lt;/a></type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the settings of navitation animation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the settings of navitation animation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->NavigateAnimation->Type="Linear";// Linear animation.
+	$datetimepicker->CalendarSettings->NavigateAnimation->Duration=200;// 200ms
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="FirstDayOfWeek">
+			<type>int</type>
+			<defaultvalue>0</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the first day of week.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the first day of week.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Sunday">0</value>
+			   <value desc="Monday">1</value>
+			   <value desc="Tuesday">2</value>
+			   <value desc="Wednesday">3</value>
+			   <value desc="Thursday">4</value>
+			   <value desc="Friday">5</value>
+			   <value desc="Saturday">6</value>
+			</allowedvalues>
+			
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->FirstDayOfWeek=1;//Monday is first day of week.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="FocusedDate">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set focused date in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set focused date in KoolCalendar. By setting this date, we will let KoolCalendar know the month to be shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->FocusedDate=mktime(0,0,0,12,15,2009);// Set focused date in 12/15/2009
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="RangeMinDate">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set min date in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set min date in KoolCalendar. User may not able to select the date prior to RangeMinDate.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	//Set the date range from 12/15/2009 to 6/15/2010
+	$datetimepicker->CalendarSettings->RangeMinDate=mktime(0,0,0,12,15,2009);
+	$datetimepicker->CalendarSettings->RangeMaxDate=mktime(0,0,0,6,15,2010);	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="RangeMaxDate">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set max date in KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set max date in KoolCalendar. User may not able to select the date after the RangeMaxDate.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	//Set the date range from 12/15/2009 to 6/15/2010
+	$datetimepicker->CalendarSettings->RangeMinDate=mktime(0,0,0,12,15,2009);
+	$datetimepicker->CalendarSettings->RangeMaxDate=mktime(0,0,0,6,15,2010);	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		
+		<property name="ShowNavigation">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show navigation buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show navigation buttons.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowNavigation=false;// Not showing the navigation buttons.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="ShowFastNavigation">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show fast navigation buttons.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set where KoolCalendar show fast navigation buttons.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->ShowFastNavigation=false;// Not showing the fast navigation buttons.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="FastNavigationStep">
+			<type>int</type>
+			<defaultvalue>3</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the step numbers of fast navigation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the step numbers of fast navigation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->CalendarSettings->FastNavigationStep=4;// Not showing the fast navigation buttons.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		
+		
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

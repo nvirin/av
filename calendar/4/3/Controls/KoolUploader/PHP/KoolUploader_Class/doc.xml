@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_kooluploader" lastupdate="01/01/2009">	
+	<title>KoolUploader Class [PHP]</title>
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the id for KoolUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolUploader. This id will be use as variable name of KoolUploader at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->id="kul";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolUploader.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->styleFolder="kooluploader/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain core file "kooluploader.php".
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain core file "kooluploader.php". Normally the path to script folder is automatically added, however in some cases you may need to set it manually.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->scriptFolder="lib/kooluploader";//Set path to "kooluploader" folder 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="width">
+			<type>string</type>
+			<defaultvalue>"300px"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width of KoolUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width of KoolUploader.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->width="500px";//Set width of KoolUploader 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="height">
+			<type>string</type>
+			<defaultvalue>"200px"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the height of KoolUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the height of KoolUploader.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->height="200px";//Set height of KoolUploader
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="handlePage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the page which handle upload request
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the page which handle upload request
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->handlePage="handleupload.php";//Set handlePage for KoolUploader 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="texts">
+			<type>array</type>
+			<allowedvalues>
+			   <value desc="">"BUTTON_ADD"</value>
+			   <value desc="">"BUTTON_UPLOAD_ALL"</value>
+			   <value desc="">"BUTTON_CLEAR_ALL"</value>
+			   <value desc="">"BUTTON_UPLOAD"</value>
+			   <value desc="">"BUTTON_REMOVE"</value>
+			   <value desc="">"BUTTON_CANCEL"</value>
+			   <value desc="">"MESSAGE_UPLOAD_SUCCESSFUL"</value>
+			   <value desc="">"MESSAGE_FILE_NOT_ALLOWED"</value>
+			   <value desc="">"MESSAGE_FILE_BIGGER_THAN_PHP_ALLOW"</value>
+			   <value desc="">"MESSAGE_FILE_BIGGER_THAN_FORM_ALLOW"</value>
+			   <value desc="">"MESSAGE_ONLY_PART_OF_FILE_UPLOADED"</value>
+			   <value desc="">"MESSAGE_UPLOAD_FAILED"</value>
+			   <value desc="">"MESSAGE_UPLOAD_CANCEL"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Get or set text for buttons and messages of KooUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set text for buttons and messages of KooUploader. This array is very useful to customize KoolUploader with your own message and button text.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->texts["MESSAGE_UPLOAD_SUCCESSFUL"]="Done!";//Customize upload successful message 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="progressTracking">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether progress tracking is enabled
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether progress tracking is enabled
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->progressTracking=true;//Enable Progress Tracking 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="updateProgressInterval">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set number of milisecond KoolUploader will send request to track uploading progress.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set number of milisecond KoolUploader will send request to track uploading progress.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->updateProgressInterval=1000;//Set interval to 1 second 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="showProgressBar">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether the progress bar will be shown
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether the progress bar will be shown
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->showProgressBar=false;//Not show progress bar 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="maxFileSize">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set maximum size (in bytes) of uploading file
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set maximum size (in bytes) of uploading file
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->maxFileSize=10*1024*1024;//Set maxFileSize to 10MB 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="allowedExtension">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set list of allowed file extensions.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set list of allowed file extensions.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$kul->allowedExtension="jpg,gif,png";//Allow *.jpg, *.gif, *.png to be uploaded 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="uploadedFiles">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the information of uploaded files.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the information of uploaded files. After having done with upload files at client-side, the page is submitted back. The information of all uloaded files will be posted back as well. When KoolUploader object initiates, Those information will be extracted and saved into uploadedFiles property.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	//Information of the files that have been uploaded will be saved in uploadedFiles 
+	foreach($kul->uploadedFiles as $file) 
+	{ 
+		echo $file["name"]." ".$file["type"]." ".$file["size"]; 
+	} 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="LoadXML">
+			<type>function</type>
+			<shortdesc>
+			   <![CDATA[
+		Create KoolUploader with XML content.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create KoolUploader with XML content. The input value may be string or XmlDocument.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php  //This feature is temporarily off ?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.0 </supportversion>
+		</method> 
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolUploader
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolUploader
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php  echo $kul->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolUploader.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php  echo $kul->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolUploader
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolUploader
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php  echo $kul->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderUploader">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolUploader body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolUploader body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php  echo $kul->RenderUploader();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolUploader
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolUploader
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php  echo $kul->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

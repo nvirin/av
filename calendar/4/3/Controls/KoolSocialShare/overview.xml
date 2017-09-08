@@ -1,0 +1,47 @@
+<control>
+	<name>KoolSocialShare - Social Network Sharing Tool</name>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[
+	KoolSocialShare is a great control to share your page on different social networks all at once with no hashes.<br/>	
+	<b>Key Features :</b>
+	<div style='padding-left:25px;'>
+	  <li>Style can be changed</li>
+	  <li>Support both horizontal and vertical alignment.</li>
+	  <li>Specially customized for Facebook,Twitter, LinkedIn sharing buttons.</li>
+	  <li>Sharing buttons can be customized.</li>	  	
+	  <li>Code is straight-forward and easy to customize.</li>
+	</div>
+	]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+	//Step 1: Register KoolSocialShare component to your page
+	require "KoolControls/KoolSocialShare/koolsocialshare.php";
+	
+	//Step 2: Create KoolSocialShare object.
+	$social_share = new KoolSocialShare("share");
+
+
+	//Step 3: Set properties for KoolSocialShare
+	$social_share->styleFolder  = "hay";
+	$social_share->UrlToShare = "http://demo.koolphp.net";
+	$social_share->TitleToShare = "KoolPHP";
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <form id="myform" method="post">
+            <!-- Step 4: Render KoolSocialShare -->		
+            <?php echo $social_share->Render();?>
+        </form>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

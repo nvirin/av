@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolRadioButton" lastupdate="01/01/2009">	
+	<title>KoolRadioButton Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolRadioButton.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolRadioButton.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var radioYes = myform_manager.get_control("radioYes");
+		alert(radioYes.id);//output "radioYes"
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="select">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">selected</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Select or unselect the radio button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Select or unselect the radio button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var radioYes = myform_manager.get_control("radioYes");
+		radioYes.select(true);//Select the radioYes.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+		<method name="is_selected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Return whether the radio button is selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return whether the radio button is selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var radioYes = myform_manager.get_control("radioYes");
+		alert(radioYes.is_selected());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolTimePicker_Class" lastupdate="01/01/2009">	
+	<title>KoolTimePicker Class [Javascript]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of KoolTimePicker.
+        alert(cal.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="get_value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the input value of KoolTimePicker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the input value of KoolTimePicker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		alert(timepicker.get_value());		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="show_timepicker">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Open the time picker.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Open the time picker.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+ 		timepicker.show_timepicker();			
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>
+		
+		 <method name="registerEvent">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<allowedvalues>
+				<value desc="">"OnBeforeTimePickerOpen"</value>
+				<value desc="">"OnTimePickerOpen"</value>
+				<value desc="">"OnBeforeTimePickerClose"</value>
+				<value desc="">"OnTimePickerClose"</value>
+				<value desc="">"OnTimeSelect"</value>
+				<value desc="">"OnSelect"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function OnSelect_Handle(sender,arg)
+    {
+        alert(arg["Date"]);
+    }
+    // Register for OnSelect event
+    timepicker.registerEvent("OnSelect",OnSelect_Handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

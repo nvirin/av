@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_slidemenupanel" lastupdate="01/01/2009">	
+	<title>SlideMenuPanel Class [Javascript]</title>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<methods>
+		<method name="getSlideMenu">
+			<type>KoolSlideMenu</type>
+			<shortdesc>
+			   <![CDATA[
+		Get object of slidemenu which the Panel belongs to
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get object of slidemenu which the Panel belongs to
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Get slidemenu object of a panel with id="panel", then collapse all the slidemenu
+        var _panel = new SlideMenuPanel("panel");
+        _panel.getSlideMenu().collapseAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,3 @@
+
+
+Header add Cache-Control "max-age=1200"

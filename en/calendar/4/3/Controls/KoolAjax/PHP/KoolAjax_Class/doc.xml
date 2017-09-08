@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_koolajax_class" lastupdate="01/01/2009">	
+	<title>KoolAjax Class [PHP]</title>
+	<metakeywords>php ajax,php ajax framework,php callback, ajax for php</metakeywords>	 
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="isCallback">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Check whether page request is a koolajax callback. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Has true value when the page is under KoolAjax callback request.  
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	if (!$koolajax->isCallBack)
+	{
+		//Not callback: Render page normally
+	}
+	else
+	{
+		//Callback: render a portion of page only
+	}
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="CharSet">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the charset of KoolAjax.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the charset of KoolAjax. This charset should be consistent with charset of page and of php response.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$koolajax->CharSet = "utf-8";
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.6.0.0</supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+		<method name="enableFunction">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$functionName</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Make a function callback-able.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Make a function callback-able.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	function multiply($x,$y)
+	{		
+		return $x*$y;			
+	}
+	$koolajax->enableFunction("multiply");				
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.1.0.0</supportversion>			
+		</method>
+		
+		<method name="registerClientScript">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$script</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Regiser script to be at client from sever-side.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Regiser script to be at client from sever-side.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+    ...
+    $koolajax->registerClientScript("alert('message from server.');");				
+    ...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.5.0.0</supportversion>			
+		</method>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

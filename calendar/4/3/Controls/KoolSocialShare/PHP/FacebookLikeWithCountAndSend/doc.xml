@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_FacebookLikeWithCountAndSend" lastupdate="09/16/2009">	
+	<title>FacebookLikeWithCountAndSend Class [PHP]</title>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin, share on google++</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../FacebookButton/index.php'>FacebookButton</a>
+<br />
+&nbsp;|__ FacebookLikeWithCountAndSend
+<br />
+<br />
+FacebookLikeWithCountAndSend is derived from FacebookButton and is cutomizied to show Like button, Send button and the count of people like.
+		]]>		
+	</description>
+
+	<properties>
+
+	</properties>
+	
+	<methods>
+		<method name="__construct">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+	
+	$socialshare->Add(new FacebookLikeWithCountAndSend());
+	
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

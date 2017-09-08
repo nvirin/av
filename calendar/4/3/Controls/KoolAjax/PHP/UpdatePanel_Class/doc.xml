@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_updatepanel_class" lastupdate="01/01/2009">	
+	<title>UpdatePanel Class [PHP]</title>
+	<metakeywords>php ajax,php ajax framework,php callback, ajax for php</metakeywords>	 
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		<property name="content">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the HTML content of UpdatePanel
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Create UpdatePanel with XML content. The input value may be string or XmlDocument. 
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+    $myPanel = new UpdatePanel("myPanel");
+    $myPanel->content = "<b>Any HTML content</b>";
+?>
+]]>
+			</samplecode>			
+			<supportversion>1.2.0.0</supportversion>
+		</property>
+	</properties>
+	
+	<methods>
+		<method name="LoadXML">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">xml</param>				
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Create UpdatePanel with XML content.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Create UpdatePanel with XML content. The input value may be string or XmlDocument. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+    $thePanel->LoadXML("<updatepanel id='thePanel'><content>{-- any content --}</content></updatepanel>");
+?>
+				]]>
+			</samplecode>					
+			<supportversion>1.2.0.0</supportversion>			
+		</method>
+		<method name="addTrigger">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">elementid</param>
+				<param type="string" optional="false">event</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Add trigger for updating action.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Add trigger for updating action.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+    //Make updatePanel update when button Login is clicked
+    $thePanel->addTrigger("btnLogin","onclick");
+?>
+				]]>
+			</samplecode>			
+			<supportversion>1.2.0.0</supportversion>			
+		</method>
+		<method name="setLoading">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">image</param>
+				<param type="string" optional="true">backColor</param>
+				<param type="int" optional="true">opacity</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Show the loading in UpdatePanel. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Show the loading in UpdatePanel. 
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+    //Set loading panel using 5.gif with white background and transparent 50/100.
+    $thePanel->setLoading("koolajax/loading/5.gif","white",50);
+?>
+				]]>
+			</samplecode>			
+			<supportversion>1.5.0.0</supportversion>			
+		</method>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

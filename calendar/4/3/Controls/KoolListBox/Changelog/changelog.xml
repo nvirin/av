@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolListBox is advanced control that extends the standard html listbox to the max. It supports order item, transfer item to another listbox, drag-and-drop and many more">	
+
+	<log date="March 29, 2013" version="1.2.0.0">
+		<![CDATA[ 		
+		- Fix issue of freezing issue due to single quote in value.
+		]]>		
+	</log>
+
+
+	<log date="Oct 15, 2012" version="1.0.0.0">
+		<![CDATA[ 		
+		- First version.
+		]]>		
+	</log>
+</changelog>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_kooluploaderitem" lastupdate="01/01/2009">	
+	<title>KoolUploaderItem Class [Javascript]</title>
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	<properties>
+	  <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of the item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of the item
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Example comes later.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>
+
+	<methods>
+		 <method name="upload">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Upload the item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Upload the item
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var upload_items = kul.getItems();//Return all items list
+        for (var i in upload_items)
+        {
+            if(upload_items[i].getStatus()=="ready")
+            {
+                //Upload all items which are ready to upload		
+                upload_items[i].upload();
+            }
+        }		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="remove">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Remove the item from list
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Remove the item from list
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var items = kul.getItems();//Return all items list
+        for (var i in items)
+        {
+            if(items[i].getStatus()=="failed")
+            {
+                //Remove all items which are failed to upload		
+                items[i].remove();
+            }
+        }		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="cancel">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Upload the item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Upload the item
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var items = kul.getItems();//Return all items list
+        for (var i in items)
+        {
+            if(items[i].getStatus()=="uploading")
+            {
+                //Cancel all items which are uploading		
+                items[i].cancel();
+            }
+        }		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getStatus">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the item's status
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the item's status.<br>
+		<b>Return value:</b>
+			<div style='padding-left:25px;'>
+				<i>"ready"</i>: File item has been added and ready to upload<br>
+				<i>"uploading"</i>: File item is uploading<br>
+				<i>"uploaded"</i>: File item is uploaded successfully<br>
+				<i>"failed"</i>: File item is failed to upload<br>
+			</div>	
+			<br>
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var items = kul.getItems();//Return all items list
+        for (var i in items)
+        {
+            alert(items[i].getFileName() + "is" + items[i].getStatus());
+            //Return: "mypic.gif is uploaded"			
+        }		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+		<method name="getFileName">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the name of file
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the name of file
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var items = kul.getItems();//Return all items list
+        for (var i in items)
+        {
+            alert(items[i].getFileName() + "is" + items[i].getStatus());
+            //Return: "mypic.gif is uploaded"			
+        }		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getTotalBytes">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get total bytes or filesize
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get total bytes or filesize
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert total bytes of file on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getTotalBytes());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getUploadedBytes">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get number of bytes have been uploaded
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get number of bytes have been uploaded
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert uploaded bytes of file on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getUploadedBytes());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getEstimatedTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get total estimated time to finish this item upload
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get total estimated time to finish this item upload
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert estimated time on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getEstimatedTime());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="getElapsedTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the elapsed uploading time.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the elapsed uploading time.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert elapsed time on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getElapsedTime());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getEstimatedTimeLeft">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get estimated time remaining to finish the upload
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get estimated time remaining to finish the upload
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert estimated time left on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getEstimatedTimeLeft());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getLastSpeed">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the last uploading speed
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the last uploading speed
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert latest uploading speed on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getLastSpeed());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getAverageSpeed">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the average uploading speed
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the average uploading speed
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert average uploading speed on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getAverageSpeed());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getUploadedPercent">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get uploading completion percent
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get uploading completion percent
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Alert uploading percent on the event of progress updating
+        alert(kul.getItem(arg.ItemId).getUploadedPercent());
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="setProgessText">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set the text near progress bar
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the text near progress bar
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnUpdateProgress",function(sender,arg){
+        //Show the uploaded progress percent
+        var  item = kul.getItem(arg.ItemId);
+        item.setProgessText(item.getUploadedPercent() + "%");
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="attachData">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">text</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Attach extra data along with uploaded item
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Attach extra data along with uploaded item
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnBeforeUpload",function(sender,arg){
+        //Attach the folder information before the file is uploaded. 
+        //This info will able to achieve at server-side by $_POST["folder"]
+        var  item = kul.getItem(arg.ItemId);
+        item.attachData("folder","temp/user1");
+        return true;
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.7 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

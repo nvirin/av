@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_ClientSettings" lastupdate="08/20/2009">	
+	<title>ClientSettings Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) ClientSettings class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="Resizing">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set settings for client resizing.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set settings for client resizing.
+				]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="If true, the grid will resize when a column is resized.">"ResizeGridOnColumnResize"</value>
+			</allowedvalues>						
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->ClientSettings->Resizing["ResizeGridOnColumnResize"] = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="Selecting">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set settings for client selecting.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set settings for client selecting.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="Scrolling">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set settings for client scrolling.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set settings for client scrolling.
+				]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="If true, the scrolling position will be persistent.">"SaveScrollingPosition"</value>
+			</allowedvalues>						
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->ClientSettings->Scrolling["SaveScrollingPosition"] = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="ClientMessages">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set client messages.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set client messages.
+				]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="String value, set the confirmation message shown when user delete row.">"DeleteConfirm"</value>
+			</allowedvalues>						
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->ClientSettings->ClientMessages["DeleteConfirm"] = "Are you sure to delete this row?";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="ClientEvents">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set client events.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set client events. More information of event list, please have a look at <a href='../../Javascript/ClientSide_Events/index.php'>Client-Side Events</a>.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->ClientSettings->ClientEvents["OnInit"] = "Handle_OnInit";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

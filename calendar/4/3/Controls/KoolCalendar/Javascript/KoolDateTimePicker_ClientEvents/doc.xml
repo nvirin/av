@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolDateTimePicker_ClientEvents" lastupdate="01/01/2009">	
+	<title>KoolDateTimePicker-ClientEvents [Javascript]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="OnBeforeDatePickerOpen">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before date picker opens.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before date picker opens.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnBeforeDatePickerOpen"] = "Handle_OnBeforeDatePickerOpen";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeDatePickerOpen(sender,args)
+	{
+		alert("Date picker is about to open");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+		
+		<property name="OnDatePickerOpen">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when date picker opens.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when date picker opens.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnDatePickerOpen"] = "Handle_OnDatePickerOpen";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnDatePickerOpen(sender,args)
+	{
+		alert("Date picker opens.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="OnBeforeTimePickerOpen">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before time picker opens.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before time picker opens.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnBeforeTimePickerOpen"] = "Handle_OnBeforeTimePickerOpen";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeTimePickerOpen(sender,args)
+	{
+		alert("Time picker is about to open");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+		
+		<property name="OnTimePickerOpen">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when time picker opens.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when time picker opens.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnTimePickerOpen"] = "Handle_OnTimePickerOpen";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnTimePickerOpen(sender,args)
+	{
+		alert("Time picker opens.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="OnBeforeDatePickerClose">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before date picker closes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before date picker closes.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnBeforeDatePickerClose"] = "Handle_OnBeforeDatePickerClose";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeDatePickerClose(sender,args)
+	{
+		alert("Date picker is about to closes");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+		
+		<property name="OnDatePickerClose">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when date picker closes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when date picker closes.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnDatePickerClose"] = "Handle_OnDatePickerClose";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnDatePickerClose(sender,args)
+	{
+		alert("Date picker closes.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="OnBeforeTimePickerClose">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur before time picker closes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur before time picker closes.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnBeforeTimePickerClose"] = "Handle_OnBeforeTimePickerClose";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnBeforeTimePickerClose(sender,args)
+	{
+		alert("Time picker is about to close");
+		return true; // Approve action
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>				
+		
+		<property name="OnTimePickerClose">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when time picker closes.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when time picker closes.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnTimePickerClose"] = "Handle_OnTimePickerClose";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnTimePickerClose(sender,args)
+	{
+		alert("Time picker closes.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		
+		
+		<property name="OnDateSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when date is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when date is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnDateSelect"] = "Handle_OnDateSelect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnDateSelect(sender,args)
+	{
+		alert("Date is selected");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="OnTimeSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when time is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when time is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnTimeSelect"] = "Handle_OnTimeSelect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnTimeSelect(sender,args)
+	{
+		alert("Time is selected");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="OnSelect">
+			<type></type>
+			<shortdesc>
+				<![CDATA[
+					Occur when date or time is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Occur when date or time is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php
+...
+	$datetimepicker->ClientEvents["OnSelect"] = "Handle_OnSelect";
+...
+?>
+...
+<script type="text/javacript">
+	function Handle_OnSelect(sender,args)
+	{
+		alert("Datetime is selected.");
+	}
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

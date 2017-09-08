@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_FacebookButton" lastupdate="09/16/2009">	
+	<title>SocialButton Class [PHP]</title>
+	<metakeywords>Social network, share on social network, social share, share on facebook, share on twitter, share on linkedin, share on google++</metakeywords>	 
+	<metadescription>KoolSocialShare is a great control to share your page on different social networks all at once with no hashes. VIEW IT NOW! </metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+
+
+		<property name="Font">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the font for facebook button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the font for facebook button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->Font = "arial";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the width for Facebook button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the width for Facebook button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->Width = "300px";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Layout">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set layout of facebook button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set layout of facebook button.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Standard button">"standard"</value>
+			   <value desc="Compact buttons with count">"button_count"</value>
+			   <value desc="Button is laid vertically">"box_count"</value>
+			</allowedvalues>			
+			
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->Layout = "standard";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Action">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set button's text.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set button's text.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Use [Like] button">"like"</value>
+			   <value desc="Use [Recommend] button">"recommend"</value>
+			</allowedvalues>			
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->Action = "recommend";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+		<property name="ShowFaces">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set whether button show the avatar of people who like your page.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether button show the avatar of people who like your page.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->ShowFaces = true;
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+		<property name="SendButton">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set whether send button is shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether send button is shown. Default value is true.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->SendButton = false;
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="DarkColor">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set whether button is in dark mode.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set whether button is in dark mode. Default value is false.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new FacebookButton();
+	$button->DarkColor = true;
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+		
+		<property name="ShowFaces">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the height of the button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the height of the button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new SocialButton("StumbleOn");
+	$button->Width = "24px";
+	$button->Height = "24px";
+	$button->ImageSrc = "images/stumbleon.jpg";
+	$button->Text = "Share on StumbleOn";
+	$button->ToolTip = "Share on StumbleOn";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="ImageSrc">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Change image for button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Change image for button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new SocialButton("StumbleOn");
+	$button->Width = "24px";
+	$button->Height = "24px";
+	$button->ImageSrc = "images/stumbleon.jpg";
+	$button->Text = "Share on StumbleOn";
+	$button->ToolTip = "Share on StumbleOn";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="Text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the text on button.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the text on button.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new SocialButton("StumbleOn");
+	$button->Width = "24px";
+	$button->Height = "24px";
+	$button->ImageSrc = "images/stumbleon.jpg";
+	$button->Text = "Share on StumbleOn";
+	$button->ToolTip = "Share on StumbleOn";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="ToolTip">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the tooltip when mouse hovers.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the tooltip when mouse hovers.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$socialshare = new KoolSocialShare("socialshare");
+
+	$button = new SocialButton("StumbleOn");
+	$button->Width = "24px";
+	$button->Height = "24px";
+	$button->ImageSrc = "images/stumbleon.jpg";
+	$button->Text = "Share on StumbleOn";
+	$button->ToolTip = "Share on StumbleOn";
+	
+	$socialshare->Add($button);
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+		
+		
+
+	</properties>
+	
+	<methods>
+		<method name="__construct">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+	$socialshare = new KoolSocialShare("socialshare");
+	$socialshare->styleFolder = "KoolControls/KoolSocialShare/styles/default";
+	$socialshare->scriptFolder = "KoolControls/KoolSocialShare";
+	
+	$socialshare->Add(new FacebookButton());
+	
+?> 
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

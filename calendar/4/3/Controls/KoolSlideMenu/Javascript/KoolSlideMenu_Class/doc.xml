@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_koolslidemenu" lastupdate="01/01/2009">	
+	<title>KoolSlideMenu Class [Javascript]</title>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<methods>
+		<method name="getItem">
+			<type>object</type>
+			<parameters>
+			   <param type="string" optional="false">id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get the item of slidemenu including slidemenu parent,child and panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the item of slidemenu including slidemenu parent,child and panel. The return object could be SlideMenuParent, SlideMenuChild, SlideMenuPanel
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Get a parent with id="parent" and expand it.
+        ksm.getItem("parent").expand();
+        
+        // Get a child with id="child" and select it.
+        ksm.getItem("child").select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getSelectedId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return array of id of selected nodes.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return array of id of selected nodes.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Unselect the selected child.	
+        var _seletedid = ksm.getSelectedId();
+        ksm.getItem(_selectedid).unselect();
+	}
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="expandAll">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Expand all parents of slidemenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Expand all parents of slidemenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Make slidemenu expand all
+        ksm.expandAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="collapseAll">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Collapse all parents of slidemenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Collapse all parents of slidemenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function testSlideMenu()
+    {
+        // Make slidemenu collapse all
+        ksm.collapseAll();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="registerEvent">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.<br>
+			<b>Allowed eventName:</b>
+			<ul>
+				<i>
+				"OnBeforeSelect"<br>
+				"OnBeforeUnSelect"<br>
+				"OnBeforeExpand"<br>
+				"OnBeforeCollapse"<br>
+				"OnSelect"<br>
+				"OnUnSelect"<br>
+				"OnExpand"<br>
+				"OnCollapse"<br>
+				"OnParentMouseOver"<br>
+				"OnParentMouseOut"<br>				
+				"OnChildMouseOver"<br>
+				"OnChildMouseOut"<br>					
+				</i>
+			</ul>
+
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function itemSelect_handle(sender,arg)
+    {
+        alert(arg.ItemId);
+    }
+    // Register for OnSelect event
+    ksm.registerEvent("OnSelect",itemSelect_handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

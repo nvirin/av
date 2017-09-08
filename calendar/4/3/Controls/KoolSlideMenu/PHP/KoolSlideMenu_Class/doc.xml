@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_koolslidemenu" lastupdate="01/01/2009">	
+	<title>KoolSlideMenu Class [PHP]</title>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="scrollEnable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether scrollbar is displayed when needed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether scrollbar is displayed when needed.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->scrollEnable=true;// Enable scrolling
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		 <property name="width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the width for slidemenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the width for slidemenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	
+	$ksm->width="100px";//Specify width by pixels
+	$ksm->width="100%";//Specify width by percent 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for slidemenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for slidemenu.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$ksm->styleFolder="koolslidemenu/styles/default";//Use the "default" style
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="selectedId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set selected child of slidemenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set selected child of slidemenu.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->selectedId="child1";
+	//Make child1 selected 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="selectEnable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether slidemenu allow selection
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether slidemenu allow selection
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->selectEnable=false;
+	//Disable select node feature 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="singleExpand">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether slidemenu keeps single node expand
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether slidemenu keeps single node expand
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->singleExpand=true;
+	//Keep only one node expand 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="boxHeight">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the fixed height of slidemenu's childboxes
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the fixed height of slidemenu's childboxes
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->boxHeight=100;//Set height for childbox
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="slidingSpeed">
+			<type></type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the sliding speed of slidemenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the sliding speed of slidemenu. This is the number of pixel that slidemenu move in a 15ms time frame.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->slidingSpeed=10;//Set speed of sliding for SlideMenu 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+		<method name="addParent">
+			<type>SlideMenuParent</type>
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			   <param type="string" optional="false">$id</param>
+			   <param type="string" optional="false">$text</param>
+			   <param type="string" optional="true">$link</param>
+			   <param type="bool" optional="true">$expand</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create another parent and add it to a existed slidemenu parent.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create another parent and add it to a existed slidemenu parent.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$ksm->addParent("root","parent1","Parent 1","parent1.php",true);
+	//Add parent to the root node. The parent has text="Parent 1" and link to "parent1.php" page 
+	//The parent expands at his initial state 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="addChild">
+			<type>SlideMenuChild</type>
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			   <param type="string" optional="false">$id</param>
+			   <param type="string" optional="false">$text</param>
+			   <param type="string" optional="true">$link</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create a child and add it to a slidemenu parent. 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create a child and add it to a slidemenu parent. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+    //Add a chil to a parent. The child has text="The Child" and link to "childpage.php" page 
+    $ksm->addChild("parent","child","The Child","childpage.php");	
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		<method name="addPanel">
+			<type>SlideMenuPanel</type>
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			   <param type="string" optional="false">$id</param>
+			   <param type="string" optional="false">$text</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Create a panel and add it to a slidemenu parent.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Create a panel and add it to a slidemenu parent.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+     //Add a panel to a parent. The panel can contain any html content. 
+    $ksm->addPanel("parent","panel","Any html content");
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		<method name="loadXML">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">$xml</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Build slidemenu from xml string. 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Build slidemenu from xml string. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$xmlDoc = new DOMDocument();
+	$xmlDoc->load("SlideMenu.xml");	
+	$ksm = new KoolSlideMenu("ksm");
+	$ksm->loadXML($xmlDoc->saveXML());
+	echo $ksm->Render();
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		<method name="getItem">
+			<type>[SlideMenuParent], [SlideMenuChild], [SlideMenuPanel]</type>
+			<parameters>
+			   <param type="string" optional="false">$id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get the menu item object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the menu item object. The return object can be SlideMenuParant, SlideMenuChild or SlideMenuPanel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$_intro = $ksm->getItem("intro");
+	$_intro->link = "intro.php";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+				 
+		<method name="Render">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Render the Slidememu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the Slidememu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $ksm->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for autocomplete.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for autocomplete.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $ksm->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $ksm->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderSlideMenu">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolSlideMenu body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolSlideMenu body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $ksm->RenderSlideMenu();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate autocomplete
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate autocomplete
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $ksm->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolGrid" lastupdate="08/20/2009">	
+	<title>KoolGrid Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) KoolGrid class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="KeepRowStateOnRefresh">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Keep row state on refresh.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Keep states of row on refresh such as: selected, sub-tables and so on.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->KeepRowStateOnRefresh = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.0.0.0</supportversion>
+		</property>	
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the folder which KoolGrid will load css to render.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the folder which KoolGrid will load css to render.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->styleFolder = "KoolControls/KoolGrid/styles/default";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolGrid script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolGrid script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = "KoolControls/KoolGrid";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="AjaxLoadingImage">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set url of ajax loading image.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set url of ajax loading image. This property only work when grid ajax is enablled.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AjaxLoadingImage = "KoolControls/KoolAjax/loading/5.gif";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="AjaxHandlePage">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the service page which KoolGrid will send ajax request.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the service page which KoolGrid will send ajax request. 
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AjaxHandlePage = "grid_service_page.php";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="AjaxEnabled">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Enable ajax feature of KoolGrid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Enable ajax feature of KoolGrid.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AjaxEnabled = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Status">
+			<type>&lt;a href='../StatusBar/index.php'>StatusBar&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					KoolGrid status bar settings.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					KoolGrid status bar settings.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ShowStatus = true;
+	$grid->Status->DoneText = "Ready";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="MasterTable">
+			<type>&lt;a href='../GridTableView/index.php'>GridTableView&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Master table object.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Master table is the first and default GridTableView's instance of KoolGrid. This tableview is pre-created. You can access and change the settings of this master table.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->MasterTable->PageSize = 5;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="AllowHovering">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow row highlighted when mouse is over.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow row highlighted when mouse is over.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowHovering = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="AllowSelecting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow row selected
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow row selected
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowSelecting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowMultiSelecting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow selecting more than one row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow selecting more than one row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowMultiSelecting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowEditing">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow KoolGrid edit and update data to datasource.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow KoolGrid edit and update data to datasource.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowEditing = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowDeleting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow KoolGrid delete data.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow KoolGrid delete data.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowDeleting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowScrolling">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Allow all tableview in grid scrollable.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Allow all tableview in grid scrollable.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowScrolling = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowSorting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all sortable columns in grid will enable sorting feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all sortable columns in grid will enable sorting feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowSorting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowResizing">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all resizable columns in grid will enable resizing feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all resizable columns in grid will enable resizing feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowResizing = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowFiltering">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all columns in grid will enable filtering feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all columns in grid will enable filtering feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowFiltering = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="AllowGrouping">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all columns in grid will enable grouping feature.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all columns in grid will enable grouping feature.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AllowGrouping = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ShowHeader">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, it make header of all tableviews visible.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, it make header of all tableviews visible.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ShowHeader = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ShowFooter">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, it make footer of all tableviews visible.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, it make footer of all tableviews visible.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ShowFooter = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+
+		<property name="KeepGridRefresh">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will keep update up with new data.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will keep update up with new data.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->KeepGridRefresh = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>4.0.0.0</supportversion>
+		</property>
+		
+		<property name="RowAlternative">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, it make grid show alternative color for each row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, it make grid show alternative color for each row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->RowAlternative = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="SingleColumnSorting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, only one column is allowed sorting at a time.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, only one column is allowed sorting at a time.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid();
+	$grid->SingleColumnSorting = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateRowSelectColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add GridRowSelectColumn to all tableviews automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add GridRowSelectColumn to all tableviews automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AutoGenerateRowSelectColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateExpandColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add GridExpandDetailColumn to all tableviews automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add GridExpandDetailColumn to all tableviews automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AutoGenerateExpandColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateColumns">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will generate and add data-driven columns to all tableviews automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will generate and add data-driven columns to all tableviews automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AutoGenerateColumns = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateEditColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add edit command column to all tableviews automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add edit command column to all tableviews automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AutoGenerateEditColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AutoGenerateDeleteColumn">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will add delete command column to all tableviews automatically.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will add delete command column to all tableviews automatically.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AutoGenerateDeleteColumn = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="DisableAutoGenerateDataFields">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the list of field names that will not be generated column by KoolGrid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the list of field names that will not be generated column by KoolGrid. When you set <code>AutoGenerateColumns</code> to <code>true</code>, by default, KooLGrid will build columns for all available fieldnames. With this <code>DisableAutoGenerateDataFields</code>, you can choose the datafields that you do not want to build columns.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->AutoGenerateColumns  = true;
+	$grid->DisableAutoGenerateDataFields  = "ID,customerNumber"; //Do not create columns for ID and customerNumber field.
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+
+		<property name="KeepSelectedRecords">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will keep selected records persistent againts postback or callback.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will keep selected records persistent againts postback or callback.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->KeepSelectedRecords = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="KeepViewStateInSession">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Make grid persistent in session.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Make grid persistent in session. When true, KoolGrid will use session to store its viewstate. This feature requires PHP Session to be turned on with <code>session_start();</code>
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->KeepViewStateInSession = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.5.0.0</supportversion>
+		</property>
+
+
+
+		<property name="ShowStatus">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, grid will show the status bar at bottom of grid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, grid will show the status bar at bottom of grid.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ShowStatus = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="ColumnWrap">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					When true, all columns in grid will be in wrap mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					When true, all columns in grid will be in wrap mode. The long text will be broken in more than one line.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ColumnWrap = true;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+	
+		<property name="CharSet">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the charset.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the charset.
+				]]>
+			</longdesc>
+			<defaultvalue>"UTF-8"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Western European, Latin-1">"ISO-8859-1"</value>
+			   <value desc="Western European, Latin-9. Adds the Euro sign, French and Finnish letters missing in Latin-1(ISO-8859-1).">"ISO-8859-15"</value>
+			   <value desc="ASCII compatible multi-byte 8-bit Unicode. ">"UTF-8"</value>
+			   <value desc="DOS-specific Cyrillic charset. This charset is supported in 4.3.2.">"cp866"</value>
+			   <value desc="Windows-specific Cyrillic charset. This charset is supported in 4.3.2.">"cp1251"</value>
+			   <value desc="Windows specific charset for Western European.">"cp1252"</value>
+			   <value desc="Russian. This charset is supported in 4.3.2.">"KOI8-R"</value>
+			   <value desc="Traditional Chinese, mainly used in Taiwan.">"BIG5"</value>
+			   <value desc="Simplified Chinese, national standard character set.">"GB2312"</value>
+			   <value desc="Big5 with Hong Kong extensions, Traditional Chinese.">"BIG5-HKSCS"</value>
+			   <value desc="Japanese">"Shift_JIS"</value>
+			   <value desc="Japanese">"EUC-JP"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->CharSet  = "ISO-8859-1"; //Western European, Latin-1
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.4.0.0</supportversion>
+		</property>		
+	
+	
+		
+		<property name="ColumnAlign">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set alignment of column's text
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set alignment of column's text
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Text in column aligns in left side">"left"</value>
+			   <value desc="Text in column aligns in center">"center"</value>
+			   <value desc="Text in column aligns in right side">"right"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ColumnAlign  = "left";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		<property name="ColumnValign">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set vertical alignment of column's text
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set vertical alignment of column's text
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Top alignment">"top"</value>
+			   <value desc="Middle alignment">"middle"</value>
+			   <value desc="Bottom alignment">"left"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ColumnValign  = "top";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		
+		
+		<property name="TableLayout">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set layout of all tableviews.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set layout of all tableviews.
+				]]>
+			</longdesc>
+			<defaultvalue>"auto"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Text in column aligns in left side">"auto"</value>
+			   <value desc="Text in column aligns in center">"fixed"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->TableLayout  = "fixed";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		
+		
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set detfault width of all tableviews.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set detfault width of all tableviews. The width can be set with px value of % value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->Width  = "900px";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+		
+		
+		<property name="Height">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set detfault height of all tableviews.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set detfault height of all tableviews. The height can only be set with px value. This property is useful when you want grid with fixed height and do scrolling if data is longer than allowed space.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->Height  = "300px";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+		
+		
+		<property name="FilterOptions">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set default filter options for all columns in grid.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set default filter options for all columns in grid.
+				]]>
+			</longdesc>
+			<defaultvalue>array("No_Filter","Equal","Not_Equal","Greater_Than","Less_Than","Greater_Than_Or_Equal","Less_Than_Or_Equal","Contain","Not_Contain","Start_With","End_With");</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->FilterOptions  = array("No_Filter","Greater_Than","Less_Than");//Only show 3 options.
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		<property name="PageSize">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the default page size for tableviews.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the default page size for tableviews.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->PageSize  = 20;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		<property name="DataSource">
+			<type>DataSource</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set default datasource for all tableviews.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set default datasource for all tableviews.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$ds = new MySQLDataSource();
+	$ds->SelectCommand = "select customerNumber,customerName from customers";
+	$grid = new KoolGrid("grid");
+	$grid->DataSource  = $ds;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+		
+		<property name="ClientSettings">
+			<type>&lt;a href='../ClientSettings/index.php'>ClientSettings&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Contain settings for client behaviours and messages.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Contain settings for client behaviours and messages.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->ClientSettings->ClientMessage["DeleteConfirm"] = "Are you sure to delete the row?";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="Localization">
+			<type>&lt;a href='../Localization/index.php'>GridLocalization&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Contain settings for grid localization.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Contain settings for grid localization.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	$grid->Localization->Load("KoolControls/KoolGrid/localization/es.xml");
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		<property name="EventHandler">
+			<type>&lt;a href='../GridEventHandler/index.php'>GridEventHandler&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the object to handle grid events.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the object to handle grid events.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnPageIndexChange($pager,$args)
+		{
+			//Catch the event when index changes
+			echo $pager->PageIndex;
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+	</properties>
+	
+	<methods>
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolGrid
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolGrid
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo $grid->Render();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolGrid.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolGrid.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $grid->RegisterScript();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolGrid
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolGrid
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $grid->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderGrid">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolGrid body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolGrid body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $grid->KoolGrid();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$script</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Regiser script to be at client from sever-side.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Regiser script to be at client from sever-side.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javascript">
+    <?php echo $grid->StartupScript();?>
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>			
+		</method>
+		
+
+		 <method name="Process">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[ 
+					Process request and data before grid render.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Process request and data before grid render.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+$grid = new KoolGrid("grid");
+...
+$grid->Process();
+...
+echo $grid->Render();
+?>				]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>			
+		</method>
+
+		 <method name="Refresh">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[ 
+					Force the grid to refresh.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Force the grid to refresh. The data will be rebound.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnGridPreRender($grid,$args)
+		{
+			//$grid: The grid object.
+			//$args: No data
+			
+			$grid->Refresh(); //Make grid refresh.
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>			
+		</method>
+
+		
+		 <method name="GetInstanceMasterTable">
+			<type>&lt;a href='../GridTableView/index.php'>GridTableView&lt;/a></type>
+			<shortdesc>
+				<![CDATA[ 
+					Get the master table object after being processed.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the master table object after being processed.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+$grid = new KoolGrid("grid");
+...
+$grid->Process();
+$mastertable = $grid->GetInstanceMasterTable();
+?>	
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>			
+		</method>
+
+		 <method name="RegisterClientEvent">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$event_name</param>
+				<param type="string" optional="false">$event_handle_function_name</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Register client-side event.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Register client-side event.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+$grid = new KoolGrid("grid");
+$grid->RegisterClientEvent("OnDetailTablesExpand","handle_onexpand");
+$grid->Process();
+echo $grid->Render();
+?>	
+
+<script type="text/javascript">
+function handle_onexpand(sender,args)
+{
+	var _row = args["Row"];
+	var _dataitem = _row.getDataItem();
+	alert(_dataitem["customerNumber"]);
+}
+</script>
+
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>			
+		</method>
+		
+
+
+		
+		
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

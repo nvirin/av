@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_kooluploader" lastupdate="01/01/2009">	
+	<title>KoolUploader Class [Javascript]</title>
+	<metadescription>KoolUploader is amazing PHP Ajax File Upload with Real-Time Progress Tracking capability. This is an art of power and simplicity.</metadescription>
+	<metakeywords>php ajax file upload, php upload progress, ajax file upload</metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name=" id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of kooluploader
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of kooluploader
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of kooluploader.
+        alert(kul.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>
+	
+	<methods>
+		 <method name="getItems">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get all uploaded items in list
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get all uploaded items in list
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    var upload_items = kul.getItems();//Return all items list
+    for (var i in upload_items)
+    {
+        if(upload_items[i].getStatus()=="ready")
+        {
+            //Upload all items which are ready to upload		
+            upload_items[i].upload();
+        }
+    }		
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="getItem">
+			<type>array</type>
+			<parameters>
+			   <param type="string " optional="false">id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get a specific uploaded item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get a specific uploaded item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.registerEvent("OnAddItem",function(sender,arg)
+    {
+        //Upload item immediately after the item is added.
+        kul.getItem(arg.ItemId).upload();
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.1 </supportversion>
+		</method> 
+		<method name="uploadAll">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Upload all items in list.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Upload all items in list.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.uploadAll();
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.1 </supportversion>
+		</method> 
+		<method name="clearAll">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Clear all items in list.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Clear all items in list.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    kul.clearAll();
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.2.0.1 </supportversion>
+		</method> 
+		<method name="registerEvent">
+			<type>void</type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Register event for KoolUploader.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register event for KoolUploader.<br>
+			<b>Allowed eventName:</b>
+			<div style='padding-left:25px;'>
+				<i>
+				"OnBeforeAddItem"<br>	
+				"OnBeforeUpload"<br>
+				"OnBeforeRemove"<br>
+				"OnBeforeCancel"<br>
+				"OnBeforeClearAll"<br>
+				"OnBeforeUploadAll"<br>
+				"OnBeforeUpdateProgress"<br>
+				"OnAddItem"<br>
+				"OnUpload"<br>
+				"OnRemove"<br>
+				"OnCancel"<br>
+				"OnClearAll"<br>
+				"OnUploadAll"<br>
+				"OnUpdateProgress"<br>
+				"OnUploadDone"<br>
+				"OnError"<br>
+				</i>
+			</div>
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function OnUploadDone_handle(sender,arg)
+    {
+        alert(arg.ItemId);
+    }	
+    // Register for OnUploadDone event
+    kul.registerEvent("OnUploadDone",OnUploadDone_handle);
+	
+    // Register for OnError event
+    kul.registerEvent("OnError",function(sender,arg){
+        alert(arg.Error);
+    });
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

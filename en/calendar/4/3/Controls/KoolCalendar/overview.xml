@@ -1,0 +1,49 @@
+<control>
+	<name>KoolCalendar - Excellent PHP Calendar</name>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[
+	KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.<br/>	
+	<b>Key Features :</b>
+	<div style='padding-left:25px;'>
+	  <li>Semantic Rendering for Minimal HTML </li>
+	  <li>Integrated DatePicker and Timepicker Controls</li>
+	  <li>Localization</li>
+	  <li>Multiple Selection Options </li>
+	  <li>Multi-view Presentation </li>
+	  <li>Horizontal and Vertical Orientation </li>
+	  <li>Rich Client-side API </li>
+	  <li>Cool Month-navigation effects </li>
+	  <li>Easily customized appearance</li>
+	</div>
+	]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+	//Step 1: Register KoolCalendar component to your page
+	require "KoolControls/KoolCalendar/koolcalendar.php";
+	
+	//Step 2: Create KoolCalendar object.
+	$cal = new KoolCalendar("cal");
+	$cal->scriptFolder = "KoolControls/KoolCalendar";//Set scriptFolder
+
+	//Step 3: Set properties for KoolCalendar
+	$cal->styleFolder="KoolControls/KoolCalendar/styles/default";
+
+	//Step 4: Init calendar before render
+	$cal->Init();	
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render KoolCalendar -->
+        <?php echo $cal->Render();?>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

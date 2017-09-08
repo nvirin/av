@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridCustomColumn" lastupdate="08/20/2009">	
+	<title>GridCustomColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridCustomColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridCustomColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ItemTemplate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the template to render item.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the template to render item.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridCustomColumn();
+	$col->ItemTemplate = "The customer {customerName} has id = {customerNumber}";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+
+		<property name="EditItemTemplate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the template to render item when row is in edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the template to render item when row is in edit mode.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridCustomColumn();
+	$col->EditItemTemplate = "<input type='button' value ='Confirm' onclick='javascript:grid_confirm_edit(this)' />";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+
+
+
+
+	</properties>
+	<methods>
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers." metakeywords = "php ajax autocomplete, php autocomplete, php ajax autosuggest, php autosuggest">	
+
+
+	<log date="Apr 15, 2012" version="1.8.0.0">
+		<![CDATA[ 
+		- Fix client-side issue with MoolTools.
+		- Fix the "repeated dates" issue happening when timezone is changed.
+	    ]]>		
+	</log>
+
+
+	<log date="Jan 15, 2012" version="1.8.0.0">
+		<![CDATA[ 
+		- Fix opening issue when working with KoolGrid.
+	    ]]>		
+	</log>
+
+
+	<log date="Aug 26, 2011" version="1.6.0.1">
+		<![CDATA[ 
+		- Fix the date parsing error in IE
+	    ]]>		
+	</log>
+
+
+
+	<log date="Aug 25, 2011" version="1.6.0.0">
+		<![CDATA[ 
+		- Fix the issue that KoolCalendar parse date wrongly.
+		- Remove the ViewSelector in KoolDateTimePicker
+		- Fix the Localization of KoolDateTimePicker and of KoolDatePicker
+	    ]]>		
+	</log>
+
+
+	<log date="May 15, 2010" version="1.5.0.0">
+		<![CDATA[ 
+		- Enhance the date parsing function.
+		- Add the $Localization to KoolDateTimePicker
+		- Improve the animation functions.
+	    ]]>		
+	</log>
+
+
+	<log date="February 28, 2010" version="1.2.0.0">
+		<![CDATA[ 
+		- Fix the issue related to date conversion of KoolDateTimePicker
+	    ]]>		
+	</log>
+
+
+	<log date="January 15, 2009" version="1.1.0.0">
+		<![CDATA[ 
+		- Enhance client-side events.
+		- Adding new properties at server-side: ExpandAnimation, CollapseAnimation.
+		- Provide better way to handle selecting date.
+	    ]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="1.0.0.0">
+		<![CDATA[ 
+		- First version.
+	    ]]>		
+	</log>
+	
+</changelog>

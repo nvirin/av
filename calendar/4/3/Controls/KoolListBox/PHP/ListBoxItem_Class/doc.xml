@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_ListBoxItem_Class" lastupdate="01/01/2009">	
+	<title>ListBoxItem Class [PHP]</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+
+
+		<property name="Text">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the text of an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the text of an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+
+		<property name="Data">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set extra data for an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set extra data for an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+	$item->Data = array("Population"=>"34,482,779");
+
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the value of an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the value of an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+
+		<property name="ToolTip">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the tooltip of an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the tooltip of an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+
+		<property name="ImageUrl">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the image url of an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the image url of an item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="CssClass">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the css class for an item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the css class for an item. The css class will apply to <li> tag of item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		
+		<property name="Selected">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item is selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item is selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+		
+		<property name="Checked">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item is checked.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item is checked.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+		
+		<property name="Checkable">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item is checkable.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item is checkable.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item  = new ListBoxItem("Canada");
+
+	$item->Text = "Canada";
+	$item->Value = "canada";	
+	$item->ToolTip = "Choose canada";
+	$item->ImageUrl = "images/canada.jpg";
+	$item->CssClass = "my_css_class";
+
+	$item->Selected = true;
+	$item->Checked = true;
+	$item->Checkable = false;
+		
+	$listbox->AddItem($item);
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+		
+		
+
+
+	</properties>
+	
+	<methods>
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

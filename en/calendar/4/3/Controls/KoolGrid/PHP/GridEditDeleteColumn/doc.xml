@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridEditDeleteColumn" lastupdate="08/20/2009">	
+	<title>GridEditDeleteColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridEditDeleteColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridEditDeleteColumn
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ButtonType">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set button type.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set button type whether button, link or image.
+				]]>
+			</longdesc>
+			
+			<defaultvalue>"Button"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Show edit delete command in button">"Button"</value>
+			   <value desc="Show edit delete command in link">"Link"</value>
+			   <value desc="Show edit delete command in image">"Image"</value>
+			</allowedvalues>			
+			
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->ButtonType = "Link";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="EditButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text on edit button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text on edit button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->EditButtonText = "Edit me";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="DeleteButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text on delete button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text on delete button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->DeleteButtonText = "Delete me";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="ConfirmButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text on confirm button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text on confirm button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->ConfirmButtonText = "Confirmation";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="CancelButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text on cancel button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text on cancel button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->CancelButtonText = "Cancel";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="EditButtonImageUrl">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set image url of edit button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set image url of edit button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->EditButtonImageUrl = "edit.gif";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="DeleteButtonImageUrl">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set image url of delete button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set image url of delete button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->DeleteButtonImageUrl = "delete.gif";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="ConfirmButtonImageUrl">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set image url of confirm button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set image url of confirm button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->ConfirmButtonImageUrl = "confirm.gif";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="CancelButtonImageUrl">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set image url of cancel button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set image url of cancel button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->CancelButtonImageUrl = "cancel.gif";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="EditButtonCssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set css class for edit button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set css class for edit button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->EditButtonCssClass = "editbutton_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="ConfirmButtonCssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set css class for confirm button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set css class for confirm button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->ConfirmButtonCssClass = "confirm_button_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="CancelButtonCssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set css class for cancel button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set css class for cancel button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->CancelButtonCssClass = "cancel_button_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="DeleteButtonCssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set css class for delete button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set css class for delete button.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->DeleteButtonCssClass = "delete_button_css";
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="ShowEditButton">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether edit button is shown.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether edit button is shown.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>			
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->ShowEditButton = false;
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+		<property name="ShowDeleteButton">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether delete button is shown.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether delete button is shown.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridEditDeleteColumn();
+	$col->ShowDeleteButton = false;
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>			
+
+
+
+	</properties>
+	<methods>
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

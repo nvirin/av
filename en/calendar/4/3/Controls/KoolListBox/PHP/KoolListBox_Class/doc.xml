@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolListBox_Class" lastupdate="01/01/2009">	
+	<title>KoolListBox Class [PHP]</title>
+	<metakeywords></metakeywords>	 
+	<metadescription></metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolListBox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolListBox. This id will be use as variable name of KoolListBox at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$listbox->id="listbox";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolListBox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolListBox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$listbox->styleFolder="KoolControls/KoolListBox/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolListBox script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolListBox script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$listbox = new KoolListBox("listbox");
+	$listbox->scriptFolder = "KoolControls/KoolListBox";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		 		
+				
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the width of KoolListBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the width of KoolListBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->Width="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="UpdatePanel">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Set the id of updatepanel that contains this listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Set the id of updatepanel that contains this listbox. By setting this property, listbox will do ajax call back instead of posting back when reorder or transfer occurs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->UpdatePanel="my_updatepanel_id";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>			
+		
+		
+		<property name="Height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the height of KoolListBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the height of KoolListBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->Height="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>	
+		
+		<property name="AllowMultiSelect">
+			<defaultvalue>false</defaultvalue>
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item multi-selecting is allowed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item multi-selecting is allowed.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AllowMultiSelect=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+						
+		<property name="AllowSelect">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item selecting is allowed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item selecting is allowed.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AllowSelect=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+						
+		<property name="AllowHover">
+			<type>bool</type>
+			<defaultvalue>true</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item hovering is allowed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item hovering is allowed. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AllowHover=false; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>			
+		
+		
+		<property name="UseCheckBoxes">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether checkbox is used.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether checkbox is used.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->UseCheckBoxes=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+	
+		
+		<property name="AllowReorder">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item ordering is allowed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item ordering is allowed. By setting this to true, user will be able to move item up and down to reoder.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AllowReorder=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="AutoPostBackOnReorder">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether listbox will do postback after items are reordered.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether listbox will do postback after items are reordered.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AutoPostBackOnReorder=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="AutoPostBackOnDelete">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether listbox will do postback after items are deleted.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether listbox will do postback after items are deleted.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AutoPostBackOnDelete=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>			
+		
+		<property name="AllowTransfer">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item transferring is allowed.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item transferring is allowed.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AllowTransfer=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="AutoPostBackOnTransfer">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether listbox will do postback after items are tranferred.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether listbox will do postback after items are tranferred.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AutoPostBackOnTransfer=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="AllowTransferOnDoubleClick">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether item transferring is allowed when user do double clicks.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether item transferring is allowed when user do double clicks.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->AllowTransferOnDoubleClick=true; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="TransferMode">
+			<type>string</type>
+			<defaultvalue>"Move"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set whether item will be copied or moved when transferred.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set whether item will be copied or moved when transferred.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Move item">"Move"</value>
+			   <value desc="Copy item">"Copy"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->TransferMode="Copy";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+				
+				
+		<property name="TransferToId">
+			<type>string</type>
+			<defaultvalue>"Move"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the id of destination listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id of destination listbox. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->TransferToId="second_listbox";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+				
+		<property name="ItemTemplate">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the template for listbox item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the template for listbox item. The data key is written in fomr {datakey} and will be replaced with text when ready.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ItemTemplate="<div style='my_own_style_class'>{Text}</div>";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>						
+				
+				
+		<property name="ClientEvents">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the client-side event.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->ClientEvents["OnSelect"]="Handle_OnSelect";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+				
+				
+		<property name="EventHandler">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the client-side event.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	class MyOwnEventHandler extends ListBoxEventHandler
+	{
+		function OnBeforeReorder($sender,$args)
+		{
+			return true;
+		}
+		function OnReorder($sender,$args)
+		{
+		
+		}
+	
+		function OnBeforeTransferIn($sender,$args)
+		{
+			return true;
+		}
+		function OnTransferIn($sender,$args)
+		{
+		
+		}
+	
+		function OnBeforeDelete($sender,$args)
+		{
+			return true;
+		}
+		function OnDelete($sender,$args)
+		{
+		
+		}
+	
+		function OnBeforeItemCheck($sender,$args)
+		{
+			return true;
+		}
+		function OnItemCheck($sender,$args)
+		{
+		
+		}
+	}
+	$listbox->EventHandler = new MyOwnEventHandler();
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>					
+				
+				
+				
+				
+				
+		<property name="Items">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Contains the list of all items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Contains the list of all items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->Target="my_sub_frame"; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+				
+				
+		<property name="SelectedItems">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Contains the list of selected items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Contains the list of selected items. This list should be accessed after listbox is initiated.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->Init();
+	
+	for($i=0;$i<count($listbox->SelectedItems);$i++)
+	{
+		echo $listbox->SelectedItems[$i]->Text;
+	}	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>				
+				
+				
+				
+		<property name="CheckedItems">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Contains the list of checked items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Contains the list of checked items. This list should be accessed after listbox is initiated.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->UseCheckBoxes = true;
+	$listbox->Init();
+	
+	for($i=0;$i<count($listbox->CheckedItems);$i++)
+	{
+		echo $listbox->CheckedItems[$i]->Text;
+	}	
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>						
+				
+				
+				
+				
+				
+				
+
+
+	</properties>
+	
+	<methods>
+		<method name="AddItem">
+			<type>KoolListBoxItem</type>
+			<parameters>
+			   <param type="ListBoxItem" optional="false">$item</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add listbox item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add listbox item. The function returns the item object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$item = $listbox->Add(new ListBoxItem("Canada","can"));//Insert the text="Canada" and Value="can"
+	$item->Selected = true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+		<method name="ClearAll">
+			<shortdesc>
+			   <![CDATA[
+			Clear all items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Clear all items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->Init();
+	
+	$listbox->ClearAll();
+	
+	//Insert new items
+	$listbox->AddItem(new ListBoxItem("Item1"));
+	$listbox->AddItem(new ListBoxItem("Item2"));		
+	$listbox->AddItem(new ListBoxItem("Item3"));		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="Init">
+			<shortdesc>
+			   <![CDATA[
+			Initiate listbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Initiate listbox. This function should be called before listbox is rendered.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$listbox->Init();
+	
+	echo $listbox->Render();
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolListBox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolListBox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$listbox->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolListBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolListBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $listbox->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolListBox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolListBox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $listbox->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderListBox">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolListBox body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolListBox body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $listbox->RenderListBox();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolListBox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolListBox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $listbox->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

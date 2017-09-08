@@ -1,0 +1,53 @@
+<control>
+	<name>KoolSlideMenu - Excellent PHP Slide Menu Control</name>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[
+		KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, 
+		KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation.
+		<br><b>Key Features:</b>
+		<div style='padding-left:25px;'>
+		   <li>Semantic Rendering for minimal HTML</li>
+		   <li>Search-Engine Friendly</li>
+		   <li>Simple PHP interface</li>
+		   <li>Rich client-side API to control</li>
+		   <li>Full-set of client-side event handles</li>
+		   <li>Support multiple level of parent and child.</li>
+		   <li>Highly customizable CSS styles and template.</li>
+		   <li>Support building menu with XML.</li>
+		</div>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+    //Step 1: Register KoolSlideMenu component to your page
+    require "koolslidemenu/koolslidemenu.php";
+
+    //Step 2: Create slidemenu object.
+    $ksm = new KoolSlideMenu("ksm");
+
+    //Step 3: Set properties for slidemenu
+    $ksm->styleFolder = "koolslidemenu/styles/default";
+
+    //Step 4: Building SlideMenu
+    $ksm->addParent("root","parent1","First Parent");
+    $ksm->AddChild("parent1","child11","A child of first parent");
+    $ksm->addParent("root","parent2","Second Parent");
+    $ksm->AddChild("parent2","child21","A child of second parent");
+
+    ...
+?>
+<html>
+    <head></head>
+    <body>
+        <!-- Step 5: Render slidemenu -->
+        <?php echo $ksm->Render();?>
+    </body>
+</html>
+
+
+		]]>
+	</samplecode>			
+</control>

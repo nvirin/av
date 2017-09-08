@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_gridrow_class" lastupdate="08/20/2009">	
+	<title>GridRow Class [Javascript]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of client-side GridRow Class</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get the id of the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the id of the row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<script type="text/javacript">
+</script>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+	</properties>	
+	
+	<methods>
+		<method name="getDataItem">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Get the dataitem of the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the dataitem of the row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		var _dataitem = _first_row.getDataItem();
+		alert(_dataitem["customerNumber"]);
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 		<method name="getElement">
+			<type>[object]</type>
+			<shortdesc>
+				<![CDATA[
+				Get the html object of the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the html object of the row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.getElement().style.background = "yellow";
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+ 
+		<method name="getCells">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Get list of cells in the row.				
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get list of cells in the row.				
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		var _cells = _first_row.getCells();
+		_cells[0].getElement().style.backgroundColor="red"; // Mark the first cell of the first row red.
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+		<method name="del">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Request server to delete this row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Request server to delete this row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.del();
+		grid.commmit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="startEdit">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Open the form for user to edit data in this row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Open the form for user to edit data in this row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.startEdit();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="cancelEdit">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Cancel the editing of user, no changes will be made on database.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Cancel the editing of user, no changes will be made on database.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.cancelEdit();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="confirmEdit">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Confirm the editing.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Confirm the editing. Changes made on data row will be update to database.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.confirmEdit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="select">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Select the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Select the row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.select();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="deselect">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Deselect the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Deselect the row.
+s				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.deselect();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="expand">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Expand tables detail for the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Expand tables detail for the row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.expand();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="collapse">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Collapse tables detail for the row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Collapse tables detail for the row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		_first_row.collapse();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="getDetailTables">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Return list of tables details associated with this row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return list of tables details associated with this row.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		var _detail_tables = _first_row.getDetailTables();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="isSelected">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+				Return whether a row is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return whether a row is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		alert(_first_row.isSelected());
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+ 		<method name="isEditing">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+				Return whether a row is in editing mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return whether a row is in editing mode.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+		var _first_row = _rows[0];
+		alert(_first_row.isEditing());
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+ 
+ 
+ 
+  
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

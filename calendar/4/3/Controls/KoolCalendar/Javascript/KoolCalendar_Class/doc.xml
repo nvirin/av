@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolCalendar_Class" lastupdate="01/01/2009">	
+	<title>KoolCalendar Class [Javascript]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolCalendar.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolCalendar.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        //Alert the id of KoolCalendar.
+        alert(cal.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="get_selected_dates">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the list of selected dates.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the list of selected dates.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var _list = cal.get_selected_dates();
+		for(var i=0;i<_list.length;i++)
+		{
+			alert(_list[i]);
+		}
+		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+		<method name="commit">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Commit all changes to server.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Commit all changes to server. After the changes such as navigation, date selection, you need to call commit to update all changes to server.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		...
+        cal.commit();		
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="select">
+			<type>void</type>
+			<parameters>
+			   <param type="Date" optional="false">date</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Select a date.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Select a date.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.select(new Date(10,9,2009));
+        cal.commit();	
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>
+		
+		<method name="deselect">
+			<type>void</type>
+			<parameters>
+			   <param type="Date" optional="false">date</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Deselect a date.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Deselect a date.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.deselect(new Date(10,9,2009));
+        cal.commit();	
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>
+		
+		<method name="deselect_all">
+			<type>void</type>
+			<parameters>
+			   <param type="Date" optional="false">date</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Deselect all selected dates.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Deselect all selected dates.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.deselect_all();
+        cal.commit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>		 
+		
+		
+		
+		<method name="navigate">
+			<type>void</type>
+			<parameters>
+			   <param type="Date" optional="false">focused_date</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Navigate to a specific date.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Navigate to a specific date.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.navigate(new Date(10,9,2009));
+        cal.commit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method> 
+		<method name="next">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Navigate to next month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Navigate to next month.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.next();
+        cal.commit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+		<method name="prev">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Navigate to previous month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Navigate to previous month.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.prev();
+        cal.commit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+		<method name="fast_next">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Make a fast next navigation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Make a fast next navigation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.fast_next();
+        cal.commit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+		<method name="fast_prev">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+				Make a fast previous navigation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+				Make a fast previous navigation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		cal.fast_prev();
+        cal.commit();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+ 
+		 <method name="registerEvent">
+			<type>void </type>
+			<parameters>
+			   <param type="string" optional="false">eventName</param>
+			   <param type="function" optional="false">handleEvent</param>
+			</parameters>
+			<allowedvalues>
+				<value desc="">"OnInit"</value>
+				<value desc="">"OnLoad"</value>
+				<value desc="">"OnBeforeSelect"</value>
+				<value desc="">"OnBeforeDeselect"</value>
+				<value desc="">"OnBeforeNavigate"</value>
+				<value desc="">"OnBeforeCommit"</value>
+				<value desc="">"OnSelect"</value>
+				<value desc="">"OnDeselect"</value>
+				<value desc="">"OnNavigate"</value>
+				<value desc="">"OnCommit"</value>
+				<value desc="">"OnDayMouseOut"</value>
+				<value desc="">"OnDayMouseOver"</value>
+			</allowedvalues>
+			<shortdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Register an client-side event.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function OnSelect_Handle(sender,arg)
+    {
+        alert(arg["Date"]);
+    }
+    // Register for OnSelect event
+    cal.registerEvent("OnSelect",OnSelect_Handle);
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

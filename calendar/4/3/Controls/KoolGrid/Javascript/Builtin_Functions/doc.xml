@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_builtin_functions" lastupdate="08/20/2009">	
+	<title>Built-in Functions</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of client-side Built-in Functions</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<methods>
+		<method name="grid_gopage">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+				<param type="int" optional="false">page_index</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Make tableview that contain the element navigate to certain page.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Make tableview that contain the element navigate to certain page.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "GoPage";
+	$col->OnClick = "grid_gopage(this,3)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+		<method name="grid_delete">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Delete the row that contain the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Delete the row that contain the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Delete";
+	$col->OnClick = "grid_delete(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_toggle_select">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Toggle selection for the row that contain the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Toggle selection for the row that contain the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Command";
+	$col->OnClick = "grid_toggle_select(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_edit">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Start editing the row which contains the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Start editing the row which contains the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Edit";
+	$col->OnClick = "grid_edit(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_confirm_edit">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Confirm editing for the row that contains the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Confirm editing for the row that contains the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Confirm";
+	$col->OnClick = "grid_confirm_edit(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_cancel_edit">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Cancel editing for the row that contains the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Cancel editing for the row that contains the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Cancel";
+	$col->OnClick = "grid_cancel_edit(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_confirm_insert">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Confirm inserting new row for the tableview that contains the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Confirm inserting new row for the tableview that contains the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Confirm Insert";
+	$col->OnClick = "grid_confirm_insert(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_cancel_insert">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+				
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Cancel inserting new row for the tableview that contains the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Cancel inserting new row for the tableview that contains the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "CancelInsert";
+	$col->OnClick = "grid_cancel_insert(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_insert">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+				
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Start inserting new row for the tableview that contains the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Start inserting new row for the tableview that contains the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Start Insert";
+	$col->OnClick = "grid_insert(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_refresh">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Make the grid that contain the element refresh.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Make the grid that contain the element refresh.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Refresh";
+	$col->OnClick = "grid_refresh(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_expand">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+				
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Make the row that contains the element expand its table details.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Make the row that contains the element expand its table details.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Expand Details";
+	$col->OnClick = "grid_expand(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_collapse">
+			<type>void</type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+				
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Make the row that contains the element collapse its table details.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Make the row that contains the element collapse its table details.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Collapse Details";
+	$col->OnClick = "grid_collapse(this)";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="grid_sort">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">_column_id</param>
+				<param type="int" optional="false">sort_order</param>
+				
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Sort the column with specified id.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Sort the column with specified id. The sort_order have 3 allowed values 0,-1 and 1 standing for "no_sort", "sort desc" and "sort asc" respectively.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Sort";
+	$col->OnClick = "grid_sort(this,1)";//Sort asc;	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="get_row">
+			<type>&lt;a href='../GridRow/index.php'>GridRow&lt;/a></type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Return the object of the row that contain the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return the object of the row that contain the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Command";
+	$col->OnClick = "alert(get_row(this).id);";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="get_tableview">
+			<type>&lt;a href='../GridTableView/index.php'>GridTableView&lt;/a></type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Return the object of the tableview that contain the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return the object of the tableview that contain the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Command";
+	$col->OnClick = "alert(get_tableview(this).id);";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+		<method name="get_grid">
+			<type>&lt;a href='../KoolGrid/index.php'>KoolGrid&lt;/a></type>
+			<parameters>
+				<param type="object" optional="false">html_element_object</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Return the object of the grid that contain the element.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return the object of the grid that contain the element.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+...
+	$col = new GridCommandColumn();
+	$col->CommandText = "Command";
+	$col->OnClick = "alert(get_grid(this).id);";	
+	$grid->MasterTable->AddColumn($col);
+...
+?>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+
+
+ 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

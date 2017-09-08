@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolNumericTextBox" lastupdate="01/01/2009">	
+	<title>KoolNumericTextBox Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolNumericTextBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolNumericTextBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	echo $txtAge->id;
+?>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+		<property name="Value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the value of textbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the value of textbox. You can use the this parameter to get input from user or to set value for textbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+
+	$txtAge->Value = 25;
+	..
+	
+	if($myform_manager_manager->IsPostBack)
+	{
+		echo $txtAge->Value;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="EmptyMessage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the empty message that will be displayed when no value is entered.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the empty message that will be displayed when no value is entered. You can show message to guide user what to put into the textbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->EmptyMessage = "Please enter your nane..";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="AutoComplete">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get whether the autocomplete feature of browser is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get whether the autocomplete feature of browser is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->AutoComplete = true;
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 
+
+
+		<property name="ShowSpinButton">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get whether spin button will be shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get whether spin button will be shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->ShowSpinButton = true;
+	$txtAge->$SpinButtonPosition = "left";//Show spin button at left side
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="SpinButtonPosition">
+			<type>string</type>
+			<defaultvalue>"right"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get the position of spin button whether on left side or right side of textbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get the position of spin button whether on left side or right side of textbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->ShowSpinButton = true;
+	$txtAge->$SpinButtonPosition = "left";//Show spin button at left side
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="MinValue">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the min value for user input.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the min value for user input.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->MinValue = 0;
+	$txtAge->MaxValue = 20;
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MaxValue">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the max value for user input.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the max value for user input.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->MinValue = 0;
+	$txtAge->MaxValue = 20;
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="NumberFormat">
+			<type>object</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the format of number.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the format of number. This object contain all format setting. You may look at the SampleCode for more details.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+
+	//Below are number formatting examples.
+	$txtAge->NumberFormat->DecimalDigits = 2; // Number will be formatted: ####.56
+	$txtAge->NumberFormat->DecimalSeparator = ".";// Number will be formatted: ####.##
+	$txtAge->NumberFormat->GroupSeparator = ",";// Number will be formatted: #,###,###
+	$txtAge->NumberFormat->GroupSize = 2;//Number will be formatted: ##,##,##
+	$txtAge->NumberFormat->NegativePattern "(n)"; // The nagative number will appeared: (1234)
+	$txtAge->NumberFormat->PositivePattern "+n"; // The positive number will appeared: + 1234
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="IncrementSettings">
+			<type>object</type>
+			<shortdesc>
+			   <![CDATA[
+		Contain settings of number increment.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Contain settings of number increment. By using this setting, you can enable increment by mouse-wheel or by key arrow. You also can set the increment step.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+
+	//Below increment settings
+	$txtAge->IncrementSettings->InterceptArrowKeys = true; // Allow increment by using up arrow key and down arrow key.
+	$txtAge->IncrementSettings->InterceptMouseWheel = true; // Allow user to increase or decrease number with mouse-wheel.
+	$txtAge->IncrementSettings->Step = 1; // Define increment value for each increment.	
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the textbox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the textbox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtAge = $myform_manager->AddControl(new KoolNumericTextBox("txtAge");
+	$txtAge->MaxLength = 10;
+	$txtAge->Mode = "SingleLine";//"MultileLine";
+?>
+
+<div>
+	<?php echo $txtAge->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

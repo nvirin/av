@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolPasswordTextBox" lastupdate="01/01/2009">	
+	<title>KoolPasswordTextBox Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolPasswordTextBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolPasswordTextBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+		<property name="Value">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the value of textbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the value of textbox. You can use the this parameter to get input from user or to set value for textbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+
+	$txtPassword->Value = "John Smith";
+	..
+	
+	if($myform_manager->IsPostBack)
+	{
+		echo $txtPassword->Value;
+	}
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="EmptyMessage">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set the empty message that will be displayed when no value is entered.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the empty message that will be displayed when no value is entered. You can show message to guide user what to put into the textbox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->EmptyMessage = "Please enter your nane..";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="AutoComplete">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get whether the autocomplete feature of browser is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get whether the autocomplete feature of browser is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->AutoComplete = true;
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 
+
+		<property name="ShowIndicator">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get whether password strength indicator will be shown.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get whether password strength indicator will be shown.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->ShowIndicator = true;
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="IndicatorElementId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Set or get the id of indicator element.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get the id of indicator element. If you don't specify this property, the indicator will be created automatically with generated id and be placed right after the password textbox. If you want to change the place to show password indicator, you just need to create a span tag <b>&lt;span id="indicator_id" $gt;&lt;/span$gt;</b> with specified id then input that id to <b>IndicatorElementId</b>.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->ShowIndicator = true;
+	$txtPassword->IndicatorElementId = "my_own_place_strength_indicator";
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+...
+<div>
+	<span id="my_own_place_strength_indicator"></span>
+</div>
+
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		 
+		<property name="IndicatorWidth">
+			<type>string</type>
+			<defaultvalue>"100px"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get the width of indicator element.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get the width of indicator element.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->ShowIndicator = true;
+	$txtPassword->IndicatorWidth = "200px";
+
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 
+
+		<property name="PreferredPasswordLength">
+			<type>int</type>
+			<defaultvalue>8</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get ideal mimnimum password length.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get ideal mimnimum password length. This value will be used to evaluate the strength of password that user inputs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+
+	$txtPassword->PreferredPasswordLength = 8;
+	$txtPassword->MinimumNumericCharacters = 2;
+	$txtPassword->MinimumUpperCaseCharacters = 2;
+	$txtPassword->MinimumLowerCaseCharacters = 2;
+	$txtPassword->MinimumSymbolCharacters = 2;
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MinimumNumericCharacters">
+			<type>int</type>
+			<defaultvalue>2</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get minimum number of numeric characters.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get minimum number of numeric characters. This value will be used to evaluate the strength of password that user inputs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+
+	$txtPassword->PreferredPasswordLength = 8;
+	$txtPassword->MinimumNumericCharacters = 2;
+	$txtPassword->MinimumUpperCaseCharacters = 2;
+	$txtPassword->MinimumLowerCaseCharacters = 2;
+	$txtPassword->MinimumSymbolCharacters = 2;
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MinimumUpperCaseCharacters">
+			<type>int</type>
+			<defaultvalue>2</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get minimum number of upper-case characters.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get minimum number of upper-case characters. This value will be used to evaluate the strength of password that user inputs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+
+	$txtPassword->PreferredPasswordLength = 8;
+	$txtPassword->MinimumNumericCharacters = 2;
+	$txtPassword->MinimumUpperCaseCharacters = 2;
+	$txtPassword->MinimumLowerCaseCharacters = 2;
+	$txtPassword->MinimumSymbolCharacters = 2;
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MinimumLowerCaseCharacters">
+			<type>int</type>
+			<defaultvalue>2</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get minimum number of lower-case characters.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get minimum number of lower-case characters. This value will be used to evaluate the strength of password that user inputs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+
+	$txtPassword->PreferredPasswordLength = 8;
+	$txtPassword->MinimumNumericCharacters = 2;
+	$txtPassword->MinimumUpperCaseCharacters = 2;
+	$txtPassword->MinimumLowerCaseCharacters = 2;
+	$txtPassword->MinimumSymbolCharacters = 2;
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="MinimumSymbolCharacters">
+			<type>int</type>
+			<defaultvalue>2</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get minimum number of symbol characters.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get minimum number of symbol characters. This value will be used to evaluate the strength of password that user inputs.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+
+	$txtPassword->PreferredPasswordLength = 8;
+	$txtPassword->MinimumNumericCharacters = 2;
+	$txtPassword->MinimumUpperCaseCharacters = 2;
+	$txtPassword->MinimumLowerCaseCharacters = 2;
+	$txtPassword->MinimumSymbolCharacters = 2;
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="TextStrengthDescriptions">
+			<type>string</type>
+			<defaultvalue>"Very Weak;Weak;Medium;Strong;Very Strong"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get texts that will display for each level of password strength.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get texts that will display for each level of password strength. There are 5 texts separated by ";" corresponding to 5 levels of password strength indicators.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->TextStrengthDescriptions = "Very Weak;Weak;Medium;Strong;Very Strong";
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="TextStrengthDescriptionStyles">
+			<type>string</type>
+			<defaultvalue>"Very Weak;Weak;Medium;Strong;Very Strong"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Set or get the css class that will be assigned to each level of password strength.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set or get the css class that will be assigned to each level of password strength. There are 5 css class name separated by ";" corresponding to 5 levels of password strength indicators.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	$txtPassword->TextStrengthDescriptionStyles = "cssVeryWea;cssWeak;cssMedium;cssStrong;cssVeryStrong";
+?>
+
+<style type="css/text">
+	.cssVeryWeak
+	{
+		//your own css definition
+	}
+	.cssWeak
+	{
+		//your own css definition
+	}
+	.cssMedium
+	{
+		//your own css definition
+	}
+	.cssStrong
+	{
+		//your own css definition
+	}
+	.cssVeryStrong
+	{
+		//your own css definition
+	}
+</style>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+	</properties>
+	
+	<methods>
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the password textbox
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the password textbox
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$txtPassword = $myform->AddControl(new KoolPasswordTextBox("txtPassword");
+	...
+?>
+
+<div>
+	<?php echo $txtPassword->Render();?>
+</div>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

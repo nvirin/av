@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridDropDownColumn" lastupdate="08/20/2009">	
+	<title>GridDropDownColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridDropDownColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../GridColumn/index.php'>GridColumn</a>
+<br />
+&nbsp;|__ GridDropDownColumn
+		]]>		
+	</description>
+	<methods>
+		 <method name="AddItem">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">$text</param>
+				<param type="string" optional="true">$value</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[ 
+					Add items to drop down list for user to choose.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Add items to drop down list for user to choose.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<?php
+	$col = new GridDropDownColumn();
+	$col->AddItem("Shipped","Shipped");
+	$col->AddItem("Cancelled","Cancelled");
+	$col->AddItem("Processing","Processing");
+?>	
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>			
+		</method>		
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

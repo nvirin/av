@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolContextMenu_Class" lastupdate="01/01/2009">	
+	<title>KoolContextMenu Class [PHP]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+<a href='../PHP_KoolMenu_Class/index.php'>KoolMenu</a>
+<br />
+&nbsp;|__ KoolContextMenu
+		]]>		
+	</description>
+
+	<properties>
+		 		
+		<property name="AttachTo">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the id of element that context menu will attach to.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the ids of elements that context menu will attach to. You may specify more than one ids seperated by comma.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->AttachTo="panel_1,panel_2"; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

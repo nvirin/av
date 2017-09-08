@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolMenuItem_Class" lastupdate="01/01/2009">	
+	<title>KoolMenuItem Class [Javascript]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolMenuItem.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolMenuItem.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+        var _item_open = km.getItem("open");
+        alert(_item_open.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1</supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="collapse">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make menu item collapse its sub panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make menu item collapse its sub panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		_item_open.collapse();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		
+
+		<method name="expand">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make menu item expand its sub panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make menu item expand its sub panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		_item_open.expand();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+		<method name="select">
+			<type>void</type>
+			<shortdesc>
+			   <![CDATA[
+		Make menu item selected.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Make menu item selected.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		_item_open.select();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		<method name="isEnabled">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the menu item is enabled.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the menu item is enabled.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		if(_item_open.isEnabled()==false)
+		{
+			alert("Item is disabled");
+		}
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		
+		<method name="hasChild">
+			<type>bool</type>
+			<shortdesc>
+			   <![CDATA[
+		Get whether the menu item has child.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get whether the menu item has child. This function is useful to determine whether the menu item contains a sub group of child items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		if(_item_open.hasChild()==true)
+		{
+			alert("Item has child.");
+		}
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>		
+
+		<method name="enable">
+			<type>void</type>
+			<parameters>
+			   <param type="bool" optional="false">_bool</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Enabled or disabled menu item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Enabled or disabled menu item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		_item_open.enable(false);// Disable the menu item.
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 		
+		
+		<method name="getChildItems">
+			<type>array</type>
+			<shortdesc>
+			   <![CDATA[
+		Return the list of child menu items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return the list of child menu items.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var _item_open = km.getItem("open");
+		var _children = _item_open.getChildItems();
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.1 </supportversion>
+		</method>
+		 	
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

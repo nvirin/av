@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="Javascript_KoolMaskedTextBox" lastupdate="01/01/2009">	
+	<title>KoolMaskedTextBox Class [PHP]</title>
+	<metakeywords>PHP FORM, PHP FORM generation, PHP FORM decoration,javascript php form validation,php form validation library,simple php form validation,php form validation class, php ajax form validation, PHP INPUT VALIDATION, PHP FORM VALIDATION, PHP VALIDATOR, skin radio buttons, style radio buttons css, skin checkbox buttons, style select,skin select, style dropdown, skin dropdown</metakeywords>	 
+	<metadescription>KoolForm is a great form manager which can help you to unload tasks when deal with form. First, it helps you to style/skin your form so that your form appears consistent in all browsers. KoolForm also provides advanced controls such as textbox, button, dropdown, validator so that you can save huge amount of time for your important matters. KoolForm can be integrated seamlessly into your page without any changes to your existing page's layout.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of KoolMaskedTextBox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of KoolMaskedTextBox.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtPhone = myform_manager.get_control("txtPhone");
+		alert(txtPhone.id);
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+
+
+	</properties>
+	
+	<methods>
+		<method name="set_value">
+			<type>void</type>
+			<parameters>
+			   <param type="float" optional="false">_value</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Set the value for masked textbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Set the value for masked textbox. The set value should not include any literal character from mask.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtPhone = myform_manager.get_control("txtPhone");
+		txtPhone.set_value("2705769987");
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</method>
+
+		<method name="get_value">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the input text of textbox.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the input text of textbox. This text is the pure text entered by user.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtPhone = myform_manager.get_control("txtPhone");
+		alert(txtPhone.get_value());
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+		<method name="get_value_with_prompt">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the input text of textbox. The unfilled character is replaced by prompt character.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the input text of textbox. The unfilled character is replaced by prompt character.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtPhone = myform_manager.get_control("txtPhone");
+		alert(txtPhone.get_value_with_prompt()); // output "270576____"
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+		<method name="get_value_with_literals">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the input text of textbox. The returned value include character from the mask.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the input text of textbox. The returned value include character from the mask.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtPhone = myform_manager.get_control("txtPhone");
+		alert(txtPhone.get_value_with_literals()); // output "(270)576-6868"
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+		<method name="get_value_with_prompt_and_literals">
+			<type>float</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the input text of textbox.The returned value include character from the mask and unfilled character is replace by prompt character.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the input text of textbox. The returned value include character from the mask and unfilled character is replace by prompt character.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    function foo()
+    {
+		var txtPhone = myform_manager.get_control("txtPhone");
+		alert(txtPhone.get_value_with_prompt_and_literals()); // output "(270)576-____"
+    }
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

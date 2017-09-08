@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_KoolMenu_Class" lastupdate="01/01/2009">	
+	<title>KoolMenu Class [PHP]</title>
+	<metakeywords>php menu, php drop down menu, javacript menu, dropdown menu</metakeywords>	 
+	<metadescription>KoolMenu is great PHP Menu control that is easy to use and simple to customize. With semantic rendering, advanced CSS, rich client-side api and myriad of features, KoolMenu stands out to be best choice for your site navigation.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of KoolMenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the id for KoolMenu. This id will be use as variable name of KoolMenu at client-side.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php		
+	$km->id="km";//We usuall use the same id name with server-side for better reference. 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property> 
+
+		<property name="styleFolder">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolMenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set folder which contain css style for KoolMenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+	$km->styleFolder="KoolControls/KoolMenu/styles/default";//Use the "default" style 
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="scriptFolder">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolMenu script.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the path to folder which contains KoolMenu script.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$km = new KoolMenu("km");
+	$km->scriptFolder = "KoolControls/KoolMenu";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+		
+		 		
+		<property name="Target">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the common target for links of menu items.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the common target for links of menu items. The target would be "_blank" or any frame name that you create on your page.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->Target="my_sub_frame"; 
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		
+		<property name="ClickToOpen">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolMenu require user to click to open.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolMenu require user to click to open.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->ClickToOpen=true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="PostBackOnSelect">
+			<type>bool</type>
+			<defaultvalue>false</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set whether KoolMenu will postback on user's selection.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set whether KoolMenu will postback on user's selection.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->PostBackOnSelect=true;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="Flow">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the flow direction of menu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the flow direction of menu.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Flow horizontally.">"Horizontal"</value>
+			   <value desc="Flow vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->Flow="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="SelectedId">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the id of selected menu item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the id of selected menu item.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	if($km->SelectedId!=null)
+	{
+		echo $km->SelectedId;
+	}
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="ExpandDirection">
+			<type>string</type>
+			<defaultvalue>"Auto"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set expand direction of menu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set expand direction of menu.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Auto expansion.">"Auto"</value>
+			   <value desc="Left expansion.">"Left"</value>
+			   <value desc="Right expansion.">"Right"</value>
+			   <value desc="Up expansion.">"Up"</value>
+			   <value desc="Down expansion.">"Down"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->ExpandDirection="Up";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+
+		<property name="ExpandDelay">
+			<type>int</type>
+			<defaultvalue>200</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set delay time before menu start to expand.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set delay time before menu start to expand.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->ExpandDelay=500;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="CollapseDelay">
+			<type>int</type>
+			<defaultvalue>200</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set delay time before menu start to collapse.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set delay time before menu start to collapse.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->CollapseDelay=500;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="GroupSettings_OffsetX">
+			<type>int</type>
+			<defaultvalue>0</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the common offset left of child menu's panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the common offset left of child menu's panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->GroupSettings_OffsetX=20; // 20px
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="GroupSettings_OffsetY">
+			<type>int</type>
+			<defaultvalue>0</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the common offset top of child menu's panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the common offset top of child menu's panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->GroupSettings_OffsetY=20; // 20px
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="GroupSettings_Flow">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the common flow direction of menu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the common flow direction of menu.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Flow horizontally.">"Horizontal"</value>
+			   <value desc="Flow vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->GroupSettings_Flow="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="GroupSettings_ExpandDirection">
+			<type>string</type>
+			<defaultvalue>"Auto"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set common expand direction of menu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set common expand direction of menu.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Auto expansion.">"Auto"</value>
+			   <value desc="Left expansion.">"Left"</value>
+			   <value desc="Right expansion.">"Right"</value>
+			   <value desc="Up expansion.">"Up"</value>
+			   <value desc="Down expansion.">"Down"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->GroupSettings_ExpandDirection="Up";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="GroupSettings_Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set common width for child menu panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set common width for child menu panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->GroupSettings_Width="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="GroupSettings_Height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set common height for child menu panel.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set common height for child menu panel.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->GroupSettings_Height="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the width of KoolMenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the width of KoolMenu.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->Width="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Height">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the height of KoolMenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the height of KoolMenu.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->Height="300px";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+
+		<property name="ExpandAnimation">
+			<type>&lt;a href='../Animation/index.php'>Animation&lt;/a></type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the settings of expand animation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the settings of expand animation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->ExpandAnimation->Type="Linear";// Linear animation.
+	$km->ExpandAnimation->Duration=200;// 200ms
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+		<property name="CollapseAnimation">
+			<type>&lt;a href='../Animation/index.php'>Animation&lt;/a></type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the settings of collapse animation.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the settings of collapse animation.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->CollapseAnimation->Type="Linear";// Linear animation.
+	$km->CollapseAnimation->Duration=200;// 200ms
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+	</properties>
+	
+	<methods>
+		<method name="Add">
+			<type>KoolMenuItem</type>
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			   <param type="string" optional="false">$id</param>
+			   <param type="string" optional="false">$text</param>
+			   <param type="string" optional="true">$link</param>
+			   <param type="bool" optional="true">$image_url</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add menu item.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add menu item. Note: The "root" is pre-built parent node id.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->Add("root","my_first_node","My First Node","first.php","node.gif");
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+		<method name="AddSeparator">
+			<parameters>
+			   <param type="string" optional="false">$parentid</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Add a separator to a menuitem.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Add a separator to a menuitem.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$km->AddSeparator("open"); // Add a seperator to the "open" menu item.
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+		<method name="GetItem">
+			<type>KoolMenuItem</type>
+			<parameters>
+			   <param type="string" optional="false">$id</param>
+			</parameters>
+			<shortdesc>
+			   <![CDATA[
+		Get the menu item object.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the menu item object.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+	$_intro = $km->GetItem("intro");
+	$_intro->Link = "intro.php";
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+
+
+		<method name="Render">
+			<type>void</type>			
+			<shortdesc>
+			   <![CDATA[
+		Render the KoolMenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Render the KoolMenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+	<?php echo 	$km->Render(); ?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterScript">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register js library for KoolMenu.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register js library for KoolMenu.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo $km->RegisterScript(); ?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		<method name="RegisterCSS">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolMenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html to register CSS for KoolMenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<head>
+    <?php echo  $km->RegisterCSS();?>
+</head>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="RenderMenu">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Return html content of KoolMenu body
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return html content of KoolMenu body
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<body>
+    <?php echo $km->RenderMenu();?>
+</body>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+		 <method name="StartupScript">
+			<type>string</type>			
+			<shortdesc>
+			   <![CDATA[
+		Return js code to inititate KoolMenu
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Return js code to inititate KoolMenu
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<script type="text/javascript">
+    <?php echo $km->StartupScript();?>
+</script>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

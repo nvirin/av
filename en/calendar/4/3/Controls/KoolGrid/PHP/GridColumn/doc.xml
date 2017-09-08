@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridColumn" lastupdate="08/20/2009">	
+	<title>GridColumn Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridColumn class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ReadOnly">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether the column is readonly.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether the column is readonly.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->ReadOnly = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="CssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the css class for column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the css class for column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->CssClass = "blueColor";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+...
+<style>
+	.blueColor
+	{
+		background-color:blue;
+	}
+</style>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowSorting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether grid allow user to sort this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether grid allow user to sort this column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->AllowSorting = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowResizing">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether user can resize the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether user can resize the column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->AllowResizing = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="AllowFiltering">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether filtering section is show and allow user to filter on this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether filtering section is show and allow user to filter on this column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->AllowFiltering = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="AllowGrouping">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether column is able to group by drag and drop.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether column is able to group by drag and drop.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->AllowGrouping = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+		<property name="AllowExporting">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether column will be exported.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether column will be exported.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->AllowExporting = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>2.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Width">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set width of the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set width of the column. The width except both px value and % value.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Width = "200px";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Visible">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether the column is visible.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether the column is visible.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Visible = false;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="HeaderText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text of header.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text of header.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->HeaderText = "Customer Name";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="FooterText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text of column's footer.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text of column's footer.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->FooterText = "Customer Name";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Aggregate">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the aggregation function.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the aggregation function. The result of column's aggregation will be added to footer text.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->FooterText = "Total Sum: ";
+	$col->Aggregate = "Sum";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.4.0.0</supportversion>
+		</property>
+
+
+		<property name="DataField">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the database field name that the column associates with.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the database field name that the column associates with.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->DataField = "customerName";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="DataFieldPrefix">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Set the extra prefix for data field name.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					This field is needed when KoolGrid is used with HugeMySQLDataSource and the field name is named with table or alias prefix.
+					This prefix is needed for KoolGrid to function correctly in filtering, grouping and sorting. Please have a look at our example.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$ds = new HugeMySQLDataSource($ds_con);
+	$ds->SelectCommand = "select orders.customerNumber from customers,orders where orders.customerNumber = customers.customerNumber";
+
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->DataField = "customerNumber";
+	$col->DataFieldPrefix = "orders."; // So KoolGrid will know it must use "orders.customerNumber" to retrieve data otherwise mysql error may occur.
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.6.0.0</supportversion>
+		</property>
+
+
+
+
+		<property name="Sort">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the sorting for the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the sorting for the column.
+				]]>
+			</longdesc>
+			<defaultvalue>0</defaultvalue>
+			<allowedvalues>
+			   <value desc="No sorting">0</value>
+			   <value desc="Sort desc">-1</value>
+			   <value desc="Sort asc">1</value>
+			</allowedvalues>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Sort = -1;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Group">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether grid data will be grouped by this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether grid will be grouped by this column.
+				]]>
+			</longdesc>
+			<defaultvalue>0</defaultvalue>
+			<allowedvalues>
+			   <value desc="">true</value>
+			   <value desc="">false</value>
+			</allowedvalues>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Group = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="GroupSettings">
+			<type>GridGroup</type>
+			<shortdesc>
+				<![CDATA[
+					Set the group settings for column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Set the group settings for column.
+				]]>
+			</longdesc>
+			<defaultvalue>0</defaultvalue>
+
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->DataField = "reportsTo";
+	$col->Group = true;
+	$col->GroupSettings->AddInfoField("reportsTo","avg");
+	$col->GroupSettings->HeaderText = "Supervisor";
+	$col->GroupSettings->InfoTemplate = "Report To: {reportsTo}";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="HeaderStyle">
+			<type>&lt;a href='../Style/index.php'>Style&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get or set style of header.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set style of header.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->HeaderStyle->Align = "right";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+
+
+		<property name="NullDisplayText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the text display when data is null.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the text display when data is null.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->NullDisplayText = "N/A";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="DefaultValue">
+			<type>object</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the default value.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the default value. This value will be shown as starting value when users do insert or edit.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->DataField = "name";
+	$col->DefaultValue = "John Smith";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.0.0.0</supportversion>
+		</property>
+
+
+		<property name="ItemStyle">
+			<type>&lt;a href='../Style/index.php'>Style&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get or set style of data cell in column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set style of data cell in column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->ItemStyle->Align = "right";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="FooterStyle">
+			<type>&lt;a href='../Style/index.php'>Style&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get or set style of column's footer.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set style of column's footer.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->FooterStyle->Align = "right";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Wrap">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether the column's text is wrap.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether the column's text is wrap.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Wrap = true;
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Align">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set alignment of column's text
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set alignment of column's text
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Colum's text aligns in left side">"left"</value>
+			   <value desc="Colum's text aligns in center">"center"</value>
+			   <value desc="Colum's text aligns in right side">"right"</value>
+			</allowedvalues>					
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Align = "center";
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="Valign">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set vertical alignment of column's text
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set vertical alignment of column's text
+				]]>
+			</longdesc>
+			<defaultvalue>"left"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Top alignment">"top"</value>
+			   <value desc="Middle alignment">"middle"</value>
+			   <value desc="Bottom alignment">"left"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Valign = "top";
+	$grid->MasterTable->AddColumn($col);
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+
+		<property name="Filter">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set filtering condition for column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set filtering condition for column.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->Filter = array("Value"=>"123","Exp"=>"Greater_Than"); // Make col filter those row has field value greater than 123
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="FilterOptions">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set default filter options for the column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set default filter options for the column.
+				]]>
+			</longdesc>
+			<defaultvalue>array("No_Filter","Equal","Not_Equal","Greater_Than","Less_Than","Greater_Than_Or_Equal","Less_Than_Or_Equal","Contain","Not_Contain","Start_With","End_With");</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$grid->FilterOptions  = array("No_Filter","Greater_Than","Less_Than");//Only show 3 chosen options.
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>	
+
+		<property name="TableView">
+			<type>&lt;a href='../GridTableView/index.php'>GridTableView&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get the tableview instance which contains this column.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the tableview instance which contains this row. Note: This property is only available after grid has been processed.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>
+		</property>	
+
+
+
+	</properties>
+	<methods>
+		<method name="InlineEditRender">
+			<type>string</type>	
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Render cell in inline edit mode.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Render cell in inline edit mode.
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		<method name="FormEditRender">
+			<type>string</type>		
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Render cell in form edit mode.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Render cell in form edit mode.
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		 
+		<method name="AddValidator">
+			<type>string</type>		
+			<parameters>
+				<param type="GridValidator" optional="false">$validator</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Add validator to column.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Add validator to column. The validator will make sure that input from user is valid before performing any data operation. More information of grid validator, please have a look at Validators section.
+			   ]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+...	
+	$col = new GridBoundColumn();//GridBoundColumn is inherited from GridColumn
+	$col->DataField = "customerNumber";
+	$col->AddValidator(new RequiredFieldValidator());
+	$grid->MasterTable->AddColumn($col);
+...
+?> 
+]]>
+			</samplecode>			
+			<supportversion>1.3.0.0 </supportversion>
+		</method>		 
+		 
+		<method name="GetEditValue">
+			<type>string</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the updated value.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the updated value.
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		 
+		<method name="GetFilterValue">
+			<type>string</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the filtering value.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the filtering value.
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>		 
+		 
+		<method name="RenderHeader">
+			<type>string</type>		
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Render header of column
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Render header of column
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		 
+		<method name="RenderFooter">
+			<type>string</type>		
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Render footer of column
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Render footer of column
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		 
+		<method name="RenderFilter">
+			<type>string</type>		
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Render filtering section of column.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Render filtering section of column.
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		
+		<method name="Render">
+			<type>string</type>		
+			<parameters>
+				<param type="GridRow" optional="false">$row</param>
+			</parameters>				
+			<shortdesc>
+			   <![CDATA[
+					Render data cell.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Render data cell.
+			   ]]>
+			</longdesc>
+			<supportversion>1.0.0.0 </supportversion>
+		</method>
+		 
+		<method name="GetUniqueID">
+			<type>string</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the column's unique ID which is assigned by KoolGrid.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the column's unique ID which is assigned by KoolGrid.
+			   ]]>
+			</longdesc>
+			<supportversion>2.3.0.0 </supportversion>
+		</method>		 
+		 
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

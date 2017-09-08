@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_ExportSettings" lastupdate="08/20/2009">	
+	<title>ExportSettings Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) ExportSettings class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="FileName">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the filename to export.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the filename to export.
+					
+				]]>
+			</longdesc>
+			<defaultvalue>"KoolGridExport"</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php
+	...
+	$grid->Process();
+	//Assume that there is ExportToPDF button to trigger exporting to PDF.
+	if(isset($_POST["ExportToPDF"]))
+	{
+		$grid->ExportSettings->FileName = "Report";
+		$grid->GetInstanceMasterTable()->ExportToPDF();
+		//KoolGrid will export with filename "Report.pdf"
+	}
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+
+		<property name="IgnorePaging">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether koolgrid will ignore paging while exporting.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether koolgrid will ignore paging while exporting. If the value is true, all data will be exported.
+				]]>
+			</longdesc>
+			<defaultvalue>false</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	...
+	$grid->Process();
+	//Assume that there is ExportToPDF button to trigger exporting to PDF.
+	if(isset($_POST["ExportToPDF"]))
+	{
+		$grid->ExportSettings->IgnorePaging = true;
+		$grid->GetInstanceMasterTable()->ExportToPDF();
+		//KoolGrid will export all available data regardless paging.
+	}
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

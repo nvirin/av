@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_FunctionPanel" lastupdate="08/20/2009">	
+	<title>FunctionPanel Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) FunctionPanel class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="ShowRefreshButton">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether refresh button is shown.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether refresh button is shown.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->FunctionPanel->ShowRefreshButton = false;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="Position">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the position of function panel.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the position of function panel.
+				]]>
+			</longdesc>
+			<defaultvalue>"bottom"</defaultvalue>
+			<allowedvalues>
+			   <value desc="Grid show function panel at top">"top"</value>
+			   <value desc="Grid show function panel at bottom">"bottom"</value>
+			   <value desc="Grid show function panel at both top and bottom position">"topbottom"</value>
+			</allowedvalues>			
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->Pager->Position = "topbottom";//Show both pager
+?> 
+]]>
+			</samplecode>
+			<supportversion>3.5.0.0</supportversion>
+		</property>
+
+
+
+		<property name="ShowInsertButton">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether insert button is shown.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether insert button is shown.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->FunctionPanel->ShowInsertButton = false;
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+		<property name="RefreshButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text of refresh button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text of refresh button.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->FunctionPanel->RefreshButtonText = "Reload";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="InsertButtonText">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set text of insert button.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set text of insert button.
+				]]>
+			</longdesc>
+			<defaultvalue>true</defaultvalue>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid->MasterTable->FunctionPanel->InsertButtonText = "New Row";
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+
+	</properties>
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

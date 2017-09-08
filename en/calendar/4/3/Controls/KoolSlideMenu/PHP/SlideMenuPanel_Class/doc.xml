@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="php_slidemenupanel" lastupdate="01/01/2009">	
+	<title>SlideMenuPanel Class [PHP]</title>
+	<metadescription>KoolSlideMenu is very Easy-to-Use PHP Slide Menu. Based on Semantic rendering, Advanced CSS together with natural Sliding effect, KoolSlideMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation</metadescription>
+	<metakeywords>php menu, php slidemenu,php slide menu, ajax menu, php ajax menu,sliding menu, vertical menu </metakeywords>	 
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+
+	<properties>
+		 <property name="id">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set id of slidemenu panel 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set id of slidemenu panel 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+    $panel = new SlideMenuPanel("panel");
+    $panel->id="thepanel";//Change id from "panel" to "thepanel"
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		 <property name="content">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set content of slidemenu panel 
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set content of slidemenu panel 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php				
+    $panel = new SlideMenuPanel("panel");
+    $panel->content = "This is panel, any html here";//Set the content of panel
+?>	
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		 <property name="parent">
+			<type>SlideMenuParent</type>
+			<shortdesc>
+			   <![CDATA[
+		Get the direct parent object
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get the direct parent object
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+	</properties>
+		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

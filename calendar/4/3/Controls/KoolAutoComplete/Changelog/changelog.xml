@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolAutoComplete is excellent PHP Ajax AutoComplete. Flexible rendering, elegant behavior together with Ajax Load On-Demand have made KoolAutoComplete the great choice to replace limited auto-complete provided by browsers." metakeywords = "php ajax autocomplete, php autocomplete, php ajax autosuggest, php autosuggest">	
+
+	<log date="Apr 16, 2012" version="1.5.0.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+
+	<log date="Mar 15, 2012" version="1.4.0.6">
+		<![CDATA[ 
+		- Make KoolAutoComplete compatible with KoolForm.
+	    ]]>		
+	</log>
+	
+	<log date="Dec 04, 2011" version="1.4.0.5">
+		<![CDATA[ 
+		- Enhance the option list management at client-side
+		]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="1.3.0.2">
+		<![CDATA[ 
+		- Enhance auto complete when working with different encoding.
+	    ]]>		
+	</log>
+
+
+
+	<log date="September 24, 2009" version="1.2.0.0">
+		<![CDATA[ 
+		- Make KoolAutoComplete work better with other language.
+	    ]]>		
+	</log>
+
+	<log date="March 08, 2009" version="1.0.0.8">
+		<![CDATA[ 
+		- Registering CSS is improved.
+	    ]]>		
+	</log>
+	<log date="February 09, 2009" version="1.0.0.6">
+		<![CDATA[ 
+		- Enhance styleFolder property.
+	    ]]>		
+	</log>
+	<log date="December 10, 2008" version="1.0.0.4">
+		<![CDATA[ 
+		- Enhance the header and footer template.
+	    ]]>		
+	</log>
+	<log date="November 17, 2008" version="1.0.0.3">
+		<![CDATA[ 
+		- New property added: scriptFolder for manually setting the path to script folder.
+	    ]]>		
+	</log>
+	<log date="November 10, 2008" version="1.0.0.2">
+		<![CDATA[ 
+		- Add item common template to ease skin development
+	    ]]>		
+	</log>
+	<log date="November 05, 2008" version="1.0.0.0">
+		<![CDATA[ 
+		- First version of KoolAutoComplete has been released
+	    ]]>		
+	</log>	
+	
+</changelog>

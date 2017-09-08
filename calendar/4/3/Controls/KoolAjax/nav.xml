@@ -1,0 +1,32 @@
+<navigation id="KoolAjax">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="php_koolajax_class" 
+					text="KoolAjax Class"
+					link="PHP/KoolAjax_Class/index.php"/>
+					
+			<link 	id="php_updatepanel_class" 
+					text="UpdatePanel Class"
+					link="PHP/UpdatePanel_Class/index.php"/>
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_koolajax_class" 
+					text="KoolAjax Class"
+					link="Javascript/KoolAjax_Class/index.php"/>
+					
+			<link 	id="javascript_updatepanel_class" 
+					text="UpdatePanel Class"
+					link="Javascript/UpdatePanel_Class/index.php"/>
+			
+			<link 	id="javascript_koolajaxrequest_class" 
+					text="KoolAjaxRequest Class"
+					link="Javascript/KoolAjaxRequest_Class/index.php"/>
+			<link 	id="javascript_koolajaxrequest_settings" 
+					text="KoolAjaxRequest Settings"
+					link="Javascript/KoolAjaxRequest_Settings/index.php"/>
+		</category>
+
+	</category>
+</navigation>

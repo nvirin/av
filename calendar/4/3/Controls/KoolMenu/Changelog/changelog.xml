@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog id="changelog" metadescription="KoolMenu is very Easy-to-Use PHP Menu. Based on Semantic rendering, Advanced CSS together with natural effect, KoolMenu is Super Fast in rendering, Highly Appearance-Customizable and Elegant Behaviors,  all making it stand out to be Excellent Choice for your Site Navigation" metakeywords = "php menu, php slidemenu, ajax menu, php ajax menu,sliding menu, vertical menu ">	
+
+	<log date="Apr 16, 2012" version="1.2.0.0">
+		<![CDATA[ 
+		- Fix client-side conflict with MooTools framework.
+		]]>		
+	</log>
+
+	<log date="Dec 04, 2011" version="1.1.0.5">
+		<![CDATA[ 		
+		-Fix opening issue in IE.
+		]]>		
+	</log>
+
+
+	<log date="January 15, 2010" version="1.1.0.0">
+		<![CDATA[ 		
+		- New client-side function KoolContextMenu::reattach()
+		]]>		
+	</log>
+
+
+	<log date="January 15, 2010" version="1.1.0.0">
+		<![CDATA[ 		
+		- Add more animations.
+		- Provide more client-side function for items.
+		- Fix the targetId issue of KoolContextMenu.
+		]]>		
+	</log>
+
+
+	<log date="December 17, 2009" version="1.0.0.0">
+		<![CDATA[ 		
+		- First version.
+		]]>		
+	</log>
+</changelog>

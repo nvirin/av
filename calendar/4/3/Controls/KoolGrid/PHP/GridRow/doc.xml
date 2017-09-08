@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_GridRow" lastupdate="08/20/2009">	
+	<title>GridRow Class [PHP]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of server-side(PHP) GridRow class.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		<property name="DataItem">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+					Get the data associated with the row. 
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the data associated with the row. 
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="Selected">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether the row is selected.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether the row is selected.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+		
+		
+		<property name="Expand">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether the row is expanded.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether the row is expanded.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+		<property name="EditMode">
+			<type>bool</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set whether the row is in edit mode.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set whether the row is in edit mode.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>		
+
+		<property name="CssClass">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get or set the css clas for row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get or set the css class for row.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+	$grid = new KoolGrid("grid");
+	
+	class MyGridEventHandler extends GridEventHandler
+	{
+		function OnRowPreRender($row,$args)
+		{
+			$row->CssClass = "blueColor"; // Make the row in blue color.			
+		}
+	}
+	$grid->EventHandler = new MyGridEventHandler();
+?> 
+...
+<style>
+	.blueColor
+	{
+		background-color:blue;
+	}
+</style>
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+
+
+
+		<property name="TableView">
+			<type>&lt;a href='../GridTableView/index.php'>GridTableView&lt;/a></type>
+			<shortdesc>
+				<![CDATA[
+					Get the tableview instance which contains this row.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the tableview instance which contains this row. Note: This property is only available after grid has been processed.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+<?php				
+
+?> 
+]]>
+			</samplecode>
+			<supportversion>1.6.0.0</supportversion>
+		</property>	
+
+	</properties>
+	<methods>
+		<method name="GetUniqueID">
+			<type>string</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the row's unique ID which is assigned by KoolGrid.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the row's unique ID which is assigned by KoolGrid.
+			   ]]>
+			</longdesc>
+			<supportversion>2.3.0.0 </supportversion>
+		</method>		 
+		
+		<method name="GetInstanceDetailTables">
+			<type>array</type>		
+			<shortdesc>
+			   <![CDATA[
+					Get the list of detail tableviews that are associated with the row.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get the list of detail tableviews that are associated with the row. 
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 
+
+
+		<method name="GetTableView">
+			<type>GridTableView</type>		
+			<shortdesc>
+			   <![CDATA[
+					Return the tableview instance that contains the row.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Return the tableview instance that contains the row.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php 
+
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>2.1.0.0 </supportversion>
+		</method> 
+
+
+	</methods>		
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

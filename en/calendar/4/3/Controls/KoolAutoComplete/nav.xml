@@ -1,0 +1,26 @@
+<navigation id="KoolAutoComplete">
+	<category id="root">
+		<link id="overview" text="Overview" link="index.php" />
+		<link id="changelog" text="Changelog" link="Changelog/index.php" />		
+		<category id="PHP" text="PHP">
+			<link 	id="php_koolautocomplete_class" 
+					text="KoolAutoComplete Class"
+					link="PHP/KoolAutoComplete_Class/index.php"/>
+					
+			<link 	id="php_koolautocompleteitem_class" 
+					text="KoolAutoCompleteItem Class"
+					link="PHP/KoolAutoCompleteItem_Class/index.php"/>
+		</category>
+		<category id="Javascript" text="Javascript">
+			<link 	id="javascript_koolautocomplete_class" 
+					text="KoolAutoComplete Class"
+					link="Javascript/KoolAutoComplete_Class/index.php"/>
+					
+			<link 	id="javascript_koolautocompleteitem_class" 
+					text="KoolAutoCompleteItem Class"
+					link="Javascript/KoolAutoCompleteItem_Class/index.php"/>
+			
+		</category>
+
+	</category>
+</navigation>

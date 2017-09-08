@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="PHP_TimeViewSettings_Class" lastupdate="01/01/2009">	
+	<title>TimeViewSettings Class [PHP]</title>
+	<metakeywords>php calendar,php ajax calendar,php date picker,php date time picker</metakeywords>	 
+	<metadescription>KoolCalendar is excellent PHP Calendar control that is features-rich, easy to integrate to web sites and simple to customize. Combining DatePicker and TimePicker, KoolCalendar offers special features like Ajax Capability, Multi-view, Quick month selection, etc. Last but not least, its revolutionary rendering using CSS sprites skyrockets its loading time.</metadescription>
+	<description>
+		<![CDATA[ 
+
+		]]>		
+	</description>
+
+	<properties>
+		
+		<property name="Orientation">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the rendering orientation of month.
+			   ]]>
+			</longdesc>
+			<allowedvalues>
+			   <value desc="Render month days horizontally.">"Horizontal"</value>
+			   <value desc="Render month days vertically.">"Vertical"</value>
+			</allowedvalues>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->Orientation="Vertical";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+		<property name="HeaderText">
+			<type>string</type>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the header text of TimeView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the header text of TimeView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->HeaderText = "Time View";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+
+		<property name="TimeFormat">
+			<type>string</type>
+			<defaultvalue>"g:i A"</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+		Get or set the time format.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+		Get or set the time format.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->TimeFormat="g:i A";
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="NumberOfColumns">
+			<type>int</type>
+			<defaultvalue>4</defaultvalue>
+			<shortdesc>
+			   <![CDATA[
+					Get or set number of columns for TimeView.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set number of columns for TimeView.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->NumberOfColumns=5;
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="StartTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the start time.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the start time.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->StartTime=mktime(1,0,0); // Start at 00:00
+	$datetimepicker->TimeViewSettings->StartTime=mktime(10,0,0); // Start at 10:00
+	$datetimepicker->TimeViewSettings->Interval=mktime(2,0,0); // Every 2 hours.		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+
+
+		<property name="EndTime">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the end time.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the end time.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->StartTime=mktime(1,0,0); // Start at 00:00
+	$datetimepicker->TimeViewSettings->EndTime=mktime(10,0,0); // End at 10:00
+	$datetimepicker->TimeViewSettings->Interval=mktime(2,0,0); // Every 2 hours.		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>
+		
+		<property name="Interval">
+			<type>int</type>
+			<shortdesc>
+			   <![CDATA[
+					Get or set the time interval.
+			   ]]>
+			</shortdesc>
+			<longdesc>
+			   <![CDATA[
+					Get or set the time interval.
+			   ]]>
+			</longdesc>
+			<samplecode>
+			   <![CDATA[
+<?php
+...
+	$datetimepicker->TimeViewSettings->StartTime=mktime(1,0,0); // Start at 00:00
+	$datetimepicker->TimeViewSettings->EndTime=mktime(10,0,0); // End at 10:00
+	$datetimepicker->TimeViewSettings->Interval=mktime(2,0,0); // Every 2 hours.		
+...
+?>
+			   ]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</property>		
+		
+
+
+	</properties>
+	
+	<methods>
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>

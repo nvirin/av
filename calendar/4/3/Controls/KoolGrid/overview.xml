@@ -1,0 +1,74 @@
+<control>
+	<name>KoolGrid - Powerful PHP Grid</name>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>KoolAjax is simple and easy-to-use PHP Ajax Framework, facilitating data exchange between server-side and client-side. KoolAjax also provides number of client-side utility functions to ease developing task. Furthermore, with UpdatePanel, a special feature of KoolAjax, developers can create a great ajax application without javascript knowledge.Using KoolAjax, you will be amazed with its power and simplicity.</metadescription>
+	<description>
+		<![CDATA[
+	When it comes to web DataGrids, fast loading of large data combined with advanced Excel-like operations has been always a challenge. Having a solid experience in web technologies, we designed our AJAX powered PHP Grid to eliminate this tradeoff. Easy-to-use, rich client-side API, myriad of features topped with an unbeatable performance is what we call KoolGrid.	<br/>
+	<br/>
+	<b>Key features:</b>
+	<ul style='padding-left:25px;'>
+		<li>Very easy to use, simple PHP code.</li>
+		<li>Rich client-side API and events</li>
+		<li>AJAX Capability</li>
+		<li>State persistence through postback and ajax callback</li>
+		<li>Support Auto CRUD ( Create, Update, Delete)</li>
+		<li>Scrolling with position persistence</li>
+		<li>Sorting</li>
+		<li>Filtering</li>
+		<li>Grouping</li>
+		<li>Row Selecting</li>
+		<li>Form and Inline Editing</li>
+		<li>Localization</li>
+		<li>Many skins are available to choose.</li>
+		<li>Skin can be all customized as wished.</li>
+	</ul>
+		]]>
+	</description>
+	<samplecode>
+		<![CDATA[
+<?php
+	//Step 1: Register KoolGrid component to your page
+	require "KoolControls/KoolGrid/koolgrid.php";
+	require "KoolControls/KoolAjax/koolajax.php";
+	$koolajax->scriptFolder = "KoolControls/KoolAjax";
+	
+	//Step 2: Create datasource
+	$db_con = mysql_connect($dbhost,$dbuser,$dbpass);
+	mysql_select_db($dbname,$db_con);
+	$ds = new MySQLDataSource($db_con);
+	$ds->SelectCommand = "select customerNumber,customerName,phone,city from customers";
+
+	//Step 3: Init KoolGrid and settings
+	$grid = new KoolGrid("grid");
+	$grid->scriptFolder = "KoolControls/KoolGrid";
+	$grid->styleFolder="default";
+	$grid->DataSource = $ds;
+	$grid->AjaxEnabled = true;
+	$grid->Width = "655px";
+	$grid->AllowInserting = true;
+	$grid->AllowSorting = true;
+	$grid->AutoGenerateColumns = true;
+	$grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+	
+	
+	//Step 4: Process Grid
+	$grid->Process();
+?>
+
+<html>
+    <head>
+        <title></title>
+        <?php echo $koolajax->Render();?>
+    </head>
+    <body>
+        <form id="form1" method="post">
+            <!-- Step 5: Get KoolGrid render -->
+            <?php echo $grid->Render();?>
+        </form>
+    </body>
+</html>
+
+		]]>
+	</samplecode>			
+</control>

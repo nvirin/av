@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documentation id="javascript_gridtableview_class" lastupdate="08/20/2009">	
+	<title>GridViewTable Class [Javascript]</title>
+	<metakeywords>php grid, php ajax grid, php datagrid, php gridview, ajax grid php</metakeywords>	 
+	<metadescription>Documentation of client-side GridViewTable Class</metadescription>
+	<description>
+		<![CDATA[ 
+			
+		]]>		
+	</description>
+	
+	<properties>
+		<property name="id">
+			<type>string</type>
+			<shortdesc>
+				<![CDATA[
+					Get the id of the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+					Get the id of the tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+<![CDATA[
+
+]]>
+			</samplecode>
+			<supportversion>1.0.0.0</supportversion>
+		</property>
+	</properties>	
+	
+	<methods>
+		<method name="selectAllRows">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Select all rows in the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Select all rows in the tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.selectAllRows();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+		<method name="deselectAllRows">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Deselect all rows in the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Deselect all rows in the tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.deselectAllRows();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+		<method name="getRows">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Return all rows in the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return all rows in the tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _rows = _mastertable.getRows();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+		<method name="getColumns">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Return all columns in the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return all columns in the tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _columns = _mastertable.getColumns();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+		<method name="getSelectedRows">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Return the array of selected rows.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return the array of selected rows.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _selected_rows = _mastertable.getSelectedRows();
+		for(var i=0;i<_selected_rows.length;i++)
+		{
+			alert(_selected_rows[i].getDataItem()["customerNumber"]); //Alert customerNumber of selected rows.
+		}
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+		<method name="goPage">
+			<type>void</type>
+			<parameters>
+				<param type="int" optional="false">page_index</param>
+			</parameters>
+			<shortdesc>
+				<![CDATA[
+				Navigate tableview to any certain page.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Navigate tableview to any certain page.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.goPage(3);
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+		<method name="refresh">
+			<type>void</type>
+			<shortdesc>
+				<![CDATA[
+				Refresh the tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Refresh the tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.refresh();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+
+
+		<method name="add_group">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">group_field</param>
+				<param type="int" optional="true">position</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Add a new group to tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Add a new group to tableview. The new group will be put at specified position. If the position is not specified, the new group will be added to the end of group list.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.add_group("reportsTo",2);
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+
+ 
+		<method name="change_group_order">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">group_field</param>
+				<param type="int" optional="true">position</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Change the group order in tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Change the group order in tableview. The group will be moved to new position in group list.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.change_group_order("reportsTo",1);
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+
+
+		<method name="remove_group">
+			<type>void</type>
+			<parameters>
+				<param type="string" optional="false">group_field</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Remove a group in tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Remove a group in tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.remove_group("reportsTo");
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 	
+ 
+
+		<method name="get_group_list">
+			<type>array</type>
+			<shortdesc>
+				<![CDATA[
+				Return array of field names that used in group list.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Return array of field names that used in group list.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		var _group_list = _mastertable.get_group_list();
+		for(var i=0;i<_group_list.length;i++)
+		{
+			alert(_group_list[i]);
+		}
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>2.0.0.0 </supportversion>
+		</method> 
+ 
+		<method name="changePageSize">
+			<type>void</type>
+			<parameters>
+				<param type="int" optional="false">page_size</param>
+			</parameters>			
+			<shortdesc>
+				<![CDATA[
+				Change the page size of tableview.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Change the page size of tableview.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.changePageSize(20);
+		grid.commit();		
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+
+		<method name="getPageIndex">
+			<type>int</type>
+			<shortdesc>
+				<![CDATA[
+				Get the current page index.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Get the current page index.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		alert(_mastertable.getPageIndex());
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+ 
+ 
+		<method name="startInsert">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Request server to open insert form for user to add new data.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Request server to open insert form for user to add new data.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.startInsert();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+		<method name="confirmInsert">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Request server to insert new added data to server.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Request server to insert new added data to server.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.confirmInsert();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+ 
+ 
+ 
+		<method name="cancelInsert">
+			<type>void </type>
+			<shortdesc>
+				<![CDATA[
+				Request server to cancel the inserting action.
+				]]>
+			</shortdesc>
+			<longdesc>
+				<![CDATA[
+				Request server to cancel the inserting action.
+				]]>
+			</longdesc>
+			<samplecode>
+				<![CDATA[
+<script type="text/javacript">
+	function foo()
+	{
+		var _mastertable = grid.getMasterTable();
+		_mastertable.cancelInsert();
+		grid.commit();
+	}
+</script>
+				]]>
+			</samplecode>
+			<supportversion>1.0.0.0 </supportversion>
+		</method> 	
+
+	</methods>	
+	<copyright>KoolPHP Inc</copyright>
+</documentation>
